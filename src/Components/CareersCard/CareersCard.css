@@ -1,0 +1,58 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+.elementary-card-container {
+    border: 1px solid black;
+    border-radius: 0px 0px 10px 10px;
+    width: 300px;
+    height: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Lato';
+    
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer */    
+}
+
+.card-container {
+    font-family: 'Lato';
+    border: 1px solid black;
+    border-radius: 15px;
+    width: 300px;
+    height: 350px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+   
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer */    
+}
+
+/* Elementary Card Header */
+.elementary-header{
+    padding: 1em;
+    font-size: 20px;
+    font-weight: 700;
+
+}
+
+.elementary-card-container{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+.card-container img{
+    object-fit: contain;
+}
+
+.card-title {
+    padding: 0.7em; 
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+p {
+    padding: 0em 1em 1em 1em;
+    text-align: start;
+}
