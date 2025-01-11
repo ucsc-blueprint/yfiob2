@@ -1,7 +1,7 @@
 import './CareersCard.css'
 
-export default function CareersCard({title, description, headerColor, userStage}){
-    if (userStage === 'elementary') {
+export default function CareersCard({title, description, headerColor, isElementary}){
+    if (isElementary) {
         return (
             <>
                 <div className="elementary-card-container">
