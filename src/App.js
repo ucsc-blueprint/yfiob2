@@ -10,7 +10,7 @@ function App() {
 				careerName={'Agricultural Architect'} 
 				description={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'}	
 				salary={'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed'}
-				careerImages={['https://placehold.co/350x250', 'https://placehold.co/350x250', 'https://placehold.co/350x250']}
+				careerImages={['https://placehold.co/350x250', 'https://placehold.co/350x250', 'https://placehold.co/350x250',  'https://placehold.co/350x250',  'https://placehold.co/350x250',  'https://placehold.co/350x250']}
 			/>
 		</div>
 	);

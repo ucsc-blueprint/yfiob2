@@ -46,3 +46,9 @@ p {
   flex-wrap: wrap;
   justify-content: space-between;
 }
+
+.jignaSmall {
+  margin-left: auto;
+  width: 63.19;
+  height: 57.42px;
+}
