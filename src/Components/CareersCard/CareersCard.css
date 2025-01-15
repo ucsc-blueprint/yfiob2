@@ -2,6 +2,7 @@
 
 /* Elementary Card Specific Styling: Container and Header*/
 .elementary-card-container {
+    background-color: #FFFFFF;
     outline: 1px solid black;
     border-radius: 0px 10px 10px 10px;
     width: 300px;
@@ -23,6 +24,7 @@
 
 /* Middle/High School Specific Styling: Container and Header */
 .card-container {
+    background-color: #FFFFFF;
     font-family: 'Lato';
     outline: 1px solid transparent;
     border-radius: 15px;
