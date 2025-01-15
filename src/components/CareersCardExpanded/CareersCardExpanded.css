@@ -1,0 +1,48 @@
+.careers-card-expanded-container {
+  display: flex;
+  flex-direction: column;
+  width: 90%;
+  margin: auto;
+  max-height: 86vh;
+
+  
+  overflow-y: scroll;
+  overflow-x: hidden;
+  font-family: 'Lato';
+  /* Hide scrollbar for WebKit browsers */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* Internet Explorer */    
+}
+
+h4 {
+  background-color: #EACAA5;
+  border: 1px solid black;
+  max-width: fit-content;
+  padding: 0.3em 2em;
+  border-radius: 10px 10px 0px 0px;
+  font-style: italic;
+}
+
+.career-expanded-card {
+  background-color: white;
+  padding: 1em;
+
+}
+
+h2 {
+  font-weight: 700;
+  font-size: 20px;
+  margin: 0px 0px 10px 00px;
+}
+
+p {
+  margin-bottom: 20px;
+}
+
+.career-images-container {
+  display: flex;
+  flex-direction: row;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
