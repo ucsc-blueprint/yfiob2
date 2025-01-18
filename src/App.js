@@ -1,5 +1,5 @@
-import { Navbar } from "./components/Navbar";
-import { QuestionCard } from "./components/QuestionCard";
+import { Navbar } from "./Components/Navbar";
+import { QuestionCard } from "./Components/QuestionCard";
 
 function App() {
 	return (
