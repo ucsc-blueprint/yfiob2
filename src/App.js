@@ -1,5 +1,5 @@
 import { Navbar } from "./Components/Navbar";
-import { CareersCard } from './Components/CareersCard/CareersCard.js';
+import CareersCard from './Components/CareersCard/CareersCard.js';
 
 function App() {
 	return (
