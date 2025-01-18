@@ -1,17 +1,18 @@
 import { Navbar } from "./Components/Navbar";
-import CareersCard from './Components/CareersCard/CareersCard.js';
+import { QuestionCard } from "./Components/QuestionCard";
 
 function App() {
 	return (
 		<div className="bg-[#FFC273] h-[100vh]">
 			<Navbar />
-      <CareersCard 
-      isElementary={false}
-      title={"Agricultural Architect"} 
-      headerColor={'green'}
-      description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."}
-      careerImage={'https://placehold.co/250x250'}
-    />
+			<div className="flex justify-center">
+				<QuestionCard
+					advice={"here's some advice"}
+					question={"test question"}
+					questionNumber={5}
+					totalQuestions={6}
+				/>
+			</div>
 		</div>
 	);
 }
