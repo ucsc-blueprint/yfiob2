@@ -4,11 +4,17 @@ import React from "react";
 
 export const CareersCardExpanded = ({category, careerName, description, salary, careerImages}) => {
   return (
-    <div className="careers-card-expanded-container">
-      <div className="career-category">
+    <div className="flex-auto w-11/12 m-auto justify-center align-middle relative top-20 left-0">
+      <div className="career-category overflow-y-auto">
         <h4>{category}</h4>
       </div>
-      <div className="career-expanded-card">
+      <div className="bg-white p-4 h-5/6">
+        {/* .career-expanded-card {
+        background-color: white;
+        padding: 1em;
+
+      }
+      */}
         <h2>{careerName}</h2>
         <p>Description:</p>
         <p>{description}:</p>
@@ -27,4 +33,3 @@ export const CareersCardExpanded = ({category, careerName, description, salary, 
     </div>
   );
 };
-

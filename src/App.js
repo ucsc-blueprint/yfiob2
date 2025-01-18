@@ -1,17 +1,17 @@
 import { Navbar } from "./components/Navbar";
-import CareersCard from "./components/CareersCard/CareersCard";
+import { CareersCardExpanded } from "./components/CareersCardExpanded/CareersCardExpanded";
 
 function App() {
 	return (
 		<div className="bg-[#FFC273] h-[100vh]">
 			<Navbar />
-      <CareersCard 
-        isElementary={false}
-        title={"Agricultural Architect"} 
-        headerColor={'green'}
-        description={"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."}
-        careerImage={'https://placehold.co/250x250'}
-      />
+        <CareersCardExpanded 
+        careerImages={['https://placehold.co/250x250', 'https://placehold.co/250x250', 'https://placehold.co/250x250']}
+        careerName={'ugh'}
+        category={"ugh x2"}
+        description={"lorem ipsum or whatever"}
+        salary={10000}
+        />
 		</div>
 	);
 }
