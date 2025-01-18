@@ -5,8 +5,8 @@ export default function CareersCard({title, description, headerColor, isElementa
   if (isElementary) {
     // Display elementary-level card summary
     return (
-      <div className="elementary-card-container">
-        <header className='elementary-header'> {title} </header>
+      <div className="elementary-card-container bg-white outline-1 outline-black rounded-tr-md rounded-bl-md w-[300px] h-[320px] overflow-y-scroll overflow-x-hidden font-lato">
+        <header className='p-1 text-[20px] text-center font-bold'> {title} </header>
         <p>{description}</p>
       </div>
     )
