@@ -1,6 +1,6 @@
-import './CareersCard.css'
+import React from "react";
 
-export default function CareersCard({title, description, headerColor, educationLevel, careerImage}) {
+export default function CareersCard({title, description, educationLevel, careerImage}) {
   if (educationLevel === 'elementary-school') {
     // Display elementary-level card summary
     return (
