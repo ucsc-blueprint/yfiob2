@@ -8,7 +8,7 @@ function App() {
 			<Navbar />
 			<div className="flex justify-center">
 			<CareersCardExpanded
-				educationLevel={'elementary-school'}
+				educationLevel={'high-school'}
 				category={'Agriculture and Natural Resources'}
 				careerName={'Agricultural Architect'}
 				title={"Agricultural Architect"} 
