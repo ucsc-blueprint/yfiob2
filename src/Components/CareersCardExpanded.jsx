@@ -37,7 +37,7 @@ export const CareersCardExpanded = ({
   );
 
   return (
-    <div className="w-11/12 m-auto no-scrollbar overflow-y-scroll max-h-[70vh]">
+    <div className="w-11/12 m-auto no-scrollbar overflow-y-scroll max-h-[80vh]">
       <h4
         className={`pl-6 pr-6 pt-2 pb-2 w-max rounded-t-xl italic`}
         // Set background color depending on education-level
