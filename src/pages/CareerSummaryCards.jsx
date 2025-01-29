@@ -4,7 +4,7 @@ import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
 import { Navbar } from "../components/Navbar";
 
-export const CareerSummaryCards = ({ CardData, Level }) => {
+const CareerSummaryCards = ({ CardData, Level }) => {
 	const [color, setColor] = useState(["", "", ""]);
 
 	useEffect(() => {
@@ -100,3 +100,5 @@ export const CareerSummaryCards = ({ CardData, Level }) => {
 		</div>
 	);
 };
+
+export default CareerSummaryCards;
