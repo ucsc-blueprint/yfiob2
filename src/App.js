@@ -1,17 +1,18 @@
-import { Navbar } from "./components/Navbar";
-import { CareersCardExpanded } from "./components/CareersCardExpanded/CareersCardExpanded";
+import { Navbar } from "./Components/Navbar";
+import { QuestionCard } from "./Components/QuestionCard";
 
 function App() {
 	return (
 		<div className="bg-[#FFC273] h-[100vh]">
 			<Navbar />
-        <CareersCardExpanded 
-        careerImages={['https://placehold.co/250x250', 'https://placehold.co/250x250', 'https://placehold.co/250x250']}
-        careerName={'ugh'}
-        category={"ugh x2"}
-        description={"lorem ipsum or whatever"}
-        salary={10000}
-        />
+			<div className="flex justify-center">
+				<QuestionCard
+					advice={"here's some advice"}
+					question={"test question"}
+					questionNumber={5}
+					totalQuestions={6}
+				/>
+			</div>
 		</div>
 	);
 }

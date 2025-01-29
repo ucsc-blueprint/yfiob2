@@ -19,7 +19,6 @@ export const CareersCardExpanded = ({category, careerName, description, salary, 
         <p>{description}:</p>
         <p>Salary:</p>
         <p>{salary}</p>
-
         <div className="flex flex-row gap-[20px] flex-wrap justify-between">
 
           {careerImages.map((careerImage, index) => (
