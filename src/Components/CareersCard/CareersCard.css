@@ -1,0 +1,52 @@
+@import url('https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap');
+
+/* Elementary Card Specific Styling: Container and Header*/
+.elementary-card-container {
+    background-color: #FFFFFF;
+    outline: 1px solid black;
+    border-radius: 0px 10px 10px 10px;
+    width: 300px;
+    height: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    font-family: 'Lato';
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer */    
+}
+
+/* Elementary Card Header */
+.elementary-header{
+    padding: 1em;
+    font-size: 20px;
+    font-weight: 700;
+}
+
+/* Middle/High School Specific Styling: Container and Header */
+.card-container {
+    background-color: #FFFFFF;
+    font-family: 'Lato';
+    outline: 1px solid transparent;
+    border-radius: 15px;
+    width: 300px;
+    height: 320px;
+    overflow-y: scroll;
+    overflow-x: hidden;
+    padding-bottom: 1em;
+    /* Hide scrollbar for WebKit browsers */
+    scrollbar-width: none; /* Firefox */
+    -ms-overflow-style: none;  /* Internet Explorer */    
+}
+
+.card-title {
+    padding: 0.7em; 
+    color: black;
+    font-weight: 700;
+    font-size: 18px;
+}
+
+/* Shared styling */
+p {
+    padding: 0em 1em 1em 1em;
+    text-align: start;
+}
