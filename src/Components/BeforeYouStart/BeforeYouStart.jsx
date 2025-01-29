@@ -1,8 +1,10 @@
 import './BeforeYouStart.css'
+import { Navbar } from '../Navbar'
 
 export const BeforeYouStart = () => {
     return (
         <>
+        <Navbar></Navbar>
         <div className = "header">Before You Start Answering</div>
         
         <div className = "dropContainer">
