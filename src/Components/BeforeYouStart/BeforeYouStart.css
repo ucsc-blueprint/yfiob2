@@ -1,0 +1,37 @@
+.header {
+    padding-top: 5%;
+    font-family: Lato;
+    font-size: 40px;
+    font-weight: 400;
+    line-height: 48px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+}
+
+.dropContainer {
+    padding-top: 10%;
+}
+
+.dropdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 1em;
+    gap: 15px;
+
+    width: 502px;
+    height: 61px;
+
+    margin: auto;
+
+    font-family: Lato;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    line-height: 24px;
+    text-align: center;
+    text-underline-position: from-font;
+    text-decoration-skip-ink: none;
+    padding: 15px;
+}
