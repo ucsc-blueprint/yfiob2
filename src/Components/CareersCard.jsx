@@ -1,6 +1,7 @@
 import React from "react";
 
 export const CareersCard = ({title, description, educationLevel, careerImage}) => {
+  
   if (educationLevel === 'elementary-school') {
     // Display elementary-level card summary
     return (
@@ -9,6 +10,7 @@ export const CareersCard = ({title, description, educationLevel, careerImage}) =
         <p className='pl-5 pr-5 text-[12px]'> {description} </p>
       </div>
     )
+    
   } else {
     // Otherwise, display middle/high school level card summary
     return (

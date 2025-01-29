@@ -17,7 +17,7 @@ export const CareersCardExpanded = ({
     "middle-school": "#3FA1D9",
     "high-school": "#47B748",
   };
-  
+
   // Used to dynamically render information sections (i.e colleges, majors, etc.)
   const renderTextSection = (label, value) => (
     <>
@@ -25,6 +25,7 @@ export const CareersCardExpanded = ({
       <p className="pb-5">{value}</p>
     </>
   );
+  
   // Styling to display all career images
   const renderImages = () => (
     <div className="flex gap-5 flex-wrap">
