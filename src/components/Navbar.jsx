@@ -2,7 +2,7 @@ import React from "react";
 
 import YFIOBLogo from "../assets/YFIOBLogo.png";
 
-const Navbar = () => {
+export const Navbar = () => {
 	return (
 		<div className="flex p-6 bg-white shadow-md font-lato">
 			<div className="py-2 grow-[100]">
@@ -27,5 +27,3 @@ const Navbar = () => {
 		</div>
 	);
 };
-
-export default Navbar;
