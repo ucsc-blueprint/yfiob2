@@ -11,11 +11,13 @@ export const CareersCardExpanded = ({
   colleges,
   majors,
 }) => {
+
   const educationStyles = {
     "elementary-school": "#EACAA5",
     "middle-school": "#3FA1D9",
     "high-school": "#47B748",
   };
+  
   // Used to dynamically render information sections (i.e colleges, majors, etc.)
   const renderTextSection = (label, value) => (
     <>
