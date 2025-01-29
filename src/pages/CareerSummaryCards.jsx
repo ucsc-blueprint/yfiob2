@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import Navbar from "../Components/Navbar";
-import CareersCard from "../Components/CareersCard/CareersCard";
+import CareersCard from "../components/CareersCard/CareersCard";
 import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
+import { Navbar } from "../components/Navbar";
 
 export const CareerSummaryCards = ({ CardData, Level }) => {
 	const [color, setColor] = useState(["", "", ""]);
@@ -27,10 +27,10 @@ export const CareerSummaryCards = ({ CardData, Level }) => {
 		<div
 			className={
 				Level === "middle"
-					? "bg-[#9AD7F8] font-lato"
+					? "bg-[#9AD7F8] font-lato h-[100vh]"
 					: Level === "high"
-					? "bg-[#B9E98E] font-lato"
-					: "bg-[#FFC273] font-lato"
+					? "bg-[#B9E98E] font-lato h-[100vh]"
+					: "bg-[#FFC273] font-lato h-[100vh]"
 			}
 		>
 			<Navbar />
@@ -80,17 +80,21 @@ export const CareerSummaryCards = ({ CardData, Level }) => {
 			</div>
 			<div className="flex justify-center">
 				<div className="flex-row flex flex-wrap justify-center">
-					{CardData.map((data) => (
-						<div key={data.title} className="p-4">
-							<CareersCard
-								title={data.title}
-								description={data.description}
-								headerColor={color[2]}
-								isElementary={data.isElementary}
-								careerImage={data.careerImage}
-							/>
-						</div>
-					))}
+					{CardData ? (
+						CardData.map((data) => (
+							<div key={data.title} className="p-4">
+								<CareersCard
+									title={data.title}
+									description={data.description}
+									headerColor={color[2]}
+									isElementary={data.isElementary}
+									careerImage={data.careerImage}
+								/>
+							</div>
+						))
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</div>
