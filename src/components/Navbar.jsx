@@ -7,7 +7,9 @@ export const Navbar = () => {
 	return (
 		<div className="flex p-6 bg-white shadow-md font-lato">
 			<div className="py-2 grow-[100]">
-				<img width={170} src={YFIOBLogo} alt="YFIOB Logo" />
+				<NavLink to={"/"}>
+					<img width={170} src={YFIOBLogo} alt="YFIOB Logo" />
+				</NavLink>
 			</div>
 			<div className="flex">
 				<div className="flex-row content-center px-3 hover:text-[#4C78E7] py-1">
