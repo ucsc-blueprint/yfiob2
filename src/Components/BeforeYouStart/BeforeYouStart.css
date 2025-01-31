@@ -1,3 +1,12 @@
+.background {
+    background: 
+        radial-gradient(circle at 0% 90%, rgba(76, 120, 231, 0.1) 0%, rgba(76, 120, 231, 0) 100%),
+        radial-gradient(circle at 120% 18.89%, rgba(71, 183, 73, 0.1) 0%, rgba(255, 255, 255, 0) 80%);
+    
+    height: 100vh; /* Full height */
+    width: 100%; /* Full width */
+}
+
 .header {
     padding-top: 5%;
     font-family: Lato;
