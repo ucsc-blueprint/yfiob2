@@ -1,7 +1,4 @@
 import { Navbar } from "./components/Navbar";
-import { QuestionCard } from "./components/QuestionCard";
-import { Navbar } from "./components/Navbar";
-import { CareersCard } from "./components/CareersCard";
 import { CareersCardExpanded } from "./components/CareersCardExpanded"
 
 function App() {
