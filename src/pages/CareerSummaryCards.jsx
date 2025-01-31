@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from "react";
-import CareersCard from "../components/CareersCard/CareersCard";
+import CareersCard from "../components/CareersCard";
 import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
 import { Navbar } from "../components/Navbar";

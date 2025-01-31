@@ -30,3 +30,5 @@ export const CareersCard = ({title, description, educationLevel, careerImage}) =
     }
 
 }
+
+export default CareersCard;

@@ -1,5 +1,5 @@
-import { Navbar } from "../Navbar"
-import { CareersCardExpanded } from "./PageComponents/CareersCardExpanded";
+import { Navbar } from "../components/Navbar"
+import { CareersCardExpanded } from "../components/CareersExpanded";
 
 // import { CareersCard } from "./components/CareersCard";
 // import { CareersCardExpanded } from "./components/CareersCardExpanded"
