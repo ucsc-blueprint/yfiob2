@@ -1,3 +1,28 @@
+select {
+    appearance: none; /* Removes default arrow */
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    
+    width: 100%;
+    height: 50px;
+    
+    font-family: Lato;
+    font-size: 20px;
+    font-style: italic;
+    font-weight: 400;
+    text-align: left;
+    padding: 10px;
+    color: #898989;
+    border: 2px solid #8989897D;
+    border-radius: 20px;
+    
+    background-color: white;
+    background-image: url('../../assets/Arrow.svg'); /* Use your SVG file */
+    background-repeat: no-repeat;
+    background-position: right 15px center; /* Positioning the arrow */
+    background-size: 20px; /* Adjust the size */
+}
+
 .background {
     background: 
         radial-gradient(circle at 0% 90%, rgba(76, 120, 231, 0.1) 0%, rgba(76, 120, 231, 0) 100%),
