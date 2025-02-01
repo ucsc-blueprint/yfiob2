@@ -70,28 +70,28 @@ export const Navbar = () => {
 				<NavLink
 					to="/"
 					onClick={() => setIsOpen(false)}
-					className="text-lg text-black hover:text-blue-600 z-10"
+					className="text-lg text-black hover:text-blue-600 z-0 p-2"
 				>
 					Home
 				</NavLink>
 				<NavLink
 					to="/take-quiz"
 					onClick={() => setIsOpen(false)}
-					className="text-lg text-black hover:text-blue-600 z-10"
+					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Take Quiz!
 				</NavLink>
 				<NavLink
 					to="/explore-careers"
 					onClick={() => setIsOpen(false)}
-					className="text-lg text-black hover:text-blue-600 z-10"
+					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Explore Careers
 				</NavLink>
 				<NavLink
 					to="/login"
 					onClick={() => setIsOpen(false)}
-					className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white z-10"
+					className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white z-10 m-2"
 				>
 					Log In
 				</NavLink>
