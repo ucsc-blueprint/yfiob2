@@ -67,28 +67,28 @@ export const Navbar = () => {
 				}`}
 			>
 				<a
-					to="/"
+					href="/"
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-0 p-2"
 				>
 					Home
 				</a>
 				<a
-					to="/take-quiz"
+					href="/take-quiz"
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Take Quiz!
 				</a>
 				<a
-					to="/explore-careers"
+					href="/explore-careers"
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Explore Careers
 				</a>
 				<a
-					to="/login"
+					href="/login"
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white z-10 m-2"
 				>
