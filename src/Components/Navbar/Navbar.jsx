@@ -1,5 +1,5 @@
-import React, { useState } from "react";
-import YFIOBLogo from "../assets/YFIOBLogo.png";
+import { useState } from "react";
+import YFIOBLogo from "../../assets/YFIOBLogo.png";
 import { NavLink } from "react-router-dom";
 
 export const Navbar = () => {
