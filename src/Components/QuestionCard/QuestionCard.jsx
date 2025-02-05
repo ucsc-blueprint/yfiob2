@@ -31,7 +31,7 @@ export const QuestionCard = ({
 								<button
 									className={`flex-[${weight}] text-center text-slate-500 bg-slate-300 m-[1%] rounded-[20px] py-3`}
 								>
-									{agreement}
+								{agreement}
 								</button>
 							);
 						})}
