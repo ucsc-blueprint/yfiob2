@@ -29,6 +29,7 @@ export const QuestionCard = ({
 							const weight = (i === 0) | (i === agreeArray.length - 1) ? 2 : 1;
 							return (
 								<button
+									key={i}
 									className={`flex-[${weight}] text-center text-slate-500 bg-slate-300 m-[1%] rounded-[20px] py-3`}
 								>
 									{agreement}
