@@ -7,7 +7,7 @@ export const Navbar = () => {
 
 	return (
 		<div className="bg-white shadow-md font-lato">
-			<div className="flex items-center justify-between p-6 h-[20vw] md:h-auto">
+			<div className="flex items-center justify-between p-6  md:h-auto">
 				{/* Logo */}
 				<div className="py-2 grow-[100] z-30">
 					<NavLink to={"/"}>
@@ -63,8 +63,8 @@ export const Navbar = () => {
 			{/* Navigation Links - Mobile */}
 
 			<div
-				className={`absolute top-20 z-0 left-0 w-full bg-white shadow-md flex flex-col items-center  transition-transform duration-300 md:hidden p-6 ${
-					isOpen ? "translate-y-0" : "-translate-y-[200%]"
+				className={`absolute border-t top-20 z-0 left-0 w-full bg-white shadow-md flex flex-col items-center  transition-transform duration-300 md:hidden p-6 ${
+					isOpen ? "translate-y-8" : "-translate-y-[200%]"
 				}`}
 			>
 				<NavLink
