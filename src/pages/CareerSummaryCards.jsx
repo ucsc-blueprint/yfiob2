@@ -1,8 +1,8 @@
 import React, { useEffect, useState } from "react";
-import CareersCard from "../components/CareersCard";
+import CareersCard from "../components/CareersCard/CareersCard.jsx";
+import { Navbar } from "../components/Navbar/Navbar.jsx";
 import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
-import { Navbar } from "../components/Navbar";
 
 const CareerSummaryCards = ({ CardData, Level }) => {
 	const [color, setColor] = useState(["", "", ""]);
