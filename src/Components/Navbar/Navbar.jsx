@@ -1,6 +1,8 @@
 import { useState } from "react";
 import YFIOBLogo from "../../assets/YFIOBLogo.png";
 
+//TODO: Turn a elements into navlink components (make it work with the testing too)
+
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
