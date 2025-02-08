@@ -12,7 +12,7 @@ export const Navbar = () => {
 				{/* Logo */}
 				<div className="py-2 grow-[100] z-30">
 					<a href={"/"}>
-						<img width={170} src={YFIOBLogo} alt="YFIOB Logo" />
+						<img width={170} src={YFIOBLogo} alt="YFIOB Logo" aria-label="Logo"/>
 					</a>
 				</div>
 
@@ -56,7 +56,7 @@ export const Navbar = () => {
 				{/* Log In Button - Desktop */}
 				<div className="hidden md:flex px-8">
 					<div className="bg-[#4C78E757] p-3 px-5 rounded-full hover:text-slate-100">
-						<a href="/login">Log In</a>
+						<a href="/login">Login</a>
 					</div>
 				</div>
 			</div>

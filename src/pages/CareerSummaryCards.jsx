@@ -38,7 +38,7 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 				<div className="flex w-1/3 flex-row items-center">
 					{/* back button */}
 					<button className="flex items-center">
-						<img src={BackButton} alt="<" />
+						<img aria-label="go back to careers page" src={BackButton} alt="<" />
 						<p className="p-0 px-5">Click to Go Back</p>
 					</button>
 				</div>
@@ -71,7 +71,7 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 						<p className="p-0 px-5 text-right">
 							Click to move onto Building and Construction Trades
 						</p>
-						<img src={ForwardButton} alt=">" />
+						<img aria-label="go to next career" src={ForwardButton} alt=">" />
 					</button>
 				</div>
 			</div>

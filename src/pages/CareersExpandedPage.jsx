@@ -29,7 +29,7 @@ export const CareersExpandedPage = ({educationLevel, nextJob}) => {
       <Navbar />
 
       <div className="flex gap-3 justify-center items-center m-10">
-        <img src='./back-arrow.svg'/>
+        <img aria-label="go back to careers page" src='./back-arrow.svg'/>
         <p>Click to Go back</p>
 
         <h2
@@ -41,7 +41,7 @@ export const CareersExpandedPage = ({educationLevel, nextJob}) => {
         >Agricultural Architect </h2>
 
         <p>{nextJob}</p>
-        <img src='./front-arrow.svg'/>
+        <img aria-label="continue" src='./front-arrow.svg'/>
       </div>
 
       <CareersCardExpanded
