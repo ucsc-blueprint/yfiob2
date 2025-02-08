@@ -45,13 +45,13 @@ export const Navbar = () => {
 
 				{/* Navigation Links - Desktop */}
 				<div className="hidden md:flex space-x-6">
-					<Link href="/" className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1">
 						Home
 					</Link>
-					<Link href="/take-quiz" className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1">
 						Take Quiz!
 					</Link>
-					<Link href="/explore-careers" className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/explore-careers"} className="px-3 hover:text-[#4C78E7] py-1">
 						Explore Careers
 					</Link>
 				</div>
@@ -59,7 +59,7 @@ export const Navbar = () => {
 				{/* Log In Button - Desktop */}
 				<div className="hidden md:flex px-8">
 					<div className="bg-[#4C78E757] p-3 px-5 rounded-full hover:text-slate-100">
-						<Link href="/login">Log In</Link>
+						<Link href={"/login"}>Log In</Link>
 					</div>
 				</div>
 			</div>
@@ -72,28 +72,28 @@ export const Navbar = () => {
 				}`}
 			>
 				<Link
-					href="/"
+					href={"/"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-0 p-2"
 				>
 					Home
 				</Link>
 				<Link
-					href="/take-quiz"
+					href={"/take-quiz"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Take Quiz!
 				</Link>
 				<Link
-					href="/explore-careers"
+					href={"/explore-careers"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
 					Explore Careers
 				</Link>
 				<Link
-					href="/login"
+					href={"/login"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white z-10 m-2"
 				>
