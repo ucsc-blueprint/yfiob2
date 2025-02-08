@@ -31,7 +31,7 @@ export const CareersCardExpanded = ({
     <div className="flex gap-5 flex-wrap">
       {careerImages.map((careerImage, index) => (
         <div key={index}>
-          <img data-testid="career-image" className="rounded-[5px]" src={careerImage} alt="careerImage" />
+          <img className="rounded-[5px]" src={careerImage} alt="careerImage" />
         </div>
       ))}
       <img className="mt-auto ml-auto h-[100px] w-[100px]" src="/jignaSmall.png" alt="Jigna Small"
@@ -40,9 +40,8 @@ export const CareersCardExpanded = ({
   );
 
   return (
-    <div data-testid="careers-card-expanded-container" className="w-11/12 m-auto no-scrollbar overflow-y-scroll max-h-[80vh]">
+    <div className="w-11/12 m-auto no-scrollbar overflow-y-scroll max-h-[80vh]">
       <h4
-        data-testid="careers-header"
         className={`pl-6 pr-6 pt-2 pb-2 w-max rounded-t-xl italic`}
         // Set background color depending on education-level
         style={{ backgroundColor: educationStyles[educationLevel] }}
