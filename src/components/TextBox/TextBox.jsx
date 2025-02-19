@@ -11,8 +11,7 @@ export default function TextBox({Placeholder}) {
     }
 
     return (
-        <div style={{backgroundColor: "#E8F6FF", height: "100vh", margin: "0", padding: "0", display: "flex", justifyContent: "center", alignItems: "center"}}>
-            <br />
+        <>
         <input type="text"
          placeholder={Placeholder}
          color='#FFFFFF'
@@ -30,6 +29,7 @@ export default function TextBox({Placeholder}) {
                      fontSize: '20px',
                  }}
           />
-        </div>
+          </>
+        
     );
 }
