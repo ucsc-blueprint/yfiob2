@@ -27,7 +27,7 @@ export const QuestionCard = ({
 						<h1 className="text-3xl font-bold">"{question}"</h1>
 						<img width={"20%"} src="/jigna-small.svg" alt="Jigna Small" />
 					</div>
-					<div className="flex-[1] w-[77%] flex-row flex justify-center pb-4 ">
+					<div className="flex-[1] w-[75%] flex-row flex justify-center pb-4 ">
 						{agreeArray.map((agreement, i) => {
 							const weight = (i === 0) | (i === agreeArray.length - 1) ? 2 : 1;
 							return (

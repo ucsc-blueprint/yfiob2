@@ -1,7 +1,7 @@
 "use client";
 
 import { Navbar } from "../../components/Navbar/Navbar";
-import { QuestionCard } from "../../components/QuestionCard.jsx";
+import { QuestionCard } from "../../components/QuestionCard/QuestionCard.jsx";
 import questions from "../../../questions.json";
 import { useState } from "react";
 import BackArrow from "../../components/BackArrow.jsx";

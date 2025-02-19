@@ -3,7 +3,6 @@
 	"version": "0.1.0",
 	"private": true,
 	"dependencies": {
-		"@testing-library/jest-dom": "^5.17.0",
 		"@testing-library/user-event": "^13.5.0",
 		"firebase": "^11.3.1",
 		"next": "^15.1.6",
@@ -16,7 +15,8 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "npx serve@latest ./build"
+		"start": "npx serve@latest ./build",
+		"test": "react-scripts test"
 	},
 	"eslintConfig": {
 		"extends": [
@@ -38,8 +38,11 @@
 	},
 	"devDependencies": {
 		"@testing-library/dom": "^10.4.0",
+		"@testing-library/jest-dom": "^6.6.3",
 		"@testing-library/react": "^16.2.0",
 		"autoprefixer": "^10.4.20",
+		"jest": "^27.5.1",
+		"jest-environment-jsdom": "^29.7.0",
 		"postcss": "^8.5.1",
 		"tailwindcss": "^3.4.17"
 	}
