@@ -18,7 +18,7 @@ export const Navbar = () => {
 					<Link href={"/"}>
 						<Image
 							width={170}
-							height={"auto"}
+							fill
 							priority
 							src={YFIOBLogo}
 							alt="YFIOB Logo"
