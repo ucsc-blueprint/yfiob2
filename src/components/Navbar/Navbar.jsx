@@ -15,7 +15,13 @@ export const Navbar = () => {
 				{/* Logo */}
 				<div className="py-2 grow-[100] z-30">
 					<Link href={"/"}>
-						<img width={170} src={YFIOBLogo} alt="YFIOB Logo" aria-label="Logo"/>
+						<img
+							width={170}
+							height={"auto"}
+							src={YFIOBLogo}
+							alt="YFIOB Logo"
+							aria-label="Logo"
+						/>
 					</Link>
 				</div>
 

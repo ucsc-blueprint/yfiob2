@@ -3,7 +3,7 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { QuestionCard } from "../../components/QuestionCard/QuestionCard.jsx";
 import questions from "../../../questions.json";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import BackArrow from "../../components/BackArrow.jsx";
 import ForwardArrow from "../../components/ForwardArrow.jsx";
 
@@ -18,6 +18,7 @@ export default function Page() {
 	const educationLevel = 1;
 	const [questions] = useState(getQuestions(educationLevel));
 	const [questionNum, setQuestionNum] = useState(5);
+	const [randomNum, setRandomNum] = useState(null);
 
 	const questionsObject = questions.map((question) => {
 		return Object.values(question.sub_questions).map((subQuestion) => {
@@ -35,12 +36,10 @@ export default function Page() {
 		});
 	});
 
-	console.log(questionsObject);
-	const [randomNum] = useState(
-		Math.round(Math.random() * questionsObject[questionNum].length)
-	);
-
-	console.log(randomNum);
+	useEffect(() => {
+		setRandomNum(Math.floor(Math.random() * questionsObject[questionNum].length));
+		// eslint-disable-next-line react-hooks/exhaustive-deps
+	}, [questionsObject]);
 
 	return (
 		<>
@@ -56,7 +55,18 @@ export default function Page() {
 					<BackArrow />
 				</button>
 				<div className="flex flex-col items-center">
-					{questionsObject[questionNum][randomNum]}
+					{randomNum != null ? (
+						questionsObject[questionNum][randomNum]
+					) : (
+						<div className="m-20">
+							<QuestionCard
+								advice={""}
+								question={""}
+								questionNumber={"1"}
+								totalQuestions={"6"}
+							/>
+						</div>
+					)}
 				</div>
 				<button
 					onClick={() => {
