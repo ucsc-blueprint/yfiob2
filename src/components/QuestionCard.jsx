@@ -15,10 +15,13 @@ export const QuestionCard = ({
 	totalQuestions,
 }) => {
 	return (
-		<div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md">
-			<div className="bg-green-500 h-[10%] w-[25%] rounded-tl-[20px]"></div>
-			<div className="bg-white h-full rounded-b-[20px] p-[5vh]">
-				<div className=" flex-col flex items-center h-[100%] justify-space-between">
+		<div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden">
+			<div
+				className="bg-green-500 h-[10%] w-[25%] rounded-tl-[20px]"
+				style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
+			></div>
+			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col">
+				<div className=" flex-col flex items-center grow justify-space-between">
 					<p className="flex-[1] w-[77%] text-[114%] text-center italic">{advice}</p>
 					<div className="flex-[3] w-[77%] flex justify-between">
 						<h1 className="text-3xl font-bold">"{question}"</h1>
@@ -38,7 +41,7 @@ export const QuestionCard = ({
 						})}
 					</div>
 				</div>
-				<div className="flex justify-end items-end text-2xl">
+				<div className="flex justify-end items-end text-2xl pb-[2vh]">
 					<span className="text-green-600">{questionNumber}</span>
 					<span className="text-slate-400">/{totalQuestions}</span>
 				</div>

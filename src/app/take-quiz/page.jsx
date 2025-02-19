@@ -4,6 +4,8 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { QuestionCard } from "../../components/QuestionCard.jsx";
 import questions from "../../../questions.json";
 import { useState } from "react";
+import BackArrow from "../../components/BackArrow.jsx";
+import ForwardArrow from "../../components/ForwardArrow.jsx";
 
 function getQuestions(educationLevel) {
 	const parsedData = Object.values(questions).map((element) => {
@@ -51,7 +53,7 @@ export default function Page() {
 						}
 					}}
 				>
-					Back
+					<BackArrow />
 				</button>
 				<div className="flex flex-col items-center">
 					{questionsObject[questionNum][randomNum]}
@@ -63,7 +65,7 @@ export default function Page() {
 						}
 					}}
 				>
-					Forward
+					<ForwardArrow />
 				</button>
 			</div>
 		</>
