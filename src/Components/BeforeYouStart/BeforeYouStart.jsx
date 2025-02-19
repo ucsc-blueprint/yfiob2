@@ -48,10 +48,17 @@ export const BeforeYouStart = () => {
   return (
     <BrowserRouter>
       <div>
+
+
         <div className="background">
+
+          {/* Light Blue Top Half */}
+          <div className="top-half">
+
           <div className="header">
-            Before You Start Answering
+          Discover a career path that matches your unique interests!
           </div>
+
 
           <div className="pt-[10%]">
             {/* Searchable School Dropdown */}
@@ -112,8 +119,26 @@ export const BeforeYouStart = () => {
             >
               Submit
             </button>
+            </div>
           </div>
+
+
+          {/* White Bottom Half */}
+
+          <div className="bottom-half">
+
+            <div className="header">
+              Career Quiz
+            </div>
+            <div className="text">
+              Choose your grade level to begin! 
+            </div>
+            
+          </div>
+
         </div>
+
+
       </div>
     </BrowserRouter>
   );
