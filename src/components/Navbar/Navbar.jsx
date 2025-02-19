@@ -1,8 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import YFIOBLogo from "../../assets/YFIOBLogo.png";
+
 import Link from "next/link";
+import Image from "next/image";
 
 //TODO: Turn a elements into navlink components (make it work with the testing too)
 
@@ -15,10 +16,11 @@ export const Navbar = () => {
 				{/* Logo */}
 				<div className="py-2 grow-[100] z-30">
 					<Link href={"/"}>
-						<img
+						<Image
 							width={170}
-							height={"auto"}
-							src={YFIOBLogo}
+							height={20}
+							priority
+							src="/assets/YFIOBLogo.png"
 							alt="YFIOB Logo"
 							aria-label="Logo"
 						/>
