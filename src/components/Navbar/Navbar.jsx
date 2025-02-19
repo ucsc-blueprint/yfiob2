@@ -1,7 +1,7 @@
 "use client";
 
 import { useState } from "react";
-import YFIOBLogo from "../../assets/YFIOBLogo.png";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -18,9 +18,9 @@ export const Navbar = () => {
 					<Link href={"/"}>
 						<Image
 							width={170}
-							fill
+							height={20}
 							priority
-							src={YFIOBLogo}
+							src="/assets/YFIOBLogo.png"
 							alt="YFIOB Logo"
 							aria-label="Logo"
 						/>
