@@ -12,7 +12,8 @@ export default function TextBox({Placeholder}) {
 
     return (
         <>
-        <input type="text"
+        <input 
+        type="text"
          placeholder={Placeholder}
          color='#FFFFFF'
           onChange={handleChange}
