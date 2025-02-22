@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const agreeArray = [
 	"Strongly Disagree",
@@ -14,11 +14,15 @@ export const QuestionCard = ({
 	questionNumber,
 	totalQuestions,
 }) => {
+	const [clickedButton, setClickedButton] = useState(null);
+
+
 	return (
 		<div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden">
 			<div
 				className="bg-green-500 h-[10%] w-[25%] rounded-tl-[20px]"
 				style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
+				
 			></div>
 			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col">
 				<div className=" flex-col flex items-center grow justify-space-between">
@@ -33,7 +37,10 @@ export const QuestionCard = ({
 							return (
 								<button
 									key={i}
-									className={`flex-[${weight}] text-center text-slate-500 bg-slate-300 m-[1%] rounded-[20px] py-3`}
+									onClick={() => setClickedButton(i)}
+									className={`flex-[${weight}] text-center text-slate-500 m-[1%] rounded-[20px] px-4 py-3 ${
+										clickedButton === i ? 'bg-green-500 text-white' : 'bg-slate-200'
+									}`}
 								>
 									{agreement}
 								</button>
