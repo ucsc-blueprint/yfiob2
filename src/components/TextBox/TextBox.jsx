@@ -1,23 +1,15 @@
 // Incorporate useStates to save the user's input
 'use client';
-import { useState } from 'react';
 
 export default function TextBox({Placeholder}) {
 
-    const [input, setInput] = useState("");
-
-    const handleChange = (e) => {
-        setInput(e.target.value);
-    }
 
     return (
         <>
         <input 
         type="text"
          placeholder={Placeholder}
-         color='#FFFFFF'
-          onChange={handleChange}
-          value={input}  
+         color='#FFFFFF'  
           style={{width: "502px",
              height: "61px",
               borderRadius: "10px",
