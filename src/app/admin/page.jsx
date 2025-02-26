@@ -10,6 +10,8 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import getData from "../../utils/getData";
 
+const clipLength = 30;
+
 function CustomSearch(props) {
 	return (
 		<div className="w-1/4">
@@ -24,13 +26,17 @@ function CustomSearch(props) {
 	);
 }
 
-function InfoCards({ children, weight }) {
+function InfoCards({ text, weight }) {
+	console.log(text);
+	text = text ?? "Undefined";
+	console.log(text.length);
+
 	return (
 		<div
-			className="bg-blue-200 rounded-md mx-1.5 p-2"
+			className="bg-blue-200 rounded-md mx-1.5 p-2 overflow-hidden"
 			style={{ gridColumn: "span " + weight + " / span " + weight }}
 		>
-			{children}
+			{text.length > clipLength ? text.slice(0, clipLength) + "..." : text}
 		</div>
 	);
 }
@@ -40,7 +46,6 @@ function StudentRow({
 	firstName,
 	lastName,
 	grade,
-	classNum,
 	zipcode,
 	email,
 }) {
@@ -48,13 +53,10 @@ function StudentRow({
 		<div className="flex flex-row items-center w-full my-3">
 			<p className="w-5 h-full">{studentNum}</p>
 			<div className="grid grid-cols-12 grid-rows-1 w-full">
-				<InfoCards weight={3}>
-					{firstName} {lastName}
-				</InfoCards>
-				<InfoCards weight={2}>Grade {grade}</InfoCards>
-				<InfoCards weight={2}>Class {classNum}</InfoCards>
-				<InfoCards weight={2}>Zipcode {zipcode}</InfoCards>
-				<InfoCards weight={3}>{email}</InfoCards>
+				<InfoCards weight={4} text={firstName + " " + lastName ?? ""} />
+				<InfoCards weight={2} text={"Grade: " + grade} />
+				<InfoCards weight={2} text={"Zipcode: " + zipcode} />
+				<InfoCards weight={4} text={email} />
 			</div>
 			<OptionsIcon style={{ transform: "scale(0.8)" }} />
 		</div>
@@ -117,24 +119,27 @@ export default function AdminPage() {
 							<SortIcon />
 						</div>
 					</div>
-					{data
-						.filter((data) => filterFunction(data, search))
-						.map((object, index) => {
-							const data = object.data;
-							return (
-								<div key={data.id || index}>
-									<StudentRow
-										studentNum={index + 1}
-										firstName={data.firstName}
-										lastName={data.lastName}
-										grade={data.grade}
-										classNum={data.classNum}
-										zipcode={data.zipcode}
-										email={data.email}
-									/>
-								</div>
-							);
-						})}
+					{data ? (
+						data
+							.filter((data) => filterFunction(data, search))
+							.map((object, index) => {
+								const data = object.data;
+								return (
+									<div key={data.id || index}>
+										<StudentRow
+											studentNum={index + 1}
+											firstName={data.firstName}
+											lastName={data.lastName}
+											grade={data.grade}
+											zipcode={data.zipcode}
+											email={data.email}
+										/>
+									</div>
+								);
+							})
+					) : (
+						<></>
+					)}
 				</div>
 			</div>
 		</>
