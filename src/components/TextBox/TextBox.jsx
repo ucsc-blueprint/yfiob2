@@ -1,7 +1,7 @@
 // Incorporate useStates to save the user's input
 'use client';
 
-export default function TextBox({Placeholder}) {
+export default function TextBox({Placeholder, onChange, value, id}) {
 
 
     return (
@@ -21,6 +21,9 @@ export default function TextBox({Placeholder}) {
                    lineHeight: '20px',
                      fontSize: '20px',
                  }}
+            onChange={onChange}
+            value={value}
+		    id={id}
           />
           </>
         

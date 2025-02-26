@@ -70,24 +70,21 @@ export const Page = () => {
 
                 {/* Email Input */}                
                 <p className="text-left m-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">Email</p>
-                <input 
-                    type="text"
-                    className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] italic font-normal leading-[20px] pl-[30px] text-white font-sofia  flex items-center"
-                    placeholder={"Email"}
-                    id="email"
-                    value={email}
-                    onChange={(e) => setEmail(e.target.value)}
-                />
+                <TextBox 
+                         Placeholder = {"Email"}
+                         onChange={(e) => setEmail(e.target.value)}
+                         value={email}
+                         id="email"
+                         />
                 
                 {/* Password Input */}
                 <p className="text-left m-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">Password</p>   
-                <input
-                className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] italic font-normal leading-[20px] pl-[30px] text-white font-sofia  flex items-center" 
-                    placeholder={"Password"} 
-                    id="password"
-                    value={password}
-                    onChange={(e) => setPassword(e.target.value)}
-                />
+                <TextBox 
+                         Placeholder = {"Password"}
+                         onChange={(e) => setPassword(e.target.value)}
+                         value={password}
+                         id="password"
+                         />
                 
 
                 <p className="text-left mt-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">School Information</p>
@@ -170,12 +167,11 @@ export const Page = () => {
 
                     
                 {/* Student ID Input */}
-                <input
-                  className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] italic font-normal leading-[20px] pl-[30px] text-white font-sofia flex items-center" 
-                    placeholder={"Student ID Number"}
-                    value={studentID}
-                    onChange={(e) => setStudentID(e.target.value)}
-                />
+                <TextBox 
+                         Placeholder = {"Student ID Number"}
+                         onChange={(e) => setStudentID(e.target.value)}
+                         value={studentID}
+                         />
                 <button
               onClick={handleSubmit}
               className="w-[502px] h-[58px] gap-[10px] rounded-[30px] px-[213px] py-[17px] bg-[#4C78E7] text-white flex items-center justify-center mt-9 "
