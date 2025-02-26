@@ -13,6 +13,8 @@ export const QuestionCard = ({
 	advice,
 	questionNumber,
 	totalQuestions,
+	selectedAnswer, 
+	onAnswerSelect,
 }) => {
 	const [clickedButton, setClickedButton] = useState(null);
 
@@ -37,9 +39,9 @@ export const QuestionCard = ({
 							return (
 								<button
 									key={i}
-									onClick={() => setClickedButton(i)}
+									onClick={() => onAnswerSelect(i)}
 									className={`flex-[${weight}] text-center text-slate-500 m-[1%] rounded-[20px] px-4 py-3 ${
-										clickedButton === i ? 'bg-green-500 text-white' : 'bg-slate-200'
+										selectedAnswer === i ? 'bg-green-500 text-white' : 'bg-slate-200'
 									}`}
 								>
 									{agreement}
