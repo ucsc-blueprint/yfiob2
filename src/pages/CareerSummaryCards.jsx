@@ -5,8 +5,20 @@ import { Navbar } from "../components/Navbar/Navbar.jsx";
 import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
 
-export const CareerSummaryCards = ({ Industry, CardData, Level }) => {
+export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex, TotalIndustries}) => {
 	const [color, setColor] = useState(["", "", ""]);
+
+	function handleLeftClick(){
+        if (Index > 0){
+            SetIndex(Index - 1)
+        }
+    }
+
+    function handleRightClick(){
+        if (Index < TotalIndustries - 1){
+        	SetIndex(Index + 1);
+        }
+    }
 
 	useEffect(() => {
 		switch (Level) {
@@ -22,7 +34,6 @@ export const CareerSummaryCards = ({ Industry, CardData, Level }) => {
 		}
 	}, [Level]);
 
-	console.log(color);
 
 	return (
 		<div
@@ -38,7 +49,7 @@ export const CareerSummaryCards = ({ Industry, CardData, Level }) => {
 			<div className="px-10 flex flex-row justify-evenly pt-10 pb-3 items-center ">
 				<div className="flex w-1/3 flex-row items-center">
 					{/* back button */}
-					<button className="flex items-center">
+					<button className="flex items-center" onClick={handleLeftClick}>
 						<img aria-label="go back to careers page" src={BackButton} alt="<" />
 						<p className="p-0 px-5">Click to Go Back</p>
 					</button>
@@ -68,7 +79,7 @@ export const CareerSummaryCards = ({ Industry, CardData, Level }) => {
 				</div>
 				<div className="w-1/3 flex flex-row items-center justify-end">
 					{/* forward button */}
-					<button className="flex items-center">
+					<button className="flex items-center" onClick={handleRightClick}>
 						<p className="p-0 px-5 text-right">
 							Click to move onto Building and Construction Trades
 						</p>
