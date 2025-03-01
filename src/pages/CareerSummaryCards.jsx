@@ -1,10 +1,11 @@
+"use client";
 import React, { useEffect, useState } from "react";
 import CareersCard from "../components/CareersCard.jsx";
 import { Navbar } from "../components/Navbar/Navbar.jsx";
 import BackButton from "../assets/BackButton.svg";
 import ForwardButton from "../assets/ForwardButton.svg";
 
-const CareerSummaryCards = ({ CardData, Level }) => {
+export const CareerSummaryCards = ({ Industry, CardData, Level }) => {
 	const [color, setColor] = useState(["", "", ""]);
 
 	useEffect(() => {
@@ -61,7 +62,7 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 									: "text-[#FF7022] text-2xl"
 							}
 						>
-							Agriculture and Natural Resources
+							{Industry}
 						</h1>
 					</div>
 				</div>
@@ -101,4 +102,4 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 	);
 };
 
-export default CareerSummaryCards;
+	

@@ -1,41 +1,42 @@
+"use client"
 import { CareersCardExpanded } from "../components/CareersCardExpanded";
 import { Navbar } from "../components/Navbar/Navbar";
+import { CareerSummaryCards } from "../pages/CareerSummaryCards";
+import { db } from "../utils/firebase";
+import { collection, where, query, getDocs } from "firebase/firestore";
+import { useState } from "react";
 
 function App() {
+	const [careerData, setCareerData] = useState([]);
+	const getFromFirebase = async () =>{ 
+		let data = [];
+		const res = await getDocs(query(collection(db, "careers"), where("industry", "==", "Fashion and Interior Design")));
+		res.forEach((document) => {
+			data.push(document.data().careers)
+		})
+		setCareerData(data)
+	}
+
+	getFromFirebase();
+
 	return (
 		<div className="bg-[#FFC273] h-[100vh]">
-			<Navbar />
-			<div className="flex justify-center">
-				<CareersCardExpanded
-					educationLevel={"high-school"}
-					category={"Agriculture and Natural Resources"}
-					careerName={"Agricultural Architect"}
-					title={"Agricultural Architect"}
-					description={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
+			<CareerSummaryCards
+			 CardData=
+			 {
+				careerData.map((career) => (
+					{
+						title: career,
+						description: "",
+						iselementary: true, 
+				  		careerimage: "jignaSmall.png"
 					}
-					salary={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-					}
-					skills={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-					}
-					colleges={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-					}
-					majors={
-						"Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur."
-					}
-					careerImages={[
-						"https://placehold.co/200x200",
-						"https://placehold.co/200x200",
-						"https://placehold.co/200x200",
-						"https://placehold.co/200x200",
-						"https://placehold.co/200x200",
-						"https://placehold.co/200x200",
-					]}
-				/>
-			</div>
+				))
+			 }
+			 level="elementary"
+			 Industry={"Fashion and Interior Design"}
+			>
+			</CareerSummaryCards>
 		</div>
 	);
 }
