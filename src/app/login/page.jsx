@@ -9,7 +9,7 @@ export const Page = () => {
     return (
         <>
             <Navbar />
-            <div className="flex flex-col items-center justify-cent h-screen bg-[#E8F6FF]">
+            <div className="flex flex-col items-center h-screen bg-[#E8F6FF]">
                 
                 <h1 className="text-4xl font-lato font-medium text-[40px] text-center mb-5 mt-[126px] ">Login</h1>
 				<div>
@@ -20,7 +20,6 @@ export const Page = () => {
 						className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] italic font-normal leading-[20px] pl-[30px] flex items-center"
 						placeholder={"Email"}
 						id="email"
-						onChange={(e) => setEmail(e.target.value)}
 					/>
 					
 					{/* Password Input */}
@@ -29,12 +28,11 @@ export const Page = () => {
 					className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] italic font-normal leading-[20px] pl-[30px] flex items-center" 
 						placeholder={"Password"} 
 						id="password"
-						onChange={(e) => setPassword(e.target.value)}
 					/>
 					
 
 				<button
-					className="mt-7 text-[24px] w-full font-lato h-[63px] bg-blue-500 text-white  rounded-[30px] w-[501px]"
+					className="mt-7 text-[24px] w-full font-lato h-[63px] bg-blue-500 text-white  rounded-[30px] w-[500.5px]"
 					>
 					Log In
 					</button>
