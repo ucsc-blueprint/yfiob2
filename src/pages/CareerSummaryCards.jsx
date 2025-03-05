@@ -45,7 +45,6 @@ export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex,
 					: "bg-[#FFC273] font-lato h-[100vh]"
 			}
 		>
-			<Navbar />
 			<div className="px-10 flex flex-row justify-evenly pt-10 pb-3 items-center ">
 				<div className="flex w-1/3 flex-row items-center">
 					{/* back button */}
