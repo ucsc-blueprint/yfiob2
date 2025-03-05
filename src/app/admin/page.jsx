@@ -5,20 +5,26 @@ import SearchIcon from "../../components/SearchIcon";
 import FilterIcon from "../../components/FilterIcon";
 import SortIcon from "../../components/SortIcon";
 import BoxArrowUpIcon from "../../components/BoxArrowUpIcon";
+import ForwardArrow from "../../components/ForwardArrow";
+import BackArrow from "../../components/BackArrow";
+import AdminFilterPopup from "../../components/AdminFilterPopup";
 
-import { Navbar } from "../../components/Navbar/Navbar";
 import { useEffect, useState } from "react";
 import getData from "../../utils/getData";
+import AdminNavbar from "../../components/AdminNavbar/AdminNavbar";
 
 const clipLength = 30;
 
 function CustomSearch(props) {
 	return (
 		<div className="w-1/4">
-			<div className="m-3 flex flex-row mb-0">
-				<input className="field-sizing-content w-4/5 outline-none" {...props} />
-				<button className="mx-2">
-					<SearchIcon style={{ transform: "scale(0.8)" }} />
+			<div className="flex flex-row mb-0">
+				<input
+					className="field-sizing-content outline-none min-w-1 grow mx-3 italic"
+					{...props}
+				/>
+				<button className="ml-2">
+					<SearchIcon style={{ transform: "scale(0.55)" }} />
 				</button>
 			</div>
 			<hr className="h-px w-full  my-0 border-0 bg-gray-700" />
@@ -27,13 +33,10 @@ function CustomSearch(props) {
 }
 
 function InfoCards({ text, weight }) {
-	console.log(text);
-	text = text ?? "Undefined";
-	console.log(text.length);
-
+	text = text ?? "undefined";
 	return (
 		<div
-			className="bg-blue-200 rounded-md mx-1.5 p-2 overflow-hidden"
+			className="bg-[#4C78E721] rounded-md mx-1.5 p-2 overflow-hidden"
 			style={{ gridColumn: "span " + weight + " / span " + weight }}
 		>
 			{text.length > clipLength ? text.slice(0, clipLength) + "..." : text}
@@ -76,14 +79,66 @@ function filterFunction(data, search) {
 	return name.includes(search.toLowerCase());
 }
 
+function PageSelector({ data, currentPage, setCurrentPage }) {
+	const maxPages = Math.ceil(data.length / 10);
+
+	return (
+		<>
+			<div className="flex flex-row w-1/3">
+				<div className="flex flex-row justify-between grow-[6]">
+					<button>
+						<BackArrow
+							onClick={() => {
+								currentPage > 0
+									? setCurrentPage(currentPage - 1)
+									: console.log("No lower page");
+							}}
+						/>
+					</button>
+					<button>{currentPage + 1}</button>
+					<button
+						onClick={() => {
+							setCurrentPage(currentPage + 1);
+						}}
+					>
+						{currentPage + 2 <= maxPages ? currentPage + 2 : ""}
+					</button>
+					<button
+						onClick={() => {
+							setCurrentPage(currentPage + 2);
+						}}
+					>
+						{currentPage + 3 <= maxPages ? currentPage + 3 : ""}
+					</button>
+					<button>
+						<ForwardArrow
+							onClick={() => {
+								currentPage < maxPages
+									? setCurrentPage(currentPage + 1)
+									: console.log("No upper page");
+							}}
+						/>
+					</button>
+				</div>
+				<div className="grow px-3">
+					<p>{`out of ${maxPages}`}</p>
+				</div>
+			</div>
+		</>
+	);
+}
 export default function AdminPage() {
 	const [data, setData] = useState([]);
 	const [search, setSearch] = useState("");
+	const [currentPage, setCurrentPage] = useState(0);
+	const [grade, setGrade] = useState(1);
+	const [shown, setShown] = useState(false);
+	const [zipcode, setZipcode] = useState(123091);
+	const [school, setSchool] = useState(null);
 
 	useEffect(() => {
 		const getNewData = async () => {
 			const newData = await getData("users");
-			console.log(newData);
 			setData(newData);
 		};
 		getNewData();
@@ -95,7 +150,16 @@ export default function AdminPage() {
 
 	return (
 		<>
-			<Navbar />
+			{shown ? (
+				<AdminFilterPopup
+					grade={grade}
+					setGrade={setGrade}
+					setZipcode={setZipcode}
+					setSchool={setSchool}
+					setShown={setShown}
+				/>
+			) : null}
+			<AdminNavbar />
 			<div className="flex justify-center w-[100vw]">
 				<div className="w-[80vw] h-[80vh] p-10">
 					<div className="flex flex-row justify-between">
@@ -109,29 +173,41 @@ export default function AdminPage() {
 							<p>Export Student Data</p>
 						</div>
 					</div>
-					<div className="flex flex-row justify-between">
+					<div className="flex flex-row justify-between pb-3">
 						<CustomSearch
+							onClick={() => {
+								setCurrentPage(0);
+							}}
 							onChange={handleChange}
 							placeholder="Type the name of student"
 						/>
 						<div className="flex flex-row">
-							<FilterIcon className="mx-3" />
-							<SortIcon />
+							<button>
+								<FilterIcon
+									onClick={() => {
+										setShown(true);
+									}}
+									style={{ transform: "scale(0.8)" }}
+									className="mx-3"
+								/>
+							</button>
+							<SortIcon style={{ transform: "scale(0.8)" }} />
 						</div>
 					</div>
 					{data ? (
 						data
 							.filter((data) => filterFunction(data, search))
+							.slice(currentPage * 10, currentPage * 10 + 10)
 							.map((object, index) => {
 								const data = object.data;
 								return (
 									<div key={data.id || index}>
 										<StudentRow
-											studentNum={index + 1}
+											studentNum={currentPage * 10 + index + 1}
 											firstName={data.firstName}
 											lastName={data.lastName}
 											grade={data.grade}
-											zipcode={data.zipcode}
+											zipcode={Math.floor(data.zipcode)}
 											email={data.email}
 										/>
 									</div>
@@ -140,6 +216,13 @@ export default function AdminPage() {
 					) : (
 						<></>
 					)}
+					<div className="flex w-full justify-end py-5">
+						<PageSelector
+							data={data}
+							currentPage={currentPage}
+							setCurrentPage={setCurrentPage}
+						/>
+					</div>
 				</div>
 			</div>
 		</>
