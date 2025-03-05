@@ -2,8 +2,8 @@
 import React, { useEffect, useState } from "react";
 import CareersCard from "../components/CareersCard.jsx";
 import { Navbar } from "../components/Navbar/Navbar.jsx";
-import BackButton from "../assets/BackButton.svg";
-import ForwardButton from "../assets/ForwardButton.svg";
+import BackArrow from "../components/BackArrow.jsx"
+import ForwardArrow from "../components/ForwardArrow.jsx";
 
 export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex, TotalIndustries}) => {
 	const [color, setColor] = useState(["", "", ""]);
@@ -50,7 +50,8 @@ export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex,
 				<div className="flex w-1/3 flex-row items-center">
 					{/* back button */}
 					<button className="flex items-center" onClick={handleLeftClick}>
-						<img aria-label="go back to careers page" src={BackButton} alt="<" />
+						<BackArrow />
+						{/* <img aria-label="go back to careers page" src={BackButton} alt="<" /> */}
 						<p className="p-0 px-5">Click to Go Back</p>
 					</button>
 				</div>
@@ -81,9 +82,9 @@ export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex,
 					{/* forward button */}
 					<button className="flex items-center" onClick={handleRightClick}>
 						<p className="p-0 px-5 text-right">
-							Click to move onto Building and Construction Trades
+							Click to go forward
 						</p>
-						<img aria-label="go to next career" src={ForwardButton} alt=">" />
+						<ForwardArrow />
 					</button>
 				</div>
 			</div>
