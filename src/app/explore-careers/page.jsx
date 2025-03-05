@@ -3,7 +3,7 @@ import { CareerSummaryCards } from "../../pages/CareerSummaryCards";
 import { db } from "../../utils/firebase";
 import { collection, where, query, getDocs } from "firebase/firestore";
 import { useState } from "react";
-
+import { Navbar } from "../../components/Navbar/Navbar";
 export default function ExploreCareersPage() {
     const INDUSTRIES = ['Agriculture and Natural Resources',
           'Energy and Utilities',
@@ -45,6 +45,7 @@ export default function ExploreCareersPage() {
 
 	return (
 		<div className="bg-[#FFC273] h-full">
+			<Navbar/>
 			<CareerSummaryCards
 			 CardData=
 			 {
