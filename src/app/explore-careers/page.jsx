@@ -21,7 +21,7 @@ export default function ExploreCareersPage() {
           'Marketing, Sales, and Service',
           'Aviation',
           'Supply Chain',
-          'Law, Law Enforcement',
+          'Law & Law Enforcement',
           'Finance and Business',
           'Public Services',
           'Fashion and Interior Design',
