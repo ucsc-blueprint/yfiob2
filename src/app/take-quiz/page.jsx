@@ -37,7 +37,7 @@ export default function Page() {
 		return Object.values(question.sub_questions).map((subQuestion, sIndex) => {
 			const questionId = `${qIndex}-${sIndex}`; 
 			return (
-				<div className="m-20" key={questionId}>
+				<div className="m" key={questionId}>
 					<QuestionCard
 						advice={question.question}
 						question={subQuestion.statement}
@@ -60,46 +60,62 @@ export default function Page() {
 	const currentQuestionId =  `${questionNum}-${savedRandomNums[questionNum] || randomNum}`;
 	return (
 		<>
-			<Navbar />
-			<div className="flex justify-center">
-				<button
-					onClick={() => {
-						if (questionNum > 0) {
-							setQuestionNum(questionNum - 1);
-						}
-					}}
-				>
-					<BackArrow />
-				</button>
-				<div className="flex flex-col items-center">
-					{questionsObject[questionNum]?.[randomNum] ?? (
-						<div className="m-20">
-							<QuestionCard
-								advice={""}
-								question={""}
-								questionNumber={"1"}
-								totalQuestions={"6"}
-								selectedAnswer={answers[question]}
-								onAnswerSelect={(answer) => {
-									setAnswers((prevAnswers) => ({
-										...prevAnswers,
-										[currentQuestionId]: answer,
-									}));
-								}}
-							/>
-						</div>
-					)}
+<Navbar />
+<div className="flex flex-col justify-center items-center m-16">
+	<div className="flex flex-row items-center justify-center">
+		<button className = "mr-10"
+			onClick={() => {
+				if (questionNum > 0) {
+					setQuestionNum(questionNum - 1);
+				}
+			}}
+		>
+			<BackArrow />
+		</button>
+
+		{/* Question Card */}
+		<div className="flex flex-col items-center ">
+			{questionsObject[questionNum]?.[randomNum] ?? (
+				<div className="m-20">
+					<QuestionCard
+						advice={""}
+						question={""}
+						questionNumber={"1"}
+						totalQuestions={"6"}
+						selectedAnswer={answers[question]}
+						onAnswerSelect={(answer) => {
+							setAnswers((prevAnswers) => ({
+								...prevAnswers,
+								[currentQuestionId]: answer,
+							}));
+						}}
+					/>
 				</div>
-				<button
-					onClick={() => {
-						if (questionNum < questions.length - 1) {
-							setQuestionNum(questionNum + 1); // Navigate to the next question
-						}
-					}}
-				>
-					<ForwardArrow />
-				</button>
-			</div>
+			)}
+		</div>
+
+		<button className="ml-10"
+			onClick={() => {
+				if (questionNum < questions.length - 1) {
+					setQuestionNum(questionNum + 1);
+				}
+			}}
+		>
+			<ForwardArrow />
+		</button>
+	</div>
+
+	
+</div>
+	{
+		
+		questionNum === questions.length - 1 && <div className="mt-6 flex justify-center ">
+		<button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
+			Submit
+		</button>
+	</div>
+	}
+
 		</>
 	);
 }

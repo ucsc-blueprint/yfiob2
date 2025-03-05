@@ -52,8 +52,15 @@ export const QuestionCard = ({
 				</div>
 				<div className="flex justify-end items-end text-2xl pb-[2vh]">
 					<span className="text-green-600">{questionNumber}</span>
-					<span className="text-slate-400">/{totalQuestions}</span>
+					<span className="text-slate-400">/{totalQuestions}</span> 
 				</div>
+			</div>
+			
+			<div className="flex-end justify-center">
+				<button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700"
+				>
+					Submit
+				</button>
 			</div>
 		</div>
 	);
