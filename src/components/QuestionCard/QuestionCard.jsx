@@ -14,7 +14,7 @@ export const QuestionCard = ({
 	questionNumber,
 	totalQuestions,
 	selectedAnswer, 
-	onAnswerSelect,
+	onAnswerSelect = () => {},
 }) => {
 	const [clickedButton, setClickedButton] = useState(null);
 
