@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 
 const agreeArray = [
 	"Strongly Disagree",
@@ -13,12 +13,18 @@ export const QuestionCard = ({
 	advice,
 	questionNumber,
 	totalQuestions,
+	selectedAnswer, 
+	onAnswerSelect = () => {},
 }) => {
+	const [clickedButton, setClickedButton] = useState(null);
+
+
 	return (
 		<div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden">
 			<div
 				className="bg-green-500 h-[10%] w-[25%] rounded-tl-[20px]"
 				style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
+				
 			></div>
 			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col">
 				<div className=" flex-col flex items-center grow justify-space-between">
@@ -33,7 +39,10 @@ export const QuestionCard = ({
 							return (
 								<button
 									key={i}
-									className={`flex-[${weight}] text-center text-slate-500 bg-slate-300 m-[1%] rounded-[20px] py-3`}
+									onClick={() => onAnswerSelect(i)}
+									className={`flex-[${weight}] text-center text-slate-500 m-[1%] rounded-[20px] px-4 py-3 ${
+										selectedAnswer === i ? 'bg-green-500 text-white' : 'bg-slate-200'
+									}`}
 								>
 									{agreement}
 								</button>
@@ -43,8 +52,15 @@ export const QuestionCard = ({
 				</div>
 				<div className="flex justify-end items-end text-2xl pb-[2vh]">
 					<span className="text-green-600">{questionNumber}</span>
-					<span className="text-slate-400">/{totalQuestions}</span>
+					<span className="text-slate-400">/{totalQuestions}</span> 
 				</div>
+			</div>
+			
+			<div className="flex-end justify-center">
+				<button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700"
+				>
+					Submit
+				</button>
 			</div>
 		</div>
 	);
