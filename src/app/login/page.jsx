@@ -30,9 +30,8 @@ export const Page = () => {
 						id="password"
 					/>
 					
-
 				<button
-					className="mt-7 text-[24px] w-full font-lato h-[63px] bg-blue-500 text-white  rounded-[30px] w-[500px]"
+					className="mt-7 text-[24px] w-full font-lato h-[63px] bg-blue-500 text-white  rounded-[30px] w-[499.9px]"
 					>
 					Log In
 					</button>
