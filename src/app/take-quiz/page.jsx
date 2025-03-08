@@ -37,7 +37,7 @@ export default function Page() {
 		return Object.values(question.sub_questions).map((subQuestion, sIndex) => {
 			const questionId = `${qIndex}-${sIndex}`; 
 			return (
-				<div className="m" key={questionId}>
+				<div key={questionId}>
 					<QuestionCard
 						advice={question.question}
 						question={subQuestion.statement}
