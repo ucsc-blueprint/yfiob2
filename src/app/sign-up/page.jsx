@@ -1,6 +1,7 @@
 "use client";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
+import TextBox from "../../components/TextBox/TextBox.jsx";
 import Button from "../../components/Button.jsx";
 import addData from "../../utils/addData.js";
 import schoolData from "./schools.json";
@@ -80,199 +81,142 @@ export const Page = () => {
     return (
         <>
             <Navbar />
-            <div className="bg-[#E8F6FF] min-h-[calc(100vh-64px)] flex items-center justify-center">
-                <div className="flex flex-col items-center justify-center">
-                    <h1 className="text-4xl font-sofia font-medium text-[40px] mb-8 leading-[40px] tracking-normal text-center">
-                        Sign up
-                    </h1>
+            <div className="bg-[#E8F6FF] flex flex-col justify-center items-center">
+                    <div className = "space-y-4 w-[502px]">
+                        <h1 className="text-4xl font-sofia font-medium text-[40px] m-8 leading-[40px] tracking-normal text-center">
+                            Sign up
+                        </h1>
 
-                    {/* Email Input */}
-                    <p className="text-left m-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
-                        Email
-                    </p>
-                    <input
-                        Placeholder="Email"
-                        onChange={(e) => setEmail(e.target.value)}
-                        value={email}
-                        id="email"
-                        onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                        onBlur={(e) => e.target.style.color = "#898989"}
-                        className="w-full h-[61px] placeholder-gray-400 text-gray-900 focus:text-black focus:outline-none"
-                        style={{width: "502px",
-                          height: "61px",
-                          borderRadius: "10px",
-                          textIndent: '30px',
-                          fontFamily: "Sofia Pro",
-                          color: "#898989",
-                          fontStyle: 'italic',
-                          fontWeight: 400,
-                          lineHeight: '20px',
-                          fontSize: '20px',
-                              }}
-                    />
-
-                    {/* Password Input */}
-                    <p className="text-left m-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
-                        Password
-                    </p>
-                    <input
-                        type="password"
-                        Placeholder="Password"
-                        onChange={(e) => setPassword(e.target.value)}
-                        value={password}
-                        id="password"
-                        onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                        onBlur={(e) => e.target.style.color = "#898989"}
-                        className="focus:outline-none"
-                        style={{width: "502px",
-                          height: "61px",
-                           borderRadius: "10px",
-                            textIndent: '30px',
-                             fontFamily: "Sofia Pro",
-                              color: "#898989",
-                               fontStyle: 'italic',
-                                fontWeight: 400,
-                                lineHeight: '20px',
-                                  fontSize: '20px',
-                              }}
-                    />
-
-                    <p className="text-left mt-3 w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
-                        School Information
-                    </p>
-
-                    {/* //TODO Add the arrows to the dropdowns */}
-                    {/* School Dropdown Input */}
-                    <div className="relative w-[502px] m-3">
-                        <input
-                            type="text"
-                            placeholder="School"
-                            value={searchTerm}
-                            onChange={(e) => {
-                                setSearchTerm(e.target.value);
-                                setSchool(e.target.value);
-                            }}
-                            onFocus={(e) => {
-                              e.target.style.color = "black"; 
-                              setIsDropdownVisible(true);
-                            }}
-                            onBlur={(e) => {
-                              setTimeout(() => setIsDropdownVisible(false), 200);
-                              e.target.style.color = "#898989";
-                          }}
-                            className="dropdown text-left w-full h-[61px] rounded-lg bg-white focus:outline-none"
-                            style={{
-                                textAlign: "left",
-                                textIndent: "30px",
-                                fontFamily: "Sofia Pro",
-                                color: "#898989",
-                                fontStyle: "italic",
-                                fontWeight: 400,
-                                lineHeight: "20px",
-                                fontSize: "20px",
-                            }}
+                        {/* Email Input */}
+                        <p className="text-left w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
+                            Email
+                        </p>
+                        <TextBox 
+                            type = "text"
+                            Placeholder = {"Email"}
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            id="email"
+                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
+                            onBlur={(e) => e.target.style.color = "#898989"}
                         />
 
-                        {/* Dropdown List */}
-                        {isDropdownVisible && (
-                            <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
-                                {filteredSchools.length > 0 ? (
-                                    filteredSchools.map((s, index) => (
-                                        <li
-                                            key={index}
-                                            onMouseDown={() => {
-                                                setSchool(s);
-                                                setSearchTerm(s);
-                                                setIsDropdownVisible(false);
-                                            }}
-                                            className="p-2 hover:bg-gray-100 cursor-pointer"
-                                        >
-                                            {s}
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li className="text-gray-500 p-2">No results found</li>
-                                )}
-                            </ul>
-                        )}
-                    </div>
-
-                    {/* Grade Dropdown Input */}
-                    <div className="relative w-[502px] mb-3">
-                        <input
-                            type="text"
-                            placeholder="Grade"
-                            value={gradeSearchTerm}
-                            onChange={(e) => {
-                                setGradeSearchTerm(e.target.value);
-                                setGrade(e.target.value);
-                            }}
-                            onFocus={() => setIsGradeDropdownVisible(true)}
-                            onBlur={() => setTimeout(() => setIsGradeDropdownVisible(false), 200)}
-                            className="dropdown text-left w-full h-[61px] rounded-lg bg-white"
-                            style={{
-                                textAlign: "left",
-                                textIndent: "30px",
-                                fontFamily: "Sofia Pro",
-                                color: "#898989",
-                                fontStyle: "italic",
-                                fontWeight: 400,
-                                lineHeight: "20px",
-                                fontSize: "20px",
-                            }}
+                        {/* Password Input */}
+                        <p className="text-left w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
+                            Password
+                        </p>
+                        <TextBox 
+                            type="password"
+                            Placeholder="Password"
+                            onChange={(e) => setPassword(e.target.value)}
+                            value={password}
+                            id="password"
+                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
+                            onBlur={(e) => e.target.style.color = "#898989"}
                         />
 
-                        {/* Dropdown List */}
-                        {isGradeDropdownVisible && (
-                            <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
-                                {filteredGrades.length > 0 ? (
-                                    filteredGrades.map((g, index) => (
-                                        <li
-                                            key={index}
-                                            onMouseDown={() => {
-                                                setGrade(g);
-                                                setGradeSearchTerm(g);
-                                                setIsGradeDropdownVisible(false);
-                                            }}
-                                            className="p-2 hover:bg-gray-100 cursor-pointer"
-                                        >
-                                            {g}
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li className="text-gray-500 p-2">No results found</li>
-                                )}
-                            </ul>
-                        )}
+                        <p className="text-left w-[502px] font-sofia font-normal text-[20px] leading-[20px] tracking-normal">
+                            School Information
+                        </p>
+
+                        {/* //TODO Add the arrows to the dropdowns */}
+                        {/* School Dropdown Input */}
+                        <div className="relative">
+                            <TextBox 
+                                Placeholder="School"
+                                onChange={(e) => {
+                                    setSearchTerm(e.target.value);
+                                    setSchool(e.target.value);
+                                }}
+                                value={searchTerm}
+                                onFocus={(e) => {
+                                    e.target.style.color = "black"; 
+                                    setIsDropdownVisible(true);
+                                }}
+                                onBlur={(e) => {
+                                    setTimeout(() => setIsDropdownVisible(false), 200);
+                                    e.target.style.color = "#898989";
+                                }}
+                            />
+                            
+                            {/* Dropdown List */}
+                            {isDropdownVisible && (
+                                <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
+                                    {filteredSchools.length > 0 ? (
+                                        filteredSchools.map((s, index) => (
+                                            <li
+                                                key={index}
+                                                onMouseDown={() => {
+                                                    setSchool(s);
+                                                    setSearchTerm(s);
+                                                    setIsDropdownVisible(false);
+                                                }}
+                                                className="p-2 hover:bg-gray-100 cursor-pointer"
+                                            >
+                                                {s}
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <li className="text-gray-500 p-2">No results found</li>
+                                    )}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* Grade Dropdown Input */}
+                        <div className="relative">
+                            <TextBox 
+                                Placeholder="Grade"
+                                onChange={(e) => {
+                                    setGradeSearchTerm(e.target.value);
+                                    setGrade(e.target.value);
+                                }}
+                                value={gradeSearchTerm}
+                                onFocus={() => setIsGradeDropdownVisible(true)}
+                                onBlur={() => setTimeout(() => setIsGradeDropdownVisible(false), 200)}
+                            />
+
+                            {/* Dropdown List */}
+                            {isGradeDropdownVisible && (
+                                <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
+                                    {filteredGrades.length > 0 ? (
+                                        filteredGrades.map((g, index) => (
+                                            <li
+                                                key={index}
+                                                onMouseDown={() => {
+                                                    setGrade(g);
+                                                    setGradeSearchTerm(g);
+                                                    setIsGradeDropdownVisible(false);
+                                                }}
+                                                className="p-2 hover:bg-gray-100 cursor-pointer"
+                                            >
+                                                {g}
+                                            </li>
+                                        ))
+                                    ) : (
+                                        <li className="text-gray-500 p-2">No results found</li>
+                                    )}
+                                </ul>
+                            )}
+                        </div>
+
+                        {/* Student ID Input */}
+                        <TextBox 
+                            Placeholder="Student ID Number"
+                            onChange={(e) => setStudentID(e.target.value)}
+                            value={studentID}
+                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
+                            onBlur={(e) => e.target.style.color = "#898989"}
+                        />
                     </div>
-
-                    {/* Student ID Input */}
-                    <input
-                        Placeholder="Student ID Number"
-                        onChange={(e) => setStudentID(e.target.value)}
-                        value={studentID}
-
-                        style={{width: "502px",
-                          height: "61px",
-                          borderRadius: "10px",
-                            textIndent: '30px',
-                             fontFamily: "Sofia Pro",
-                              color: "#898989",
-                               fontStyle: 'italic',
-                                fontWeight: 400,
-                                lineHeight: '20px',
-                                  fontSize: '20px',
-                              }}
-                    />
-
-                    <button
-                        onClick={handleSubmit}
-                        className="w-[502px] h-[58px] gap-[10px] rounded-[30px] px-[213px] py-[17px] bg-[#4C78E7] text-white flex items-center justify-center mt-9"
-                    >
-                        Sign Up
-                    </button>
+                    <div className="my-6 w-[502px]">
+                        <Button
+                            text = "Sign Up"
+                            size = "big"
+                            onClick = {handleSubmit}
+                        />
+                    </div>
                 </div>
-            </div>
         </>
     );
 };
