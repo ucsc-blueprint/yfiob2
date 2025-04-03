@@ -84,7 +84,7 @@ export const Page = () => {
             <Navbar />
             <div className="bg-[#E8F6FF] flex flex-col justify-center items-center">
                 <div className = "space-y-4 w-[502px]">
-                    <h1 className="text-4xl font-sofia font-medium text-[40px] mb-8 leading-[40px] tracking-normal text-center">
+                    <h1 className="text-4xl font-sofia font-medium text-[40px] m-8 leading-[40px] tracking-normal text-center">
                         Sign up
                     </h1>
 
