@@ -89,7 +89,7 @@ export const Page = () => {
                     </h1>
 
                     {/* Email Input */}
-                    <p className="text-left m-3 w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
+                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
                         Email
                     </p>
                     <TextBox 
@@ -103,7 +103,7 @@ export const Page = () => {
                     />
 
                     {/* Password Input */}
-                    <p className="text-left m-3 w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
+                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
                         Password
                     </p>
                     <TextBox 
@@ -116,7 +116,7 @@ export const Page = () => {
                             onBlur={(e) => e.target.style.color = "#898989"}
                     />
 
-                    <p className="text-left mt-3 w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
+                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
                         School Information
                     </p>
 
@@ -215,7 +215,7 @@ export const Page = () => {
                             onBlur={(e) => e.target.style.color = "#898989"}
                         />
                     </div>
-                    
+
                     <div className="my-6 w-[502px]">
                         <Button
                             text = "Sign Up"
