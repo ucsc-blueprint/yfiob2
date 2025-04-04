@@ -1,14 +1,18 @@
 "use client";
 import React, { useState } from "react";
-import { useRouter } from "next/navigation";
+import Link from "next/link";
+import { useRouter  } from "next/navigation";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import TextBox from "../../components/TextBox/TextBox";
+
 
 function Page() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
+
 
     const handleLogin = async () => {
 		if (!email || !password) {
@@ -37,6 +41,14 @@ function Page() {
                 <div>
                     {/* Email Input */}
                     <p className="text-left m-3 w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">Email</p>
+                     <TextBox 
+                            type = "text"
+                            Placeholder = {"Email"}
+                            className="w-[502px] h-[61px] font-lato rounded-[10px] text-[20px] text-[#898989] font-medium leading-[20px] pl-[30px] flex items-center"
+                            onChange={(e) => setEmail(e.target.value)}
+                            value={email}
+                            id="email"
+                        />
                     <input
                         type="text"
                         className="w-[502px] h-[61px] rounded-[10px] text-[20px] text-[#898989] font-medium leading-[20px] pl-[30px] flex items-center"
@@ -63,7 +75,12 @@ function Page() {
                     >
                         Log In
                     </button>
-                    <p className="mt-9 ml-28 font-lato">Don't have an account? <span className="text-[#4C78E7]">Sign Up!</span></p>
+                    <p className="mt-9 ml-28 font-lato">Don't have an account? 
+                    &nbsp;	
+                        <Link href="/sign-up" className="text-[#4C78E7]">
+                            Sign Up!	
+                        </Link>
+                    </p>
                 </div>
             </div>
         </>
