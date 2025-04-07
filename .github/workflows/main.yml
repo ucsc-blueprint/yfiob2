@@ -2,7 +2,7 @@ name: Node.js CI
 
 on:
   push:
-    branches: [ main, test-assessment-card-simple ]
+    branches: [ main ]
   pull_request:
     branches: [ main ]
 
