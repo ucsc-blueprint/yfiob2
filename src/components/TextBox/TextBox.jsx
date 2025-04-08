@@ -28,6 +28,5 @@ export default function TextBox({Placeholder, onChange, onFocus, onBlur, value, 
         id={id}
         />
         </>
-        
     );
 }

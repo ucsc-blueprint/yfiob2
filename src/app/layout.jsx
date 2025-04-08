@@ -6,8 +6,16 @@ export default function RootLayout({ children }) {
 			<head>
 				<link rel="preconnect" href="https://fonts.googleapis.com" />
 				<link rel="preconnect" href="https://fonts.gstatic.com" />
+
+				{/* Lato font */}
 				<link
 					href="https://fonts.googleapis.com/css2?family=Lato&display=swap"
+					rel="stylesheet"
+				/>
+
+				{/* Kumbh Sans font */}
+				<link 
+					href="https://fonts.googleapis.com/css2?family=Kumbh+Sans:wght@100..900&display=swap" 
 					rel="stylesheet"
 				/>
 				<meta charSet="UTF-8" />
