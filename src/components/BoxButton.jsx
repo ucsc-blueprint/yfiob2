@@ -1,28 +1,34 @@
 import React from "react";
 
-export const BoxButton = ({text, color, onClick}) => {
-  // Button size is dependent on text-size
+export const BoxButton = ({ text, color = "blue", onClick }) => {
   if (color === "gray") {
     return (
-      <button 
-        className = "text-white font-lato font-normal text-[1.125rem] bg-[#4C78E7] w-max p-4 pl-8 pr-8 rounded-[30px]"
-        onClick = {onClick}
+      <button
+        className="min-w-[118px] bg-[#E0E0E0] text-[#4F4F4F] font-lato text-[1rem] px-6 py-3 rounded-[10px]"
+        onClick={onClick}
       >
         {text}
       </button>
-    );  
-  // Button size is based on parent container
-  } else if (size === "blue") {
+    );
+  } else if (color === "blue") {
     return (
-        <button 
-            className="rounded-[10px] text-white font-lato text-center w-full font-normal text-[22px] bg-[#4C78E7] p-4 pl-8 pr-8"
-            onClick = {onClick}
-        >
-            {text}
-        </button>
-    );  
-  } 
+      <button
+        className="w-full bg-[#4C78E7] text-white font-lato text-[1.375rem] px-8 py-4 rounded-[10px]"
+        onClick={onClick}
+      >
+        {text}
+      </button>
+    );
+  } else if (color === "lightblue") {
+    return (
+      <button
+        className="w-full bg-[#D8E6FF] border border-[#4C78E7] text-black font-lato text-[1.125rem] px-8 py-4 rounded-[10px]"
+        onClick={onClick}
+      >
+        {text}
+      </button>
+    );
+  }
 };
 
-export default Button;
- 
+export default BoxButton;
