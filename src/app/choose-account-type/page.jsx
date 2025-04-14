@@ -11,15 +11,15 @@ export const Page = () => {
     const router = useRouter();
     
     const handleLoginClick = () => {
-        router.push('/login');
+        router.push('/login'); // Navigate to the /login page
     };
 
     const handleSignUpClick = () => {
-        router.push('/sign-up'); 
-
+        router.push('/sign-up'); // Navigate to the /signup page
+    }
 
     const goToQuiz = () => {
-        router.push('/take-quiz'); 
+        router.push('/take-quiz'); // Navigate to the quiz page
     }
     
     return (

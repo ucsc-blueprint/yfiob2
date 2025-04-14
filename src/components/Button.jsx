@@ -11,6 +11,8 @@ export const Button = ({text, size, onClick}) => {
         {text}
       </button>
     );  
+
+    
   // Button size is based on parent container
   } else if (size === "big") {
     return (
