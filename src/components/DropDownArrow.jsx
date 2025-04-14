@@ -1,0 +1,16 @@
+import * as React from "react";
+const DropDownArrow = (props) => (
+    <svg 
+        xmlns="http://www.w3.org/2000/svg"
+        width="21" 
+        height="13" 
+        viewBox="0 0 21 13" 
+        fill="none" 
+        className="absolute right-3 top-1/2 w-6 h-6 -translate-y-1/2 pointer-events-none">
+    <path 
+        d="M8.21183 12.1522L0.864005 4.80435C-0.0309225 3.90942 -0.230632 2.88543 0.264875 1.73239C0.758498 0.577464 1.64118 0 2.91292 0H17.4673C18.739 0 19.6217 0.577464 20.1153 1.73239C20.6108 2.88543 20.4111 3.90942 19.5162 4.80435L12.1684 12.1522C11.8857 12.4348 11.5796 12.6467 11.2499 12.788C10.9202 12.9293 10.5669 13 10.1901 13C9.81328 13 9.46002 12.9293 9.13031 12.788C8.8006 12.6467 8.49444 12.4348 8.21183 12.1522Z" 
+        fill="#4C78E7" 
+        fillOpacity="0.5"/>
+    </svg>
+);
+export default DropDownArrow;
