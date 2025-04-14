@@ -1,3 +1,4 @@
+import { useState } from "react";
 import XIcon from "./XIcon";
 
 const grades = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12];
@@ -17,17 +18,37 @@ function CustomSearch(props) {
 }
 
 export default function AdminFilterPopup({
-	grade,
+	currentGrade,
 	setGrade,
 	setZipcode,
-	setSchool,
 	setShown,
 }) {
+	const [tempGrade, setTempGrade] = useState(currentGrade);
+	const [tempZip, setTempZip] = useState(null);
+
+	function search() {
+		setZipcode(tempZip);
+		setGrade(tempGrade);
+		setShown(false);
+	}
+
+	function reset() {
+		setTempGrade(null);
+		setTempZip(null);
+		setZipcode(null);
+		setGrade(null);
+		setShown(false);
+	}
+
 	function CircleButton({ grade, selected }) {
 		return (
 			<button
 				onClick={() => {
-					setGrade(grade);
+					if (grade === currentGrade) {
+						setTempGrade(null);
+					} else {
+						setTempGrade(grade);
+					}
 				}}
 				className={`rounded-full h-[2rem] w-[2rem] m-2 aspect-square ${
 					!selected ? "bg-[#4C78E721]" : "bg-[#4c78e795]"
@@ -39,12 +60,19 @@ export default function AdminFilterPopup({
 	}
 
 	return (
-		<div className="absolute top-0 left-0 w-full h-full backdrop-blur-md z-20">
-			<div className="flex items-center justify-center w-full h-full">
-				<div className="bg-white  rounded-lg shadow-md flex flex-col items-center">
+		<div
+			className="absolute top-0 left-0 w-full h-full backdrop-blur-md z-20"
+			onClick={(e) => {
+				if (e.target.id === "close") {
+					setShown(false);
+				}
+			}}
+		>
+			<div className="flex items-center justify-center w-full h-full" id="close">
+				<div className="bg-white rounded-lg shadow-md flex flex-col items-center">
 					<button
 						className="ml-auto"
-						onClick={() => {
+						onClick={(e) => {
 							setShown(false);
 						}}
 					>
@@ -59,7 +87,7 @@ export default function AdminFilterPopup({
 									<CircleButton
 										key={index}
 										grade={gradeNum}
-										selected={gradeNum === grade}
+										selected={gradeNum === tempGrade}
 									/>
 								))}
 							</div>
@@ -71,12 +99,12 @@ export default function AdminFilterPopup({
 							<div className="grow-[20]">
 								<CustomSearch
 									onChange={(e) => {
-										setZipcode(e.target.value);
+										setTempZip(e.target.value);
 									}}
 								/>
 							</div>
 						</div>
-						<div className="flex flex-row items-end my-3">
+						{/* <div className="flex flex-row items-end my-3">
 							<h1 className="mx-1 p-2 rounded-sm bg-[#4C78E721] font-black">School</h1>
 							<div className="grow-[20]">
 								<CustomSearch
@@ -85,6 +113,20 @@ export default function AdminFilterPopup({
 									}}
 								/>
 							</div>
+						</div> */}
+						<div className="flex">
+							<button
+								className="bg-[#4C78E780] my-3 mx-1 p-2 rounded-sm"
+								onClick={() => search()}
+							>
+								Search
+							</button>
+							<button
+								className="bg-[#4C78E780] my-3 mx-1 p-2 rounded-sm"
+								onClick={() => reset()}
+							>
+								Reset
+							</button>
 						</div>
 					</div>
 				</div>

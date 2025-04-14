@@ -1,17 +1,16 @@
 "use client";
 
-import OptionsIcon from "../../components/OptionsIcon";
-import SearchIcon from "../../components/SearchIcon";
-import FilterIcon from "../../components/FilterIcon";
-import SortIcon from "../../components/SortIcon";
-import BoxArrowUpIcon from "../../components/BoxArrowUpIcon";
-import ForwardArrow from "../../components/ForwardArrow";
-import BackArrow from "../../components/BackArrow";
-import AdminFilterPopup from "../../components/AdminFilterPopup";
-
+import OptionsIcon from "../../../components/OptionsIcon";
+import SearchIcon from "../../../components/SearchIcon";
+import FilterIcon from "../../../components/FilterIcon";
+import SortIcon from "../../../components/SortIcon";
+import BoxArrowUpIcon from "../../../components/BoxArrowUpIcon";
+import ForwardArrow from "../../../components/ForwardArrow";
+import BackArrow from "../../../components/BackArrow";
+import AdminFilterPopup from "../../../components/AdminFilterPopup";
 import { useEffect, useState } from "react";
-import getData from "../../utils/getData";
-import AdminNavbar from "../../components/AdminNavbar/AdminNavbar";
+import getData from "../../../utils/getData";
+import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 
 const clipLength = 30;
 
@@ -66,19 +65,6 @@ function StudentRow({
 	);
 }
 
-function filterFunction(data, search) {
-	const user = data.data;
-	if (!user.firstName) {
-		user.firstName = "";
-	}
-	if (!user.lastName) {
-		user.lastName = "";
-	}
-
-	const name = user.firstName.toLowerCase() + " " + user.lastName.toLowerCase();
-	return name.includes(search.toLowerCase());
-}
-
 function PageSelector({ data, currentPage, setCurrentPage }) {
 	const maxPages = Math.ceil(data.length / 10);
 
@@ -127,14 +113,59 @@ function PageSelector({ data, currentPage, setCurrentPage }) {
 		</>
 	);
 }
+
+function UserRows({ data, currentPage, filterFunction, search }) {
+	return data ? (
+		data
+			.filter((data) => filterFunction(data, search))
+			.slice(currentPage * 10, currentPage * 10 + 10)
+			.map((object, index) => {
+				const data = object.data;
+				return (
+					<div key={data.id || index}>
+						<StudentRow
+							studentNum={currentPage * 10 + index + 1}
+							firstName={data.firstName}
+							lastName={data.lastName}
+							grade={data.grade}
+							zipcode={Math.floor(data.zipcode)}
+							email={data.email}
+						/>
+					</div>
+				);
+			})
+	) : (
+		<></>
+	);
+}
+
 export default function AdminPage() {
 	const [data, setData] = useState([]);
 	const [search, setSearch] = useState("");
 	const [currentPage, setCurrentPage] = useState(0);
-	const [grade, setGrade] = useState(1);
+	const [grade, setGrade] = useState(null);
 	const [shown, setShown] = useState(false);
-	const [zipcode, setZipcode] = useState(123091);
-	const [school, setSchool] = useState(null);
+	const [zipcode, setZipcode] = useState(null);
+
+	function filterFunction(data, search) {
+		const user = data.data;
+		if (!user.firstName) {
+			user.firstName = "";
+		}
+		if (!user.lastName) {
+			user.lastName = "";
+		}
+
+		const name = user.firstName.toLowerCase() + " " + user.lastName.toLowerCase();
+		const containsName = name.includes(search.toLowerCase());
+
+		let inGrade = user.grade === grade || grade === null;
+
+		let containsZip =
+			Math.floor(user.zipcode).toString().includes(zipcode) || zipcode === null;
+
+		return containsName && inGrade && containsZip;
+	}
 
 	useEffect(() => {
 		const getNewData = async () => {
@@ -152,10 +183,9 @@ export default function AdminPage() {
 		<>
 			{shown ? (
 				<AdminFilterPopup
-					grade={grade}
+					currentGrade={grade}
 					setGrade={setGrade}
 					setZipcode={setZipcode}
-					setSchool={setSchool}
 					setShown={setShown}
 				/>
 			) : null}
@@ -194,28 +224,12 @@ export default function AdminPage() {
 							<SortIcon style={{ transform: "scale(0.8)" }} />
 						</div>
 					</div>
-					{data ? (
-						data
-							.filter((data) => filterFunction(data, search))
-							.slice(currentPage * 10, currentPage * 10 + 10)
-							.map((object, index) => {
-								const data = object.data;
-								return (
-									<div key={data.id || index}>
-										<StudentRow
-											studentNum={currentPage * 10 + index + 1}
-											firstName={data.firstName}
-											lastName={data.lastName}
-											grade={data.grade}
-											zipcode={Math.floor(data.zipcode)}
-											email={data.email}
-										/>
-									</div>
-								);
-							})
-					) : (
-						<></>
-					)}
+					<UserRows
+						data={data}
+						currentPage={currentPage}
+						filterFunction={filterFunction}
+						search={search}
+					/>
 					<div className="flex w-full justify-end py-5">
 						<PageSelector
 							data={data}
