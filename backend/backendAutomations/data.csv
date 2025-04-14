@@ -1,0 +1,90 @@
+physical,5,building and construction trades
+physical,5,manufacturing and product development
+physical,5,transportation
+physical,4,agriculture and natural resources
+physical,4,engineering and architecture
+physical,4,fashion and interior design
+physical,4,public services
+physical,3,"arts, media, and entertainment"
+physical,3,"education, child development and family services"
+physical,3,"energy, environment, and utilities"
+physical,3,marketing sales and service
+physical,2,health science and medical technology
+physical,2,"hospitatility, tourism, and recreation"
+physical,1,business and finance
+physical,1,information and communication technologies
+observe,5,business and finance
+observe,5,engineering and architecture
+observe,5,public services
+observe,4,agriculture and natural resources
+observe,4,"education, child development, and family services"
+observe,4,"energy, environment and utilities"
+observe,3,building and construction trades
+observe,3,fashion and interior design
+observe,3,health science and medical technology
+observe,3,marketing sales and service
+observe,2,"arts, media and entertainment"
+observe,2,"hospitality, tourism, and recreation"
+observe,2,manufactuing and product development
+observe,1,informatin and communication technologies
+observe,1,transportation
+creative,5,"arts, media, and entertainment"
+creative,5,fashion and interior design
+creative,4,engineering and architecture
+creative,4,information and communication technologies
+creative,4,marketing sales and service
+creative,3,"education, child development, and family services"
+creative,3,business and finance
+creative,3,"hospitality, tourism, and recreation"
+creative,2,agriculture and natural resources
+creative,2,"energy, environment, and utilities"
+creative,2,manufacturing and product development
+creative,1,building and construction trades
+creative,1,health science and medical technology
+creative,1,public services
+creative,1,transportation
+teach,5,"education, child development, and family services"
+teach,5,"hospitality, tourism, and recreation"
+teach,5,marketing sales and service
+teach,4,business and finance
+teach,4,health science and medical technology
+teach,3,agriculture and natural resources
+teach,3,"arts, media, and entertainment"
+teach,3,building and construction trades
+teach,2,engineering and architecture
+teach,2,information and communication technologies
+teach,2,public services
+teach,1,"energy, environment and utilities"
+teach,1,fashion and interior design
+teach,1,manufacturing and product development
+teach,1,transportation
+lead,5,business and finance
+lead,5,manufacturing and product development
+lead,5,marketing sales and service
+lead,4,"arts, media, and entertainment"
+lead,4,engineering and architecture
+lead,4,"hospitality, tourism, and recreation"
+lead,3,"education, child development, and family services"
+lead,3,"energy, environment, and utilities"
+lead,3,fashion and interior design
+lead,3,public services
+lead,2,building and construction trades
+lead,2,health science and medical technology
+lead,2,information and communication technologies
+lead,1,agriculture and natural resources
+lead,1,transportation
+engineer,5,building and construction trades
+engineer,5,"energy, environment, and utilities"
+engineer,5,engineering and architecture
+engineer,5,transportation
+engineer,4,business and finance
+engineer,4,fashion and interior design
+engineer,4,manufacturing and product development
+engineer,4,marketing sales and service
+engineer,3,agriculture and natural resources
+engineer,3,"education, child development and family services"
+engineer,3,health science and medical technology
+engineer,3,public services
+engineer,2,information and communication technologies
+engineer,1,"arts, media and entertainment"
+engineer,1,"hospitality, tourism, and recreation"
