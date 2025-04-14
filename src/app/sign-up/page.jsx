@@ -3,10 +3,11 @@ import { Navbar } from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import TextBox from "../../components/TextBox/TextBox.jsx";
 import Button from "../../components/Button.jsx";
-import addData from "../../utils/addData.js";
+import { addData } from "../../utils/addData.js";
 import schoolData from "./schools.json";
 import gradeData from "./grades.json"; // Import grades.json
 import DropDownArrow from "../../components/DropDownArrow.jsx";
+import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export const Page = () => {
     const [email, setEmail] = useState("");
@@ -53,31 +54,47 @@ export const Page = () => {
 
     const handleSubmit = async () => {
         console.log("Submitting data: ", { email, password, school, grade, studentID });
+        
         if (
-            email.trim() === "" ||
-            password.trim() === "" ||
-            school.trim() === "" ||
-            grade.trim() === "" ||
-            studentID.trim() === ""
+          email.trim() === "" ||
+          password.trim() === "" ||
+          school.trim() === "" ||
+          grade.trim() === "" ||
+          studentID.trim() === ""
         ) {
-            alert("Please fill out all fields");
-            return;
+          alert("Please fill out all fields");
+          return;
         }
-
+      
+        const auth = getAuth();
+        
         try {
-            await addData("users", {
-                email: email,
-                password: password,
-                school: school,
-                grade: grade,
-                studentID: studentID,
-            });
-            alert("Data saved successfully");
+          // Create the user with Firebase Auth
+          const userCredential = await createUserWithEmailAndPassword(auth, email, password);
+          const user = userCredential.user;
+          console.log("User created successfully: ", user.uid);
+      
+          // Prepare user data without the password
+          const userData = {
+            uid: user.uid,
+            email,
+            school,
+            grade,
+            studentID,
+            // You might add additional fields (e.g., createdAt timestamp)
+          };
+      
+          // Save additional data to Firestore
+          await addData("users", userData);
+      
+          alert("User registered and data saved successfully");
+      
         } catch (error) {
-            console.log("Error saving data: ", error);
-            alert("Error saving data");
+          console.error("Error during signup: ", error);
+          alert("Error saving data: " + error.message);
         }
-    };
+      };
+
 
     return (
         <>
