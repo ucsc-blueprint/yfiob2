@@ -8,12 +8,15 @@ import { addDoc, collection } from "firebase/firestore";
  */
 export async function addData(collectionName, data) {
 	try {
-		const docRef = await addDoc(collection(db, collectionName), data);
-		console.log("Document written with ID: ", docRef.id);
+	  const docRef = await addDoc(collection(db, collectionName), data);
+	  console.log("Document written with ID: ", docRef.id);
+	  return docRef; // Return the document reference
 	} catch (e) {
-		console.error("Error adding document: ", e);
+	  console.error("Error adding document: ", e);
+	  throw e;
 	}
-}
+  }
+  
 
 /**
  * Checks if an email already exists in a firrestore collection
