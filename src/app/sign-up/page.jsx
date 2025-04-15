@@ -81,7 +81,6 @@ export const Page = () => {
             school,
             grade,
             studentID,
-            // You might add additional fields (e.g., createdAt timestamp)
           };
       
           // Save additional data to Firestore

@@ -13,7 +13,7 @@ export async function addData(collectionName, data) {
 	  return docRef; // Return the document reference
 	} catch (e) {
 	  console.error("Error adding document: ", e);
-	  throw e;  // Rethrow to let callers know something went wrong
+	  throw e;
 	}
   }
   
