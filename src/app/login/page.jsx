@@ -34,52 +34,61 @@ function Page() {
 	};
 
     return (
-        <>
-            <Navbar />
-            <div className="flex flex-col items-center h-screen bg-[#E8F6FF]">
-                <div className = "space-y-4 w-[502px] mt-20">
-                    <h1 className="text-4xl font-lato font-medium text-[40px] m-8 leading-[40px] tracking-normal text-center">
-                        Login
-                    </h1>
-                    
-                    {/* Email Input */}
-                    <p className="text-left font-lato font-normal text-[20px] leading-[20px] tracking-normal">Email</p>
-                    <TextBox 
-                            type = "text"
-                            Placeholder = {"Email"}
-                            onChange={(e) => setEmail(e.target.value)}
-                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                            value={email}
-                            id="email"
-                    />
-                    
-                    {/* Password Input */}
-                    <p className="text-left font-lato font-normal text-[20px] leading-[20px] tracking-normal">Password</p>
-                    <TextBox 
-                            type = "password"
-                            Placeholder = {"Password"}
-                            onChange={(e) => setPassword(e.target.value)}
-                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                            value={password}
-                            id="password"
-                    />
-                </div>
+      <>
+        <div className="min-h-screen flex flex-col bg-[#E8F6FF] overflow-hidden">
+          <Navbar />
 
-                <div className="space-y-6 my-7 w-[502px]">
-                    <Button
-                        text = "Log In"
-                        size = "big"
-                        onClick = {handleLogin}
-                    />
-                    <p className="text-center font-lato text-[20px]">Don't have an account? 
-                    &nbsp;	
-                        <Link href="/sign-up" className="text-[#4C78E7]">
-                            Sign Up!	
-                        </Link>
-                    </p>
-                </div>
+          {/* Centered Login Content */}
+          <div className="flex-grow flex items-center justify-center">
+            <div className="w-[502px] space-y-6">
+              <h1 className="text-4xl font-lato font-bold text-[40px] leading-[40px] tracking-normal text-center mb-8">
+                Login
+              </h1>
+
+              {/* Email Input */}
+              <div className="space-y-1">
+                <p className="text-left font-lato font-normal text-[20px]">
+                  Email
+                </p>
+                <TextBox
+                  type="text"
+                  Placeholder={"Email"}
+                  onChange={(e) => setEmail(e.target.value)}
+                  onFocus={(e) => (e.target.style.color = "black")}
+                  value={email}
+                  id="email"
+                />
+              </div>
+
+              {/* Password Input */}
+              <div className="space-y-1">
+                <p className="text-left font-lato font-normal text-[20px]">
+                  Password
+                </p>
+                <TextBox
+                  type="password"
+                  Placeholder={"Password"}
+                  onChange={(e) => setPassword(e.target.value)}
+                  onFocus={(e) => (e.target.style.color = "black")}
+                  value={password}
+                  id="password"
+                />
+              </div>
+
+              {/* Log In Button */}
+              <Button text="Log In" size="big" onClick={handleLogin} />
+
+              {/* Sign Up Link */}
+              <p className="text-center font-lato text-[20px]">
+                Don't have an account?{" "}
+                <Link href="/sign-up" className="text-[#4C78E7]">
+                  Sign Up!
+                </Link>
+              </p>
             </div>
-        </>
+          </div>
+        </div>
+      </>
     );
 }
 

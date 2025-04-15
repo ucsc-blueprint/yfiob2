@@ -96,152 +96,149 @@ export const Page = () => {
 
 
     return (
-        <>
-            <Navbar />
-            <div className="bg-[#E8F6FF] flex flex-col justify-center items-center">
-                <div className = "space-y-4 w-[502px]">
-                    <h1 className="text-4xl font-sofia font-medium text-[40px] m-8 leading-[40px] tracking-normal text-center">
-                        Sign up
-                    </h1>
+      <>
+        <div className="min-h-screen flex flex-col bg-[#E8F6FF] overflow-hidden">
+          <Navbar />
 
-                    {/* Email Input */}
-                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
-                        Email
-                    </p>
-                    <TextBox 
-                            type = "text"
-                            Placeholder = {"Email"}
-                            onChange={(e) => setEmail(e.target.value)}
-                            value={email}
-                            id="email"
-                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                            onBlur={(e) => e.target.style.color = "#898989"}
-                    />
+          {/* Centered Signup Content */}
+          <div className="flex-grow flex items-center justify-center">
+            <div className="w-[502px] space-y-4">
+              <h1 className="text-4xl font-lato font-bold text-[40px] m-8 leading-[40px] tracking-normal text-center">
+                Sign up
+              </h1>
 
-                    {/* Password Input */}
-                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
-                        Password
-                    </p>
-                    <TextBox 
-                            type="password"
-                            Placeholder="Password"
-                            onChange={(e) => setPassword(e.target.value)}
-                            value={password}
-                            id="password"
-                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                            onBlur={(e) => e.target.style.color = "#898989"}
-                    />
+              {/* Email Input */}
+              <p className="text-left font-lato font-normal text-[20px]">
+                Email
+              </p>
+              <TextBox
+                type="text"
+                Placeholder={"Email"}
+                onChange={(e) => setEmail(e.target.value)}
+                value={email}
+                id="email"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
 
-                    <p className="text-left w-[502px] font-lato font-normal text-[20px] leading-[20px] tracking-normal">
-                        School Information
-                    </p>
+              {/* Password Input */}
+              <p className="text-left font-lato font-normal text-[20px]">
+                Password
+              </p>
+              <TextBox
+                type="password"
+                Placeholder="Password"
+                onChange={(e) => setPassword(e.target.value)}
+                value={password}
+                id="password"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
 
-                    {/* School Dropdown Input */}
-                    <div className="relative">
-                    <TextBox 
-                                Placeholder="School"
-                                onChange={(e) => {
-                                    setSearchTerm(e.target.value);
-                                    setSchool(e.target.value);
-                                }}
-                                value={searchTerm}
-                                onFocus={(e) => {
-                                    e.target.style.color = "black"; 
-                                    setIsDropdownVisible(true);
-                                }}
-                                onBlur={(e) => {
-                                    setTimeout(() => setIsDropdownVisible(false), 200);
-                                    e.target.style.color = "#898989";
-                                }}
-                            />
-                       
-                       {/* Arrow SVG */}
-                        <DropDownArrow/>
+              <p className="text-left font-lato font-normal text-[20px]">
+                School Information
+              </p>
 
-                        {/* Dropdown List */}
-                        {isDropdownVisible && (
-                            <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
-                                {filteredSchools.length > 0 ? (
-                                    filteredSchools.map((s, index) => (
-                                        <li
-                                            key={index}
-                                            onMouseDown={() => {
-                                                setSchool(s);
-                                                setSearchTerm(s);
-                                                setIsDropdownVisible(false);
-                                            }}
-                                            className="p-2 hover:bg-gray-100 cursor-pointer"
-                                        >
-                                            {s}
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li className="text-gray-500 p-2">No results found</li>
-                                )}
-                            </ul>
-                        )}
-                    </div>
+              {/* School Dropdown */}
+              <div className="relative">
+                <TextBox
+                  Placeholder="School"
+                  onChange={(e) => {
+                    setSearchTerm(e.target.value);
+                    setSchool(e.target.value);
+                  }}
+                  value={searchTerm}
+                  onFocus={(e) => {
+                    e.target.style.color = "black";
+                    setIsDropdownVisible(true);
+                  }}
+                  onBlur={(e) => {
+                    setTimeout(() => setIsDropdownVisible(false), 200);
+                    e.target.style.color = "#898989";
+                  }}
+                />
+                <DropDownArrow />
+                {isDropdownVisible && (
+                  <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
+                    {filteredSchools.length > 0 ? (
+                      filteredSchools.map((s, index) => (
+                        <li
+                          key={index}
+                          onMouseDown={() => {
+                            setSchool(s);
+                            setSearchTerm(s);
+                            setIsDropdownVisible(false);
+                          }}
+                          className="p-2 hover:bg-gray-100 cursor-pointer"
+                        >
+                          {s}
+                        </li>
+                      ))
+                    ) : (
+                      <li className="text-gray-500 p-2">No results found</li>
+                    )}
+                  </ul>
+                )}
+              </div>
 
-                    {/* Grade Dropdown Input */}
-                    <div className="relative">
-                    <TextBox 
-                                Placeholder="Grade"
-                                onChange={(e) => {
-                                    setGradeSearchTerm(e.target.value);
-                                    setGrade(e.target.value);
-                                }}
-                                value={gradeSearchTerm}
-                                onFocus={() => setIsGradeDropdownVisible(true)}
-                                onBlur={() => setTimeout(() => setIsGradeDropdownVisible(false), 200)}
-                            />
+              {/* Grade Dropdown */}
+              <div className="relative">
+                <TextBox
+                  Placeholder="Grade"
+                  onChange={(e) => {
+                    setGradeSearchTerm(e.target.value);
+                    setGrade(e.target.value);
+                  }}
+                  value={gradeSearchTerm}
+                  onFocus={() => setIsGradeDropdownVisible(true)}
+                  onBlur={() =>
+                    setTimeout(() => setIsGradeDropdownVisible(false), 200)
+                  }
+                />
+                <DropDownArrow />
+                {isGradeDropdownVisible && (
+                  <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
+                    {filteredGrades.length > 0 ? (
+                      filteredGrades.map((g, index) => (
+                        <li
+                          key={index}
+                          onMouseDown={() => {
+                            setGrade(g);
+                            setGradeSearchTerm(g);
+                            setIsGradeDropdownVisible(false);
+                          }}
+                          className="p-2 hover:bg-gray-100 cursor-pointer"
+                        >
+                          {g}
+                        </li>
+                      ))
+                    ) : (
+                      <li className="text-gray-500 p-2">No results found</li>
+                    )}
+                  </ul>
+                )}
+              </div>
 
-                        {/* Arrow SVG */}
-                        <DropDownArrow/>
+              {/* Student ID */}
+              <TextBox
+                Placeholder="Student ID Number"
+                onChange={(e) => setStudentID(e.target.value)}
+                value={studentID}
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
 
-                        {/* Dropdown List */}
-                        {isGradeDropdownVisible && (
-                            <ul className="absolute top-full left-0 right-0 mt-1 bg-white border border-gray-300 rounded-lg max-h-40 shadow-md z-10 overflow-y-auto">
-                                {filteredGrades.length > 0 ? (
-                                    filteredGrades.map((g, index) => (
-                                        <li
-                                            key={index}
-                                            onMouseDown={() => {
-                                                setGrade(g);
-                                                setGradeSearchTerm(g);
-                                                setIsGradeDropdownVisible(false);
-                                            }}
-                                            className="p-2 hover:bg-gray-100 cursor-pointer"
-                                        >
-                                            {g}
-                                        </li>
-                                    ))
-                                ) : (
-                                    <li className="text-gray-500 p-2">No results found</li>
-                                )}
-                            </ul>
-                        )}
-                    </div>
-
-                    {/* Student ID Input */}
-                    <TextBox 
-                            Placeholder="Student ID Number"
-                            onChange={(e) => setStudentID(e.target.value)}
-                            value={studentID}
-                            onFocus={(e) => e.target.style.color = "black"}  // Change text color to black on focus
-                            onBlur={(e) => e.target.style.color = "#898989"}
-                        />
-                    </div>
-
-                    <div className="my-6 w-[502px]">
-                        <Button
-                            text = "Sign Up"
-                            size = "big"
-                            onClick = {handleSubmit}
-                        />
-                    </div>
+              {/* Sign Up Button */}
+              <div className="my-6">
+                <Button text="Sign Up" size="big" onClick={handleSubmit} />
+              </div>
             </div>
-        </>
+          </div>
+        </div>
+      </>
     );
 };
 
 export default Page;
+
+
