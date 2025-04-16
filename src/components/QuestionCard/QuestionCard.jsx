@@ -14,10 +14,17 @@ export const QuestionCard = ({
 	questionNumber,
 	totalQuestions,
 	selectedAnswer, 
+	grade, 
 	onAnswerSelect = () => {},
 }) => {
-	const [clickedButton, setClickedButton] = useState(null);
 
+	const gradeColor = {
+		"elementary-school": "bg-[#9AD7F8]",
+		"middle-school": "bg-[#BAE98E]",	
+		"high-school": "bg-[#FFC273]",
+	}
+	
+	const color = gradeColor[grade]
 
 	return (
 		<div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden">
@@ -41,7 +48,7 @@ export const QuestionCard = ({
 									key={i}
 									onClick={() => onAnswerSelect(i)}
 									className={`flex-[${weight}] text-center text-slate-500 m-[1%] rounded-[20px] px-4 py-3 ${
-										selectedAnswer === i ? 'bg-green-500 text-white' : 'bg-slate-200'
+										selectedAnswer === i ? `${color} text-white` : 'bg-slate-200'
 									}`}
 								>
 									{agreement}
