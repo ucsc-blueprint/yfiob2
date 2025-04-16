@@ -6,6 +6,7 @@ import questions from "../../../questions.json";
 import { useEffect, useState } from "react";
 import BackArrow from "../../components/BackArrow.jsx";
 import ForwardArrow from "../../components/ForwardArrow.jsx";
+import { getAllResponses } from "../../../backend/questions/questionDB.js";
 
 function getQuestions(educationLevel) {
 	const parsedData = Object.values(questions).map((element) => {
@@ -15,8 +16,12 @@ function getQuestions(educationLevel) {
 }
 
 export default function Page() {
+	
+	
+
 	const educationLevel = 1;
 	const [questions] = useState(getQuestions(educationLevel));
+	
 	const [questionNum, setQuestionNum] = useState(0);
 	const [savedRandomNums, setSavedRandomNums] = useState({});
 	const [answers, setAnswers] = useState({}); 
@@ -32,6 +37,14 @@ export default function Page() {
 		}
 	}, [questionNum, randomNum, savedRandomNums]);
 
+	useEffect(()=>{
+		const getData = async () =>{
+			const data =  await getAllResponses("Akshay");
+			return data;
+		} 
+		getData().then((res)=>{console.log(res)})
+	}, [])
+	
 	// map each question to the sub question 
 	const questionsObject = questions.map((question, qIndex) => {
 		return Object.values(question.sub_questions).map((subQuestion, sIndex) => {
