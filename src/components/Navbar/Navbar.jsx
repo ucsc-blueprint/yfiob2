@@ -59,7 +59,7 @@ export const Navbar = () => {
 					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1">
 						Take Quiz!
 					</Link>
-					<Link href={"/explore-careers"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/choose-grade-level"} className="px-3 hover:text-[#4C78E7] py-1">
 						Explore Careers
 					</Link>
 				</div>
@@ -94,7 +94,7 @@ export const Navbar = () => {
 					Take Quiz!
 				</Link>
 				<Link
-					href={"/explore-careers"}
+					href={"/choose-grade-level"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
