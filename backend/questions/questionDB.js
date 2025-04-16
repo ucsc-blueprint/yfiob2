@@ -1,5 +1,5 @@
 import { db } from "../firebaseConfig.js";
-import { collection, getDocs, query, where, limit, addDoc} from "firebase/firestore";
+import { collection, getDocs, query, where, limit, addDoc, updateDoc} from "firebase/firestore";
 
 async function storeQuestion(username, questionNumber, questionResponse){
     /*
@@ -25,35 +25,58 @@ async function storeQuestion(username, questionNumber, questionResponse){
     
     const docs = await getDocs(q);
     if(!docs.empty){
-        console.log(docs.docs[0].data());
+        const docRef = docs.docs[0].ref
+        updateDoc(docRef, {
+            optionSelected: Number(questionResponse)
+        })
         
     }else{
-        console.log("not found")
-        // create a new document
-        const newDoc = addDoc(responsesReference, { 
+        addDoc(responsesReference, { 
             username: username,
             questionNumber: Number(questionNumber),
-            questionResponse: Number(questionResponse)
+            optionSelected: Number(questionResponse)
         });
     }
-    
-    
-    //console.log("Docs: ", docs.get())
     
 }
 
 async function getAllResponses(username){
-    /*
-      1) 
-    */
+    const responsesReference = collection(db, "userResponses")
+
+    const q = query(
+        responsesReference, 
+        where("username", '==', username), 
+        
+    );
+
+    // Returns array of users answer chocies
+    const docs = await getDocs(q);
+    const res = docs.docs.map((doc) => {
+        return doc.data()
+    })
+    return res;
 }
 
 async function getResponse(username, questionNumber){
+    const responsesReference = collection(db, "userResponses")
+    
+    const q = query(
+        responsesReference, 
+        where("username", '==', username), 
+        where("questionNumber", "==", questionNumber),
+        limit(1)
+    );
+
+    
+    const docs = await getDocs(q);
+    if(!docs.empty){
+        const docRef = docs.docs[0].ref
+        return docs.docs[0].data()
+    }else{
+        return null
+    }
 
 }
-
-
-storeQuestion("Akshay", 2, 5);
 
 
 
