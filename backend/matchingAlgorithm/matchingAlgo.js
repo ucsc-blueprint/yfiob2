@@ -22,7 +22,7 @@ algorithm:
 */
 
 import { db } from "../firebaseConfig.js";
-import { collection, getDocs, query, where, getDoc} from "firebase/firestore";
+import { collection, getDocs, query, where} from "firebase/firestore";
 
 async function getTopKIndustries(username, k) {
     // Step 1: Initialize a JSON object to store the industries and their scores

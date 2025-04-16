@@ -1,7 +1,7 @@
 import { db } from "../firebaseConfig.js";
 import { collection, getDocs, query, where, limit, addDoc, updateDoc} from "firebase/firestore";
 
-async function storeQuestion(username, questionNumber, questionResponse){
+export async function storeResponse(username, questionNumber, questionResponse){
     /*
     1) check if there is an existing document where 
     questionNumber of that document equals the parameter to this function
@@ -40,7 +40,7 @@ async function storeQuestion(username, questionNumber, questionResponse){
     
 }
 
-async function getAllResponses(username){
+export async function getAllResponses(username){
     const responsesReference = collection(db, "userResponses")
 
     const q = query(
@@ -57,7 +57,7 @@ async function getAllResponses(username){
     return res;
 }
 
-async function getResponse(username, questionNumber){
+export async function getResponse(username, questionNumber){
     const responsesReference = collection(db, "userResponses")
     
     const q = query(
