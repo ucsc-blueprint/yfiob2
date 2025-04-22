@@ -19,10 +19,10 @@ export const CareersCardExpanded = ({
 
     // Used to dynamically render information sections (i.e colleges, majors, etc.)
     const renderTextSection = (label, value) => (
-        <>
+        <div>
             <p className="font-medium pb-2">{label}:</p>
-            <p className="pb-5">{value}</p>
-        </>
+            <div className="pb-5">{value}</div>
+        </div>
     );
 
     // Styling to display all career images
@@ -88,15 +88,28 @@ export const CareersCardExpanded = ({
                             <>
                                 {renderTextSection("Description", description)}
                                 {renderTextSection("Salary", salary)}
-                                {renderTextSection("Colleges", (
-                                    <ul style={{listStyleType: "disc", paddingLeft: "1.5rem"}}>
+                                {renderTextSection(
+                                    "Colleges",
+                                    <ul
+                                        style={{
+                                            listStyleType: "disc",
+                                            paddingLeft: "1.5rem",
+                                        }}
+                                    >
                                         {colleges.map((college, index) => (
                                             <li key={index}>{college}</li>
                                         ))}
                                     </ul>
-                                ))}
-                                {renderTextSection("Skills", (
-                                    <div style={{ display: "flex", flexWrap: "wrap", gap: "8px" }}>
+                                )}
+                                {renderTextSection(
+                                    "Skills",
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            gap: "8px",
+                                        }}
+                                    >
                                         {skills.map((skill, index) => (
                                             <div
                                                 key={index}
@@ -112,7 +125,7 @@ export const CareersCardExpanded = ({
                                             </div>
                                         ))}
                                     </div>
-                                ))}
+                                )}
                                 {renderTextSection("Majors", majors)}
                             </>
                         )}
