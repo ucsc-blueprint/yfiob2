@@ -20,7 +20,31 @@ function App() {
           Discover a career path that matches your unique interests!
         </h1>
         <div className="flex items-center justify-center space-x-40 mt-6">
-          {/* Add other puzzle pieces here */}
+        <img
+            src="/assets/ConstructionPuzzlePiece.svg"
+            alt="K-5 Puzzle Piece"
+            className="w-36 h-36"
+          />
+          <img
+            src="/assets/TeacherPuzzlePiece.svg"
+            alt="K-5 Puzzle Piece"
+            className="w-40 h-40"
+          />
+          <img
+            src="/assets/DirectorPuzzlePiece.svg"
+            alt="K-5 Puzzle Piece"
+            className="w-36 h-36"
+          />
+          <img
+            src="/assets/DoctorPuzzlePiece.svg"
+            alt="K-5 Puzzle Piece"
+            className="w-36 h-36"
+          />
+          <img
+            src="/assets/FirefighterPuzzlePiece.svg"
+            alt="K-5 Puzzle Piece"
+            className="w-36 h-36"
+          />
         </div>
       </div>
 

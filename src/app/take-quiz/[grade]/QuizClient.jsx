@@ -41,7 +41,6 @@ export default function QuizClient({ grade }) {
     }
   }, [questionNum, randomNum, savedRandomNums]);
 
-  // build question cards
   const questionsObject = questionsForLevel.map((q, qIndex) =>
     Object.values(q.sub_questions).map((sub, sIndex) => {
       const questionId = `${qIndex}-${sIndex}`;
@@ -56,28 +55,59 @@ export default function QuizClient({ grade }) {
           onAnswerSelect={(answer) =>
             setAnswers((prev) => ({ ...prev, [questionId]: answer }))
           }
+          grade={grade}
         />
       );
     })
   );
 
+  const gradeColor = {
+    "elementary-school": "bg-[#9AD7F8]",
+    "middle-school": "bg-[#BAE98E]",
+    "high-school": "bg-[#FFC273]",
+  };
+  const color = gradeColor[grade] || "blue";
+
   const currentQuestionId = `${questionNum}-${
     savedRandomNums[questionNum] ?? randomNum
   }`;
 
+
+  // green: bg-[#BAE98E],  
+	// blue: bg-[#9AD7F8]
+  // orange: bg-[#FFC273]
+
+
   return (
     <>
-      <Navbar />
-      <div className="flex flex-col justify-center items-center m-16">
+      {/* Navbar sits on top */}
+      <div className="relative z-10">
+        <Navbar />
+      </div>
+      
+      {/* full‐screen background under the navbar */}
+      <div
+        className={`
+          fixed
+          left-0 right-0
+          top-16    /* adjust if your navbar height is different */
+          bottom-0
+          ${color}
+          z-0
+          flex flex-col justify-center items-center
+        `}
+      >
+        <div className="font-kumbh text-[40px] py-10">
+          Career Quiz
+        </div>
         <div className="flex items-center">
           <button
             className="mr-10"
-            onClick={() =>
-              questionNum > 0 && setQuestionNum((n) => n - 1)
-            }
+            onClick={() => questionNum > 0 && setQuestionNum((n) => n - 1)}
           >
             <BackArrow />
           </button>
+
           <div className="flex flex-col items-center">
             {questionsObject[questionNum]?.[randomNum] ?? (
               <QuestionCard
@@ -86,13 +116,14 @@ export default function QuizClient({ grade }) {
                 questionNumber="1"
                 totalQuestions={questionsForLevel.length}
                 selectedAnswer={answers[currentQuestionId]}
-                grade="middle-school"
+                grade={grade}
                 onAnswerSelect={(answer) =>
                   setAnswers((prev) => ({ ...prev, [currentQuestionId]: answer }))
                 }
               />
             )}
           </div>
+
           <button
             className="ml-10"
             onClick={() =>
@@ -103,6 +134,7 @@ export default function QuizClient({ grade }) {
             <ForwardArrow />
           </button>
         </div>
+
         {questionNum === questionsForLevel.length - 1 && (
           <div className="mt-6 flex justify-center">
             <button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
