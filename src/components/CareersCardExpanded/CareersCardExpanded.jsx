@@ -1,3 +1,4 @@
+import Image from "next/image";
 import React from "react";
 
 export const CareersCardExpanded = ({
@@ -27,22 +28,28 @@ export const CareersCardExpanded = ({
 
     // Styling to display all career images
     const renderImages = () => (
-        <div className="flex flex-col gap-5">
+        <div className="flex flex-col gap-5 items-end">
             {careerImages.map((careerImage, index) => (
                 <div key={index}>
-                    <img
-                        data-testid="career-image"
-                        className="rounded-md w-full object-cover"
+                    <Image
+                        className="rounded-md object-cover"
                         src={careerImage}
                         alt="careerImage"
+                        width={0}
+                        height={200}
+                        style={{ width: "auto", maxHeight: "200px" }}
                     />
                 </div>
             ))}
-            <img
-                className="mt-auto ml-auto h-24 w-24"
-                src="/jignaSmall.png"
-                alt="Jigna Small"
-            />
+            {careerImages.length <= 0 ? (
+                <img
+                    className="mt-auto ml-auto h-24 w-24"
+                    src="/jignaSmall.png"
+                    alt="Jigna Small"
+                />
+            ) : (
+                <></>
+            )}
         </div>
     );
 
