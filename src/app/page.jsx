@@ -9,9 +9,9 @@ function App() {
     careerName: "Software Developer",
     description: "Develops software applications and systems",
     salary: "$80,000 - $150,000",
-    skills: "Programming, problem-solving, communication",
+    skills: ["computer science", "software engineering", "information technology"],
     careerImages: [],
-    colleges: "Various universities and colleges",
+    colleges: ["ucsc", "stanford", "mit"],
     majors: "Computer Science, Software Engineering",
   };
 
