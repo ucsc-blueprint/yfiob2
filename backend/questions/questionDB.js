@@ -10,7 +10,6 @@ export async function storeResponse(username, questionNumber, questionResponse){
     3) If not, then create a brand new document with the data in the parameters to this function.
     Append this new document to the collection
     */
-   
 
     //1)
     const responsesReference = collection(db, "userResponses")
@@ -33,7 +32,7 @@ export async function storeResponse(username, questionNumber, questionResponse){
     }else{
         addDoc(responsesReference, { 
             username: username,
-            questionNumber: Number(questionNumber),
+            questionNumber: questionNumber,
             optionSelected: Number(questionResponse)
         });
     }
@@ -75,8 +74,8 @@ export async function getResponse(username, questionNumber){
     }else{
         return null
     }
-
 }
+
 
 
 

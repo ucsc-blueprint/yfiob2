@@ -6,7 +6,7 @@ import questions from "../../../questions.json";
 import { useEffect, useState } from "react";
 import BackArrow from "../../components/BackArrow.jsx";
 import ForwardArrow from "../../components/ForwardArrow.jsx";
-import { getAllResponses } from "../../../backend/questions/questionDB.js";
+import { getAllResponses, storeResponse } from "../../../backend/questions/questionDB.js";
 
 function getQuestions(educationLevel) {
 	const parsedData = Object.values(questions).map((element) => {
@@ -15,17 +15,13 @@ function getQuestions(educationLevel) {
 	return parsedData[educationLevel];
 }
 
-export default function Page() {
-	
-	
-
+export default function Page() {	
 	const educationLevel = 1;
 	const [questions] = useState(getQuestions(educationLevel));
 	
 	const [questionNum, setQuestionNum] = useState(0);
 	const [savedRandomNums, setSavedRandomNums] = useState({});
 	const [answers, setAnswers] = useState({}); 
-
 	const randomNum = savedRandomNums[questionNum] ?? Math.floor(Math.random() * questions[questionNum].sub_questions.length);
 
 	useEffect(() => {
@@ -40,10 +36,43 @@ export default function Page() {
 	useEffect(()=>{
 		const getData = async () =>{
 			const data =  await getAllResponses("Akshay");
+			mergeWithState(data);
 			return data;
 		} 
 		getData().then((res)=>{console.log(res)})
-	}, [])
+	}, []);
+
+	function mergeWithState(data){
+		for(const responseObj of data){
+			const answerStr = responseObj["questionNumber"];
+			const answerStrSplit = answerStr.split("-");
+			const questionNum = answerStr[0];
+			const randomQuestionNum = parseInt(answerStrSplit[1]);
+			setSavedRandomNums((prev) => ({
+				...prev,
+				[questionNum]: randomQuestionNum,
+			}));
+			
+			setAnswers((prevAnswers) => ({
+				...prevAnswers,
+				[answerStr]: responseObj["optionSelected"], 
+			}));
+		}
+	}
+
+	function handleAnswerSelect(value, questionId){
+		
+		
+		const insertData = async () =>{
+			await storeResponse("Akshay", questionId, value);
+		}
+		insertData();
+		
+		setAnswers((prevAnswers) => ({
+			...prevAnswers,
+			[questionId]: value, 
+		}));
+	}
 	
 	// map each question to the sub question 
 	const questionsObject = questions.map((question, qIndex) => {
@@ -57,12 +86,10 @@ export default function Page() {
 						questionNumber={question.question_id}
 						totalQuestions={"6"}
 						selectedAnswer={answers[questionId]} 
-						onAnswerSelect={(answer) => {
-							setAnswers((prevAnswers) => ({
-								...prevAnswers,
-								[questionId]: answer, 
-							}));
+						onAnswerSelect={(value) => {
+							handleAnswerSelect(value, questionId)
 						}}
+						
 					/>
 				</div>
 			);
@@ -71,6 +98,7 @@ export default function Page() {
 
 	// creates a unique ID for each question
 	const currentQuestionId =  `${questionNum}-${savedRandomNums[questionNum] || randomNum}`;
+
 	return (
 		<>
 <Navbar />
@@ -95,12 +123,9 @@ export default function Page() {
 						question={""}
 						questionNumber={"1"}
 						totalQuestions={"6"}
-						selectedAnswer={answers[question]}
-						onAnswerSelect={(answer) => {
-							setAnswers((prevAnswers) => ({
-								...prevAnswers,
-								[currentQuestionId]: answer,
-							}));
+						selectedAnswer={answers[currentQuestionId]}
+						onAnswerSelect={(value) => {
+							handleAnswerSelect(value, currentQuestionId)
 						}}
 					/>
 				</div>
