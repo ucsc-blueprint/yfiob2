@@ -21,7 +21,7 @@ algorithm:
 9) return the array of industries
 */
 
-import { db } from "../firebaseConfig.js";
+import { db } from "../../firebaseConfig"; // Adjust the import path as necessary
 import { collection, getDocs, query, where} from "firebase/firestore";
 
 async function getTopKIndustries(username, k) {
@@ -82,3 +82,4 @@ async function getTopKIndustries(username, k) {
 getTopKIndustries("Akshay", 5).then((result) => {
     console.log(result);
 });
+
