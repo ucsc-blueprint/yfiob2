@@ -1,7 +1,7 @@
 import * as fs from 'fs';
 import { parse } from "csv-parse";
 
-import { db } from "../firebaseConfig.js";
+import { db } from '../../src/utils/firebase';
 import { addDoc, collection } from "firebase/firestore";
 
 const ref = collection(db, "questionClassification");

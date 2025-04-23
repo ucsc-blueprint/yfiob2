@@ -1,6 +1,6 @@
 import { Careers } from "../../constants/CAREERS.js";
 
-import { db } from "../firebaseConfig.js";
+import { db } from "../../src/utils/firebase.js";
 import { addDoc, collection } from "firebase/firestore";
 
 async function operate(tableName, industryAttribute) {
