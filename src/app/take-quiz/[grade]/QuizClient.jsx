@@ -1,12 +1,12 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { useRouter, useParams } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
 import BackArrow from "../../../components/BackArrow.jsx";
 import ForwardArrow from "../../../components/ForwardArrow.jsx";
 import questions from "../../../../questions.json";
+import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
 
 function getQuestions(educationLevel) {
   const parsed = Object.values(questions);
@@ -41,6 +41,47 @@ export default function QuizClient({ grade }) {
     }
   }, [questionNum, randomNum, savedRandomNums]);
 
+  useEffect(()=>{
+      const getData = async () =>{
+        const data =  await getAllResponses("Akshay");
+        mergeWithState(data);
+        return data;
+      } 
+      getData().then((res)=>{console.log(res)})
+    }, []);
+
+  function mergeWithState(data){
+      for(const responseObj of data){
+        const answerStr = responseObj["questionNumber"];
+        const answerStrSplit = answerStr.split("-");
+        const questionNum = answerStr[0];
+        const randomQuestionNum = parseInt(answerStrSplit[1]);
+        setSavedRandomNums((prev) => ({
+          ...prev,
+          [questionNum]: randomQuestionNum,
+        }));
+        
+        setAnswers((prevAnswers) => ({
+          ...prevAnswers,
+          [answerStr]: responseObj["optionSelected"], 
+        }));
+      }
+    }
+  
+  
+  function handleAnswerSelect(value, questionId){
+      
+      const insertData = async () =>{
+        await storeResponse("Akshay", questionId, value);
+      }
+      insertData();
+      
+      setAnswers((prevAnswers) => ({
+        ...prevAnswers,
+        [questionId]: value, 
+      }));
+    }
+
   const questionsObject = questionsForLevel.map((q, qIndex) =>
     Object.values(q.sub_questions).map((sub, sIndex) => {
       const questionId = `${qIndex}-${sIndex}`;
@@ -53,7 +94,7 @@ export default function QuizClient({ grade }) {
           totalQuestions={questionsForLevel.length}
           selectedAnswer={answers[questionId]}
           onAnswerSelect={(answer) =>
-            setAnswers((prev) => ({ ...prev, [questionId]: answer }))
+            handleAnswerSelect(answer, questionId)
           }
           grade={grade}
         />
@@ -68,6 +109,7 @@ export default function QuizClient({ grade }) {
   };
   const color = gradeColor[grade] || "blue";
 
+  // creates a unique ID for each question
   const currentQuestionId = `${questionNum}-${
     savedRandomNums[questionNum] ?? randomNum
   }`;
