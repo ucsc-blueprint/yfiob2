@@ -29,8 +29,8 @@ export const CareersCardExpanded = ({
     // Styling to display all career images
     const renderImages = () => (
         <div className="flex flex-col gap-5 items-end">
-            {careerImages.map((careerImage, index) => (
-                <div key={index}>
+            {careerImages?.map((careerImage, index) => (
+                <div key={index} data-testid="career-image">
                     <Image
                         className="rounded-md object-cover"
                         src={careerImage}
@@ -41,14 +41,12 @@ export const CareersCardExpanded = ({
                     />
                 </div>
             ))}
-            {careerImages.length <= 0 ? (
+            {(!careerImages || careerImages.length <= 0) && (
                 <img
                     className="mt-auto ml-auto h-24 w-24"
                     src="/jignaSmall.png"
                     alt="Jigna Small"
                 />
-            ) : (
-                <></>
             )}
         </div>
     );
@@ -61,40 +59,25 @@ export const CareersCardExpanded = ({
             <h4
                 data-testid="careers-header"
                 className="pt-2 pb-2 text-center text-xl text-white rounded-t-2xl"
-                // Set background color depending on education-level
                 style={{ backgroundColor: educationStyles[educationLevel] }}
             >
                 {category}
             </h4>
             <div className="bg-white p-10 no-scrollbar overflow-y-scroll">
-                {/* Two-column layout for content and images */}
                 <div className="flex flex-row gap-8">
-                    {/* Left column for text content */}
                     <div className="flex-1">
-                        <h2 className="text-xl font-medium pb-10">{careerName}</h2>
-
-                        {/* If elementary-school, display career name, description and salary */}
-                        {educationLevel === "elementary-school" && (
-                            <>
-                                {renderTextSection("Description", description)}
-                                {renderTextSection("Salary", salary)}
-                            </>
+                        {educationLevel !== "high-school" && (
+                            <h2 className="text-xl font-medium pb-10">{careerName}</h2>
                         )}
 
-                        {/* If middle-school, display skills, description and salary */}
-                        {educationLevel === "middle-school" && (
-                            <>
-                                {renderTextSection("Description", description)}
-                                {renderTextSection("Salary", salary)}
-                                {renderTextSection("Skills", skills)}
-                            </>
-                        )}
+                        {renderTextSection("Description", description)}
+                        {renderTextSection("Salary", salary)}
 
-                        {/* If high-school, display all information except career name */}
+                        {educationLevel === "middle-school" &&
+                            renderTextSection("Skills", skills)}
+
                         {educationLevel === "high-school" && (
                             <>
-                                {renderTextSection("Description", description)}
-                                {renderTextSection("Salary", salary)}
                                 {renderTextSection(
                                     "Colleges",
                                     <ul
@@ -103,9 +86,11 @@ export const CareersCardExpanded = ({
                                             paddingLeft: "1.5rem",
                                         }}
                                     >
-                                        {colleges.map((college, index) => (
-                                            <li key={index}>{college}</li>
-                                        ))}
+                                        {Array.isArray(colleges)
+                                            ? colleges.map((college, index) => (
+                                                  <li key={index}>{college}</li>
+                                              ))
+                                            : colleges}
                                     </ul>
                                 )}
                                 {renderTextSection(
@@ -117,20 +102,22 @@ export const CareersCardExpanded = ({
                                             gap: "8px",
                                         }}
                                     >
-                                        {skills.map((skill, index) => (
-                                            <div
-                                                key={index}
-                                                style={{
-                                                    background: "#FFC273",
-                                                    padding: "5px 10px",
-                                                    borderRadius: "5px",
-                                                    width: "fit-content",
-                                                    whiteSpace: "nowrap",
-                                                }}
-                                            >
-                                                {skill}
-                                            </div>
-                                        ))}
+                                        {Array.isArray(skills)
+                                            ? skills.map((skill, index) => (
+                                                  <div
+                                                      key={index}
+                                                      style={{
+                                                          background: "#FFC273",
+                                                          padding: "5px 10px",
+                                                          borderRadius: "5px",
+                                                          width: "fit-content",
+                                                          whiteSpace: "nowrap",
+                                                      }}
+                                                  >
+                                                      {skill}
+                                                  </div>
+                                              ))
+                                            : skills}
                                     </div>
                                 )}
                                 {renderTextSection("Majors", majors)}
@@ -138,7 +125,6 @@ export const CareersCardExpanded = ({
                         )}
                     </div>
 
-                    {/* Right column for images */}
                     <div className="w-1/3">{renderImages()}</div>
                 </div>
             </div>
