@@ -69,13 +69,13 @@ export const Navbar = () => {
 
 				{/* Navigation Links - Desktop */}
 				<div className="">
-					<Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Home
 					</Link>
-					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Take Quiz!
 					</Link>
-					<Link href={"/choose-grade-level"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/choose-grade-level"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Explore Careers
 					</Link>
 				</div>
