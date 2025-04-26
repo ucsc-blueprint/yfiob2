@@ -1,9 +1,9 @@
 "use client";
 
 import BoxButton from "../../components/BoxButton.jsx";
-import { useState, useEffect } from "react";
-import { onAuthStateChanged } from "firebase/auth";
-import { auth } from "../../utils/firebase.js";
+import { useRouter } from 'next/navigation';
+import { useState } from "react";
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -11,35 +11,20 @@ import Image from "next/image";
 
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
-	const [user, setUser] = useState(null);
-	
-  useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (currentUser) => {
-      setUser(currentUser);
-    });
 
-    return () => unsubscribe(); // cleanup on unmount
-  }, []);
+		const router = useRouter();
+		
+		const handleLoginClick = () => {
+				router.push('/login'); // Navigate to the /login page
+		};
 
-	/** Display "Login" button for users which are not signed in */
-	const displayLoginButton = () => {
-		return (
-			<div className="hidden md:flex px-8">
-				<Link href={"/login"} >
-					<BoxButton text="Login" color="blue"/>
-				</Link>
-			</div>
-		);
-	}
+		// const handleSignUpClick = () => {
+		// 		router.push('/sign-up'); // Navigate to the /signup page
+		// }
 
-	/** Display "Profile" button for signed in users */
-	const displayProfileButton = () => {
-		return (
-			<div className="hidden md:flex px-8">
-				<BoxButton text="Profile" color="blue"/>
-			</div>
-		);
-	}
+		// const goToQuiz = () => {
+		// 		router.push('/take-quiz'); // Navigate to the quiz page
+		// }
 
 	return (
 		<div className="bg-white shadow-md font-lato">
@@ -57,16 +42,17 @@ export const Navbar = () => {
 						/>
 					</Link>
 				</div>
+
 				{/* Hamburger Menu */}
 				<button
 					className="w-12 h-16 flex items-center justify-center md:hidden"
 					onClick={() => setIsOpen(!isOpen)}
 				>
-				<div className="space-y-2">
-					<span
-						className={`block h-0.5 bg-black rounded-full transition-all duration-300 ${
-							isOpen ? "w-8 rotate-45 translate-y-2.5" : "w-8"
-						}`}
+					<div className="space-y-2">
+						<span
+							className={`block h-0.5 bg-black rounded-full transition-all duration-300 ${
+								isOpen ? "w-8 rotate-45 translate-y-2.5" : "w-8"
+							}`}
 						/>
 						<span
 							className={`block h-0.5 bg-black rounded-full transition-all duration-300 ${
@@ -95,7 +81,13 @@ export const Navbar = () => {
 				</div>
 
 				{/* Log In Button - Desktop */}
-				{ (user) ? displayProfileButton() : displayLoginButton()}
+				<div className="hidden md:flex px-8">
+						<BoxButton
+							text="Login"
+							color="blue"
+							onClick={handleLoginClick}
+						/>
+				</div>
 			</div>
 
 			{/* Navigation Links - Mobile */}
