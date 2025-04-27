@@ -65,6 +65,8 @@ function App() {
             <img src="/assets/9-12PuzzlePiece.svg" alt="9-12 Puzzle Piece" className="w-[150px] h-[150px]" />
           </button>
         </div>
+      </div>
+    </div>
     );
 }
 
