@@ -13,9 +13,9 @@ export const CareersCardExpanded = ({
     majors,
 }) => {
     const educationStyles = {
-        "elementary-school": "#EACAA5",
-        "middle-school": "#3FA1D9",
-        "high-school": "#47B748",
+        "elementary-school": "#4C78E7",
+        "middle-school": "#47B748",
+        "high-school": "#FF7022",
     };
 
     // Used to dynamically render information sections (i.e colleges, majors, etc.)
@@ -74,7 +74,34 @@ export const CareersCardExpanded = ({
                         {renderTextSection("Salary", salary)}
 
                         {educationLevel === "middle-school" &&
-                            renderTextSection("Skills", skills)}
+                                renderTextSection(
+                                    "Skills",
+                                    <div
+                                        style={{
+                                            display: "flex",
+                                            flexWrap: "wrap",
+                                            gap: "8px",
+                                        }}
+                                    >
+                                        {Array.isArray(skills)
+                                            ? skills.map((skill, index) => (
+                                                <div
+                                                    key={index}
+                                                    style={{
+                                                        background: "#47B748",
+                                                        padding: "5px 10px",
+                                                        borderRadius: "5px",
+                                                        width: "fit-content",
+                                                        whiteSpace: "nowrap",
+                                                    }}
+                                                >
+                                                    {skill}
+                                                </div>
+                                            ))
+                                            : skills}
+                                    </div>
+                                )}
+
 
                         {educationLevel === "high-school" && (
                             <>
