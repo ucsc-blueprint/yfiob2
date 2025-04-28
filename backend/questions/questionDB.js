@@ -1,4 +1,4 @@
-import { db } from "../../src/utils/firebase";
+import { db } from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, limit, addDoc, updateDoc} from "firebase/firestore";
 
 export async function storeResponse(username, questionNumber, questionResponse){
