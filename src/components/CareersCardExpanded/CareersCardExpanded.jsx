@@ -1,83 +1,143 @@
+import Image from "next/image";
 import React from "react";
 
 export const CareersCardExpanded = ({
-  educationLevel,
-  category,
-  careerName,
-  description,
-  salary,
-  skills,
-  careerImages,
-  colleges,
-  majors,
+    educationLevel,
+    category,
+    careerName,
+    description,
+    salary,
+    skills,
+    careerImages,
+    colleges,
+    majors,
 }) => {
+    const educationStyles = {
+        "elementary-school": {
+            primary: "#4C78E7",
+        },
+        "middle-school": {
+            primary: "#47B748",
+            secondary: "#47B748",
+        },
+        "high-school": {
+            primary: "#FF7022",
+            secondary: "#FFC273",
+        },
+    };
 
-  const educationStyles = {
-    "elementary-school": "#EACAA5",
-    "middle-school": "#3FA1D9",
-    "high-school": "#47B748",
-  };
-
-  // Used to dynamically render information sections (i.e colleges, majors, etc.)
-  const renderTextSection = (label, value) => (
-    <>
-      <p className="pb-2">{label}:</p>
-      <p className="pb-5">{value}</p>
-    </>
-  );
-  
-  // Styling to display all career images
-  const renderImages = () => (
-    <div className="flex gap-5 flex-wrap">
-      {careerImages.map((careerImage, index) => (
-        <div key={index}>
-          <img data-testid="career-image" className="rounded-[5px]" src={careerImage} alt="careerImage" />
+    // Used to dynamically render information sections (i.e colleges, majors, etc.)
+    const renderTextSection = (label, value) => (
+        <div>
+            <p className="font-medium pb-2">{label}:</p>
+            <div className="pb-5">{value}</div>
         </div>
-      ))}
-      <img className="mt-auto ml-auto h-[100px] w-[100px]" src="/jignaSmall.png" alt="Jigna Small"
-      />
-    </div>
-  );
+    );
 
-  return (
-    <div data-testid="careers-card-expanded-container" className="w-11/12 m-auto no-scrollbar overflow-y-scroll max-h-[80vh]">
-      <h4
-        data-testid="careers-header"
-        className={`pl-6 pr-6 pt-2 pb-2 w-max rounded-t-xl italic`}
-        // Set background color depending on education-level
-        style={{ backgroundColor: educationStyles[educationLevel] }}
-      >
-        {category}
-      </h4>
-      <div className="bg-white p-5 no-scrollbar overflow-y-scroll">
-        {/* If elementary-school, display career name, description and salary  */}
-        {educationLevel === "elementary-school" && (
-          <>
-            <h2 className="text-[20px] font-medium pb-2">{careerName}</h2>
-            {renderTextSection("Description", description)}
-            {renderTextSection("Salary", salary)}
-          </>
-        )}
-        {/* If middle-school, display skills, description and salary  */}
-        {educationLevel === "middle-school" && (
-          <>
-            {renderTextSection("Description", description)}
-            {renderTextSection("Salary", salary)}
-            {renderTextSection("Skills", skills)}
-          </>
-        )}
-        {/* If middle-school, display all information except career name */}
-        {educationLevel === "high-school" && (
-          <>
-            {renderTextSection("Description", description)}
-            {renderTextSection("Salary", salary)}
-            {renderTextSection("Colleges", colleges)}
-            {renderTextSection("Skills", skills)}
-            {renderTextSection("Majors", majors)}
-          </>
-        )}
-        {renderImages()}
-      </div>
-    </div>
-  );
+    // Styling to display all career images
+    const renderImages = () => (
+        <div className="flex flex-col gap-5 items-end">
+            {careerImages?.map((careerImage, index) => (
+                <div key={index} data-testid="career-image">
+                    <Image
+                        className="rounded-md object-cover"
+                        src={careerImage}
+                        alt="careerImage"
+                        width={0}
+                        height={200}
+                        style={{ width: "auto", maxHeight: "200px" }}
+                    />
+                </div>
+            ))}
+            {(!careerImages || careerImages.length <= 0) && (
+                <img
+                    className="mt-auto ml-auto h-24 w-24"
+                    src="/jignaSmall.png"
+                    alt="Jigna Small"
+                />
+            )}
+        </div>
+    );
+
+    const styledSkillsSection = renderTextSection(
+        "Skills",
+        <div
+            style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "8px",
+            }}
+        >
+            {Array.isArray(skills)
+                ? skills.map((skill, index) => (
+                      <div
+                          key={index}
+                          style={{
+                              background: educationStyles[educationLevel]?.secondary,
+                              padding: "5px 10px",
+                              borderRadius: "5px",
+                              width: "fit-content",
+                              whiteSpace: "nowrap",
+                          }}
+                      >
+                          {skill}
+                      </div>
+                  ))
+                : skills}
+        </div>
+    );
+
+
+    return (
+        <div
+            data-testid="careers-card-expanded-container"
+            className="rounded-3xl w-11/12 m-auto no-scrollbar overflow-y-scroll pt-5 max-h-auto shadow-md"
+        >
+            <h4
+                data-testid="careers-header"
+                className="pt-2 pb-2 text-center text-xl text-white rounded-t-2xl"
+                style={{ backgroundColor: educationStyles[educationLevel]?.primary }}
+            >
+                {category}
+            </h4>
+            <div className="bg-white p-10 no-scrollbar overflow-y-scroll">
+                <div className="flex flex-row gap-8">
+                    <div className="flex-1">
+                        {educationLevel !== "high-school" && (
+                            <h2 className="text-xl font-medium pb-10">{careerName}</h2>
+                        )}
+
+                        {renderTextSection("Description", description)}
+                        {renderTextSection("Salary", salary)}
+
+                        {educationLevel === "middle-school" && styledSkillsSection}
+
+                        {educationLevel === "high-school" && (
+                            <>
+                                {renderTextSection(
+                                    "Colleges",
+                                    <ul
+                                        style={{
+                                            listStyleType: "disc",
+                                            paddingLeft: "1.5rem",
+                                        }}
+                                    >
+                                        {Array.isArray(colleges)
+                                            ? colleges.map((college, index) => (
+                                                <li key={index}>{college}</li>
+                                            ))
+                                            : colleges}
+                                    </ul>
+                                )}
+                                {styledSkillsSection}
+                                {renderTextSection("Majors", majors)}
+                            </>
+                        )}
+                    </div>
+
+                    <div className="w-1/3">{renderImages()}</div>
+                </div>
+            </div>
+        </div>
+    );
 };

@@ -1,6 +1,6 @@
 "use client";
 import React, { useEffect, useState } from "react";
-import CareersCard from "../components/CareersCard.jsx";
+import CareersCard from "../components/Careers_Card/CareersCard.jsx";
 import { Navbar } from "../components/Navbar/Navbar.jsx";
 import BackArrow from "../components/BackArrow.jsx"
 import ForwardArrow from "../components/ForwardArrow.jsx";
