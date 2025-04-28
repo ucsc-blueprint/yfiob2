@@ -79,7 +79,7 @@ describe("CareersCardExpanded", () => {
         // Header Color Test
         test("elementary school header color", () => {
             expect(screen.getByTestId("careers-header")).toHaveStyle(
-                "background-color: #EACAA5"
+                "background-color:#4C78E7"
             );
         });
 
@@ -140,7 +140,7 @@ describe("CareersCardExpanded", () => {
         // Header Color Test
         test("middle school header color", () => {
             expect(screen.getByTestId("careers-header")).toHaveStyle(
-                "background-color: #3FA1D9"
+                "background-color: #47B748"
             );
         });
 
@@ -212,7 +212,7 @@ describe("CareersCardExpanded", () => {
         // Header Color Test
         test("high school header color", () => {
             expect(screen.getByTestId("careers-header")).toHaveStyle(
-                "background-color: #47B748"
+                "background-color: #FF7022"
             );
         });
 
