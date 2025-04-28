@@ -48,36 +48,56 @@ export const QuestionCard = ({
 				style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
 				
 			></div>
-			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col">
-				<div className=" flex-col flex items-center grow justify-space-between">
-					<p className="flex-[1] w-[77%] text-[114%] text-center italic">{advice}</p>
-					<div className="flex-[3] w-[77%] flex justify-between">
-						<h1 className="text-3xl font-bold">"{question}"</h1>
-						<img width={"20%"} src={`${puzzleImg}`} alt="Jigna Small" />
-					</div>
-					<div className="flex-[1] w-[75%] flex-row flex justify-center pb-4 ">
-						{agreeArray.map((agreement, i) => {
-							const weight = (i === 0) | (i === agreeArray.length - 1) ? 2 : 1;
-							return (
-								<button
-									key={i}
-									onClick={() => onAnswerSelect(i)}
-									className={`flex-[${weight}] text-center m-[1%] rounded-[20px] px-4 py-3 ${
-										selectedAnswer === i ? `${bgColor} text-white` : 'bg-slate-200 text-slate-500' 
-									}`}
-								>
-									{agreement}
-								</button>
-							);
-						})}
-					</div>
-				</div>
-				<div className="flex justify-end items-end text-2xl pb-[2vh]">
-					<span className={`${tColor}`}>{questionNumber}</span>
-					<span className="text-slate-400">/{totalQuestions}</span> 
-				</div>
-			</div>
-			
+			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col justify-center">
+			<div className="font-lato italic text-gray-500 mb-5 pl-[11.5%]">
+  "Don't worry about time, money, training, or education. Just think do you enjoy it?"
+</div>
+
+<div className="flex-col flex items-center grow relative mb-14">
+  <div className="flex-[3] w-[77%] flex items-start gap-4 mr-14 -ml-5">
+    {/* Fixed size circle */}
+    <div className={`flex items-center justify-center text-white w-10 h-10 rounded-full ${bgColor} flex-shrink-0`}>
+      {questionNumber}
+    </div>
+
+    {/* Fixed height for question text area */}
+    <div className="flex flex-col min-h-[140px] justify-between">
+      <h1 className="text-3xl font-bold mb-2">"{question}"</h1>
+      <p className="text-sm text-gray-400">Please select how strongly you agree/disagree with this statement</p>
+    </div>
+
+    {/* Keep puzzle image stable */}
+    <img className="absolute right-0 w-[20%] min-w-[80px] max-w-[100px]" src={`${puzzleImg}`} alt="Jigna Small" />
+  </div>
+
+  {/* Answer buttons */}
+  <div className="flex-[1] w-[75%] flex justify-center flex-wrap gap-4 pt-10">
+    {agreeArray.map((agreement, i) => {
+      const weight = (i === 0 || i === agreeArray.length - 1) ? 2 : 1;
+      return (
+        <button
+          key={i}
+          onClick={() => onAnswerSelect(i)}
+          className={`flex-[${weight}] text-center rounded-[20px] px-4 py-3 transition ${
+            selectedAnswer === i ? `${bgColor} text-white` : 'bg-slate-200 text-slate-500'
+          }`}
+        >
+          {agreement}
+        </button>
+      );
+    })}
+<div className="absolute mt-14 right-0 text-2xl">
+    <span className={`${tColor}`}>{questionNumber}</span>
+    <span className="text-slate-400">/{totalQuestions}</span>
+  </div>
+  </div>
+</div>
+
+  {/* Page Number */}
+  
+</div>
+
+
 			<div className="flex-end justify-center">
 				<button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700"
 				>
