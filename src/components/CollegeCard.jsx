@@ -1,23 +1,26 @@
+"use client";
+
 import Image from "next/image";
 import UniversityCampus from "./UniversityCampus";
 
 const agreeArray = ["Yes", "Maybe", "No"];
 
-function Button(props) {
+function Button({ children, isSelected, onClick }) {
     return (
-        <div className="flex grow justify-center" {...props}>
+        <div className="flex grow justify-center">
             <button
-                className={
-                    "text-center bg-slate-200 text-slate-500 w-28 rounded-[20px] px-4 py-3"
-                }
+                onClick={onClick}
+                className={`text-center rounded-[20px] px-4 py-3 w-28 ${
+                    isSelected ? "bg-green-500 text-white" : "bg-slate-200 text-slate-500"
+                }`}
             >
-                {props.children}
+                {children}
             </button>
         </div>
     );
 }
 
-export const CollegeCard = ({ onAnswerSelect = () => {} }) => {
+export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
     return (
         <div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden">
             <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex">
@@ -27,7 +30,7 @@ export const CollegeCard = ({ onAnswerSelect = () => {} }) => {
                         <Image
                             fill
                             className="object-cover"
-                            src={"https://placehold.co/500x300"}
+                            src={"collegeExterior.png"}
                             alt="College"
                         />
                     </div>
@@ -35,7 +38,7 @@ export const CollegeCard = ({ onAnswerSelect = () => {} }) => {
                         <Image
                             fill
                             className="object-cover"
-                            src={"https://placehold.co/500x300"}
+                            src={"collegeInterior.png"}
                             alt="College"
                         />
                     </div>
@@ -48,9 +51,15 @@ export const CollegeCard = ({ onAnswerSelect = () => {} }) => {
                         <div>
                             <UniversityCampus />
                         </div>
-                        <div className="flex w-full items-stretch ">
-                            {agreeArray.map((agree) => (
-                                <Button>{agree}</Button>
+                        <div className="flex w-full items-stretch">
+                            {agreeArray.map((agree, index) => (
+                                <Button
+                                    key={agree}
+                                    isSelected={selectedAnswer === index}
+                                    onClick={() => onAnswerSelect(index)}
+                                >
+                                    {agree}
+                                </Button>
                             ))}
                         </div>
                     </div>
