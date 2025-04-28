@@ -13,9 +13,17 @@ export const CareersCardExpanded = ({
     majors,
 }) => {
     const educationStyles = {
-        "elementary-school": "#EACAA5",
-        "middle-school": "#3FA1D9",
-        "high-school": "#47B748",
+        "elementary-school": {
+            primary: "#4C78E7",
+        },
+        "middle-school": {
+            primary: "#47B748",
+            secondary: "#47B748",
+        },
+        "high-school": {
+            primary: "#FF7022",
+            secondary: "#FFC273",
+        },
     };
 
     // Used to dynamically render information sections (i.e colleges, majors, etc.)
@@ -51,6 +59,35 @@ export const CareersCardExpanded = ({
         </div>
     );
 
+    const styledSkillsSection = renderTextSection(
+        "Skills",
+        <div
+            style={{
+                display: "flex",
+                flexWrap: "wrap",
+                gap: "8px",
+            }}
+        >
+            {Array.isArray(skills)
+                ? skills.map((skill, index) => (
+                      <div
+                          key={index}
+                          style={{
+                              background: educationStyles[educationLevel]?.secondary,
+                              padding: "5px 10px",
+                              borderRadius: "5px",
+                              width: "fit-content",
+                              whiteSpace: "nowrap",
+                          }}
+                      >
+                          {skill}
+                      </div>
+                  ))
+                : skills}
+        </div>
+    );
+
+
     return (
         <div
             data-testid="careers-card-expanded-container"
@@ -59,7 +96,7 @@ export const CareersCardExpanded = ({
             <h4
                 data-testid="careers-header"
                 className="pt-2 pb-2 text-center text-xl text-white rounded-t-2xl"
-                style={{ backgroundColor: educationStyles[educationLevel] }}
+                style={{ backgroundColor: educationStyles[educationLevel]?.primary }}
             >
                 {category}
             </h4>
@@ -73,8 +110,7 @@ export const CareersCardExpanded = ({
                         {renderTextSection("Description", description)}
                         {renderTextSection("Salary", salary)}
 
-                        {educationLevel === "middle-school" &&
-                            renderTextSection("Skills", skills)}
+                        {educationLevel === "middle-school" && styledSkillsSection}
 
                         {educationLevel === "high-school" && (
                             <>
@@ -88,38 +124,12 @@ export const CareersCardExpanded = ({
                                     >
                                         {Array.isArray(colleges)
                                             ? colleges.map((college, index) => (
-                                                  <li key={index}>{college}</li>
-                                              ))
+                                                <li key={index}>{college}</li>
+                                            ))
                                             : colleges}
                                     </ul>
                                 )}
-                                {renderTextSection(
-                                    "Skills",
-                                    <div
-                                        style={{
-                                            display: "flex",
-                                            flexWrap: "wrap",
-                                            gap: "8px",
-                                        }}
-                                    >
-                                        {Array.isArray(skills)
-                                            ? skills.map((skill, index) => (
-                                                  <div
-                                                      key={index}
-                                                      style={{
-                                                          background: "#FFC273",
-                                                          padding: "5px 10px",
-                                                          borderRadius: "5px",
-                                                          width: "fit-content",
-                                                          whiteSpace: "nowrap",
-                                                      }}
-                                                  >
-                                                      {skill}
-                                                  </div>
-                                              ))
-                                            : skills}
-                                    </div>
-                                )}
+                                {styledSkillsSection}
                                 {renderTextSection("Majors", majors)}
                             </>
                         )}
