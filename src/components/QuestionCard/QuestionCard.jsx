@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 
 const agreeArray = [
 	"Strongly Disagree",
@@ -10,7 +10,6 @@ const agreeArray = [
 
 export const QuestionCard = ({
 	question,
-	advice,
 	questionNumber,
 	totalQuestions,
 	selectedAnswer, 
@@ -29,6 +28,7 @@ export const QuestionCard = ({
 		"elementary-school": "text-[#3FA1D9]", 
 		"middle-school": "text-[#47B748]",
 		"high-school":  "text-[#FF7022]", 
+		"grey-color": "text-[#9F9F9F]",
 	}
 
 	const puzzleColor = {
@@ -36,10 +36,14 @@ export const QuestionCard = ({
 		"middle-school": "/jigna-small-green.svg",
 		"high-school":  "/jigna-small-orange.svg", 
 	}
+
+	
 	
 	const bgColor = backgroundColor[grade]
 	const tColor = textColor[grade]
 	const puzzleImg = puzzleColor[grade]
+	const gcolor = textColor[3]
+	
 
 	return (
 		<div className={`bg-slate-300 w-[66vw] h-[50vh] rounded-[20px] font-lato shadow-md overflow-hidden`}>
@@ -49,7 +53,7 @@ export const QuestionCard = ({
 				
 			></div>
 			<div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col justify-center">
-			<div className="font-lato italic text-gray-500 mb-5 pl-[11.5%]">
+			<div className={`font-lato italic ${gcolor} mb-5 pl-[11.5%]`}>
   "Don't worry about time, money, training, or education. Just think do you enjoy it?"
 </div>
 
