@@ -62,7 +62,7 @@ export default function QuizResultsPage() {
         </button>
         <div className="flex space-x-2">
           <Link
-            href="/quiz"
+            href="/take-quiz"
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
           >
             <RefreshIcon className="mr-2 h-4 w-4" />
@@ -176,7 +176,7 @@ export default function QuizResultsPage() {
             <p className="italic mb-2">Not Happy with your Results?</p>
             <p className="mb-4 text-gray-700">Take the quiz again here!</p>
             <Link
-              href="/quiz"
+              href="/take-quiz"
               className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
             >
               Retake Quiz
