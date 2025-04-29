@@ -5,6 +5,8 @@ import { collection, where, query, getDocs } from "firebase/firestore";
 import { useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 export default function ExploreCareersPage() {
+
+
     const INDUSTRIES = ['Agriculture and Natural Resources',
           'Energy and Utilities',
           'Arts, Media, and Entertainment',
@@ -46,6 +48,11 @@ export default function ExploreCareersPage() {
 	return (
 		<div className="bg-[#FFC273] h-full">
 			<Navbar/>
+			<button className="flex items-center gap-2 px-6 py-3 min-w-[164px] h-[41px] bg-blue-600 rounded-lg border-2 border-blue-700 text-white font-bold transition-all duration-200 hover:bg-blue-500">
+				<a href="/choose-careers">
+					<span>Back to Careers</span>
+				</a>
+			</button>
 			<CareerSummaryCards
 			 CardData=
 			 {

@@ -1,5 +1,7 @@
 "use client";
 
+import BoxButton from "../../components/BoxButton.jsx";
+import { useRouter } from 'next/navigation';
 import { useState } from "react";
 
 import Link from "next/link";
@@ -10,11 +12,25 @@ import Image from "next/image";
 export const Navbar = () => {
 	const [isOpen, setIsOpen] = useState(false);
 
+		const router = useRouter();
+		
+		const handleLoginClick = () => {
+				router.push('/login'); // Navigate to the /login page
+		};
+
+		// const handleSignUpClick = () => {
+		// 		router.push('/sign-up'); // Navigate to the /signup page
+		// }
+
+		// const goToQuiz = () => {
+		// 		router.push('/take-quiz'); // Navigate to the quiz page
+		// }
+
 	return (
 		<div className="bg-white shadow-md font-lato">
-			<div className="flex items-center justify-between p-6 h-[20vw] md:h-auto">
+			<div className="flex items-center justify-between px-6 h-[20vw] md:h-auto">
 				{/* Logo */}
-				<div className="py-2 grow-[100] z-30">
+				<div className="font-bold py-2 z-30">
 					<Link href={"/"}>
 						<Image
 							width={170}
@@ -52,23 +68,25 @@ export const Navbar = () => {
 				</button>
 
 				{/* Navigation Links - Desktop */}
-				<div className="hidden md:flex space-x-6">
-					<Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1">
+				<div className="">
+					<Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Home
 					</Link>
-					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/take-quiz"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Take Quiz!
 					</Link>
-					<Link href={"/explore-careers"} className="px-3 hover:text-[#4C78E7] py-1">
+					<Link href={"/choose-grade-level"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
 						Explore Careers
 					</Link>
 				</div>
 
 				{/* Log In Button - Desktop */}
 				<div className="hidden md:flex px-8">
-					<div className="bg-[#4C78E757] p-3 px-5 rounded-full hover:text-slate-100">
-						<Link href={"/login"}>Log In</Link>
-					</div>
+						<BoxButton
+							text="Login"
+							color="blue"
+							onClick={handleLoginClick}
+						/>
 				</div>
 			</div>
 
@@ -94,7 +112,7 @@ export const Navbar = () => {
 					Take Quiz!
 				</Link>
 				<Link
-					href={"/explore-careers"}
+					href={"/choose-grade-level"}
 					onClick={() => setIsOpen(false)}
 					className="text-lg text-black hover:text-blue-600 z-10 p-2"
 				>
