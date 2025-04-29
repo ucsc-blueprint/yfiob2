@@ -21,10 +21,11 @@ algorithm:
 9) return the array of industries
 */
 
-import { db } from "../../src/utils/firebase.js";
-import { collection, getDocs, query, where} from "firebase/firestore";
+// import { db } from "../../src/utils/firebase.js";
+import { db } from "../firebaseConfig.js";
+import { collection, getDocs, addDoc } from "firebase/firestore";
 
-async function getTopKIndustries(username, k) {
+async function storeTopKIndustries(username, k) {
     // Step 1: Initialize a JSON object to store the industries and their scores
     const industries = {};
 
@@ -77,17 +78,24 @@ async function getTopKIndustries(username, k) {
     const arr = Object.entries(industries)
 
     insertionSort(arr);
-    let newArr = [];
-
-    if(k > arr.length){
+    
+    if(k > arr.length) {
         k = arr.length;
     }
 
-    for(let i = 0; i < k; i ++){
-        newArr.push(arr[i]);
+    const industryReference  = collection(db, "userTopKIndustries")
+
+    //saving the top k industries to the database
+    for(let i = 0; i < k; i++){
+        //store the industry at this index (arr[i][0]) and store the ranking (which is i)
+        addDoc(industryReference, { 
+            username: username,
+            industry: arr[i][0],
+            ranking: Number(i)
+        });
     }
-    return newArr;    
 }
+
 // Step 7: Return the sorted industries object
 function insertionSort(arr) {
     for (let i = 1; i < arr.length; i++){
@@ -103,8 +111,4 @@ function insertionSort(arr) {
     return arr;
 }
 
-/*
-getTopKIndustries("Akshay", 2).then((result) => {
-    console.log(result);
-});
-*/
+storeTopKIndustries("Akshay", 2)
