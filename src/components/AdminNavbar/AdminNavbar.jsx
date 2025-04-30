@@ -20,7 +20,9 @@ export default function AdminNavbar() {
 				</div>
 				<div className="flex flex-row grow justify-center">
 					<div className="flex flex-row">
-						<button className="p-4">Insights</button>
+						<Link href="/admin/insights">
+							<button className="p-4">Insights</button>
+						</Link>
 						<button className="p-4">Quiz</button>
 						<button className="p-4">Students</button>
 					</div>
