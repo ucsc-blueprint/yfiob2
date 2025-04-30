@@ -1,0 +1,205 @@
+// app/quiz-results/page.jsx
+"use client";
+
+import { useState } from "react";
+import Link from "next/link";
+import { Navbar } from "../../components/Navbar/Navbar";
+import {
+  BarChart,
+  Bar,
+  XAxis,
+  Tooltip,
+  ResponsiveContainer,
+  Cell,
+  LabelList,
+} from "recharts";
+import CareersCard from "../../components/Careers_Card/CareersCard";
+import {
+  ChevronDownIcon,
+  RefreshIcon,
+  ShareIcon,
+} from "@heroicons/react/outline";
+
+export default function QuizResultsPage() {
+  // Static data
+  const percentages = { arts: 23, trades: 43, ag: 59 };
+  const chartData = [
+    { name: "Arts, Media, and Entertainment", value: percentages.arts, fill: "#C8E6C9" },
+    { name: "Building and Construction Trades", value: percentages.trades, fill: "#A5D6A7" },
+    { name: "Agriculture and Natural Resources", value: percentages.ag, fill: "#4CAF50" },
+  ];
+
+  const topJobs = [
+    { title: "Agricultural Architect", description: "Design sustainable farm layouts and eco-friendly irrigation systems.", imageUrl: "/jigna-small.svg" },
+    { title: "Farm Manager", description: "Oversee daily operations, budgeting, and crop planning on a commercial farm.", imageUrl: "/jigna-small.svg" },
+    { title: "Soil Conservationist", description: "Work with landowners to protect soil health and prevent erosion.", imageUrl: "/jigna-small.svg" },
+    { title: "Agricultural Engineer", description: "Develop agricultural machinery and automation solutions.", imageUrl: "/jigna-small.svg" },
+  ];
+
+  const otherJobsTitles = [
+    "Environmental Scientist","Hydrologist","Food Scientist","Landscape Designer",
+    "Wildlife Biologist","Agricultural Economist","Conservation Officer","Forestry Technician"
+  ];
+  const otherJobs = otherJobsTitles.map(title => ({
+    title,
+    description: "",
+    imageUrl: "/jigna-small.svg",
+  }));
+
+  const [shareEmail, setShareEmail] = useState("");
+
+  return (
+    <div className="min-h-screen flex flex-col bg-white">
+      <Navbar />
+
+      {/* Top controls */}
+      <div className="flex items-center justify-between px-4 py-6">
+        <button
+          className="flex items-center text-blue-600 border border-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
+        >
+          Quiz results on 10/9/2025
+          <ChevronDownIcon className="ml-2 h-4 w-4" />
+        </button>
+        <div className="flex space-x-2">
+          <Link
+            href="/take-quiz"
+            className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
+          >
+            <RefreshIcon className="mr-2 h-4 w-4" />
+            Retake Quiz
+          </Link>
+          <button
+            className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
+          >
+            <ShareIcon className="mr-2 h-4 w-4" />
+            Share
+          </button>
+        </div>
+      </div>
+
+      {/* Full-screen hero */}
+      <section className="flex flex-col items-center justify-center bg-white min-h-[calc(100vh-80px)] px-4">
+        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
+          <div className="text-center md:text-left">
+            <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
+            <h1 className="mt-4 text-5xl font-bold">Agriculture and Natural Resources</h1>
+          </div>
+          <img
+            src="/assets/ResultsPuzzlePiece.svg"
+            alt="Puzzle piece"
+            className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
+          />
+        </div>
+        <div className="w-full max-w-4xl h-80 mt-8">
+          <ResponsiveContainer width="100%" height="100%">
+            <BarChart
+              data={chartData}
+              margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
+              barGap={0}
+              barCategoryGap="-20%"
+            >
+              <XAxis
+                dataKey="name"
+                axisLine={false}
+                tickLine={false}
+                interval={0}
+                height={60}
+                tick={{ fill: "#555", fontSize: 16 }}
+              />
+              <Tooltip formatter={val => `${val}%`} cursor={false} />
+              <Bar dataKey="value" isAnimationActive={false} barSize={140}>
+                {chartData.map((entry, idx) => (
+                  <Cell key={idx} fill={entry.fill} />
+                ))}
+                <LabelList
+                  dataKey="value"
+                  position="top"
+                  formatter={val => `${val}%`}
+                  style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
+                />
+              </Bar>
+            </BarChart>
+          </ResponsiveContainer>
+        </div>
+        <h3 className="text-center text-2xl font-bold">
+            Your top job recommendations for{" "}
+            <span className="font-extrabold text-green-700">
+          Agriculture and Natural Resources
+            </span>
+          </h3>
+      </section>
+
+
+        {/* Green cards section */}
+      <section className="bg-green-50 py-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+          {topJobs.map((job, i) => (
+            <CareersCard key={i} {...job} />
+          ))}
+        </div>
+      </section>
+
+      {/* CTA Section */}
+      <section className="bg-white py-16">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-12 text-center px-4">
+          <div>
+            <p className="italic mb-2">Interested in gaining experience?</p>
+            <p className="mb-4 text-gray-700">
+              Visit the YFIOB page for info on Work Based Learning Events!
+            </p>
+            <Link
+              href="https://yfiob.example.com"
+              className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+            >
+              YFIOB Page
+            </Link>
+          </div>
+          <div>
+            <p className="italic mb-2">Share your results!</p>
+            <div className="flex justify-center mt-2">
+              <input
+                type="email"
+                placeholder="Enter your email"
+                className="border border-gray-300 rounded-l px-4 py-2 w-64 focus:outline-none"
+                value={shareEmail}
+                onChange={e => setShareEmail(e.target.value)}
+              />
+              <button
+                className="bg-blue-600 text-white px-6 py-2 rounded-r-full hover:bg-blue-700 transition"
+                onClick={() => console.log("Send to:", shareEmail)}
+              >
+                Send &rarr;
+              </button>
+            </div>
+          </div>
+          <div>
+            <p className="italic mb-2">Not Happy with your Results?</p>
+            <p className="mb-4 text-gray-700">Take the quiz again here!</p>
+            <Link
+              href="/take-quiz"
+              className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+            >
+              Retake Quiz
+            </Link>
+          </div>
+        </div>
+      </section>
+
+      {/* White heading for other recs */}
+      <section className="bg-white pb-8">
+        <h4 className="text-center text-2xl font-semibold">
+          Your other career recommendations
+        </h4>
+      </section>
+
+      {/* Gray grid section with extra top padding */}
+      <section className="bg-gray-100 pt-16 px-4 pb-12">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
+          {otherJobs.map((job, idx) => (
+            <CareersCard key={idx} {...job} />
+          ))}
+        </div>
+      </section>
+    </div>
+  );
+}
