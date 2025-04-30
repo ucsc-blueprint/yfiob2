@@ -1,0 +1,82 @@
+[
+    {
+        "name": "Fashion and Interior Design",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Building Trades and Construction",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Arts, Media, and Entertainment",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Energy and Utilities",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Skilled Trades",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Ecology & Environmental",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Engineering and Design Industry",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Agriculture and Natural Resources",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Hospitality, Tourism, and Recreation",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Information Technology",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Research & Academia",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Education, Child Development, and Family Services",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Manufacturing and Product Development",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Health Science and Medical Technology",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Psychology",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Public Services",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Law Enforcement",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Finance and Business",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Transportation",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    },
+    {
+        "name": "Aviation",
+        "description": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque faucibus massa id massa tempor, ac consequat nunc feugiat. Suspendisse sit amet aliquet sem. Fusce vitae varius nunc. Ut vel mollis enim, sit amet commodo metus. Duis eget cursus est. In vel vulputate risus."
+    }
+]

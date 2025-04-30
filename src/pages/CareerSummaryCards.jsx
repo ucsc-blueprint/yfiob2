@@ -1,11 +1,24 @@
+"use client";
 import React, { useEffect, useState } from "react";
-import CareersCard from "../components/CareersCard.jsx";
+import CareersCard from "../components/Careers_Card/CareersCard.jsx";
 import { Navbar } from "../components/Navbar/Navbar.jsx";
-import BackButton from "../assets/BackButton.svg";
-import ForwardButton from "../assets/ForwardButton.svg";
+import BackArrow from "../components/BackArrow.jsx"
+import ForwardArrow from "../components/ForwardArrow.jsx";
 
-const CareerSummaryCards = ({ CardData, Level }) => {
+export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex, TotalIndustries}) => {
 	const [color, setColor] = useState(["", "", ""]);
+
+	function handleLeftClick(){
+        if (Index > 0){
+            SetIndex(Index - 1)
+        }
+    }
+
+    function handleRightClick(){
+        if (Index < TotalIndustries - 1){
+        	SetIndex(Index + 1);
+        }
+    }
 
 	useEffect(() => {
 		switch (Level) {
@@ -21,7 +34,6 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 		}
 	}, [Level]);
 
-	console.log(color);
 
 	return (
 		<div
@@ -33,12 +45,12 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 					: "bg-[#FFC273] font-lato h-[100vh]"
 			}
 		>
-			<Navbar />
 			<div className="px-10 flex flex-row justify-evenly pt-10 pb-3 items-center ">
 				<div className="flex w-1/3 flex-row items-center">
 					{/* back button */}
-					<button className="flex items-center">
-						<img aria-label="go back to careers page" src={BackButton} alt="<" />
+					<button className="flex items-center" onClick={handleLeftClick}>
+						<BackArrow />
+						{/* <img aria-label="go back to careers page" src={BackButton} alt="<" /> */}
 						<p className="p-0 px-5">Click to Go Back</p>
 					</button>
 				</div>
@@ -61,17 +73,17 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 									: "text-[#FF7022] text-2xl"
 							}
 						>
-							Agriculture and Natural Resources
+							{Industry}
 						</h1>
 					</div>
 				</div>
 				<div className="w-1/3 flex flex-row items-center justify-end">
 					{/* forward button */}
-					<button className="flex items-center">
+					<button className="flex items-center" onClick={handleRightClick}>
 						<p className="p-0 px-5 text-right">
-							Click to move onto Building and Construction Trades
+							Click to go forward
 						</p>
-						<img aria-label="go to next career" src={ForwardButton} alt=">" />
+						<ForwardArrow />
 					</button>
 				</div>
 			</div>
@@ -101,4 +113,4 @@ const CareerSummaryCards = ({ CardData, Level }) => {
 	);
 };
 
-export default CareerSummaryCards;
+	

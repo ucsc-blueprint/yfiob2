@@ -14,17 +14,17 @@ export const CareersCard = ({title, description, educationLevel, careerImage}) =
   } else {
     // Otherwise, display middle/high school level card summary
     return (
-      <div className="no-scrollbar overflow-y-auto bg-white rounded-3xl w-[240px] h-[250px] rounded-15px pb-1em font-lato ">
+      <div className="no-scrollbar overflow-y-auto bg-white rounded-xl w-[240px] h-[250px] rounded-20px pb-1em font-lato">
         {/* Dynamically render header for either middle-school or high-school header */}
         { educationLevel === 'middle-school' ? 
         // Header for middle-school level
-        <header className='pt-2 pb-2 bg-[#3FA1D9] text-center text-[22px] font-bold text-lg pd-[0.7em]'> {title} </header>
+        <header className='pt-2 pb-2 bg-[#3FA1D9] text-center text-[22px] text-lg pd-[0.7em] text-white'> {title} </header>
         :
         // Header for high-school level
-        <header className="pt-2 pb-2 bg-[#47B748] text-center text-[22px] font-bold text-lg pd-[0.7em]">{title}</header>
+        <header className="pt-2 pb-2 bg-[#FF7022] text-center text-[22px] text-lg pd-[0.7em] text-white">{title}</header>
         }
-        <p className="pl-5 pr-5 pt-3 pb-3 text-[12px]">{description}</p>
-        <img className='m-auto mb-5' src={careerImage} alt='career-image'></img>
+        <img className='m-auto mt-5 mb-5 w-auto h-[100px] object-contain' src={careerImage || "/jignaOrange.png"} alt='career-images'></img>
+        <p className="pl-5 pr-5 pt-3 pb-3 text-[12px]">{description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al"}</p>
       </div>        
       );
     }
