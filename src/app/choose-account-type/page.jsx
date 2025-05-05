@@ -5,25 +5,27 @@ import BoxButton from "../../components/BoxButton.jsx";
 import Image from "next/image";
 import Puzzle from "../../assets/BluePuzzleGuy.svg";
 import { useRouter, useSearchParams } from "next/navigation";
+import { auth } from "../../utils/firebase.js";
+import { onAuthStateChanged } from "firebase/auth";
 
 export const Page = () => {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const grade = searchParams.get('grade') || "elementary-school";
-    
+    const grade = searchParams.get("grade") || "elementary-school";
+
     const handleLoginClick = () => {
         router.push(`/login?grade=${grade}`);
     };
-    
+
     const handleSignUpClick = () => {
         router.push(`/sign-up?grade=${grade}`);
     };
-    
+
     const goToQuiz = () => {
         // Guest users don't need validation
         router.push(`/take-quiz/${grade}?valid=true`);
     };
-    
+
     return (
         <>
             <div className="min-h-screen flex flex-col bg-[#E8F6FF] overflow-hidden">
