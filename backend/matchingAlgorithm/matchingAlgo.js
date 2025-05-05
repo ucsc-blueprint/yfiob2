@@ -21,7 +21,7 @@ algorithm:
 9) return the array of industries
 */
 
-// import { db } from "../../src/utils/firebase.js";
+//import { db } from "../firebase.js";
 import { db } from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc} from "firebase/firestore";
 
@@ -43,8 +43,9 @@ async function storeTopKIndustries(username, k) {
     // Step 5: Process each response
     for (const doc of responses.docs) {
         const questionData = doc.data();
-        const questionNumber = questionData.questionNumber;
+        const questionFullNumber = questionData.questionNumber;
         const optionSelected = questionData.optionSelected;
+        const questionNumber = questionFullNumber.split("-")[0];
 
         // Step 6a: Get the question category
         const categoryQuery = query(questionsRef, where("questionNumber", "==", questionNumber));
@@ -53,7 +54,6 @@ async function storeTopKIndustries(username, k) {
         for (const categoryDoc of categoryDocs.docs) {
             const categoryData = categoryDoc.data();
             const category = categoryData.questionCategory;
-
             // Step 6b: Get the industry of the selected option
             const industryQuery = query(
                 questionClassificationRef,
@@ -65,7 +65,6 @@ async function storeTopKIndustries(username, k) {
             for (const industryDoc of industryDocs.docs) {
                 const industryData = industryDoc.data();
                 const industry = industryData.industry;
-
                 // Step 6c: Increment the score of the industry
                 if (industry in industries) {
                     industries[industry] += 1;
