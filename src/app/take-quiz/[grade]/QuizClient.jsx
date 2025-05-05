@@ -1,13 +1,13 @@
 "use client";
 
 import { useEffect, useState } from "react";
+import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
 import BackArrow from "../../../components/BackArrow.jsx";
 import ForwardArrow from "../../../components/ForwardArrow.jsx";
 import questions from "../../../../questions.json";
 import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
-import { useRouter } from "next/navigation";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);
@@ -16,13 +16,15 @@ function getQuestions(educationLevel) {
 
 export default function QuizClient({ grade }) {
     const router = useRouter();
-    const queries = router.query;
+    const searchParams = useSearchParams();
+    const isValid = searchParams.get('valid') === 'true';
 
-    console.log(queries);
-
-    if (!queries?.vaid) {
-        router.push("/choose-account-type", { page: grade });
-    }
+    // If not a valid session, redirect to choose-account-type
+    useEffect(() => {
+        if (!isValid) {
+            router.push(`/choose-account-type?grade=${grade}`);
+        }
+    }, [isValid, router, grade]);
 
     // map grade → index
     const gradeToIndex = {
@@ -64,7 +66,7 @@ export default function QuizClient({ grade }) {
         for (const responseObj of data) {
             const answerStr = responseObj["questionNumber"];
             const answerStrSplit = answerStr.split("-");
-            const questionNum = answerStr[0];
+            const questionNum = answerStrSplit[0];
             const randomQuestionNum = parseInt(answerStrSplit[1]);
             setSavedRandomNums((prev) => ({
                 ...prev,
@@ -118,10 +120,6 @@ export default function QuizClient({ grade }) {
     // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
 
-    // green: bg-[#BAE98E],
-    // blue: bg-[#9AD7F8]
-    // orange: bg-[#FFC273]
-
     return (
         <>
             {/* Navbar sits on top */}
@@ -134,7 +132,7 @@ export default function QuizClient({ grade }) {
                 className={`
           fixed
           left-0 right-0
-          top-16    /* adjust if your navbar height is different */
+          top-16
           bottom-0
           ${color}
           z-0
