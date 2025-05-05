@@ -1,12 +1,45 @@
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
+import getData from "../../../utils/getData";
 
-export default function AdminInsights() {
+export default async function AdminInsights() {
   // TODO: fetch these from Firebase
   const assessmentsTaken = 481;
   const last7DaysGrowth = 220;
   const mostClickedCareer = "Agricultural Engineer";
-  const readyForCollegePercent = 56;
-  const topTrendingSchool = "Santa Cruz County Highschool";
+
+  let users = [];
+  const schools = {};
+  let topTrendingSchool = "Unknown";
+  
+  try {
+    users = await getData("users");
+    console.log("Users: ", users);
+
+    for (let i = 0; i < users.length; i++) {
+      const user = users[i];
+      if (!user.data.school) {
+        continue;
+      }
+      const school = user.data.school;
+      if (schools[school]) {
+        schools[school] += 1;
+      } else {
+        schools[school] = 1;
+      }
+    }
+
+    console.log("Schools: ", schools);
+
+    if (Object.keys(schools).length > 0) {
+      topTrendingSchool = Object.keys(schools).reduce((a, b) => 
+        schools[a] > schools[b] ? a : b
+      );
+    }
+  } catch (error) {
+    console.error("Error fetching user data:", error);
+  }
+
+  const readyForCollegePercent = 75;
 
   // TODO: fetch sectors array from Firebase, with percent & a color code
   const sectors = [
@@ -79,7 +112,7 @@ export default function AdminInsights() {
 
           </div>
           <div className="bg-white p-6 rounded-lg shadow text-center">
-              <p className="font-bold">{topTrendingSchool}</p>
+              <p className="text-2xl font-bold">{topTrendingSchool}</p>
               <p className="text-gray-500 text-sm">
                 top trending school
               </p>

@@ -23,8 +23,13 @@ export default function AdminNavbar() {
 						<Link href="/admin/insights">
 							<button className="p-4">Insights</button>
 						</Link>
-						<button className="p-4">Quiz</button>
-						<button className="p-4">Students</button>
+						<Link href="/admin/jobs">
+							<button className="p-4">Jobs</button>
+						</Link>
+
+						<Link href="/admin/students">
+							<button className="p-4">Students</button>
+						</Link>
 					</div>
 				</div>
 				<div className="grow flex justify-end">
