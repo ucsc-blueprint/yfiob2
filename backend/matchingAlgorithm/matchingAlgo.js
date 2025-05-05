@@ -16,15 +16,16 @@ algorithm:
 6c) increment the score of the industry by 1 in the JSON object
 6d) if the industry is not in the JSON object, initialize it with a score of 1
 
-7) add the key/value pairs of the json to a max heap
-8) pop the k-highest elements from the max heap and return them as an array of industries
+7) add the key/value pairs of the json to a list
+8) get the k-highest elements from the list and return them as an array of industries
 9) return the array of industries
 */
 
-import { db } from "../../firebaseConfig"; // Adjust the import path as necessary
-import { collection, getDocs, query, where} from "firebase/firestore";
+// import { db } from "../../src/utils/firebase.js";
+import { db } from "../../src/utils/firebase.js";
+import { collection, getDocs, query, where, addDoc} from "firebase/firestore";
 
-async function getTopKIndustries(username, k) {
+async function storeTopKIndustries(username, k) {
     // Step 1: Initialize a JSON object to store the industries and their scores
     const industries = {};
 
@@ -74,12 +75,40 @@ async function getTopKIndustries(username, k) {
             }
         }
     }
+    const arr = Object.entries(industries)
 
-    // Step 7: Return the industries object
-    return industries;
+    insertionSort(arr);
+    
+    if(k > arr.length) {
+        k = arr.length;
+    }
+
+    const industryReference  = collection(db, "userTopKIndustries")
+
+    //saving the top k industries to the database
+    for(let i = 0; i < k; i++){
+        //store the industry at this index (arr[i][0]) and store the ranking (which is i)
+        addDoc(industryReference, { 
+            username: username,
+            industry: arr[i][0],
+            ranking: Number(i)
+        });
+    }
 }
 
-getTopKIndustries("Akshay", 5).then((result) => {
-    console.log(result);
-});
+// Step 7: Return the sorted industries object
+function insertionSort(arr) {
+    for (let i = 1; i < arr.length; i++){
+        const current = arr[i];
+        const currentVal = current[1];
+        let j = i - 1;
+        while (j >= 0 && arr[j][1] > currentVal){
+            arr[j + 1] = arr[j]
+            j--;
+        }
+        arr[j + 1] = current;
+    }
+    return arr;
+}
 
+storeTopKIndustries("Akshay", 2)
