@@ -1,12 +1,9 @@
 "use client";
-import { useEffect } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import BoxButton from "../../components/BoxButton.jsx";
 import Image from "next/image";
 import Puzzle from "../../assets/BluePuzzleGuy.svg";
 import { useRouter, useSearchParams } from "next/navigation";
-import { auth } from "../../utils/firebase.js";
-import { onAuthStateChanged } from "firebase/auth";
 
 export const Page = () => {
     const router = useRouter();
