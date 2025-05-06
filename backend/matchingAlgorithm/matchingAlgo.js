@@ -125,5 +125,3 @@ function insertionSort(arr) {
     }
     return arr;
 }
-
-storeTopKIndustries("Akshay", 2)
