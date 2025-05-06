@@ -21,11 +21,27 @@ algorithm:
 9) return the array of industries
 */
 
-//import { db } from "../firebase.js";
-import { db } from "../../src/utils/firebase.js";
-import { collection, getDocs, query, where, addDoc} from "firebase/firestore";
+import { db } from "../firebase.js";
+//import { db } from "../../src/utils/firebase.js";
+import { collection, getDocs, query, where, addDoc, deleteDoc} from "firebase/firestore";
 
 async function storeTopKIndustries(username, k) {
+    const industryReference  = collection(db, "userTopKIndustries")
+    const industriesFoundQuery = query(industryReference, where("username", "==", username));
+    const industriesFound = await getDocs(industriesFoundQuery);
+    for (const doc of industriesFound.docs) {
+        const docRef = doc.ref;
+        await deleteDoc(docRef);
+    }
+    //delete all previous entries of the user in the database
+    const userResponsesFoundRef = collection(db, "userTopKIndustries");
+    const responseFoundRef = query(userResponsesFoundRef, where("username", "==", username));
+    const responsesFound = await getDocs(responseFoundRef);
+    for (const doc of responsesFound.docs) {
+        const docRef = doc.ref;
+        await deleteDoc(docRef);
+    }
+
     // Step 1: Initialize a JSON object to store the industries and their scores
     const industries = {};
 
@@ -82,7 +98,7 @@ async function storeTopKIndustries(username, k) {
         k = arr.length;
     }
 
-    const industryReference  = collection(db, "userTopKIndustries")
+    
 
     //saving the top k industries to the database
     for(let i = 0; i < k; i++){
