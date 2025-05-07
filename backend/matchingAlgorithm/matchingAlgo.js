@@ -23,7 +23,7 @@ algorithm:
 
 //import { db } from "../firebase.js";
 import {db} from "../../src/utils/firebase.js"
-import { collection, getDocs, query, where, addDoc, deleteDoc} from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy} from "firebase/firestore";
 
 export default async function storeTopKIndustries(username, k) {
     const industryReference  = collection(db, "userTopKIndustries")
@@ -124,4 +124,17 @@ function insertionSort(arr) {
         arr[j + 1] = current;
     }
     return arr;
+}
+
+
+export async function getTopKIndustries(username){
+    const industriesFoundQuery = query(collection(db, "userTopKIndustries"), where("username", "==", username), orderBy("ranking"));
+    const industriesFound = await getDocs(industriesFoundQuery);
+    const industries = [];
+
+    for (const doc of industriesFound.docs) {
+        const data = doc.data();
+        industries.push([data.industry, data.ranking]);
+    }
+    return industries;
 }

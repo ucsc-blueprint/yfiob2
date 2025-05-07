@@ -1,7 +1,7 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
 import {
@@ -20,8 +20,23 @@ import {
   ShareIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
+import { getTopKIndustries } from "../../../backend/matchingAlgorithm/matchingAlgo";
+
 
 export default function QuizResultsPage() {
+  const [industries, setIndustries] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      getTopKIndustries("Akshay").then((industries) => {
+        console.log("Top K Industries:", industries);
+        setIndustries(industries);
+      });
+    }
+    fetchData();
+
+  }, []);
+
+
   // Static data
   const percentages = { arts: 23, trades: 43, ag: 59 };
   const chartData = [
@@ -86,7 +101,7 @@ export default function QuizResultsPage() {
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
-            <h1 className="mt-4 text-5xl font-bold">Agriculture and Natural Resources</h1>
+            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[0][0]}</h1>
           </div>
           <img
             src="/assets/ResultsPuzzlePiece.svg"
