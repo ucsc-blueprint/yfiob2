@@ -8,6 +8,7 @@ import BackArrow from "../../../components/BackArrow.jsx";
 import ForwardArrow from "../../../components/ForwardArrow.jsx";
 import questions from "../../../../questions.json";
 import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
+import storeTopKIndustries from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);

@@ -21,11 +21,11 @@ algorithm:
 9) return the array of industries
 */
 
-import { db } from "../firebase.js";
-//import { db } from "../../src/utils/firebase.js";
+//import { db } from "../firebase.js";
+import {db} from "../../src/utils/firebase.js"
 import { collection, getDocs, query, where, addDoc, deleteDoc} from "firebase/firestore";
 
-async function storeTopKIndustries(username, k) {
+export default async function storeTopKIndustries(username, k) {
     const industryReference  = collection(db, "userTopKIndustries")
     const industriesFoundQuery = query(industryReference, where("username", "==", username));
     const industriesFound = await getDocs(industriesFoundQuery);
