@@ -1,20 +1,13 @@
-"use client";
-import { Navbar } from "../../components/Navbar/Navbar";
-import React, { useState } from "react";
-import { CareerSummaryCards } from "../../pages/CareerSummaryCards";
-import { useSearchParams } from "next/navigation";
-import { link } from "next/link";
+import { Navbar } from "../../../components/Navbar/Navbar";
+import { CareerSummaryCards } from "../../../pages/CareerSummaryCards";
 
-// Components
 const gradeColor = {
     "elementary-school": "#FF9E1E",
     "middle-school": "#75D122",
     "high-school": "#2CA9F6",
 };
 
-export default function Page() {
-    const grade = useSearchParams().get("grade") ?? "elementary-school";
-
+export default async function ChooseCareersCleint({ grade }) {
     const HeaderSection = () => (
         <>
             <div
@@ -38,8 +31,6 @@ export default function Page() {
             </a>
         </button>
     );
-
-    console.log(grade);
 
     return (
         <>

@@ -1,7 +1,7 @@
 "use client";
-import { Navbar } from "../../components/Navbar/Navbar";
+import { Navbar } from "../../../components/Navbar/Navbar";
 import React, { useState } from "react";
-import { CareerSummaryCards } from "../../pages/CareerSummaryCards";
+import { CareerSummaryCards } from "../../../pages/CareerSummaryCards";
 import { link } from "next/link";
 
 // Components

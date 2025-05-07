@@ -14,7 +14,7 @@ function App() {
                     <p className="mt-2 font-kumbh">Choose your grade level to begin!</p>
                 </div>
                 <div className="flex items-center justify-center space-x-8">
-                    <Link href="/choose-careers?grade=elementary-school">
+                    <Link href="/choose-careers/elementary-school">
                         <button className="flex flex-col items-center cursor-pointer focus:outline-none">
                             <img
                                 src="/assets/K-5PuzzlePiece.svg"
@@ -23,7 +23,7 @@ function App() {
                             />
                         </button>
                     </Link>
-                    <Link href="/choose-careers?grade=middle-school">
+                    <Link href="/choose-careers/middle-school">
                         <button className="flex flex-col items-center cursor-pointer focus:outline-none">
                             <img
                                 src="/assets/6-8PuzzlePiece.svg"
@@ -32,7 +32,7 @@ function App() {
                             />
                         </button>
                     </Link>
-                    <Link href="/choose-careers?grade=high-school">
+                    <Link href="/choose-careers/high-school">
                         <button className="flex flex-col items-center cursor-pointer focus:outline-none">
                             <img
                                 src="/assets/9-12PuzzlePiece.svg"
