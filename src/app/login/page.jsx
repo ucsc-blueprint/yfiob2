@@ -7,14 +7,23 @@ import { signInWithEmailAndPassword } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import TextBox from "../../components/TextBox/TextBox";
 import Button from "../../components/Button.jsx";
+import { getAuth, signOut } from "firebase/auth";
 
 function Page() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
+    const [loggedinflag, setLogin] = useState(false);
     const searchParams = useSearchParams();
     const grade = searchParams.get('grade') || "elementary-school";
-    
+
+    // Redirect logged-in users to the home page
+    useEffect(() => {
+        if (loggedinflag === true) {
+            router.push("/"); // Redirect to the home page
+        }
+    }, [loggedinflag, router]);
+
     const handleLogin = async () => {
         if (!email || !password) {
             alert("Please enter both email and password.");
@@ -27,16 +36,28 @@ function Page() {
             alert("Login successful!");
             // Navigate to the quiz with the grade and valid=true parameter
             router.push(`/take-quiz/${grade}?valid=true`);
+            setLogin(true);
         } catch (error) {
             // Handle errors such as wrong credentials or non-existing accounts
             alert("Login failed: " + error.message);
         }
     };
-    
+
+    const handleLogout = async () => {
+        try {
+            await signOut(auth); // Use the imported `auth` object
+            alert("Logout successful!");
+            setLogin(false); // Update the logged-in state
+            router.push("/login"); // Redirect to the login page
+        } catch (error) {
+            alert("Logout failed: " + error.message); // Handle errors
+        }
+    };
+
     return (
         <>
             <div className="min-h-screen flex flex-col bg-[#E8F6FF] overflow-hidden">
-                <Navbar />
+                <Navbar loggedinflag={loggedinflag} />
                 {/* Centered Login Content */}
                 <div className="flex-grow flex items-center justify-center">
                     <div className="w-[502px] space-y-6">

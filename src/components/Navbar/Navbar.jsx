@@ -7,9 +7,13 @@ import { useState } from "react";
 import Link from "next/link";
 import Image from "next/image";
 
+import { signOut } from "firebase/auth";
+import { auth } from "../../utils/firebase"; 
+
 //TODO: Turn a elements into navlink components (make it work with the testing too)
 
-export const Navbar = () => {
+
+export const Navbar = ({loggedinflag}) => {
 	const [isOpen, setIsOpen] = useState(false);
 
 		const router = useRouter();
@@ -18,6 +22,8 @@ export const Navbar = () => {
 				router.push('/login'); // Navigate to the /login page
 		};
 
+		var loggedIn = false;
+
 		// const handleSignUpClick = () => {
 		// 		router.push('/sign-up'); // Navigate to the /signup page
 		// }
@@ -25,6 +31,24 @@ export const Navbar = () => {
 		// const goToQuiz = () => {
 		// 		router.push('/take-quiz'); // Navigate to the quiz page
 		// }
+		console.log(loggedinflag);
+		if (loggedinflag !== undefined) {
+			loggedIn = true;
+		}	
+
+		const handleLogout = async () => {
+			try {
+				await signOut(auth); // Use the imported `auth` object
+				alert("Logout successful!");
+				// setLogin(false); // Update the logged-in state
+				router.push("/login"); // Redirect to the login page
+				loggedIn = false;
+			} catch (error) {
+				alert("Logout failed: " + error.message); // Handle errors
+			}
+		};
+
+		
 
 	return (
 		<div className="bg-white shadow-md font-lato">
@@ -81,13 +105,24 @@ export const Navbar = () => {
 				</div>
 
 				{/* Log In Button - Desktop */}
-				<div className="hidden md:flex px-8">
+				{loggedIn === true && (
+					<div className="hidden md:flex px-8">
 						<BoxButton
 							text="Login"
 							color="blue"
 							onClick={handleLoginClick}
 						/>
-				</div>
+					</div>
+				)}
+				{loggedIn === false && (
+					<div className="hidden md:flex px-8">
+						<BoxButton
+							text="Logout"
+							color="blue"
+							onClick={handleLogout}
+						/>
+					</div>
+				)}
 			</div>
 
 			{/* Navigation Links - Mobile */}
