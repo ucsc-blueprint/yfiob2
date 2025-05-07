@@ -93,6 +93,11 @@ export default function QuizClient({ grade }) {
         }));
     }
 
+    function handleSubmit() {
+        storeTopKIndustries("Akshay", 3);
+        router.replace("/results");
+    }
+
     const questionsObject = questionsForLevel.map((q, qIndex) =>
         Object.values(q.sub_questions).map((sub, sIndex) => {
             const questionId = `${qIndex}-${sIndex}`;
@@ -181,7 +186,7 @@ export default function QuizClient({ grade }) {
 
                 {questionNum === questionsForLevel.length - 1 && (
                     <div className="mt-6 flex justify-center">
-                        <button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
+                        <button onClick={handleSubmit} className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
                             Submit
                         </button>
                     </div>
