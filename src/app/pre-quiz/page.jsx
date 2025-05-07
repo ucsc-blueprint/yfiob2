@@ -42,7 +42,7 @@ function App() {
               <img
                 src="/assets/K-5PuzzlePiece.svg"
                 alt="K-5 Puzzle Piece"
-                className="w-[180px] h-[180px]"
+                className="w-[180px] h-[180px] transform hover:scale-105 transition-transform"
               />
             </button>
             <button
@@ -52,7 +52,7 @@ function App() {
               <img
                 src="/assets/6-8PuzzlePiece.svg"
                 alt="6-8 Puzzle Piece"
-                className="w-[300px] h-[180px]"
+                className="w-[300px] h-[180px] transform hover:scale-105 transition-transform"
               />
             </button>
             <button
@@ -62,7 +62,7 @@ function App() {
               <img
                 src="/assets/9-12PuzzlePiece.svg"
                 alt="9-12 Puzzle Piece"
-                className="w-[180px] h-[180px]"
+                className="w-[180px] h-[180px] transform hover:scale-105 transition-transform"
               />
             </button>
           </div>
