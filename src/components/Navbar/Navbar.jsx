@@ -22,7 +22,7 @@ export const Navbar = ({loggedinflag}) => {
 				router.push('/login'); // Navigate to the /login page
 		};
 
-		var loggedIn = false;
+		var loggedOut = false;
 
 		// const handleSignUpClick = () => {
 		// 		router.push('/sign-up'); // Navigate to the /signup page
@@ -31,9 +31,9 @@ export const Navbar = ({loggedinflag}) => {
 		// const goToQuiz = () => {
 		// 		router.push('/take-quiz'); // Navigate to the quiz page
 		// }
-		console.log(loggedinflag);
+	
 		if (loggedinflag !== undefined) {
-			loggedIn = true;
+			loggedOut = true;
 		}	
 
 		const handleLogout = async () => {
@@ -42,12 +42,13 @@ export const Navbar = ({loggedinflag}) => {
 				alert("Logout successful!");
 				// setLogin(false); // Update the logged-in state
 				router.push("/login"); // Redirect to the login page
-				loggedIn = false;
+				
 			} catch (error) {
 				alert("Logout failed: " + error.message); // Handle errors
 			}
 		};
 
+		console.log("Logged out: ", loggedOut);
 		
 
 	return (
@@ -105,7 +106,7 @@ export const Navbar = ({loggedinflag}) => {
 				</div>
 
 				{/* Log In Button - Desktop */}
-				{loggedIn === true && (
+				{loggedOut === true && (
 					<div className="hidden md:flex px-8">
 						<BoxButton
 							text="Login"
@@ -114,7 +115,7 @@ export const Navbar = ({loggedinflag}) => {
 						/>
 					</div>
 				)}
-				{loggedIn === false && (
+				{loggedOut === false && (
 					<div className="hidden md:flex px-8">
 						<BoxButton
 							text="Logout"

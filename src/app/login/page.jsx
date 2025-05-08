@@ -17,12 +17,12 @@ function Page() {
     const searchParams = useSearchParams();
     const grade = searchParams.get('grade') || "elementary-school";
 
-    // Redirect logged-in users to the home page
-    useEffect(() => {
-        if (loggedinflag === true) {
-            router.push("/"); // Redirect to the home page
-        }
-    }, [loggedinflag, router]);
+    // // Redirect logged-in users to the home page
+    // useEffect(() => {
+    //     if (loggedinflag === true) {
+    //         router.push("/"); // Redirect to the home page
+    //     }
+    // }, [loggedinflag, router]);
 
     const handleLogin = async () => {
         if (!email || !password) {
