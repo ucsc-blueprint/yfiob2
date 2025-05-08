@@ -24,7 +24,7 @@ import { getTopKIndustries } from "../../../backend/matchingAlgorithm/matchingAl
 
 
 export default function QuizResultsPage() {
-  const [industries, setIndustries] = useState([]);
+  const [industries, setIndustries] = useState([["", ""], ["", ""], ["", ""]]);
   useEffect(() => {
     const fetchData = async () => {
       getTopKIndustries("Akshay").then((industries) => {
@@ -36,13 +36,30 @@ export default function QuizResultsPage() {
 
   }, []);
 
-
+  
   // Static data
-  const percentages = { arts: 23, trades: 43, ag: 59 };
+  console.log("Industries:", industries);
+
+  var percentages;
+  if (industries.length > 0) {
+
+    percentages = {
+      [industries[0][0]]: industries[0][1],
+      [industries[1][0]]: industries[1][1],
+      [industries[2][0]]: industries[2][1],
+
+    }
+  }else{
+    percentages = {
+      arts: 0,
+      trades: 0,
+      ag: 0,
+    };
+  }
   const chartData = [
-    { name: "Arts, Media, and Entertainment", value: percentages.arts, fill: "#C8E6C9" },
-    { name: "Building and Construction Trades", value: percentages.trades, fill: "#A5D6A7" },
-    { name: "Agriculture and Natural Resources", value: percentages.ag, fill: "#4CAF50" },
+    { name: industries[0][0], value: industries[0][1], fill: "#C8E6C9" },
+    { name: industries[1][0], value: industries[1][1], fill: "#A5D6A7" },
+    { name: industries[2][0], value: industries[2][1], fill: "#4CAF50" },
   ];
 
   const topJobs = [
@@ -101,7 +118,7 @@ export default function QuizResultsPage() {
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
-            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[0][0]}</h1>
+            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[2][0]}</h1>
           </div>
           <img
             src="/assets/ResultsPuzzlePiece.svg"

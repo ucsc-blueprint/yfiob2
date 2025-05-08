@@ -94,7 +94,10 @@ export default function QuizClient({ grade }) {
     }
 
     function handleSubmit() {
-        storeTopKIndustries("Akshay", 3);
+        const storeIndustries = async () => {
+            await storeTopKIndustries("Akshay", 3);
+        }
+        storeIndustries();
         router.replace("/results");
     }
 

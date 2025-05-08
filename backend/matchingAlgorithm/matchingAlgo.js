@@ -90,23 +90,29 @@ export default async function storeTopKIndustries(username, k) {
             }
         }
     }
+    
     const arr = Object.entries(industries)
 
     insertionSort(arr);
-    
+
     if(k > arr.length) {
         k = arr.length;
     }
 
-    
+    var totalTopIndustryCount = 0;
+    for(let i = 0; i < k; i++){
+        totalTopIndustryCount += arr[i][1];
+    }
 
     //saving the top k industries to the database
     for(let i = 0; i < k; i++){
-        //store the industry at this index (arr[i][0]) and store the ranking (which is i)
+        console.log(arr[i][1]);
+        console.log(totalTopIndustryCount);
         addDoc(industryReference, { 
             username: username,
             industry: arr[i][0],
-            ranking: Number(i)
+            ranking: Number(i),
+            percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
         });
     }
 }
@@ -117,7 +123,7 @@ function insertionSort(arr) {
         const current = arr[i];
         const currentVal = current[1];
         let j = i - 1;
-        while (j >= 0 && arr[j][1] > currentVal){
+        while (j >= 0 && arr[j][1] < currentVal){
             arr[j + 1] = arr[j]
             j--;
         }
@@ -128,13 +134,14 @@ function insertionSort(arr) {
 
 
 export async function getTopKIndustries(username){
-    const industriesFoundQuery = query(collection(db, "userTopKIndustries"), where("username", "==", username), orderBy("ranking"));
+    const industriesFoundQuery = query(collection(db, "userTopKIndustries"), where("username", "==", username), orderBy("percentage"));
     const industriesFound = await getDocs(industriesFoundQuery);
     const industries = [];
 
     for (const doc of industriesFound.docs) {
         const data = doc.data();
-        industries.push([data.industry, data.ranking]);
+        industries.push([data.industry, data.percentage]);
     }
+    console.log(industries);
     return industries;
 }
