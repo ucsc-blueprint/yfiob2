@@ -37,6 +37,7 @@ function Page() {
             // Navigate to the quiz with the grade and valid=true parameter
             router.push(`/take-quiz/${grade}?valid=true`);
             setLogin(true);
+            console.log(userCredential.user); // Log the user data for debugging
         } catch (error) {
             // Handle errors such as wrong credentials or non-existing accounts
             alert("Login failed: " + error.message);
