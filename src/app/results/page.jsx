@@ -18,6 +18,7 @@ import {
   ChevronDownIcon,
   RefreshIcon,
   ShareIcon,
+  PaperAirplaneIcon,
 } from "@heroicons/react/outline";
 
 export default function QuizResultsPage() {
@@ -47,6 +48,8 @@ export default function QuizResultsPage() {
   }));
 
   const [shareEmail, setShareEmail] = useState("");
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [shareModalEmail, setShareModalEmail] = useState("");
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -70,6 +73,7 @@ export default function QuizResultsPage() {
           </Link>
           <button
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
+            onClick={() => setShowShareModal(true)}
           >
             <ShareIcon className="mr-2 h-4 w-4" />
             Share
@@ -200,6 +204,39 @@ export default function QuizResultsPage() {
           ))}
         </div>
       </section>
+
+      {/* Modal for sharing results */}
+      {showShareModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
+          <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-center">
+            <h2 className="text-2xl font-semibold mb-4 italic">Share your results!</h2>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="border-2 border-blue-400 rounded-lg px-4 py-3 w-full mb-6 focus:outline-none focus:border-blue-600 text-lg"
+              value={shareModalEmail}
+              onChange={e => setShareModalEmail(e.target.value)}
+            />
+            <div className="flex justify-between">
+              <button
+                className="flex-1 border-2 border-red-400 text-red-500 rounded-full py-2 mr-2 text-lg font-semibold hover:bg-red-50 transition"
+                onClick={() => setShowShareModal(false)}
+              >
+                Cancel <span className="ml-1">✗</span>
+              </button>
+              <button
+                className="flex-1 bg-blue-600 text-white rounded-full py-2 ml-2 text-lg font-semibold flex items-center justify-center hover:bg-blue-700 transition"
+                onClick={() => {
+                  // handle send logic here
+                  setShowShareModal(false);
+                }}
+              >
+                Send <PaperAirplaneIcon className="ml-2 h-5 w-5 rotate-90" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
