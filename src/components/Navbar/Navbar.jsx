@@ -19,7 +19,13 @@ export const Navbar = () => {
 
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, (user) => {
-      setIsLoggedIn(!!user); // Set `isLoggedIn` to true if a user is logged in, false otherwise
+      if (user) {
+        setIsLoggedIn(true);
+        console.log("User email:", user.email); // Log the user's email for debugging
+      } else {
+        setIsLoggedIn(false);
+        console.log("No user is logged in."); // Log when no user is logged in
+      }
     });
 
     return () => unsubscribe(); // Cleanup the listener on component unmount
