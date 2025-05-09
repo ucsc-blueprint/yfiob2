@@ -22,7 +22,7 @@ function Page() {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // If the user is logged in, redirect them to the profile page
-                router.push("/"); // Change this to the desired page
+                router.push(`/take-quiz/${grade}?valid=true`); // Change this to the desired page
             }
         });
 
