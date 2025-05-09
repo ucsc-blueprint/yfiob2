@@ -1,34 +1,32 @@
+import Image from "next/image";
 import React from "react";
 
-export const CareersCard = ({title, description, educationLevel, careerImage}) => {
-  
-  if (educationLevel === 'elementary-school') {
-    // Display elementary-level card summary
-    return (
-      <div className="no-scrollbar overflow-y-auto bg-white rounded-tr-xl rounded-b-xl border-black border-2  w-[240px] h-[250px] font-lato ">
-        <header className='p-3 text-center text-[20px] font-bold text-lg pd-[0.7em]'> {title} </header>
-        <p className='pl-5 pr-5 text-[12px]'> {description} </p>
-      </div>
-    )
-    
-  } else {
-    // Otherwise, display middle/high school level card summary
-    return (
-      <div className="no-scrollbar overflow-y-auto bg-white rounded-xl w-[240px] h-[250px] rounded-20px pb-1em font-lato">
-        {/* Dynamically render header for either middle-school or high-school header */}
-        { educationLevel === 'middle-school' ? 
-        // Header for middle-school level
-        <header className='pt-2 pb-2 bg-[#3FA1D9] text-center text-[22px] text-lg pd-[0.7em] text-white'> {title} </header>
-        :
-        // Header for high-school level
-        <header className="pt-2 pb-2 bg-[#FF7022] text-center text-[22px] text-lg pd-[0.7em] text-white">{title}</header>
-        }
-        <img className='m-auto mt-5 mb-5 w-auto h-[100px] object-contain' src={careerImage || "/jignaOrange.png"} alt='career-images'></img>
-        <p className="pl-5 pr-5 pt-3 pb-3 text-[12px]">{description || "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al"}</p>
-      </div>        
-      );
-    }
+const backgroundColor = {
+    "elementary-school": "bg-[#2CA9F6]",
+    "middle-school": "bg-[#75D122]",
+    "high-school": "bg-[#FF9E1E]",
+};
 
-}
+export const CareersCard = ({ title, description, grade, image }) => {
+    return (
+        <a href="/">
+            <div
+                className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
+            >
+                <header
+                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center`}
+                >
+                    <div>{title}</div>
+                </header>
+                <div className="h-[150px] w-full relative my-[13px]">
+                    <Image fill src={image} style={{ objectFit: "contain" }} alt={title} />
+                </div>
+                <div className="text-[14px] w-full px-[26px] pb-[13px]">
+                    <p>{description}</p>
+                </div>
+            </div>
+        </a>
+    );
+};
 
 export default CareersCard;
