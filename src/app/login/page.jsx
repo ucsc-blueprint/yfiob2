@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import TextBox from "../../components/TextBox/TextBox";
 import Button from "../../components/Button.jsx";
@@ -17,12 +17,17 @@ function Page() {
     const searchParams = useSearchParams();
     const grade = searchParams.get('grade') || "elementary-school";
 
-    // // Redirect logged-in users to the home page
-    // useEffect(() => {
-    //     if (loggedinflag === true) {
-    //         router.push("/"); // Redirect to the home page
-    //     }
-    // }, [loggedinflag, router]);
+    // Redirect logged-in users to another page
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // If the user is logged in, redirect them to the profile page
+                router.push("/"); // Change this to the desired page
+            }
+        });
+
+        return () => unsubscribe(); // Cleanup the listener on component unmount
+    }, [router]);
 
     const handleLogin = async () => {
         if (!email || !password) {
