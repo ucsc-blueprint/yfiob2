@@ -1,5 +1,3 @@
-// Components
-
 import ChooseCareersCleint from "./ChooseCareersClient";
 
 export async function generateStaticParams() {

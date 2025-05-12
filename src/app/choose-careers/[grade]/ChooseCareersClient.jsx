@@ -1,7 +1,6 @@
 import BackArrow from "../../../components/BackArrow";
 import CareersCard from "../../../components/Careers_Card/CareersCard";
 import { Navbar } from "../../../components/Navbar/Navbar";
-import { CareerSummaryCards } from "../../../pages/CareerSummaryCards";
 
 const backgroundColor = {
     "elementary-school": "bg-[#2CA9F6]",
@@ -138,7 +137,7 @@ export default async function ChooseCareersCleint({ grade }) {
                 <BackButton />
                 <HeaderSection />
                 <div className="flex justify-center px-16">
-                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 w-full">
+                    <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-4 w-full">
                         {dummyCareers.map((data, index) => (
                             <CareersCard
                                 key={index}
