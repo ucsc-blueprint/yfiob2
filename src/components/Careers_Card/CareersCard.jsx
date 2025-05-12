@@ -9,7 +9,7 @@ const backgroundColor = {
 
 export const CareersCard = ({ title, description, grade, image }) => {
     return (
-        <a href="/">
+        <a href="/career-in-depth">
             <div
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
             >
