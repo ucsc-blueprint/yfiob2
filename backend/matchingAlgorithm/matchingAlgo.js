@@ -145,3 +145,15 @@ export async function getTopKIndustries(username){
     console.log(industries);
     return industries;
 }
+
+export async function getCareersForIndustry(industry){
+    const careersFoundQuery = query(collection(db, "careers"), where("industry", "==", industry));
+    const careersFound = await getDocs(careersFoundQuery);
+    const careers = [];
+
+    for (const doc of careersFound.docs) {
+        const data = doc.data();
+        careers.push(data.careers);
+    }
+    return careers;
+}
