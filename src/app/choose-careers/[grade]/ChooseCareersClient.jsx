@@ -1,6 +1,7 @@
-import BackArrow from "../../../components/BackArrow";
+import CareerBackButton from "../../../components/CareerBackButton";
 import CareersCard from "../../../components/Careers_Card/CareersCard";
 import { Navbar } from "../../../components/Navbar/Navbar";
+const careersData = require("../../../../constants/Careers.json");
 
 const backgroundColor = {
     "elementary-school": "bg-[#2CA9F6]",
@@ -12,93 +13,6 @@ const gradeName = {
     "middle-school": "Grades 6 - 8",
     "high-school": "Grades 9 - 12",
 };
-
-const dummyCareers = [
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-    {
-        name: "Transportation",
-        description:
-            "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna al",
-        image: "https://placehold.co/100x100",
-    },
-];
 
 export default async function ChooseCareersCleint({ grade }) {
     const HeaderSection = () => (
@@ -115,36 +29,24 @@ export default async function ChooseCareersCleint({ grade }) {
         </div>
     );
 
-    const BackButton = () => (
-        <div className="absolute top-28 left-[64px]">
-            <button className="flex items-center gap-2 px-2 py-3 h-[41px] bg-[#4C78E7] rounded-lg border-2 border-[#516FBE] text-white font-bold transition-all duration-200 hover:bg-blue-500">
-                <a href="/choose-grade-level">
-                    <span className="flex items-center">
-                        <div style={{ transform: "scale(0.9)" }}>
-                            <BackArrow />
-                        </div>
-                        <div className="pl-2">Back to Grade Levels</div>
-                    </span>
-                </a>
-            </button>
-        </div>
-    );
-
     return (
         <>
             <Navbar />
             <div className="mt-6">
-                <BackButton />
+                <CareerBackButton src={"/choose-grade-level"}>
+                    Back to Grade Level
+                </CareerBackButton>
                 <HeaderSection />
                 <div className="flex justify-center px-16">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-4 w-full">
-                        {dummyCareers.map((data, index) => (
+                        {Object.keys(careersData).map((key, index) => (
                             <CareersCard
                                 key={index}
-                                title={data.name}
-                                description={data.description}
+                                path={key}
+                                title={careersData[key].name}
+                                description={careersData[key].description}
                                 grade={grade}
-                                image={data.image}
+                                image={careersData[key].image}
                             />
                         ))}
                     </div>

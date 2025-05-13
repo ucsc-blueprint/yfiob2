@@ -7,19 +7,41 @@ const backgroundColor = {
     "high-school": "bg-[#FF9E1E]",
 };
 
-export const CareersCard = ({ title, description, grade, image }) => {
+const jignaHue = {
+    "elementary-school": "hue-rotate(180deg)",
+    "middle-school": "hue-rotate(60deg)",
+    "high-school": "hue-rotate(0deg)",
+};
+
+export const CareersCard = ({
+    title,
+    description,
+    grade,
+    image = "/assets/jigna.svg",
+    path,
+    specific = false,
+}) => {
     return (
-        <a href={`/careers/${grade}/${title}`}>
+        <a
+            href={
+                !specific ? `/careers/${grade}/${path}` : `/career-in-depth/${grade}/${path}`
+            }
+        >
             <div
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
             >
                 <header
-                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center`}
+                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center`}
                 >
                     <div>{title}</div>
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
-                    <Image fill src={image} style={{ objectFit: "contain" }} alt={title} />
+                    <Image
+                        fill
+                        src={image}
+                        style={{ objectFit: "contain", filter: jignaHue[grade] }}
+                        alt={title}
+                    />
                 </div>
                 <div className="text-[14px] w-full px-[26px] pb-[13px]">
                     <p>{description}</p>

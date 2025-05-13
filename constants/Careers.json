@@ -1,0 +1,98 @@
+{
+    "agriculture-and-natural-resources": {
+        "name": "Agriculture and Natural Resources",
+        "description": "Quis officia mollit mollit ipsum voluptate quis enim. Tempor deserunt reprehenderit deserunt et aute exercitation excepteur ut enim dolor.",
+        "careers": {
+            "animal-science": {
+                "name": "Animal Science",
+                "description": "Eu incididunt tempor eiusmod mollit do irure anim exercitation consequat dolore magna sint veniam.",
+                "id": 1,
+                "jobs": [
+                    {
+                        "id": 101,
+                        "title": "Animal Breeder",
+                        "icon": "🐾",
+                        "jobTasks": "Ad ex labore do ipsum ipsum ad enim minim sint veniam. Commodo officia ipsum commodo qui aliqua ea tempor amet pariatur dolore culpa est.",
+                        "earnings": 1234,
+                        "earningsDetails": "Dolor officia consectetur id reprehenderit nisi non est enim consequat ex minim. Cupidatat in consectetur aute commodo nostrud nostrud sit sit mollit anim culpa exercitation reprehenderit ad.",
+                        "training": "Tempor velit adipisicing quis elit ut occaecat ut eiusmod non. Ad eiusmod anim incididunt nisi nulla commodo cupidatat et ea exercitation.",
+                        "dataSources": [
+                            {
+                                "name": "Bureu of Labor Statistics",
+                                "logoUrl": "/bls-logo.png"
+                            },
+                            {
+                                "name": "O*NET",
+                                "logoUrl": "/onet-logo.png"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 102,
+                        "title": "Animal Caretaker",
+                        "icon": "🐾",
+                        "jobTasks": "Ad ex labore do ipsum ipsum ad enim minim sint veniam. Commodo officia ipsum commodo qui aliqua ea tempor amet pariatur dolore culpa est.",
+                        "earnings": 4321,
+                        "earningsDetails": "Dolor officia consectetur id reprehenderit nisi non est enim consequat ex minim. Cupidatat in consectetur aute commodo nostrud nostrud sit sit mollit anim culpa exercitation reprehenderit ad.",
+                        "training": "Tempor velit adipisicing quis elit ut occaecat ut eiusmod non. Ad eiusmod anim incididunt nisi nulla commodo cupidatat et ea exercitation.",
+                        "dataSources": [
+                            {
+                                "name": "Bureu of Labor Statistics",
+                                "logoUrl": "/bls-logo.png"
+                            },
+                            {
+                                "name": "O*NET",
+                                "logoUrl": "/onet-logo.png"
+                            }
+                        ]
+                    }
+                ]
+            },
+            "plant-science-and-gardening": {
+                "name": "Plant Science & Gardening",
+                "description": "Eu incididunt tempor eiusmod mollit do irure anim exercitation consequat dolore magna sint veniam.",
+                "id": 1,
+                "jobs": [
+                    {
+                        "id": 101,
+                        "title": "Botanist",
+                        "icon": "🌱",
+                        "jobTasks": "Ad ex labore do ipsum ipsum ad enim minim sint veniam. Commodo officia ipsum commodo qui aliqua ea tempor amet pariatur dolore culpa est.",
+                        "earnings": 1234,
+                        "earningsDetails": "Dolor officia consectetur id reprehenderit nisi non est enim consequat ex minim. Cupidatat in consectetur aute commodo nostrud nostrud sit sit mollit anim culpa exercitation reprehenderit ad.",
+                        "training": "Tempor velit adipisicing quis elit ut occaecat ut eiusmod non. Ad eiusmod anim incididunt nisi nulla commodo cupidatat et ea exercitation.",
+                        "dataSources": [
+                            {
+                                "name": "Bureu of Labor Statistics",
+                                "logoUrl": "/bls-logo.png"
+                            },
+                            {
+                                "name": "O*NET",
+                                "logoUrl": "/onet-logo.png"
+                            }
+                        ]
+                    },
+                    {
+                        "id": 102,
+                        "title": "Crop Workers Supervisor",
+                        "icon": "🧑‍🌾",
+                        "jobTasks": "Ad ex labore do ipsum ipsum ad enim minim sint veniam. Commodo officia ipsum commodo qui aliqua ea tempor amet pariatur dolore culpa est.",
+                        "earnings": 4321,
+                        "earningsDetails": "Dolor officia consectetur id reprehenderit nisi non est enim consequat ex minim. Cupidatat in consectetur aute commodo nostrud nostrud sit sit mollit anim culpa exercitation reprehenderit ad.",
+                        "training": "Tempor velit adipisicing quis elit ut occaecat ut eiusmod non. Ad eiusmod anim incididunt nisi nulla commodo cupidatat et ea exercitation.",
+                        "dataSources": [
+                            {
+                                "name": "Bureu of Labor Statistics",
+                                "logoUrl": "/bls-logo.png"
+                            },
+                            {
+                                "name": "O*NET",
+                                "logoUrl": "/onet-logo.png"
+                            }
+                        ]
+                    }
+                ]
+            }
+        }
+    }
+}

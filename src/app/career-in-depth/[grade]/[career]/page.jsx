@@ -1,9 +1,12 @@
-import CareersClient from "./CareersClient";
+import CareerInDepthClient from "./CareerInDepthClient";
+
 const careersData = await require("../../../../../constants/Careers.json");
 
 export async function generateStaticParams() {
     const grades = ["elementary-school", "middle-school", "high-school"];
-    const careers = Object.keys(careersData).map((key) => key);
+    const careers = Object.keys(careersData)
+        .map((key) => Object.keys(careersData[key].careers).map((key) => key))
+        .flat();
 
     const params = [];
     for (const grade of grades) {
@@ -14,6 +17,7 @@ export async function generateStaticParams() {
             });
         }
     }
+
     return params;
 }
 
@@ -21,5 +25,5 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
     const { grade, career } = await params;
 
-    return <CareersClient grade={grade} career={career} />;
+    return <CareerInDepthClient grade={grade} career={career} />;
 }
