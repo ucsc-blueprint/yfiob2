@@ -5,7 +5,7 @@ import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
 
-export default async function AdminInsights() {
+export default function AdminInsights() {
   // TODO: fetch these from Firebase
   
   // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
@@ -16,13 +16,23 @@ export default async function AdminInsights() {
   const mostClickedCareer = "Agricultural Engineer";
 
   let assessmentsTaken = 0;
-  let users = [];
-  let submissions = [];
+  const [users, getUsers] = useState([]);
+  const [submissions, getSubmissions] = useState([]);
   const schools = {};
   let topTrendingSchool = "Unknown";
   
+  useEffect(() => {
+    const getNewData = async () => {
+      const users = await getData("users");
+      const submissions = await getData("submissions");
+      getUsers(users);
+      getSubmissions(submissions);
+    };
+    getNewData();
+  }, []);
+
   try {
-    users = await getData("users");
+    // users = await getData("users");
     console.log("Users: ", users);
 
     for (let i = 0; i < users.length; i++) {
@@ -73,7 +83,7 @@ export default async function AdminInsights() {
   //   }
   // }
 
-  submissions = await getData("submissions")
+  // submissions = await getData("submissions")
   try {
       console.log("You submitted your Quiz", submissions);
       assessmentsTaken = submissions.length;
