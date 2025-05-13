@@ -12,7 +12,7 @@ export default async function AdminInsights() {
   // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
 
   let last7DaysGrowth = 0;
-  const readyForCollegePercent = 75;
+  let readyForCollegePercent = 0;
   const mostClickedCareer = "Agricultural Engineer";
 
   let assessmentsTaken = 0;
@@ -49,29 +49,29 @@ export default async function AdminInsights() {
 
 
 
-    const fetchSubmissions = async () => { 
-      try {
-        const querySnapshot = await getDocs(collection(db, "submissions"));
-      } catch (error) {
-        console.error("Error fetching submissions:", error);
-      }
-    }
-    fetchSubmissions();
+  //   const fetchSubmissions = async () => { 
+  //     try {
+  //       const querySnapshot = await getDocs(collection(db, "submissions"));
+  //     } catch (error) {
+  //       console.error("Error fetching submissions:", error);
+  //     }
+  //   }
+  //   fetchSubmissions();
 
 
-  const handleSubmissionAdd = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "submissions"), {
-        __userID: "Aviel'sFakeID",
-        readyForCollege: true,
-        timestamp: new Date(),
-      });
-      assessmentsTaken + 1;
-      console.log("Document written with ID: ", docRef.id);
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
-  }
+  // const handleSubmissionAdd = async () => {
+  //   try {
+  //     const docRef = await addDoc(collection(db, "submissions"), {
+  //       __userID: "Aviel'sFakeID",
+  //       readyForCollege: true,
+  //       timestamp: new Date(),
+  //     });
+  //     assessmentsTaken + 1;
+  //     console.log("Document written with ID: ", docRef.id);
+  //   } catch (error) {
+  //     console.error("Error adding document: ", error);
+  //   }
+  // }
 
   submissions = await getData("submissions")
   try {
@@ -81,20 +81,53 @@ export default async function AdminInsights() {
       console.error("Error fetching submission data:", error);
   }
   try {
-    let timestamp = new Date();
+    const currentDate = new Date();
+    // Calculate date 7 days ago
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    
     last7DaysGrowth = submissions.filter((submission) => {
-      const submissionDate = new Date(submission.timestamp);
-      const diffTime = Math.abs(timestamp - submissionDate);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      return diffDays <= 7;
+      // Check if submission and timestamp exist
+      if (!submission || !submission.data || !submission.data.timestamp) {
+        return false;
+      }
+      
+      // Handle Firestore timestamp conversion
+      let submissionDate;
+      if (submission.data.timestamp && typeof submission.data.timestamp.toDate === 'function') {
+        // Firebase Timestamp object (use toDate() method)
+        submissionDate = submission.data.timestamp.toDate();
+      } else if (submission.data.timestamp && submission.data.timestamp.seconds) {
+        // Firebase timestamp stored as seconds/nanoseconds
+        submissionDate = new Date(submission.data.timestamp.seconds * 1000);
+      } else if (submission.data.timestamp instanceof Date) {
+        // Already a JavaScript Date
+        submissionDate = submission.data.timestamp;
+      } else if (typeof submission.data.timestamp === 'string') {
+        // String timestamp
+        submissionDate = new Date(submission.data.timestamp);
+      } else {
+        // Unable to parse timestamp
+        console.log("Unparseable timestamp:", submission.data.timestamp);
+        return false;
+      }
+      
+      // Compare to see if it's within the last 7 days
+      return submissionDate >= sevenDaysAgo && submissionDate <= currentDate;
     }).length;
+    
+    console.log("Last 7 days growth:", last7DaysGrowth);
   } catch (error) {
     console.error("Error calculating last 7 days growth:", error);
   }
 
-
-
-  
+  try {
+    readyForCollegePercent = (submissions.filter((submission) => {
+      return submission.data.readyForCollege === true;
+    }).length / submissions.length) * 100;
+  } catch (error) {
+    console.error("Error calculating ready for college percent:", error);
+  }
 
   // TODO: fetch sectors array from Firebase, with percent & a color code
   const sectors = [
@@ -147,14 +180,14 @@ export default async function AdminInsights() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
               Add Submission
             </button>
             <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
               Add ReadyForCollege
             </button>
-          </div>
+          </div> */}
 
           {/* Three summary cards */}
           <div className="grid grid-cols-2 gap-4">
