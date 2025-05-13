@@ -1,13 +1,23 @@
+"use client";
+import { useEffect, useState } from "react";
+import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
+import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
 
 export default async function AdminInsights() {
   // TODO: fetch these from Firebase
-  const assessmentsTaken = 481;
-  const last7DaysGrowth = 220;
+  
+  // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
+  // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
+
+  let last7DaysGrowth = 0;
+  const readyForCollegePercent = 75;
   const mostClickedCareer = "Agricultural Engineer";
 
+  let assessmentsTaken = 0;
   let users = [];
+  let submissions = [];
   const schools = {};
   let topTrendingSchool = "Unknown";
   
@@ -28,8 +38,6 @@ export default async function AdminInsights() {
       }
     }
 
-    console.log("Schools: ", schools);
-
     if (Object.keys(schools).length > 0) {
       topTrendingSchool = Object.keys(schools).reduce((a, b) => 
         schools[a] > schools[b] ? a : b
@@ -39,7 +47,54 @@ export default async function AdminInsights() {
     console.error("Error fetching user data:", error);
   }
 
-  const readyForCollegePercent = 75;
+
+
+    const fetchSubmissions = async () => { 
+      try {
+        const querySnapshot = await getDocs(collection(db, "submissions"));
+      } catch (error) {
+        console.error("Error fetching submissions:", error);
+      }
+    }
+    fetchSubmissions();
+
+
+  const handleSubmissionAdd = async () => {
+    try {
+      const docRef = await addDoc(collection(db, "submissions"), {
+        __userID: "Aviel'sFakeID",
+        readyForCollege: true,
+        timestamp: new Date(),
+      });
+      assessmentsTaken + 1;
+      console.log("Document written with ID: ", docRef.id);
+    } catch (error) {
+      console.error("Error adding document: ", error);
+    }
+  }
+
+  submissions = await getData("submissions")
+  try {
+      console.log("You submitted your Quiz", submissions);
+      assessmentsTaken = submissions.length;
+  } catch (error) {
+      console.error("Error fetching submission data:", error);
+  }
+  try {
+    let timestamp = new Date();
+    last7DaysGrowth = submissions.filter((submission) => {
+      const submissionDate = new Date(submission.timestamp);
+      const diffTime = Math.abs(timestamp - submissionDate);
+      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+      return diffDays <= 7;
+    }).length;
+  } catch (error) {
+    console.error("Error calculating last 7 days growth:", error);
+  }
+
+
+
+  
 
   // TODO: fetch sectors array from Firebase, with percent & a color code
   const sectors = [
@@ -90,6 +145,15 @@ export default async function AdminInsights() {
               </p>
               <p className="ml-2 text-gray-500">last 7 days</p>
             </div>
+          </div>
+
+          <div className="grid grid-cols-2 gap-4">
+            <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
+              Add Submission
+            </button>
+            <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
+              Add ReadyForCollege
+            </button>
           </div>
 
           {/* Three summary cards */}
