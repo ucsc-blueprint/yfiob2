@@ -231,7 +231,7 @@ export default function QuizResultsPage() {
                   setShowShareModal(false);
                 }}
               >
-                Send <PaperAirplaneIcon className="ml-2 h-5 w-5 rotate-90" />
+                Send <PaperAirplaneIcon className="ml-2 mb-1 h-4 w-4 rotate-45" />
               </button>
             </div>
           </div>
