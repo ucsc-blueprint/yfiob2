@@ -20,16 +20,25 @@ import {
   ShareIcon,
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
-import { getTopKIndustries } from "../../../backend/matchingAlgorithm/matchingAlgo";
+import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
 
 
 export default function QuizResultsPage() {
   const [industries, setIndustries] = useState([]);
+  const [careers, setCareers] = useState([]);
   useEffect(() => {
     const fetchData = async () => {
       getTopKIndustries("Akshay").then((industries) => {
         console.log("Top K Industries:", industries);
         setIndustries(industries);
+        if (industries.length > 0) {
+          const topIndustry = industries[industries.length - 1][0];
+          getCareersForIndustry(topIndustry).then((careers) => {
+            console.log("Careers for Top Industry:", careers);
+            setCareers(careers);
+          });
+          console.log("Top Industry:", topIndustry);
+        }
       });
     }
     fetchData();
@@ -157,8 +166,8 @@ export default function QuizResultsPage() {
         {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-          {topJobs.map((job, i) => (
-            <CareersCard key={i} {...job} />
+          {careers.map((job, i) => (
+            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -219,9 +228,7 @@ export default function QuizResultsPage() {
       {/* Gray grid section with extra top padding */}
       <section className="bg-gray-100 pt-16 px-4 pb-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {otherJobs.map((job, idx) => (
-            <CareersCard key={idx} {...job} />
-          ))}
+
         </div>
       </section>
 
