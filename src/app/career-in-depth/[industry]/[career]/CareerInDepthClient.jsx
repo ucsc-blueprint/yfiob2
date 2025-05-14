@@ -3,6 +3,7 @@ import { useState } from "react";
 import { Navbar } from "../../../../components/Navbar/Navbar";
 import careerData from "/dummycareer.json"; // Fixed: capital D to match usage below
 import CareerBackButton from "../../../../components/CareerBackButton";
+import { useSearchParams } from "next/navigation";
 
 const HeaderSection = () => (
     <div className="flex flex-col items-center font-kumbh py-10">
@@ -15,7 +16,10 @@ const HeaderSection = () => (
 // Get category data
 const categoryData = careerData.categories.find((cat) => cat.name === "Animal Science");
 
-export default function CareerInDepthClient({ grade, career }) {
+export default function CareerInDepthClient({ industry, career }) {
+    const searchParams = useSearchParams();
+    const grade = searchParams.get("grade");
+
     // Add state management for selected job
     const [selectedJobId, setSelectedJobId] = useState(categoryData?.jobs[0]?.id || 0);
 
@@ -27,7 +31,9 @@ export default function CareerInDepthClient({ grade, career }) {
         <>
             <Navbar />
             <HeaderSection />
-            <CareerBackButton>Back to Careers</CareerBackButton>
+            <CareerBackButton src={`/careers/${grade}/${industry}`}>
+                Back to Careers
+            </CareerBackButton>
             <div className="container mx-auto px-4 py-8 mt-16">
                 <div className="flex flex-col md:flex-row gap-6">
                     {/* Left Sidebar - Job List */}

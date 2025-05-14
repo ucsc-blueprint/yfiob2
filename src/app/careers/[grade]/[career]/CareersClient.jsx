@@ -30,7 +30,7 @@ export default function CareersClient({ grade, career }) {
                             description={careersData[career].careers[key].description}
                             grade={grade}
                             image={careersData[career].careers[key].image}
-                            path={key}
+                            href={`/career-in-depth/${career}/${key}?grade=${grade}`}
                             specific={true}
                         />
                     ))}

@@ -18,15 +18,10 @@ export const CareersCard = ({
     description,
     grade,
     image = "/assets/jigna.svg",
-    path,
-    specific = false,
+    href,
 }) => {
     return (
-        <a
-            href={
-                !specific ? `/careers/${grade}/${path}` : `/career-in-depth/${grade}/${path}`
-            }
-        >
+        <a href={href}>
             <div
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
             >

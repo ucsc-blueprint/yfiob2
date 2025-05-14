@@ -42,7 +42,7 @@ export default async function ChooseCareersCleint({ grade }) {
                         {Object.keys(careersData).map((key, index) => (
                             <CareersCard
                                 key={index}
-                                path={key}
+                                href={`/careers/${grade}/${key}`}
                                 title={careersData[key].name}
                                 description={careersData[key].description}
                                 grade={grade}
