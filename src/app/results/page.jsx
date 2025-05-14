@@ -31,19 +31,27 @@ export default function QuizResultsPage() {
       getTopKIndustries("Akshay").then((industries) => {
         console.log("Top K Industries:", industries);
         setIndustries(industries);
-        if (industries.length > 0) {
-          const topIndustry = industries[industries.length - 1][0];
-          getCareersForIndustry(topIndustry).then((careers) => {
-            console.log("Careers for Top Industry:", careers);
-            setCareers(careers);
-          });
-          console.log("Top Industry:", topIndustry);
-        }
+        
       });
     }
     fetchData();
-
   }, []);
+
+  useEffect(() => {
+    const fetchCareers = async () => {
+      if (industries.length > 0) {
+        const topIndustry = industries[industries.length - 1][0];
+        getCareersForIndustry(topIndustry).then((careers) => {
+          console.log("Careers for Top Industry:", careers);
+          setCareers(careers);
+        });
+      }
+    }
+    if (industries.length > 0) {
+      fetchCareers();
+    }
+
+  }, [industries]);
 
   
   // Static data
@@ -157,7 +165,7 @@ export default function QuizResultsPage() {
         <h3 className="text-center text-2xl font-bold">
             Your top job recommendations for{" "}
             <span className="font-extrabold text-green-700">
-          Agriculture and Natural Resources
+          {industries.length > 0 && industries[industries.length - 1][0]}
             </span>
           </h3>
       </section>

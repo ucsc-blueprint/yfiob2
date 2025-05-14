@@ -19,6 +19,7 @@ export default function QuizClient({ grade }) {
     const router = useRouter();
     const searchParams = useSearchParams();
     const isValid = searchParams.get('valid') === 'true';
+    const [isLoading, setIsLoading] = useState(false);
 
     // If not a valid session, redirect to choose-account-type
     useEffect(() => {
@@ -94,11 +95,10 @@ export default function QuizClient({ grade }) {
     }
 
     function handleSubmit() {
-        const storeIndustries = async () => {
-            await storeTopKIndustries("Akshay", 3);
-        }
-        storeIndustries();
-        router.replace("/results");
+        setIsLoading(true);
+        storeTopKIndustries("Akshay", 3).then(() => {
+            router.replace("/results");
+        });
     }
 
     const questionsObject = questionsForLevel.map((q, qIndex) =>
@@ -187,11 +187,17 @@ export default function QuizClient({ grade }) {
                     </button>
                 </div>
 
+                {isLoading && (
+                    <div className="mt-2 text-sm text-gray-500">
+                        Matching with careers...
+                    </div>
+                )}
                 {questionNum === questionsForLevel.length - 1 && (
-                    <div className="mt-6 flex justify-center">
+                    <div className="mt-6 flex flex-col justify-center">
                         <button onClick={handleSubmit} className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
                             Submit
                         </button>
+                        
                     </div>
                 )}
             </div>

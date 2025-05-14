@@ -105,16 +105,18 @@ export default async function storeTopKIndustries(username, k) {
     }
 
     //saving the top k industries to the database
+    const addPromises = [];
     for(let i = 0; i < k; i++){
-        console.log(arr[i][1]);
-        console.log(totalTopIndustryCount);
-        addDoc(industryReference, { 
-            username: username,
-            industry: arr[i][0],
-            ranking: Number(i),
-            percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
-        });
+        addPromises.push(
+            addDoc(industryReference, { 
+                username: username,
+                industry: arr[i][0],
+                ranking: Number(i),
+                percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
+            })
+        );
     }
+    await Promise.all(addPromises);
 }
 
 // Step 7: Return the sorted industries object
