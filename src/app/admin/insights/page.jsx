@@ -13,6 +13,13 @@ export default function AdminInsights() {
   // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
   const [industriesRecommended, setIndustriesRecommended] = useState([]);
 
+  const gradeColor = {
+    0: "border-t-[20px] border-[#90BD00]",
+    1: "border-t-[20px] border-[#BDBD00]",
+    2: "border-t-[20px] border-[#BD7800]",
+    3: "border-t-[20px] border-[#BD4500]",
+  };
+  
   useEffect(()=> {
     console.log("in useeffect")
     const getData = async () => {
@@ -260,17 +267,24 @@ export default function AdminInsights() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
-              {industriesRecommended.map((industry, i) => (
+            <div className="grid grid-cols-3 gap-6">
+  {industriesRecommended.map(([industryName, percentage], idx) => (
+    <div
+      key={industryName}
+      className="bg-white rounded-lg shadow overflow-hidden"
+    >
                 <div
-                  key={i}
-                  className={`border-t-4 bg-white rounded-lg p-4`}
-                >
-                  <p className="text-2xl font-bold">{industry[1]}%</p>
-                  <p className="text-gray-500 text-sm">{industry[0]}</p>
+                  className={`h-6 ${
+                    gradeColor[idx]
+                  }`}
+                />
+                <div className="p-6 text-center">
+                  <p className="text-4xl font-bold">{percentage}%</p>
+                  <p className="mt-2 text-gray-600">{industryName}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </div>
