@@ -4,12 +4,24 @@ import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
 import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
+import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
 
 export default function AdminInsights() {
   // TODO: fetch these from Firebase
   
   // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
   // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
+  const [industriesRecommended, setIndustriesRecommended] = useState([]);
+
+  useEffect(()=> {
+    console.log("in useeffect")
+    const getData = async () => {
+      getAllIndustries().then((data)=>{
+        setIndustriesRecommended(data);
+      });
+    }
+    getData();
+  }, [])
 
   let last7DaysGrowth = 0;
   let readyForCollegePercent = 0;
@@ -249,13 +261,13 @@ export default function AdminInsights() {
             </div>
 
             <div className="grid grid-cols-3 gap-4">
-              {sectors.map((sector, i) => (
+              {industriesRecommended.map((industry, i) => (
                 <div
                   key={i}
-                  className={`border-t-4 ${sector.color} bg-white rounded-lg p-4`}
+                  className={`border-t-4 bg-white rounded-lg p-4`}
                 >
-                  <p className="text-2xl font-bold">{sector.percent}%</p>
-                  <p className="text-gray-500 text-sm">{sector.label}</p>
+                  <p className="text-2xl font-bold">{industry[1]}%</p>
+                  <p className="text-gray-500 text-sm">{industry[0]}</p>
                 </div>
               ))}
             </div>
