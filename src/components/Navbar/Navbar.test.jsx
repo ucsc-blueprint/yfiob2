@@ -1,13 +1,13 @@
 import { render, screen } from "@testing-library/react";
 import { Navbar } from "./Navbar";
 
-jest.mock("next/navigation", () => ({
-	useRouter() {
-	  return {
-		prefetch: () => null
-	  };
-	}
-  })); 
+// jest.mock("next/navigation", () => ({
+// 	useRouter() {
+// 	  return {
+// 		prefetch: () => null
+// 	  };
+// 	}
+//   })); 
 
 test("Navbar rendered", async () => {
 	render(<Navbar />);
