@@ -46,7 +46,7 @@ function App() {
               />
             </button>
             <button
-              onClick={() => handleGradeClick("high-school")}
+              onClick={() => handleGradeClick("middle-school")}
               className="flex flex-col items-center cursor-pointer focus:outline-none"
             >
               <img

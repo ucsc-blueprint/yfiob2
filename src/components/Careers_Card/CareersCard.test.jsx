@@ -1,4 +1,3 @@
-export default CareersCard;
 import CareersCard from './CareersCard'
 import {render, fireEvent, screen} from '@testing-library/react'
 

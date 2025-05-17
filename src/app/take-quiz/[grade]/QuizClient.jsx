@@ -24,7 +24,7 @@ export default function QuizClient({ grade }) {
     // If not a valid session, redirect to choose-account-type
     useEffect(() => {
         if (!isValid) {
-            router.push(`/choose-account-type?grade=${grade}`);
+            router.push(`/choose-account-type?grade=${grade}`)
         }
     }, [isValid, router, grade]);
 
