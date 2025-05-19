@@ -1,4 +1,4 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import XIcon from "./XIcon";
 
 const grades = ["K", "1", "2", "3", "4", "5", "6", "7", "8", "9", "10", "11", "12"];
@@ -25,26 +25,30 @@ export default function AdminFilterPopup({
   setShown,
 }) {
   const [tempGrade, setTempGrade] = useState(
-    currentGrade != null ? String(currentGrade) : null
+    currentGrade != null ? currentGrade : []
   );
   const [tempZip, setTempZip] = useState("");
   const [tempSchool, setTempSchool] = useState("");
 
+  // Disable body scrolling when popup is shown
+  useEffect(() => {
+    const originalStyle = window.getComputedStyle(document.body).overflow;
+    document.body.style.overflow = "hidden";
+    
+    return () => {
+      document.body.style.overflow = originalStyle;
+    };
+  }, []);
+
   function search() {
     setZipcode(tempZip.trim() || null);
-    const gradeValue =
-      tempGrade === "K"
-        ? "K"
-        : tempGrade != null
-        ? parseInt(tempGrade, 10)
-        : null;
-    setGrade(gradeValue);
+    setGrade(tempGrade.length > 0 ? tempGrade : null);
     setSchool(tempSchool.trim() || null);
     setShown(false);
   }
 
   function reset() {
-    setTempGrade(null);
+    setTempGrade([]);
     setTempZip("");
     setTempSchool("");
     setZipcode(null);
@@ -56,7 +60,11 @@ export default function AdminFilterPopup({
   function CircleButton({ grade, selected }) {
     return (
       <button
-        onClick={() => setTempGrade(selected ? null : grade)}
+        onClick={() =>
+          setTempGrade((prev) =>
+            selected ? prev.filter((g) => g !== grade) : [...prev, grade]
+          )
+        }
         className={`rounded-full h-[2rem] w-[2rem] m-2 flex items-center justify-center text-sm font-bold ${
           !selected ? "bg-[#4C78E721]" : "bg-[#4C78E795]"
         }`}
@@ -68,14 +76,13 @@ export default function AdminFilterPopup({
 
   return (
     <div
-      className="absolute top-0 left-0 w-full h-full backdrop-blur-md z-20"
+      className="fixed top-0 left-0 w-screen h-screen backdrop-blur-md z-50"
       onClick={(e) => e.target.id === "close" && setShown(false)}
     >
       <div className="flex items-center justify-center w-full h-full" id="close">
         <div className="bg-white rounded-lg shadow-md flex flex-col items-center">
           <button className="ml-auto p-2" onClick={() => setShown(false)}>
-            <XIcon style={{ transform: "scale(0.7)" }} />
-          </button>
+            <XIcon style={{ transform: "scale(0.7)" }} /> </button>
           <h1 className="text-xl font-semibold mb-4">Filter</h1>
           <div className="w-[80%] p-6">
             <div className="mb-4">
@@ -84,7 +91,7 @@ export default function AdminFilterPopup({
               </h2>
               <div className="flex flex-wrap mt-2">
                 {grades.map((g) => (
-                  <CircleButton key={g} grade={g} selected={g === tempGrade} />
+                  <CircleButton key={g} grade={g} selected={tempGrade.includes(g)} />
                 ))}
               </div>
             </div>

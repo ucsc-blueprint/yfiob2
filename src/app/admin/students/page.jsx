@@ -31,16 +31,23 @@ function CustomSearch(props) {
   );
 }
 
-function isGradeMatch(studentGrade, filterGrade) {
-  if (filterGrade == null) return true;
-  const target = filterGrade === "K" ? 0 : Number(filterGrade);
-  const g = String(studentGrade).trim();
-  if (g.includes("-")) {
-    const [min, max] = g.split("-").map(x => (x === "K" ? 0 : Number(x)));
-    return target >= min && target <= max;
+function isGradeMatch(studentGrade, filterGrades) {
+  if (!filterGrades || filterGrades.length === 0) return true;
+
+  const studentRange = String(studentGrade).trim();
+  let studentGrades = [];
+
+  if (studentRange.includes("-")) {
+    const [min, max] = studentRange.split("-").map((g) => (g === "K" ? 0 : Number(g)));
+    studentGrades = Array.from({ length: max - min + 1 }, (_, i) => (min + i).toString());
+  } else {
+    studentGrades = [studentRange === "K" ? "0" : studentRange];
   }
-  const single = g === "K" ? 0 : Number(g);
-  return single === target;
+
+  return filterGrades.some((g) => {
+    const target = g === "K" ? "0" : g;
+    return studentGrades.includes(target);
+  });
 }
 
 function InfoCards({ text, weight }) {
