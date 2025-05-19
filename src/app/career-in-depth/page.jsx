@@ -2,7 +2,7 @@
 import BackArrow from "../../components/BackArrow";
 import { useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
-import careerData from "/dummycareer.json"; // Fixed: capital D to match usage below
+import careerData from "/dummycareer.json";
 
 const HeaderSection = () => (
     <div className="flex flex-col items-center font-kumbh py-10">
