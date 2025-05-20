@@ -1,38 +1,42 @@
 "use client";
 import { useState } from "react";
 import { Navbar } from "../../../../components/Navbar/Navbar";
-import careerData from "/dummycareer.json"; // Fixed: capital D to match usage below
 import CareerBackButton from "../../../../components/CareerBackButton";
 import { useSearchParams } from "next/navigation";
+const CareerGroups = await require("../../../../../constants/CareerGroups.json");
 
-const HeaderSection = () => (
-    <div className="flex flex-col items-center font-kumbh py-10">
-        <div className="font-[500] flex flex-col items-center">
-            <h1 className="text-[40px]">Animal Science</h1>
-        </div>
-    </div>
-);
+const lorem =
+    "Commodo aliqua eu elit aliqua ea eu deserunt. Sunt commodo ex pariatur magna do consectetur sit incididunt exercitation do Lorem. Do ea non ad mollit.";
 
-// Get category data
-const categoryData = careerData.categories.find((cat) => cat.name === "Animal Science");
-
-export default function CareerInDepthClient({ industry, career }) {
+export default function ExploreJobsClient({ industry, career, careerJobsData }) {
     const searchParams = useSearchParams();
     const grade = searchParams.get("grade");
+    const careerTitle = CareerGroups[industry]["careers"][career].title;
+    const industryTitle = CareerGroups[industry].title;
+    const careerJobs = CareerGroups[industry]["careers"][career].jobs;
+
+    const HeaderSection = () => (
+        <div className="flex flex-col items-center font-kumbh py-10">
+            <div className="font-[500] flex flex-col items-center">
+                <h1 className="text-[40px]">{careerTitle}</h1>
+            </div>
+        </div>
+    );
 
     // Add state management for selected job
-    const [selectedJobId, setSelectedJobId] = useState(categoryData?.jobs[0]?.id || 0);
+    const [selectedJobTitle, setSelectedJobTitle] = useState(
+        careerJobsData[Object.keys(careerJobsData)[0]].title
+    );
 
     // Get the selected job data
-    const selectedJob =
-        categoryData?.jobs.find((job) => job.id === selectedJobId) || categoryData?.jobs[0];
+    const selectedJob = careerJobsData[selectedJobTitle];
 
     return (
         <>
             <Navbar />
             <HeaderSection />
-            <CareerBackButton src={`/careers/${grade}/${industry}`}>
-                Back to Careers
+            <CareerBackButton src={`/explore-careers/${industry}?grade=${grade}`}>
+                Back to {industryTitle}
             </CareerBackButton>
             <div className="container mx-auto px-4 py-8 mt-16">
                 <div className="flex flex-col md:flex-row gap-6">
@@ -42,19 +46,26 @@ export default function CareerInDepthClient({ industry, career }) {
                             Jobs/Occupations
                         </div>
                         <div className="border border-gray-200">
-                            {categoryData?.jobs.map((job) => (
-                                <div
-                                    key={job.id}
-                                    className={`p-3 border-b cursor-pointer hover:bg-orange-100 ${
-                                        job.id === selectedJobId
-                                            ? "bg-orange-200"
-                                            : "bg-orange-50"
-                                    }`}
-                                    onClick={() => setSelectedJobId(job.id)}
-                                >
-                                    {job.title}
-                                </div>
-                            ))}
+                            {careerJobs?.map((job, index) => {
+                                const jobData = careerJobsData[job];
+                                console.log(jobData);
+
+                                if (jobData == null) return <div key={index}></div>;
+
+                                return (
+                                    <div
+                                        key={index}
+                                        className={`p-3 border-b cursor-pointer hover:bg-orange-100 ${
+                                            job.title === selectedJob
+                                                ? "bg-orange-200"
+                                                : "bg-orange-50"
+                                        }`}
+                                        onClick={() => setSelectedJobTitle(jobData.title)}
+                                    >
+                                        {jobData.title}
+                                    </div>
+                                );
+                            })}
                         </div>
                     </div>
 
@@ -81,20 +92,20 @@ export default function CareerInDepthClient({ industry, career }) {
                         {/* Job details sections */}
                         <div className="mb-6">
                             <h3 className="text-xl font-bold mb-2">Job Tasks:</h3>
-                            <p className="text-sm">{selectedJob?.jobTasks}</p>
+                            <p className="text-sm">{selectedJob?.jobTasks || lorem}</p>
                         </div>
 
                         <div className="mb-6">
                             <h3 className="text-xl font-bold mb-2">Earnings:</h3>
                             <div className="text-xl font-bold text-green-800 mb-2">
-                                ${selectedJob?.earnings?.toLocaleString()}
+                                ${selectedJob?.earnings?.toLocaleString() || "1234"}
                             </div>
-                            <p className="text-sm">{selectedJob?.earningsDetails}</p>
+                            <p className="text-sm">{selectedJob?.earningsDetails || lorem}</p>
                         </div>
 
                         <div>
                             <h3 className="text-xl font-bold mb-2">Training:</h3>
-                            <p className="text-sm">{selectedJob?.training}</p>
+                            <p className="text-sm">{selectedJob?.training || lorem}</p>
                         </div>
                     </div>
                 </div>

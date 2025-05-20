@@ -33,13 +33,16 @@ export const CareersCard = ({
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image
                         fill
-                        src={image}
+                        src={image ?? "/assets/jigna.svg"}
                         style={{ objectFit: "contain", filter: jignaHue[grade] }}
                         alt={title}
                     />
                 </div>
                 <div className="text-[14px] w-full px-[26px] pb-[13px]">
-                    <p>{description}</p>
+                    <p>
+                        {description ??
+                            "Consectetur esse non ipsum irure elit elit officia nisi cillum non cupidatat. "}
+                    </p>
                 </div>
             </div>
         </a>

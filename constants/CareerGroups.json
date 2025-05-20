@@ -1,0 +1,909 @@
+{
+    "agriculture-and-natural-resources": {
+        "title": "Agriculture and Natural Resources",
+        "careers": {
+            "animal-science": {
+                "title": "Animal Science",
+                "jobs": [
+                    "Animal Breeder",
+                    "Animal Caretaker",
+                    "Animal Scientist",
+                    "Animal Trainer",
+                    "Veterinarian (VMD)",
+                    "Zoo Veterinarian",
+                    "Zoologist",
+                    "Wildlife Biologist",
+                    "Wildlife Control Agent"
+                ]
+            },
+            "plant-science-and-gardening": {
+                "title": "Plant Science & Gardening",
+                "jobs": [
+                    "Botanist",
+                    "Crop Workers Supervisor",
+                    "Greenhouse and Nursery Manager",
+                    "Horticulturist",
+                    "Plant Breeder"
+                ]
+            },
+            "environmental-conservation": {
+                "title": "Environmental Conservation",
+                "jobs": [
+                    "Conservation Scientist",
+                    "Environmental Compliance Inspector",
+                    "Environmental Disease Analyst",
+                    "Environmental Economists",
+                    "Environmental Engineer",
+                    "Environmental Planner",
+                    "Environmental Research Analyst",
+                    "Environmental Restoration Planners",
+                    "Environmental Technician",
+                    "Soil Conservation Technician",
+                    "Soil Conservationist",
+                    "Soil Engineer",
+                    "Soil Scientist"
+                ]
+            },
+            "aquatic-science": {
+                "title": "Aquatic Science",
+                "jobs": [
+                    "Aquaculture Specialist",
+                    "Marine and Aquatic Biologist",
+                    "Marine Surveyor",
+                    "Oceanographer"
+                ]
+            },
+            "farming-and-ranching": {
+                "title": "Farming & Ranching",
+                "jobs": [
+                    "Farm and Ranch Manager",
+                    "Farm Equipment Mechanic",
+                    "Farm Management Advisor",
+                    "Farm Product Buyer",
+                    "Farm Products Purchasing Agent",
+                    "Farmers and Ranchers"
+                ]
+            },
+            "forestry": {
+                "title": "Forestry",
+                "jobs": [
+                    "Forester",
+                    "Forest and Conservation Technician",
+                    "Forest and Conservation Workers",
+                    "Logging Equipment Operators",
+                    "Logging Worker Supervisor"
+                ]
+            }
+        }
+    },
+    "arts-media-and-entertainment": {
+        "title": "Arts, Media, and Entertainment",
+        "careers": {
+            "performing-arts": {
+                "title": "Performing Arts",
+                "jobs": [
+                    "Actor/Actress",
+                    "Dancer",
+                    "Choreographer",
+                    "Musician",
+                    "Singer",
+                    "Music Arrangers and Orchestrators",
+                    "Music Director",
+                    "Theater and Media Director"
+                ]
+            },
+            "visual-arts-and-design": {
+                "title": "Visual Arts & Design",
+                "jobs": [
+                    "Fine Artist",
+                    "Illustrator",
+                    "Cartoonist (Publications)",
+                    "Graphic Designer",
+                    "Set Designer",
+                    "Set Illustrator",
+                    "Sculptors",
+                    "Exhibit Artist",
+                    "Exhibit Designer",
+                    "Furniture Designer",
+                    "Toy Designer",
+                    "Fashion Artist",
+                    "Fashion Designer",
+                    "Fashion Coordinator",
+                    "Makeup Artists - Theatrical"
+                ]
+            },
+            "media-and-broadcasting": {
+                "title": "Media & Broadcasting",
+                "jobs": [
+                    "Broadcast News Analyst",
+                    "Broadcast Technician",
+                    "Film Editor",
+                    "Cinematographer",
+                    "Radio & TV Announcer",
+                    "Radio & TV News Commentator",
+                    "Radio & TV Newscaster",
+                    "Radio & TV Producer",
+                    "Radio & TV Program Director",
+                    "Radio & TV Sports Announcer",
+                    "Radio & TV Station Administrator",
+                    "Radio & TV Talk Show Host",
+                    "Disc Jockey"
+                ]
+            },
+            "writing-and-editing": {
+                "title": "Writing & Editing",
+                "jobs": [
+                    "Writer / Author",
+                    "Copy Writer",
+                    "Screen Writer",
+                    "Script Editor",
+                    "Editorial Writer, Newspapers & Magazines",
+                    "Newspaper Editor",
+                    "Publications Editor"
+                ]
+            },
+            "art-management": {
+                "title": "Art Management",
+                "jobs": [
+                    "Art Director",
+                    "Artists Agent (Manager)",
+                    "Museum Curator",
+                    "Museum Technicians and Conservators",
+                    "Art Appraiser",
+                    "Art Restorer"
+                ]
+            }
+        }
+    },
+    "building-and-construction-trades": {
+        "title": "Building and Construction Trades",
+        "careers": {
+            "construction-management": {
+                "title": "Construction Management",
+                "jobs": [
+                    "Construction Manager",
+                    "Building Inspector",
+                    "Construction Carpenter",
+                    "Building Maintenance Mechanic",
+                    "Facilities Planner"
+                ]
+            },
+            "skilled-trades": {
+                "title": "Skilled Trades",
+                "jobs": [
+                    "Electrician",
+                    "Electrician Helpers",
+                    "Plumber (Plumbing Contractor)",
+                    "Pipefitter",
+                    "Sheet Metal Workers",
+                    "Mason",
+                    "Roofer",
+                    "Painter",
+                    "HVAC Technician",
+                    "Cabinet Maker",
+                    "Boilermakers",
+                    "Reinforcing Iron and Rebar Workers"
+                ]
+            },
+            "heavy-equipment-operation": {
+                "title": "Heavy Equipment Operation",
+                "jobs": [
+                    "Crane Operator",
+                    "Bulldozer / Grader Operator",
+                    "Excavating Machine Operator",
+                    "Excavating Supervisor",
+                    "Heavy Equipment Mechanic",
+                    "Heavy Machine Operator"
+                ]
+            },
+            "building-maintenance": {
+                "title": "Building Maintenance",
+                "jobs": [
+                    "Building Maintenance Mechanic",
+                    "Janitorial Supervisors",
+                    "Housekeeping Supervisors"
+                ]
+            }
+        }
+    },
+    "business-and-finance": {
+        "title": "Business and Finance",
+        "careers": {
+            "accounting-and-auditing": {
+                "title": "Accounting & Auditing",
+                "jobs": [
+                    "Accountant",
+                    "Accounting Clerk",
+                    "Auditor",
+                    "Bookkeeper",
+                    "Budget Accountant",
+                    "Budget Analyst",
+                    "Certified Public Accountant (CPA)",
+                    "Cost Accountant",
+                    "County or City Auditor",
+                    "Internal Auditor",
+                    "Property Accountant",
+                    "Tax Accountant",
+                    "Tax Auditor",
+                    "Tax Preparer"
+                ]
+            },
+            "financial-services": {
+                "title": "Financial Services",
+                "jobs": [
+                    "Actuary",
+                    "Financial Analyst",
+                    "Financial Examiner",
+                    "Financial Manager",
+                    "Financial Planner",
+                    "Financial Quantitative Analysts",
+                    "Loan Officer",
+                    "Loan Counselor",
+                    "Securities Broker",
+                    "Securities and Commodities Sales Agent",
+                    "Insurance Agent",
+                    "Insurance Adjuster",
+                    "Insurance Claim Examiner",
+                    "Insurance Claims Adjuster",
+                    "Insurance Underwriter"
+                ]
+            },
+            "management-and-administration": {
+                "title": "Management & Administration",
+                "jobs": [
+                    "Administrative Assistant",
+                    "Administrative Service Manager",
+                    "Benefits Manager",
+                    "Chief Executives",
+                    "Chief Financial Officer",
+                    "Chief Sustainability Officers",
+                    "Compliance Managers",
+                    "Compliance Officer",
+                    "Compensation Administrator",
+                    "Compensation Specialist",
+                    "Employment Administrator",
+                    "Employment and Placement Specialist",
+                    "Human Resources Management Advisor",
+                    "Human Resources Management Consultant",
+                    "Manager",
+                    "Office Supervisor",
+                    "Project Management Specialists",
+                    "Purchasing Agent",
+                    "Purchasing Manager",
+                    "Storage and Distribution Manager",
+                    "Supply Chain Managers"
+                ]
+            },
+            "sales-and-brokerage": {
+                "title": "Sales & Brokerage",
+                "jobs": [
+                    "Sales Representative (all types)",
+                    "Sales Engineers",
+                    "Sales Managers",
+                    "Retail Store Manager",
+                    "Retail Buyer",
+                    "Real Estate Broker",
+                    "Real Estate Appraiser"
+                ]
+            }
+        }
+    },
+    "education-child-development-and-family-services": {
+        "title": "Education, Child Development, and Family Services",
+        "careers": {
+            "teaching-k-12-and-postsecondary": {
+                "title": "Teaching (K-12 & Postsecondary)",
+                "jobs": [
+                    "Elementary School Teacher",
+                    "High School Teacher",
+                    "Middle School Teacher",
+                    "Preschool Teacher",
+                    "Special Ed Teachers (all levels)",
+                    "Career / Technical Education Teacher",
+                    "Outdoor Education Teacher",
+                    "Literacy and Remedial Education Teachers",
+                    "Professor (all subjects)",
+                    "Graduate Teaching Assistant",
+                    "Vocational Education Instructors"
+                ]
+            },
+            "educational-administration": {
+                "title": "Educational Administration",
+                "jobs": [
+                    "School Administrator",
+                    "Registrar Administrator",
+                    "Curriculum and Assessment Director",
+                    "Student Admissions Administrator",
+                    "Student Affairs Administrator",
+                    "Special Education Administrator",
+                    "Preschool Administrator",
+                    "Elementary School Administrator",
+                    "High School Administrator",
+                    "Middle School Administrator"
+                ]
+            },
+            "counseling-and-student-services": {
+                "title": "Counseling & Student Services",
+                "jobs": [
+                    "Academic Advisor",
+                    "Admissions Counselor",
+                    "Guidance Counselor",
+                    "Counselor",
+                    "Job Development Specialist",
+                    "Day Care Center Administrator",
+                    "Child Support Investigator",
+                    "Child Support Services Worker",
+                    "Childcare Workers"
+                ]
+            },
+            "child-and-family-services": {
+                "title": "Child & Family Services",
+                "jobs": [
+                    "Family Caseworker",
+                    "Social Worker",
+                    "Healthcare Social Workers",
+                    "Youth Services Specialist",
+                    "Marriage and Family Therapists"
+                ]
+            }
+        }
+    },
+    "energy-environment-and-utilities": {
+        "title": "Energy, Environment, and Utilities",
+        "careers": {
+            "energy-production-and-management": {
+                "title": "Energy Production & Management",
+                "jobs": [
+                    "Solar Energy Installation Managers",
+                    "Solar Energy Systems Designer",
+                    "Solar Energy Systems Engineers",
+                    "Solar Sales Representatives and Assessors",
+                    "Solar Thermal Installers and Technicians",
+                    "Wind Energy Engineer",
+                    "Wind Energy Operations Managers",
+                    "Wind Energy Project Managers",
+                    "Wind Turbine Service Technicians",
+                    "Nuclear Power Reactor Operator",
+                    "Nuclear Engineer",
+                    "Nuclear Fuels Research Engineer",
+                    "Nuclear Monitoring Technician",
+                    "Power Plant Operators"
+                ]
+            },
+            "environmental-science-and-engineering": {
+                "title": "Environmental Science & Engineering",
+                "jobs": [
+                    "Environmental Engineer",
+                    "Environmental Compliance Inspector",
+                    "Environmental Technician",
+                    "Hazardous Materials Removal Worker",
+                    "Hazardous Waste Management Analyst",
+                    "Industrial Air Pollution Analyst",
+                    "Industrial Ecologists",
+                    "Industrial Hygienist",
+                    "Industrial Safety and Health Engineer",
+                    "Occupational Safety & Health Inspector",
+                    "Water Pollution Control Inspector",
+                    "Water Resource Specialists",
+                    "Water Treatment Plant Operators",
+                    "Water/Wastewater Engineers"
+                ]
+            },
+            "utilities-operations": {
+                "title": "Utilities Operations",
+                "jobs": [
+                    "Power Distributors and Dispatchers",
+                    "Power-Line Installer and Mechanic",
+                    "Gas Plant Operator"
+                ]
+            },
+            "sustainability-and-conservation": {
+                "title": "Sustainability & Conservation",
+                "jobs": [
+                    "Chief Sustainability Officers",
+                    "Sustainability Specialists",
+                    "Energy Auditor",
+                    "Brownfield Redevelopment Specialist"
+                ]
+            }
+        }
+    },
+    "engineering-and-architecture": {
+        "title": "Engineering and Architecture",
+        "careers": {
+            "engineering-disciplines": {
+                "title": "Engineering Disciplines",
+                "jobs": [
+                    "Aeronautical & Aerospace Engineer",
+                    "Agricultural Engineer",
+                    "Bioengineers and Biomedical Engineers",
+                    "Chemical Engineer",
+                    "Civil Engineer",
+                    "Electrical Engineer",
+                    "Electronics Engineer",
+                    "Environmental Engineer",
+                    "Industrial Engineer",
+                    "Mechanical Engineer",
+                    "Nuclear Engineer",
+                    "Mining Engineer",
+                    "Petroleum Engineer",
+                    "Robotics Engineers",
+                    "Structural Engineer",
+                    "Transportation Engineer",
+                    "Validation Engineers"
+                ]
+            },
+            "architecture-and-planning": {
+                "title": "Architecture & Planning",
+                "jobs": [
+                    "Architect",
+                    "Architectural Drafters",
+                    "Landscape Architect",
+                    "Landscape Contractor",
+                    "Urban and Regional Planner",
+                    "City Planning Aide"
+                ]
+            },
+            "technical-support": {
+                "title": "Technical Support",
+                "jobs": [
+                    "Engineering Technician",
+                    "Aerospace Engineering Technician",
+                    "Civil Engineering Technician",
+                    "Electrical Engineering Technician",
+                    "Mechanical Engineering Technician",
+                    "Industrial Engineering Technician",
+                    "Surveyor",
+                    "Surveying Technicians",
+                    "Mapping Technician"
+                ]
+            }
+        }
+    },
+    "fashion-and-interior-design": {
+        "title": "Fashion and Interior Design",
+        "careers": {
+            "fashion-design": {
+                "title": "Fashion Design",
+                "jobs": [
+                    "Fashion Artist",
+                    "Fashion Coordinator",
+                    "Fashion Designer",
+                    "Makeup Artists"
+                ]
+            },
+            "interior-and-set-design": {
+                "title": "Interior & Set Design",
+                "jobs": [
+                    "Interior Designer",
+                    "Set Designer",
+                    "Set Illustrator",
+                    "Exhibit Designer",
+                    "Furniture Designer",
+                    "Toy Designer"
+                ]
+            },
+            "textile-and-product-design": {
+                "title": "Textile & Product Design",
+                "jobs": ["Textile Designer", "Ornamental-Metalwork Designer"]
+            }
+        }
+    },
+    "health-science-and-medical-technology": {
+        "title": "Health Science and Medical Technology",
+        "careers": {
+            "nursing": {
+                "title": "Nursing",
+                "jobs": [
+                    "Acute Care Nurse",
+                    "Community Health Nurse",
+                    "Hospital Nurse",
+                    "Nurse",
+                    "Nurse Anesthetists",
+                    "Nurse Midwives",
+                    "Nurse Practitioner",
+                    "Nurses Aide",
+                    "Private Nurse",
+                    "Registered Nurses",
+                    "School Nurse"
+                ]
+            },
+            "physicians-and-surgeons": {
+                "title": "Physicians & Surgeons",
+                "jobs": [
+                    "Anesthesiologist (MD)",
+                    "Cardiologist (MD)",
+                    "Dermatologist (MD)",
+                    "Family Practitioner (MD)",
+                    "General Internal Medicine Physicians",
+                    "Neurologists",
+                    "Obstetrician (MD)",
+                    "Occupational Physician (MD)",
+                    "Ophthalmologist (MD)",
+                    "Orthodontist (MD)",
+                    "Pathologist (MD)",
+                    "Pediatric Dentist",
+                    "Pediatrician (MD)",
+                    "Plastic Surgeon",
+                    "Preventive Medicine Physicians",
+                    "Psychiatrist (MD)",
+                    "Radiologist (MD)",
+                    "Sports Medicine Physicians",
+                    "Sports Physician (Orthopedist)",
+                    "Surgeons (MD)",
+                    "Urologists"
+                ]
+            },
+            "therapists": {
+                "title": "Therapists",
+                "jobs": [
+                    "Art Therapist",
+                    "Athletic Trainer",
+                    "Clinical Psychologist",
+                    "Clinical Sociologist",
+                    "Counseling Psychologist",
+                    "Developmental Psychologist",
+                    "Educational Therapist",
+                    "Exercise Physiologist",
+                    "Manual Arts Therapist",
+                    "Marriage and Family Therapists",
+                    "Massage Therapist",
+                    "Mental Health Counselor",
+                    "Occupational Therapist",
+                    "Physical Therapist",
+                    "Recreational Therapist",
+                    "Speech Pathologist",
+                    "Speech-Language Pathology Assistants",
+                    "Vocational Rehabilitation Counselor"
+                ]
+            },
+            "technicians-and-technologists": {
+                "title": "Technicians & Technologists",
+                "jobs": [
+                    "Anesthesiologist Assistants",
+                    "Cardiovascular Technologist",
+                    "EEG Technician/Technologist",
+                    "Endoscopy Technicians",
+                    "Medical Appliance Technician",
+                    "Medical Assistant",
+                    "Medical Equipment Technician",
+                    "Medical Laboratory Technician",
+                    "Medical Photographer",
+                    "Medical Records Technician",
+                    "Medical Secretary",
+                    "Medical Technologist",
+                    "Nuclear Medicine Technologist",
+                    "Nuclear Monitoring Technician",
+                    "Ophthalmic Laboratory Technician",
+                    "Ophthalmic Medical Technicians",
+                    "Ophthalmic Medical Technologists",
+                    "Orthodontic Assistant",
+                    "Orthodontic Laboratory Technician",
+                    "Phlebotomist",
+                    "Physical Therapy Assistant",
+                    "Radiologic Technicians",
+                    "Radiologic Technologist",
+                    "Respiratory Care Technician",
+                    "Respiratory Therapist",
+                    "Respiratory Therapy Technicians",
+                    "Surgical Assistants",
+                    "Surgical Technician/Technologist",
+                    "Ultrasound Technologist"
+                ]
+            },
+            "dental-professions": {
+                "title": "Dental Professions",
+                "jobs": [
+                    "Dental Assistant",
+                    "Dental Hygienist",
+                    "Dental Laboratory Technician",
+                    "Dentist (DDS)",
+                    "Orthodontist (MD)",
+                    "Periodontist"
+                ]
+            },
+            "pharmacy": {
+                "title": "Pharmacy",
+                "jobs": ["Pharmacist", "Pharmacy Technician"]
+            },
+            "mental-health": {
+                "title": "Mental Health",
+                "jobs": [
+                    "Psychiatric Aide",
+                    "Psychiatric Technician",
+                    "Clinical Psychologist",
+                    "Mental Health Counselor"
+                ]
+            }
+        }
+    },
+    "hospitality-tourism-and-recreation": {
+        "title": "Hospitality, Tourism, and Recreation",
+        "careers": {
+            "hospitality-management": {
+                "title": "Hospitality Management",
+                "jobs": ["Hotel Manager", "Spa Manager", "Restaurant Manager"]
+            },
+            "food-services": {
+                "title": "Food Services",
+                "jobs": [
+                    "Baker",
+                    "Bartender",
+                    "Catering Administrator",
+                    "Chef",
+                    "Food & Drug Inspector",
+                    "Food Science Technicians",
+                    "Food Technologist"
+                ]
+            },
+            "recreation-and-fitness": {
+                "title": "Recreation & Fitness",
+                "jobs": [
+                    "Camp Director",
+                    "Fitness Trainer",
+                    "Recreation Worker",
+                    "Sports Events Planner",
+                    "Sports Agent"
+                ]
+            },
+            "travel-and-tourism": {
+                "title": "Travel & Tourism",
+                "jobs": ["Travel Agent", "Travel Counselor", "Tour Guides and Escorts"]
+            }
+        }
+    },
+    "information-and-communication-technology": {
+        "title": "Information and Communication Technology",
+        "careers": {
+            "software-and-web-development": {
+                "title": "Software & Web Development",
+                "jobs": [
+                    "Computer Programmer",
+                    "Computer and Information Scientists",
+                    "Software Developers - Applications",
+                    "Software Quality Assurance Analysts and Testers",
+                    "Web Administrators",
+                    "Web Art Director",
+                    "Webmaster",
+                    "Video Game Designer"
+                ]
+            },
+            "it-support-and-networking": {
+                "title": "IT Support & Networking",
+                "jobs": [
+                    "Computer Hardware Technician",
+                    "Computer Network Architects",
+                    "Computer Network Support Specialists",
+                    "Computer Systems Analyst",
+                    "Computer Systems Engineer",
+                    "Computer User Support Specialist",
+                    "Information Security Analysts",
+                    "IT Administrator (Information Technology)",
+                    "Information Technology Project Managers"
+                ]
+            },
+            "hardware-and-systems": {
+                "title": "Hardware & Systems",
+                "jobs": ["Computer Hardware Engineers", "Computer Technician"]
+            }
+        }
+    },
+    "manufacturing-and-product-development": {
+        "title": "Manufacturing and Product Development",
+        "careers": {
+            "production-and-assembly": {
+                "title": "Production & Assembly",
+                "jobs": [
+                    "Aircraft Assembler",
+                    "Engine and Machine Assemblers",
+                    "Machinist",
+                    "Model Maker",
+                    "Model Makers, Metal and Plastic",
+                    "Team Assemblers"
+                ]
+            },
+            "quality-control": {
+                "title": "Quality Control",
+                "jobs": [
+                    "Quality Control Inspector",
+                    "Quality Control Managers",
+                    "Quality Control Technician",
+                    "Precision Devices Inspectors and Testers"
+                ]
+            },
+            "product-design-and-development": {
+                "title": "Product Design & Development",
+                "jobs": [
+                    "Commercial Designer",
+                    "Industrial Designer",
+                    "Manufacturing Engineers",
+                    "Product Planner",
+                    "Product Safety Engineer",
+                    "Tool and Die Makers",
+                    "Tool and Machine Designer"
+                ]
+            }
+        }
+    },
+    "marketing-sales-and-services": {
+        "title": "Marketing, Sales, and Services",
+        "careers": {
+            "marketing-and-advertising": {
+                "title": "Marketing & Advertising",
+                "jobs": [
+                    "Advertising Account Manager",
+                    "Advertising Agency Coordinator",
+                    "Advertising Sales Agent",
+                    "Market Research Analyst",
+                    "Marketing Managers",
+                    "Search Marketing Strategists"
+                ]
+            },
+            "sales": {
+                "title": "Sales",
+                "jobs": [
+                    "Sales Representative (all types)",
+                    "Sales Engineers",
+                    "Sales Managers",
+                    "Retail Sales Department Supervisor",
+                    "Customer Service Representative",
+                    "Customer Service Supervisor"
+                ]
+            },
+            "public-relations": {
+                "title": "Public Relations",
+                "jobs": [
+                    "Fund Raiser",
+                    "Fundraising Manager",
+                    "Public Relations Manager",
+                    "Public Relations Specialist"
+                ]
+            },
+            "personal-services": {
+                "title": "Personal Services",
+                "jobs": [
+                    "Barber",
+                    "Cosmetologist (Hair Stylist)",
+                    "Manicurists and Pedicurists",
+                    "Personal Service Supervisor",
+                    "Skin Care Specialist"
+                ]
+            }
+        }
+    },
+    "public-services": {
+        "title": "Public Services",
+        "careers": {
+            "legal-and-judicial": {
+                "title": "Legal & Judicial",
+                "jobs": [
+                    "Administrative Law Judge",
+                    "Admiralty Lawyer",
+                    "Appeals Examiner",
+                    "Arbitrator",
+                    "Attorney",
+                    "Bailiff",
+                    "Corporation Lawyer",
+                    "Correction Officer",
+                    "Court Reporter",
+                    "Criminal Lawyer",
+                    "Judge",
+                    "Law Clerks",
+                    "Lawyer",
+                    "Legal Assistant",
+                    "Legal Secretary",
+                    "Legislative Assistant",
+                    "Legislator",
+                    "Magistrate",
+                    "Paralegal",
+                    "Patent Agent",
+                    "Patent Lawyer",
+                    "Probate Lawyer",
+                    "Real Estate Lawyer",
+                    "Tax Lawyer"
+                ]
+            },
+            "law-enforcement-and-security": {
+                "title": "Law Enforcement & Security",
+                "jobs": [
+                    "Border Patrol Agent",
+                    "Customs Inspector",
+                    "Detective",
+                    "Harbor, Lake & Waterways Police",
+                    "Immigration Inspector",
+                    "Intelligence Analyst",
+                    "Intelligence Specialist",
+                    "Narcotics Investigator",
+                    "Parole Officer",
+                    "Police and Detectives Supervisor",
+                    "Police Artist",
+                    "Police Detective",
+                    "Police Identification and Records Officers",
+                    "Police Officer",
+                    "Security and Fire Alarm Systems Installers",
+                    "Sheriffs",
+                    "Transit and Railroad Police"
+                ]
+            },
+            "emergency-and-social-services": {
+                "title": "Emergency & Social Services",
+                "jobs": [
+                    "Emergency Management Specialist",
+                    "Emergency Medical Technician",
+                    "Fire Inspector",
+                    "Fire Investigator",
+                    "Fire Prevention Engineer",
+                    "Fire Protection Engineer",
+                    "Firefighter",
+                    "Forest Fire Fighting and Prevention Supervisor",
+                    "Probation Officer",
+                    "Social and Community Service Managers",
+                    "Social and Human Service Assistants",
+                    "Social Welfare Administrator"
+                ]
+            },
+            "government-administration": {
+                "title": "Government Administration",
+                "jobs": [
+                    "Congressional Aide",
+                    "Government Budget Analyst",
+                    "Government Property Inspector",
+                    "Government Service Executives"
+                ]
+            }
+        }
+    },
+    "transportation": {
+        "title": "Transportation",
+        "careers": {
+            "ground-transportation": {
+                "title": "Ground Transportation",
+                "jobs": [
+                    "Bus Driver (School)",
+                    "Delivery Driver",
+                    "Locomotive Operator",
+                    "Railroad Conductors and Yardmasters",
+                    "Railroad Inspector",
+                    "Taxi Driver",
+                    "Traffic Administrator (Freight, Passenger)",
+                    "Transportation Supervisor",
+                    "Truck Driver (Long Distance)",
+                    "Truck Mechanic"
+                ]
+            },
+            "aviation": {
+                "title": "Aviation",
+                "jobs": [
+                    "Air Traffic Controller",
+                    "Airline Flight Control Administrator",
+                    "Airline Flight Operations Administrator",
+                    "Airline Flight Reservations Administrator",
+                    "Airport Administrator",
+                    "Airport Engineer",
+                    "Highway Patrol Pilot",
+                    "Pilot"
+                ]
+            },
+            "maritime": {
+                "title": "Maritime",
+                "jobs": [
+                    "Marine Engineer",
+                    "Marine Architect",
+                    "Ship Engineers",
+                    "Ship Master",
+                    "Ship Pilot"
+                ]
+            },
+            "logistics-and-planning": {
+                "title": "Logistics & Planning",
+                "jobs": [
+                    "Cargo and Freight Agents",
+                    "Logistics Analysts",
+                    "Logistics Engineers",
+                    "Transportation Engineer",
+                    "Transportation Planners"
+                ]
+            }
+        }
+    }
+}

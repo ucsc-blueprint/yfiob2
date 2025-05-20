@@ -1,7 +1,10 @@
-import CareerBackButton from "../../../components/CareerBackButton";
-import CareersCard from "../../../components/Careers_Card/CareersCard";
-import { Navbar } from "../../../components/Navbar/Navbar";
-const careersData = require("../../../../constants/Careers.json");
+"use client";
+
+import { useSearchParams } from "next/navigation";
+import CareerBackButton from "../../components/CareerBackButton";
+import CareersCard from "../../components/Careers_Card/CareersCard";
+import { Navbar } from "../../components/Navbar/Navbar";
+const CareerGroups = await require("../../../constants/CareerGroups.json");
 
 const backgroundColor = {
     "elementary-school": "bg-[#2CA9F6]",
@@ -14,7 +17,10 @@ const gradeName = {
     "high-school": "Grades 9 - 12",
 };
 
-export default async function ChooseCareersCleint({ grade }) {
+export default function ExploreIndustriesClient() {
+    const searchParams = useSearchParams();
+    const grade = searchParams.get("grade") ?? "elementary-school";
+
     const HeaderSection = () => (
         <div className="flex flex-col items-center font-kumbh py-10">
             <div
@@ -39,14 +45,14 @@ export default async function ChooseCareersCleint({ grade }) {
                 <HeaderSection />
                 <div className="flex justify-center px-16">
                     <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-4 w-full">
-                        {Object.keys(careersData).map((key, index) => (
+                        {Object.keys(CareerGroups).map((key, index) => (
                             <CareersCard
                                 key={index}
-                                href={`/careers/${grade}/${key}`}
-                                title={careersData[key].name}
-                                description={careersData[key].description}
+                                href={`/explore-careers/${key}?grade=${grade}`}
+                                title={CareerGroups[key].title}
+                                description={CareerGroups[key].description}
                                 grade={grade}
-                                image={careersData[key].image}
+                                image={CareerGroups[key].image}
                             />
                         ))}
                     </div>
