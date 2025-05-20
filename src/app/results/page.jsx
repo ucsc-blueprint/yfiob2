@@ -1,7 +1,7 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
 import {
@@ -18,16 +18,54 @@ import {
   ChevronDownIcon,
   RefreshIcon,
   ShareIcon,
+  PaperAirplaneIcon,
 } from "@heroicons/react/outline";
+import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
+
 
 export default function QuizResultsPage() {
+  const [industries, setIndustries] = useState([]);
+  const [careers, setCareers] = useState([]);
+  useEffect(() => {
+    const fetchData = async () => {
+      getTopKIndustries("Akshay").then((industries) => {
+        console.log("Top K Industries:", industries);
+        setIndustries(industries);
+        
+      });
+    }
+    fetchData();
+  }, []);
+
+  useEffect(() => {
+    const fetchCareers = async () => {
+      if (industries.length > 0) {
+        const topIndustry = industries[industries.length - 1][0];
+        getCareersForIndustry(topIndustry).then((careers) => {
+          console.log("Careers for Top Industry:", careers);
+          setCareers(careers);
+        });
+      }
+    }
+    if (industries.length > 0) {
+      fetchCareers();
+    }
+
+  }, [industries]);
+
+  
   // Static data
-  const percentages = { arts: 23, trades: 43, ag: 59 };
-  const chartData = [
-    { name: "Arts, Media, and Entertainment", value: percentages.arts, fill: "#C8E6C9" },
-    { name: "Building and Construction Trades", value: percentages.trades, fill: "#A5D6A7" },
-    { name: "Agriculture and Natural Resources", value: percentages.ag, fill: "#4CAF50" },
-  ];
+  console.log("Industries:", industries);
+
+  const colors = ["#C8E6C9", "#A5D6A7", "#4CAF50"];
+  const chartData = industries.map((industry, index) => ({
+    name: industry[0],
+    value: industry[1],
+    fill: colors[index % colors.length],
+  })
+  );
+  
+  
 
   const topJobs = [
     { title: "Agricultural Architect", description: "Design sustainable farm layouts and eco-friendly irrigation systems.", imageUrl: "/jigna-small.svg" },
@@ -47,6 +85,8 @@ export default function QuizResultsPage() {
   }));
 
   const [shareEmail, setShareEmail] = useState("");
+  const [showShareModal, setShowShareModal] = useState(false);
+  const [shareModalEmail, setShareModalEmail] = useState("");
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -70,6 +110,7 @@ export default function QuizResultsPage() {
           </Link>
           <button
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
+            onClick={() => setShowShareModal(true)}
           >
             <ShareIcon className="mr-2 h-4 w-4" />
             Share
@@ -82,7 +123,7 @@ export default function QuizResultsPage() {
         <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
           <div className="text-center md:text-left">
             <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
-            <h1 className="mt-4 text-5xl font-bold">Agriculture and Natural Resources</h1>
+            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[industries.length - 1][0]}</h1>
           </div>
           <img
             src="/assets/ResultsPuzzlePiece.svg"
@@ -124,7 +165,7 @@ export default function QuizResultsPage() {
         <h3 className="text-center text-2xl font-bold">
             Your top job recommendations for{" "}
             <span className="font-extrabold text-green-700">
-          Agriculture and Natural Resources
+          {industries.length > 0 && industries[industries.length - 1][0]}
             </span>
           </h3>
       </section>
@@ -133,8 +174,8 @@ export default function QuizResultsPage() {
         {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-          {topJobs.map((job, i) => (
-            <CareersCard key={i} {...job} />
+          {careers.map((job, i) => (
+            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -195,11 +236,42 @@ export default function QuizResultsPage() {
       {/* Gray grid section with extra top padding */}
       <section className="bg-gray-100 pt-16 px-4 pb-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-          {otherJobs.map((job, idx) => (
-            <CareersCard key={idx} {...job} />
-          ))}
+
         </div>
       </section>
+
+      {/* Modal for sharing results */}
+      {showShareModal && (
+        <div className="fixed inset-0 flex items-center justify-center bg-black bg-opacity-30 z-50">
+          <div className="bg-white rounded-xl shadow-lg p-8 w-full max-w-md text-center">
+            <h2 className="text-2xl font-semibold mb-4 italic">Share your results!</h2>
+            <input
+              type="email"
+              placeholder="Enter your email"
+              className="border-2 border-blue-400 rounded-lg px-4 py-3 w-full mb-6 focus:outline-none focus:border-blue-600 text-lg"
+              value={shareModalEmail}
+              onChange={e => setShareModalEmail(e.target.value)}
+            />
+            <div className="flex justify-between">
+              <button
+                className="flex-1 border-2 border-red-400 text-red-500 rounded-full py-2 mr-2 text-lg font-semibold hover:bg-red-50 transition"
+                onClick={() => setShowShareModal(false)}
+              >
+                Cancel <span className="ml-1">✗</span>
+              </button>
+              <button
+                className="flex-1 bg-blue-600 text-white rounded-full py-2 ml-2 text-lg font-semibold flex items-center justify-center hover:bg-blue-700 transition"
+                onClick={() => {
+                  // handle send logic here
+                  setShowShareModal(false);
+                }}
+              >
+                Send <PaperAirplaneIcon className="ml-2 mb-1 h-4 w-4 rotate-45" />
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
     </div>
   );
 }
