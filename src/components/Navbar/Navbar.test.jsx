@@ -9,6 +9,20 @@ jest.mock("next/navigation", () => ({
 	}
   })); 
 
+jest.mock("../../utils/firebase", () => ({
+	auth: {},
+	db: {},
+	app: {}
+}));
+
+jest.mock("firebase/auth", () => ({
+	signOut: jest.fn(() => Promise.resolve()),
+	onAuthStateChanged: jest.fn((auth, callback) => {
+		callback(null);
+		return jest.fn(); 
+	})
+}));
+
 test("Navbar rendered", async () => {
 	render(<Navbar />);
 

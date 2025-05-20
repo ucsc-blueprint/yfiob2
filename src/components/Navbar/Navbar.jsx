@@ -23,7 +23,7 @@ export const Navbar = () => {
       setIsLoggedIn(!!user);
     });
 
-    return () => unsubscribe();
+    return () => unsubscribe;
   }, []);
 
   const handleLoginClick = () => {
