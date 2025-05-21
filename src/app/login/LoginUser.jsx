@@ -1,9 +1,9 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { useRouter, useSearchParams } from "next/navigation";
 import { Navbar } from "../../components/Navbar/Navbar";
-import { signInWithEmailAndPassword } from "firebase/auth";
+import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../utils/firebase";
 import TextBox from "../../components/TextBox/TextBox";
 import Button from "../../components/Button.jsx";
@@ -12,9 +12,22 @@ export function LoginUser() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const router = useRouter();
+    const [loggedinflag, setLogin] = useState(false);
     const searchParams = useSearchParams();
     const grade = searchParams.get('grade') || "elementary-school";
-    
+
+    // Redirect logged-in users to another page
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            if (user) {
+                // If the user is logged in, redirect them to the profile page
+                router.push(`/take-quiz/${grade}?valid=true`); // Change this to the desired page
+            }
+        });
+
+        return () => unsubscribe(); // Cleanup the listener on component unmount
+    }, [router]);
+
     const handleLogin = async () => {
         if (!email || !password) {
             alert("Please enter both email and password.");
@@ -25,18 +38,20 @@ export function LoginUser() {
             const userCredential = await signInWithEmailAndPassword(auth, email, password);
             // If successful, you can get the user data from userCredential.user
             alert("Login successful!");
-            // Navigate to the quiz with the grade and valid=true parameter         
+            // Navigate to the quiz with the grade and valid=true parameter
             router.push(`/take-quiz/${grade}?valid=true`);
+            setLogin(true);
+            console.log(userCredential.user); // Log the user data for debugging
         } catch (error) {
             // Handle errors such as wrong credentials or non-existing accounts
             alert("Login failed: " + error.message);
         }
     };
-    
+
     return (
         <>
             <div className="min-h-screen flex flex-col bg-[#E8F6FF] overflow-hidden">
-                <Navbar />
+                <Navbar loggedinflag={loggedinflag} />
                 {/* Centered Login Content */}
                 <div className="flex-grow flex items-center justify-center">
                     <div className="w-[502px] space-y-6">
