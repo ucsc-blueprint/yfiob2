@@ -12,6 +12,8 @@ import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 export const Page = () => {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [school, setSchool] = useState("");
     const [grade, setGrade] = useState("");
     const [studentID, setStudentID] = useState("");
@@ -59,6 +61,8 @@ export const Page = () => {
           email.trim() === "" ||
           password.trim() === "" ||
           school.trim() === "" ||
+          firstName.trim() === "" ||
+          lastName.trim() === "" ||
           grade.trim() === "" ||
           studentID.trim() === ""
         ) {
@@ -81,8 +85,10 @@ export const Page = () => {
             school,
             grade,
             studentID,
+            firstName,
+            lastName,
           };
-      
+          //console.log("User data to save: ", userData);
           // Save additional data to Firestore
           await addData("users", userData);
       
@@ -125,12 +131,37 @@ export const Page = () => {
               <p className="text-left font-lato font-normal text-[20px]">
                 Password
               </p>
+
               <TextBox
                 type="password"
                 Placeholder="Password"
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 id="password"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
+
+              {/* Name Input */}
+              <p className="text-left font-lato font-normal text-[20px]">
+                Name
+              </p>
+              <TextBox
+                type="text"
+                Placeholder={"First Name"}
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
+                id="firstName"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
+
+              <TextBox
+                type="text"
+                Placeholder={"Last Name"}
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                id="lastName"
                 onFocus={(e) => (e.target.style.color = "black")}
                 onBlur={(e) => (e.target.style.color = "#898989")}
               />
