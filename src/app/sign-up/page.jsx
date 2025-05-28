@@ -2,6 +2,7 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import TextBox from "../../components/TextBox/TextBox.jsx";
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button.jsx";
 import { addData } from "../../utils/addData.js";
 import schoolData from "./schools.json";
@@ -21,7 +22,8 @@ export const Page = () => {
     const [searchTerm, setSearchTerm] = useState("");
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [filteredSchools, setFilteredSchools] = useState([]);
-    
+    const router = useRouter();
+
     // State for grade dropdown
     const [gradeSearchTerm, setGradeSearchTerm] = useState("");
     const [isGradeDropdownVisible, setIsGradeDropdownVisible] = useState(false);
@@ -95,7 +97,7 @@ export const Page = () => {
           await addData("users", userData);
       
           alert("User registered and data saved successfully");
-      
+          router.push(`/`);
         } catch (error) {
           console.error("Error during signup: ", error);
           alert("Error saving data: " + error.message);
@@ -114,6 +116,34 @@ export const Page = () => {
               <h1 className="text-4xl font-lato font-bold text-[40px] m-8 leading-[40px] tracking-normal text-center">
                 Sign up
               </h1>
+
+              {/* Name Input */}
+              <p className="text-left font-lato font-normal text-[20px]">
+                First Name
+              </p>
+              <TextBox
+                type="text"
+                Placeholder={"First Name"}
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
+                id="firstName"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
+
+              <p className="text-left font-lato font-normal text-[20px]">
+                Last Name
+              </p>
+
+              <TextBox
+                type="text"
+                Placeholder={"Last Name"}
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                id="lastName"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
 
               {/* Email Input */}
               <p className="text-left font-lato font-normal text-[20px]">
@@ -140,30 +170,6 @@ export const Page = () => {
                 onChange={(e) => setPassword(e.target.value)}
                 value={password}
                 id="password"
-                onFocus={(e) => (e.target.style.color = "black")}
-                onBlur={(e) => (e.target.style.color = "#898989")}
-              />
-
-              {/* Name Input */}
-              <p className="text-left font-lato font-normal text-[20px]">
-                Name
-              </p>
-              <TextBox
-                type="text"
-                Placeholder={"First Name"}
-                onChange={(e) => setFirstName(e.target.value)}
-                value={firstName}
-                id="firstName"
-                onFocus={(e) => (e.target.style.color = "black")}
-                onBlur={(e) => (e.target.style.color = "#898989")}
-              />
-
-              <TextBox
-                type="text"
-                Placeholder={"Last Name"}
-                onChange={(e) => setLastName(e.target.value)}
-                value={lastName}
-                id="lastName"
                 onFocus={(e) => (e.target.style.color = "black")}
                 onBlur={(e) => (e.target.style.color = "#898989")}
               />
