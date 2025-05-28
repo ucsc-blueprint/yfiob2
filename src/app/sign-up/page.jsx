@@ -10,6 +10,7 @@ import DropDownArrow from "../../components/DropDownArrow.jsx";
 import { getAuth, createUserWithEmailAndPassword } from "firebase/auth";
 
 export const Page = () => {
+    const [isAdmin, setIsAdmin] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
     const [firstName, setFirstName] = useState("");
@@ -87,6 +88,7 @@ export const Page = () => {
             studentID,
             firstName,
             lastName,
+            isAdmin,
           };
           //console.log("User data to save: ", userData);
           // Save additional data to Firestore

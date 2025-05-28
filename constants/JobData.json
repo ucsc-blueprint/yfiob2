@@ -1,0 +1,5516 @@
+{
+    "animal-science": {
+        "Animal Breeder": {
+            "id": 1,
+            "title": "Animal Breeder",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Animal Caretaker": {
+            "id": 2,
+            "title": "Animal Caretaker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Animal Scientist": {
+            "id": 3,
+            "title": "Animal Scientist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Animal Trainer": {
+            "id": 4,
+            "title": "Animal Trainer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Veterinarian (VMD)": {
+            "id": 5,
+            "title": "Veterinarian (VMD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Zoo Veterinarian": {
+            "id": 6,
+            "title": "Zoo Veterinarian",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Zoologist": {
+            "id": 7,
+            "title": "Zoologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wildlife Biologist": {
+            "id": 8,
+            "title": "Wildlife Biologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wildlife Control Agent": {
+            "id": 9,
+            "title": "Wildlife Control Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "plant-science-and-gardening": {
+        "Botanist": {
+            "id": 1,
+            "title": "Botanist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Crop Workers Supervisor": {
+            "id": 2,
+            "title": "Crop Workers Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Greenhouse and Nursery Manager": {
+            "id": 3,
+            "title": "Greenhouse and Nursery Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Horticulturist": {
+            "id": 4,
+            "title": "Horticulturist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Plant Breeder": {
+            "id": 5,
+            "title": "Plant Breeder",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "environmental-conservation": {
+        "Conservation Scientist": {
+            "id": 1,
+            "title": "Conservation Scientist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Compliance Inspector": {
+            "id": 2,
+            "title": "Environmental Compliance Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Disease Analyst": {
+            "id": 3,
+            "title": "Environmental Disease Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Economists": {
+            "id": 4,
+            "title": "Environmental Economists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Engineer": {
+            "id": 5,
+            "title": "Environmental Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Planner": {
+            "id": 6,
+            "title": "Environmental Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Research Analyst": {
+            "id": 7,
+            "title": "Environmental Research Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Restoration Planners": {
+            "id": 8,
+            "title": "Environmental Restoration Planners",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Technician": {
+            "id": 9,
+            "title": "Environmental Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Soil Conservation Technician": {
+            "id": 10,
+            "title": "Soil Conservation Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Soil Conservationist": {
+            "id": 11,
+            "title": "Soil Conservationist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Soil Engineer": {
+            "id": 12,
+            "title": "Soil Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Soil Scientist": {
+            "id": 13,
+            "title": "Soil Scientist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "aquatic-science": {
+        "Aquaculture Specialist": {
+            "id": 1,
+            "title": "Aquaculture Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marine and Aquatic Biologist": {
+            "id": 2,
+            "title": "Marine and Aquatic Biologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marine Surveyor": {
+            "id": 3,
+            "title": "Marine Surveyor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Oceanographer": {
+            "id": 4,
+            "title": "Oceanographer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "farming-and-ranching": {
+        "Farm and Ranch Manager": {
+            "id": 1,
+            "title": "Farm and Ranch Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Farm Equipment Mechanic": {
+            "id": 2,
+            "title": "Farm Equipment Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Farm Management Advisor": {
+            "id": 3,
+            "title": "Farm Management Advisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Farm Product Buyer": {
+            "id": 4,
+            "title": "Farm Product Buyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Farm Products Purchasing Agent": {
+            "id": 5,
+            "title": "Farm Products Purchasing Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Farmers and Ranchers": {
+            "id": 6,
+            "title": "Farmers and Ranchers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "forestry": {
+        "Forester": {
+            "id": 1,
+            "title": "Forester",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Forest and Conservation Technician": {
+            "id": 2,
+            "title": "Forest and Conservation Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Forest and Conservation Workers": {
+            "id": 3,
+            "title": "Forest and Conservation Workers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Logging Equipment Operators": {
+            "id": 4,
+            "title": "Logging Equipment Operators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Logging Worker Supervisor": {
+            "id": 5,
+            "title": "Logging Worker Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "performing-arts": {
+        "Actor/Actress": {
+            "id": 1,
+            "title": "Actor/Actress",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Dancer": {
+            "id": 2,
+            "title": "Dancer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Choreographer": {
+            "id": 3,
+            "title": "Choreographer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Musician": {
+            "id": 4,
+            "title": "Musician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Singer": {
+            "id": 5,
+            "title": "Singer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Music Arrangers and Orchestrators": {
+            "id": 6,
+            "title": "Music Arrangers and Orchestrators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Music Director": {
+            "id": 7,
+            "title": "Music Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Theater and Media Director": {
+            "id": 8,
+            "title": "Theater and Media Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "visual-arts-and-design": {
+        "Fine Artist": {
+            "id": 1,
+            "title": "Fine Artist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Illustrator": {
+            "id": 2,
+            "title": "Illustrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cartoonist (Publications)": {
+            "id": 3,
+            "title": "Cartoonist (Publications)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Graphic Designer": {
+            "id": 4,
+            "title": "Graphic Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Set Designer": {
+            "id": 5,
+            "title": "Set Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Set Illustrator": {
+            "id": 6,
+            "title": "Set Illustrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sculptors": {
+            "id": 7,
+            "title": "Sculptors",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Exhibit Artist": {
+            "id": 8,
+            "title": "Exhibit Artist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Exhibit Designer": {
+            "id": 9,
+            "title": "Exhibit Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Furniture Designer": {
+            "id": 10,
+            "title": "Furniture Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Toy Designer": {
+            "id": 11,
+            "title": "Toy Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fashion Artist": {
+            "id": 12,
+            "title": "Fashion Artist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fashion Designer": {
+            "id": 13,
+            "title": "Fashion Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fashion Coordinator": {
+            "id": 14,
+            "title": "Fashion Coordinator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Makeup Artists - Theatrical": {
+            "id": 15,
+            "title": "Makeup Artists - Theatrical",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "media-and-broadcasting": {
+        "Broadcast News Analyst": {
+            "id": 1,
+            "title": "Broadcast News Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Broadcast Technician": {
+            "id": 2,
+            "title": "Broadcast Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Film Editor": {
+            "id": 3,
+            "title": "Film Editor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cinematographer": {
+            "id": 4,
+            "title": "Cinematographer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Announcer": {
+            "id": 5,
+            "title": "Radio & TV Announcer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV News Commentator": {
+            "id": 6,
+            "title": "Radio & TV News Commentator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Newscaster": {
+            "id": 7,
+            "title": "Radio & TV Newscaster",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Producer": {
+            "id": 8,
+            "title": "Radio & TV Producer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Program Director": {
+            "id": 9,
+            "title": "Radio & TV Program Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Sports Announcer": {
+            "id": 10,
+            "title": "Radio & TV Sports Announcer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Station Administrator": {
+            "id": 11,
+            "title": "Radio & TV Station Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radio & TV Talk Show Host": {
+            "id": 12,
+            "title": "Radio & TV Talk Show Host",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Disc Jockey": {
+            "id": 13,
+            "title": "Disc Jockey",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "writing-and-editing": {
+        "Writer / Author": {
+            "id": 1,
+            "title": "Writer / Author",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Copy Writer": {
+            "id": 2,
+            "title": "Copy Writer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Screen Writer": {
+            "id": 3,
+            "title": "Screen Writer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Script Editor": {
+            "id": 4,
+            "title": "Script Editor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Editorial Writer, Newspapers & Magazines": {
+            "id": 5,
+            "title": "Editorial Writer, Newspapers & Magazines",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Newspaper Editor": {
+            "id": 6,
+            "title": "Newspaper Editor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Publications Editor": {
+            "id": 7,
+            "title": "Publications Editor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "art-management": {
+        "Art Director": {
+            "id": 1,
+            "title": "Art Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Artists Agent (Manager)": {
+            "id": 2,
+            "title": "Artists Agent (Manager)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Museum Curator": {
+            "id": 3,
+            "title": "Museum Curator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Museum Technicians and Conservators": {
+            "id": 4,
+            "title": "Museum Technicians and Conservators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Art Appraiser": {
+            "id": 5,
+            "title": "Art Appraiser",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Art Restorer": {
+            "id": 6,
+            "title": "Art Restorer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "construction-management": {
+        "Construction Manager": {
+            "id": 1,
+            "title": "Construction Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Building Inspector": {
+            "id": 2,
+            "title": "Building Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Construction Carpenter": {
+            "id": 3,
+            "title": "Construction Carpenter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Building Maintenance Mechanic": {
+            "id": 4,
+            "title": "Building Maintenance Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Facilities Planner": {
+            "id": 5,
+            "title": "Facilities Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "skilled-trades": {
+        "Electrician": {
+            "id": 1,
+            "title": "Electrician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Electrician Helpers": {
+            "id": 2,
+            "title": "Electrician Helpers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Plumber (Plumbing Contractor)": {
+            "id": 3,
+            "title": "Plumber (Plumbing Contractor)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pipefitter": {
+            "id": 4,
+            "title": "Pipefitter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sheet Metal Workers": {
+            "id": 5,
+            "title": "Sheet Metal Workers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mason": {
+            "id": 6,
+            "title": "Mason",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Roofer": {
+            "id": 7,
+            "title": "Roofer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Painter": {
+            "id": 8,
+            "title": "Painter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "HVAC Technician": {
+            "id": 9,
+            "title": "HVAC Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cabinet Maker": {
+            "id": 10,
+            "title": "Cabinet Maker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Boilermakers": {
+            "id": 11,
+            "title": "Boilermakers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Reinforcing Iron and Rebar Workers": {
+            "id": 12,
+            "title": "Reinforcing Iron and Rebar Workers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "heavy-equipment-operation": {
+        "Crane Operator": {
+            "id": 1,
+            "title": "Crane Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Bulldozer / Grader Operator": {
+            "id": 2,
+            "title": "Bulldozer / Grader Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Excavating Machine Operator": {
+            "id": 3,
+            "title": "Excavating Machine Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Excavating Supervisor": {
+            "id": 4,
+            "title": "Excavating Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Heavy Equipment Mechanic": {
+            "id": 5,
+            "title": "Heavy Equipment Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Heavy Machine Operator": {
+            "id": 6,
+            "title": "Heavy Machine Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "building-maintenance": {
+        "Building Maintenance Mechanic": {
+            "id": 1,
+            "title": "Building Maintenance Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Janitorial Supervisors": {
+            "id": 2,
+            "title": "Janitorial Supervisors",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Housekeeping Supervisors": {
+            "id": 3,
+            "title": "Housekeeping Supervisors",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "accounting-and-auditing": {
+        "Accountant": {
+            "id": 1,
+            "title": "Accountant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Accounting Clerk": {
+            "id": 2,
+            "title": "Accounting Clerk",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Auditor": {
+            "id": 3,
+            "title": "Auditor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Bookkeeper": {
+            "id": 4,
+            "title": "Bookkeeper",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Budget Accountant": {
+            "id": 5,
+            "title": "Budget Accountant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Budget Analyst": {
+            "id": 6,
+            "title": "Budget Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Certified Public Accountant (CPA)": {
+            "id": 7,
+            "title": "Certified Public Accountant (CPA)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cost Accountant": {
+            "id": 8,
+            "title": "Cost Accountant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "County or City Auditor": {
+            "id": 9,
+            "title": "County or City Auditor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Internal Auditor": {
+            "id": 10,
+            "title": "Internal Auditor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Property Accountant": {
+            "id": 11,
+            "title": "Property Accountant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tax Accountant": {
+            "id": 12,
+            "title": "Tax Accountant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tax Auditor": {
+            "id": 13,
+            "title": "Tax Auditor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tax Preparer": {
+            "id": 14,
+            "title": "Tax Preparer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "financial-services": {
+        "Actuary": {
+            "id": 1,
+            "title": "Actuary",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Financial Analyst": {
+            "id": 2,
+            "title": "Financial Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Financial Examiner": {
+            "id": 3,
+            "title": "Financial Examiner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Financial Manager": {
+            "id": 4,
+            "title": "Financial Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Financial Planner": {
+            "id": 5,
+            "title": "Financial Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Financial Quantitative Analysts": {
+            "id": 6,
+            "title": "Financial Quantitative Analysts",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Loan Officer": {
+            "id": 7,
+            "title": "Loan Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Loan Counselor": {
+            "id": 8,
+            "title": "Loan Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Securities Broker": {
+            "id": 9,
+            "title": "Securities Broker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Securities and Commodities Sales Agent": {
+            "id": 10,
+            "title": "Securities and Commodities Sales Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Insurance Agent": {
+            "id": 11,
+            "title": "Insurance Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Insurance Adjuster": {
+            "id": 12,
+            "title": "Insurance Adjuster",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Insurance Claim Examiner": {
+            "id": 13,
+            "title": "Insurance Claim Examiner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Insurance Claims Adjuster": {
+            "id": 14,
+            "title": "Insurance Claims Adjuster",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Insurance Underwriter": {
+            "id": 15,
+            "title": "Insurance Underwriter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "management-and-administration": {
+        "Administrative Assistant": {
+            "id": 1,
+            "title": "Administrative Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Administrative Service Manager": {
+            "id": 2,
+            "title": "Administrative Service Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Benefits Manager": {
+            "id": 3,
+            "title": "Benefits Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Chief Executives": {
+            "id": 4,
+            "title": "Chief Executives",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Chief Financial Officer": {
+            "id": 5,
+            "title": "Chief Financial Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Chief Sustainability Officers": {
+            "id": 6,
+            "title": "Chief Sustainability Officers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Compliance Managers": {
+            "id": 7,
+            "title": "Compliance Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Compliance Officer": {
+            "id": 8,
+            "title": "Compliance Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Compensation Administrator": {
+            "id": 9,
+            "title": "Compensation Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Compensation Specialist": {
+            "id": 10,
+            "title": "Compensation Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Employment Administrator": {
+            "id": 11,
+            "title": "Employment Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Employment and Placement Specialist": {
+            "id": 12,
+            "title": "Employment and Placement Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Human Resources Management Advisor": {
+            "id": 13,
+            "title": "Human Resources Management Advisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Human Resources Management Consultant": {
+            "id": 14,
+            "title": "Human Resources Management Consultant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Manager": {
+            "id": 15,
+            "title": "Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Office Supervisor": {
+            "id": 16,
+            "title": "Office Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Project Management Specialists": {
+            "id": 17,
+            "title": "Project Management Specialists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Purchasing Agent": {
+            "id": 18,
+            "title": "Purchasing Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Purchasing Manager": {
+            "id": 19,
+            "title": "Purchasing Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Storage and Distribution Manager": {
+            "id": 20,
+            "title": "Storage and Distribution Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Supply Chain Managers": {
+            "id": 21,
+            "title": "Supply Chain Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "sales-and-brokerage": {
+        "Sales Representative (all types)": {
+            "id": 1,
+            "title": "Sales Representative (all types)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sales Engineers": {
+            "id": 2,
+            "title": "Sales Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sales Managers": {
+            "id": 3,
+            "title": "Sales Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Retail Store Manager": {
+            "id": 4,
+            "title": "Retail Store Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Retail Buyer": {
+            "id": 5,
+            "title": "Retail Buyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Real Estate Broker": {
+            "id": 6,
+            "title": "Real Estate Broker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Real Estate Appraiser": {
+            "id": 7,
+            "title": "Real Estate Appraiser",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "teaching-k-12-and-postsecondary": {
+        "Elementary School Teacher": {
+            "id": 1,
+            "title": "Elementary School Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "High School Teacher": {
+            "id": 2,
+            "title": "High School Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Middle School Teacher": {
+            "id": 3,
+            "title": "Middle School Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Preschool Teacher": {
+            "id": 4,
+            "title": "Preschool Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Special Ed Teachers (all levels)": {
+            "id": 5,
+            "title": "Special Ed Teachers (all levels)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Career / Technical Education Teacher": {
+            "id": 6,
+            "title": "Career / Technical Education Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Outdoor Education Teacher": {
+            "id": 7,
+            "title": "Outdoor Education Teacher",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Literacy and Remedial Education Teachers": {
+            "id": 8,
+            "title": "Literacy and Remedial Education Teachers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Professor (all subjects)": {
+            "id": 9,
+            "title": "Professor (all subjects)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Graduate Teaching Assistant": {
+            "id": 10,
+            "title": "Graduate Teaching Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Vocational Education Instructors": {
+            "id": 11,
+            "title": "Vocational Education Instructors",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "educational-administration": {
+        "School Administrator": {
+            "id": 1,
+            "title": "School Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Registrar Administrator": {
+            "id": 2,
+            "title": "Registrar Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Curriculum and Assessment Director": {
+            "id": 3,
+            "title": "Curriculum and Assessment Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Student Admissions Administrator": {
+            "id": 4,
+            "title": "Student Admissions Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Student Affairs Administrator": {
+            "id": 5,
+            "title": "Student Affairs Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Special Education Administrator": {
+            "id": 6,
+            "title": "Special Education Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Preschool Administrator": {
+            "id": 7,
+            "title": "Preschool Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Elementary School Administrator": {
+            "id": 8,
+            "title": "Elementary School Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "High School Administrator": {
+            "id": 9,
+            "title": "High School Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Middle School Administrator": {
+            "id": 10,
+            "title": "Middle School Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "counseling-and-student-services": {
+        "Academic Advisor": {
+            "id": 1,
+            "title": "Academic Advisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Admissions Counselor": {
+            "id": 2,
+            "title": "Admissions Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Guidance Counselor": {
+            "id": 3,
+            "title": "Guidance Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Counselor": {
+            "id": 4,
+            "title": "Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Job Development Specialist": {
+            "id": 5,
+            "title": "Job Development Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Day Care Center Administrator": {
+            "id": 6,
+            "title": "Day Care Center Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Child Support Investigator": {
+            "id": 7,
+            "title": "Child Support Investigator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Child Support Services Worker": {
+            "id": 8,
+            "title": "Child Support Services Worker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Childcare Workers": {
+            "id": 9,
+            "title": "Childcare Workers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "child-and-family-services": {
+        "Family Caseworker": {
+            "id": 1,
+            "title": "Family Caseworker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Social Worker": {
+            "id": 2,
+            "title": "Social Worker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Healthcare Social Workers": {
+            "id": 3,
+            "title": "Healthcare Social Workers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Youth Services Specialist": {
+            "id": 4,
+            "title": "Youth Services Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marriage and Family Therapists": {
+            "id": 5,
+            "title": "Marriage and Family Therapists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "energy-production-and-management": {
+        "Solar Energy Installation Managers": {
+            "id": 1,
+            "title": "Solar Energy Installation Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Solar Energy Systems Designer": {
+            "id": 2,
+            "title": "Solar Energy Systems Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Solar Energy Systems Engineers": {
+            "id": 3,
+            "title": "Solar Energy Systems Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Solar Sales Representatives and Assessors": {
+            "id": 4,
+            "title": "Solar Sales Representatives and Assessors",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Solar Thermal Installers and Technicians": {
+            "id": 5,
+            "title": "Solar Thermal Installers and Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wind Energy Engineer": {
+            "id": 6,
+            "title": "Wind Energy Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wind Energy Operations Managers": {
+            "id": 7,
+            "title": "Wind Energy Operations Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wind Energy Project Managers": {
+            "id": 8,
+            "title": "Wind Energy Project Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Wind Turbine Service Technicians": {
+            "id": 9,
+            "title": "Wind Turbine Service Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Power Reactor Operator": {
+            "id": 10,
+            "title": "Nuclear Power Reactor Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Engineer": {
+            "id": 11,
+            "title": "Nuclear Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Fuels Research Engineer": {
+            "id": 12,
+            "title": "Nuclear Fuels Research Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Monitoring Technician": {
+            "id": 13,
+            "title": "Nuclear Monitoring Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Power Plant Operators": {
+            "id": 14,
+            "title": "Power Plant Operators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "environmental-science-and-engineering": {
+        "Environmental Engineer": {
+            "id": 1,
+            "title": "Environmental Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Compliance Inspector": {
+            "id": 2,
+            "title": "Environmental Compliance Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Technician": {
+            "id": 3,
+            "title": "Environmental Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Hazardous Materials Removal Worker": {
+            "id": 4,
+            "title": "Hazardous Materials Removal Worker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Hazardous Waste Management Analyst": {
+            "id": 5,
+            "title": "Hazardous Waste Management Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Air Pollution Analyst": {
+            "id": 6,
+            "title": "Industrial Air Pollution Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Ecologists": {
+            "id": 7,
+            "title": "Industrial Ecologists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Hygienist": {
+            "id": 8,
+            "title": "Industrial Hygienist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Safety and Health Engineer": {
+            "id": 9,
+            "title": "Industrial Safety and Health Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Occupational Safety & Health Inspector": {
+            "id": 10,
+            "title": "Occupational Safety & Health Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Water Pollution Control Inspector": {
+            "id": 11,
+            "title": "Water Pollution Control Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Water Resource Specialists": {
+            "id": 12,
+            "title": "Water Resource Specialists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Water Treatment Plant Operators": {
+            "id": 13,
+            "title": "Water Treatment Plant Operators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Water/Wastewater Engineers": {
+            "id": 14,
+            "title": "Water/Wastewater Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "utilities-operations": {
+        "Power Distributors and Dispatchers": {
+            "id": 1,
+            "title": "Power Distributors and Dispatchers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Power-Line Installer and Mechanic": {
+            "id": 2,
+            "title": "Power-Line Installer and Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Gas Plant Operator": {
+            "id": 3,
+            "title": "Gas Plant Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "sustainability-and-conservation": {
+        "Chief Sustainability Officers": {
+            "id": 1,
+            "title": "Chief Sustainability Officers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sustainability Specialists": {
+            "id": 2,
+            "title": "Sustainability Specialists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Energy Auditor": {
+            "id": 3,
+            "title": "Energy Auditor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Brownfield Redevelopment Specialist": {
+            "id": 4,
+            "title": "Brownfield Redevelopment Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "engineering-disciplines": {
+        "Aeronautical & Aerospace Engineer": {
+            "id": 1,
+            "title": "Aeronautical & Aerospace Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Agricultural Engineer": {
+            "id": 2,
+            "title": "Agricultural Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Bioengineers and Biomedical Engineers": {
+            "id": 3,
+            "title": "Bioengineers and Biomedical Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Chemical Engineer": {
+            "id": 4,
+            "title": "Chemical Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Civil Engineer": {
+            "id": 5,
+            "title": "Civil Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Electrical Engineer": {
+            "id": 6,
+            "title": "Electrical Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Electronics Engineer": {
+            "id": 7,
+            "title": "Electronics Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Environmental Engineer": {
+            "id": 8,
+            "title": "Environmental Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Engineer": {
+            "id": 9,
+            "title": "Industrial Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mechanical Engineer": {
+            "id": 10,
+            "title": "Mechanical Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Engineer": {
+            "id": 11,
+            "title": "Nuclear Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mining Engineer": {
+            "id": 12,
+            "title": "Mining Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Petroleum Engineer": {
+            "id": 13,
+            "title": "Petroleum Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Robotics Engineers": {
+            "id": 14,
+            "title": "Robotics Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Structural Engineer": {
+            "id": 15,
+            "title": "Structural Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Transportation Engineer": {
+            "id": 16,
+            "title": "Transportation Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Validation Engineers": {
+            "id": 17,
+            "title": "Validation Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "architecture-and-planning": {
+        "Architect": {
+            "id": 1,
+            "title": "Architect",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Architectural Drafters": {
+            "id": 2,
+            "title": "Architectural Drafters",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Landscape Architect": {
+            "id": 3,
+            "title": "Landscape Architect",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Landscape Contractor": {
+            "id": 4,
+            "title": "Landscape Contractor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Urban and Regional Planner": {
+            "id": 5,
+            "title": "Urban and Regional Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "City Planning Aide": {
+            "id": 6,
+            "title": "City Planning Aide",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "technical-support": {
+        "Engineering Technician": {
+            "id": 1,
+            "title": "Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Aerospace Engineering Technician": {
+            "id": 2,
+            "title": "Aerospace Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Civil Engineering Technician": {
+            "id": 3,
+            "title": "Civil Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Electrical Engineering Technician": {
+            "id": 4,
+            "title": "Electrical Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mechanical Engineering Technician": {
+            "id": 5,
+            "title": "Mechanical Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Engineering Technician": {
+            "id": 6,
+            "title": "Industrial Engineering Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Surveyor": {
+            "id": 7,
+            "title": "Surveyor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Surveying Technicians": {
+            "id": 8,
+            "title": "Surveying Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mapping Technician": {
+            "id": 9,
+            "title": "Mapping Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "fashion-design": {
+        "Fashion Artist": {
+            "id": 1,
+            "title": "Fashion Artist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fashion Coordinator": {
+            "id": 2,
+            "title": "Fashion Coordinator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fashion Designer": {
+            "id": 3,
+            "title": "Fashion Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Makeup Artists": {
+            "id": 4,
+            "title": "Makeup Artists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "interior-and-set-design": {
+        "Interior Designer": {
+            "id": 1,
+            "title": "Interior Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Set Designer": {
+            "id": 2,
+            "title": "Set Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Set Illustrator": {
+            "id": 3,
+            "title": "Set Illustrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Exhibit Designer": {
+            "id": 4,
+            "title": "Exhibit Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Furniture Designer": {
+            "id": 5,
+            "title": "Furniture Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Toy Designer": {
+            "id": 6,
+            "title": "Toy Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "textile-and-product-design": {
+        "Textile Designer": {
+            "id": 1,
+            "title": "Textile Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ornamental-Metalwork Designer": {
+            "id": 2,
+            "title": "Ornamental-Metalwork Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "nursing": {
+        "Acute Care Nurse": {
+            "id": 1,
+            "title": "Acute Care Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Community Health Nurse": {
+            "id": 2,
+            "title": "Community Health Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Hospital Nurse": {
+            "id": 3,
+            "title": "Hospital Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nurse": {
+            "id": 4,
+            "title": "Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nurse Anesthetists": {
+            "id": 5,
+            "title": "Nurse Anesthetists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nurse Midwives": {
+            "id": 6,
+            "title": "Nurse Midwives",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nurse Practitioner": {
+            "id": 7,
+            "title": "Nurse Practitioner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nurses Aide": {
+            "id": 8,
+            "title": "Nurses Aide",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Private Nurse": {
+            "id": 9,
+            "title": "Private Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Registered Nurses": {
+            "id": 10,
+            "title": "Registered Nurses",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "School Nurse": {
+            "id": 11,
+            "title": "School Nurse",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "physicians-and-surgeons": {
+        "Anesthesiologist (MD)": {
+            "id": 1,
+            "title": "Anesthesiologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cardiologist (MD)": {
+            "id": 2,
+            "title": "Cardiologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Dermatologist (MD)": {
+            "id": 3,
+            "title": "Dermatologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Family Practitioner (MD)": {
+            "id": 4,
+            "title": "Family Practitioner (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "General Internal Medicine Physicians": {
+            "id": 5,
+            "title": "General Internal Medicine Physicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Neurologists": {
+            "id": 6,
+            "title": "Neurologists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Obstetrician (MD)": {
+            "id": 7,
+            "title": "Obstetrician (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Occupational Physician (MD)": {
+            "id": 8,
+            "title": "Occupational Physician (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ophthalmologist (MD)": {
+            "id": 9,
+            "title": "Ophthalmologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Orthodontist (MD)": {
+            "id": 10,
+            "title": "Orthodontist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pathologist (MD)": {
+            "id": 11,
+            "title": "Pathologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pediatric Dentist": {
+            "id": 12,
+            "title": "Pediatric Dentist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pediatrician (MD)": {
+            "id": 13,
+            "title": "Pediatrician (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Plastic Surgeon": {
+            "id": 14,
+            "title": "Plastic Surgeon",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Preventive Medicine Physicians": {
+            "id": 15,
+            "title": "Preventive Medicine Physicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Psychiatrist (MD)": {
+            "id": 16,
+            "title": "Psychiatrist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radiologist (MD)": {
+            "id": 17,
+            "title": "Radiologist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sports Medicine Physicians": {
+            "id": 18,
+            "title": "Sports Medicine Physicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sports Physician (Orthopedist)": {
+            "id": 19,
+            "title": "Sports Physician (Orthopedist)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Surgeons (MD)": {
+            "id": 20,
+            "title": "Surgeons (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Urologists": {
+            "id": 21,
+            "title": "Urologists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "therapists": {
+        "Art Therapist": {
+            "id": 1,
+            "title": "Art Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Athletic Trainer": {
+            "id": 2,
+            "title": "Athletic Trainer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Clinical Psychologist": {
+            "id": 3,
+            "title": "Clinical Psychologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Clinical Sociologist": {
+            "id": 4,
+            "title": "Clinical Sociologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Counseling Psychologist": {
+            "id": 5,
+            "title": "Counseling Psychologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Developmental Psychologist": {
+            "id": 6,
+            "title": "Developmental Psychologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Educational Therapist": {
+            "id": 7,
+            "title": "Educational Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Exercise Physiologist": {
+            "id": 8,
+            "title": "Exercise Physiologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Manual Arts Therapist": {
+            "id": 9,
+            "title": "Manual Arts Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marriage and Family Therapists": {
+            "id": 10,
+            "title": "Marriage and Family Therapists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Massage Therapist": {
+            "id": 11,
+            "title": "Massage Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mental Health Counselor": {
+            "id": 12,
+            "title": "Mental Health Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Occupational Therapist": {
+            "id": 13,
+            "title": "Occupational Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Physical Therapist": {
+            "id": 14,
+            "title": "Physical Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Recreational Therapist": {
+            "id": 15,
+            "title": "Recreational Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Speech Pathologist": {
+            "id": 16,
+            "title": "Speech Pathologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Speech-Language Pathology Assistants": {
+            "id": 17,
+            "title": "Speech-Language Pathology Assistants",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Vocational Rehabilitation Counselor": {
+            "id": 18,
+            "title": "Vocational Rehabilitation Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "technicians-and-technologists": {
+        "Anesthesiologist Assistants": {
+            "id": 1,
+            "title": "Anesthesiologist Assistants",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cardiovascular Technologist": {
+            "id": 2,
+            "title": "Cardiovascular Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "EEG Technician/Technologist": {
+            "id": 3,
+            "title": "EEG Technician/Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Endoscopy Technicians": {
+            "id": 4,
+            "title": "Endoscopy Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Appliance Technician": {
+            "id": 5,
+            "title": "Medical Appliance Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Assistant": {
+            "id": 6,
+            "title": "Medical Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Equipment Technician": {
+            "id": 7,
+            "title": "Medical Equipment Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Laboratory Technician": {
+            "id": 8,
+            "title": "Medical Laboratory Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Photographer": {
+            "id": 9,
+            "title": "Medical Photographer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Records Technician": {
+            "id": 10,
+            "title": "Medical Records Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Secretary": {
+            "id": 11,
+            "title": "Medical Secretary",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Medical Technologist": {
+            "id": 12,
+            "title": "Medical Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Medicine Technologist": {
+            "id": 13,
+            "title": "Nuclear Medicine Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Nuclear Monitoring Technician": {
+            "id": 14,
+            "title": "Nuclear Monitoring Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ophthalmic Laboratory Technician": {
+            "id": 15,
+            "title": "Ophthalmic Laboratory Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ophthalmic Medical Technicians": {
+            "id": 16,
+            "title": "Ophthalmic Medical Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ophthalmic Medical Technologists": {
+            "id": 17,
+            "title": "Ophthalmic Medical Technologists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Orthodontic Assistant": {
+            "id": 18,
+            "title": "Orthodontic Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Orthodontic Laboratory Technician": {
+            "id": 19,
+            "title": "Orthodontic Laboratory Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Phlebotomist": {
+            "id": 20,
+            "title": "Phlebotomist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Physical Therapy Assistant": {
+            "id": 21,
+            "title": "Physical Therapy Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radiologic Technicians": {
+            "id": 22,
+            "title": "Radiologic Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Radiologic Technologist": {
+            "id": 23,
+            "title": "Radiologic Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Respiratory Care Technician": {
+            "id": 24,
+            "title": "Respiratory Care Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Respiratory Therapist": {
+            "id": 25,
+            "title": "Respiratory Therapist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Respiratory Therapy Technicians": {
+            "id": 26,
+            "title": "Respiratory Therapy Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Surgical Assistants": {
+            "id": 27,
+            "title": "Surgical Assistants",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Surgical Technician/Technologist": {
+            "id": 28,
+            "title": "Surgical Technician/Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ultrasound Technologist": {
+            "id": 29,
+            "title": "Ultrasound Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "dental-professions": {
+        "Dental Assistant": {
+            "id": 1,
+            "title": "Dental Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Dental Hygienist": {
+            "id": 2,
+            "title": "Dental Hygienist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Dental Laboratory Technician": {
+            "id": 3,
+            "title": "Dental Laboratory Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Dentist (DDS)": {
+            "id": 4,
+            "title": "Dentist (DDS)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Orthodontist (MD)": {
+            "id": 5,
+            "title": "Orthodontist (MD)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Periodontist": {
+            "id": 6,
+            "title": "Periodontist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "pharmacy": {
+        "Pharmacist": {
+            "id": 1,
+            "title": "Pharmacist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pharmacy Technician": {
+            "id": 2,
+            "title": "Pharmacy Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "mental-health": {
+        "Psychiatric Aide": {
+            "id": 1,
+            "title": "Psychiatric Aide",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Psychiatric Technician": {
+            "id": 2,
+            "title": "Psychiatric Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Clinical Psychologist": {
+            "id": 3,
+            "title": "Clinical Psychologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Mental Health Counselor": {
+            "id": 4,
+            "title": "Mental Health Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "hospitality-management": {
+        "Hotel Manager": {
+            "id": 1,
+            "title": "Hotel Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Spa Manager": {
+            "id": 2,
+            "title": "Spa Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Restaurant Manager": {
+            "id": 3,
+            "title": "Restaurant Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "food-services": {
+        "Baker": {
+            "id": 1,
+            "title": "Baker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Bartender": {
+            "id": 2,
+            "title": "Bartender",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Catering Administrator": {
+            "id": 3,
+            "title": "Catering Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Chef": {
+            "id": 4,
+            "title": "Chef",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Food & Drug Inspector": {
+            "id": 5,
+            "title": "Food & Drug Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Food Science Technicians": {
+            "id": 6,
+            "title": "Food Science Technicians",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Food Technologist": {
+            "id": 7,
+            "title": "Food Technologist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "recreation-and-fitness": {
+        "Camp Director": {
+            "id": 1,
+            "title": "Camp Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fitness Trainer": {
+            "id": 2,
+            "title": "Fitness Trainer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Recreation Worker": {
+            "id": 3,
+            "title": "Recreation Worker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sports Events Planner": {
+            "id": 4,
+            "title": "Sports Events Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sports Agent": {
+            "id": 5,
+            "title": "Sports Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "travel-and-tourism": {
+        "Travel Agent": {
+            "id": 1,
+            "title": "Travel Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Travel Counselor": {
+            "id": 2,
+            "title": "Travel Counselor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tour Guides and Escorts": {
+            "id": 3,
+            "title": "Tour Guides and Escorts",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "software-and-web-development": {
+        "Computer Programmer": {
+            "id": 1,
+            "title": "Computer Programmer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer and Information Scientists": {
+            "id": 2,
+            "title": "Computer and Information Scientists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Software Developers - Applications": {
+            "id": 3,
+            "title": "Software Developers - Applications",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Software Quality Assurance Analysts and Testers": {
+            "id": 4,
+            "title": "Software Quality Assurance Analysts and Testers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Web Administrators": {
+            "id": 5,
+            "title": "Web Administrators",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Web Art Director": {
+            "id": 6,
+            "title": "Web Art Director",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Webmaster": {
+            "id": 7,
+            "title": "Webmaster",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Video Game Designer": {
+            "id": 8,
+            "title": "Video Game Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "it-support-and-networking": {
+        "Computer Hardware Technician": {
+            "id": 1,
+            "title": "Computer Hardware Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer Network Architects": {
+            "id": 2,
+            "title": "Computer Network Architects",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer Network Support Specialists": {
+            "id": 3,
+            "title": "Computer Network Support Specialists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer Systems Analyst": {
+            "id": 4,
+            "title": "Computer Systems Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer Systems Engineer": {
+            "id": 5,
+            "title": "Computer Systems Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer User Support Specialist": {
+            "id": 6,
+            "title": "Computer User Support Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Information Security Analysts": {
+            "id": 7,
+            "title": "Information Security Analysts",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "IT Administrator (Information Technology)": {
+            "id": 8,
+            "title": "IT Administrator (Information Technology)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Information Technology Project Managers": {
+            "id": 9,
+            "title": "Information Technology Project Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "hardware-and-systems": {
+        "Computer Hardware Engineers": {
+            "id": 1,
+            "title": "Computer Hardware Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Computer Technician": {
+            "id": 2,
+            "title": "Computer Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "production-and-assembly": {
+        "Aircraft Assembler": {
+            "id": 1,
+            "title": "Aircraft Assembler",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Engine and Machine Assemblers": {
+            "id": 2,
+            "title": "Engine and Machine Assemblers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Machinist": {
+            "id": 3,
+            "title": "Machinist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Model Maker": {
+            "id": 4,
+            "title": "Model Maker",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Model Makers, Metal and Plastic": {
+            "id": 5,
+            "title": "Model Makers, Metal and Plastic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Team Assemblers": {
+            "id": 6,
+            "title": "Team Assemblers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "quality-control": {
+        "Quality Control Inspector": {
+            "id": 1,
+            "title": "Quality Control Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Quality Control Managers": {
+            "id": 2,
+            "title": "Quality Control Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Quality Control Technician": {
+            "id": 3,
+            "title": "Quality Control Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Precision Devices Inspectors and Testers": {
+            "id": 4,
+            "title": "Precision Devices Inspectors and Testers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "product-design-and-development": {
+        "Commercial Designer": {
+            "id": 1,
+            "title": "Commercial Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Industrial Designer": {
+            "id": 2,
+            "title": "Industrial Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Manufacturing Engineers": {
+            "id": 3,
+            "title": "Manufacturing Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Product Planner": {
+            "id": 4,
+            "title": "Product Planner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Product Safety Engineer": {
+            "id": 5,
+            "title": "Product Safety Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tool and Die Makers": {
+            "id": 6,
+            "title": "Tool and Die Makers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tool and Machine Designer": {
+            "id": 7,
+            "title": "Tool and Machine Designer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "marketing-and-advertising": {
+        "Advertising Account Manager": {
+            "id": 1,
+            "title": "Advertising Account Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Advertising Agency Coordinator": {
+            "id": 2,
+            "title": "Advertising Agency Coordinator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Advertising Sales Agent": {
+            "id": 3,
+            "title": "Advertising Sales Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Market Research Analyst": {
+            "id": 4,
+            "title": "Market Research Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marketing Managers": {
+            "id": 5,
+            "title": "Marketing Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Search Marketing Strategists": {
+            "id": 6,
+            "title": "Search Marketing Strategists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "sales": {
+        "Sales Representative (all types)": {
+            "id": 1,
+            "title": "Sales Representative (all types)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sales Engineers": {
+            "id": 2,
+            "title": "Sales Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sales Managers": {
+            "id": 3,
+            "title": "Sales Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Retail Sales Department Supervisor": {
+            "id": 4,
+            "title": "Retail Sales Department Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Customer Service Representative": {
+            "id": 5,
+            "title": "Customer Service Representative",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Customer Service Supervisor": {
+            "id": 6,
+            "title": "Customer Service Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "public-relations": {
+        "Fund Raiser": {
+            "id": 1,
+            "title": "Fund Raiser",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fundraising Manager": {
+            "id": 2,
+            "title": "Fundraising Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Public Relations Manager": {
+            "id": 3,
+            "title": "Public Relations Manager",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Public Relations Specialist": {
+            "id": 4,
+            "title": "Public Relations Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "personal-services": {
+        "Barber": {
+            "id": 1,
+            "title": "Barber",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Cosmetologist (Hair Stylist)": {
+            "id": 2,
+            "title": "Cosmetologist (Hair Stylist)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Manicurists and Pedicurists": {
+            "id": 3,
+            "title": "Manicurists and Pedicurists",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Personal Service Supervisor": {
+            "id": 4,
+            "title": "Personal Service Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Skin Care Specialist": {
+            "id": 5,
+            "title": "Skin Care Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "legal-and-judicial": {
+        "Administrative Law Judge": {
+            "id": 1,
+            "title": "Administrative Law Judge",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Admiralty Lawyer": {
+            "id": 2,
+            "title": "Admiralty Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Appeals Examiner": {
+            "id": 3,
+            "title": "Appeals Examiner",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Arbitrator": {
+            "id": 4,
+            "title": "Arbitrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Attorney": {
+            "id": 5,
+            "title": "Attorney",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Bailiff": {
+            "id": 6,
+            "title": "Bailiff",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Corporation Lawyer": {
+            "id": 7,
+            "title": "Corporation Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Correction Officer": {
+            "id": 8,
+            "title": "Correction Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Court Reporter": {
+            "id": 9,
+            "title": "Court Reporter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Criminal Lawyer": {
+            "id": 10,
+            "title": "Criminal Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Judge": {
+            "id": 11,
+            "title": "Judge",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Law Clerks": {
+            "id": 12,
+            "title": "Law Clerks",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Lawyer": {
+            "id": 13,
+            "title": "Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Legal Assistant": {
+            "id": 14,
+            "title": "Legal Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Legal Secretary": {
+            "id": 15,
+            "title": "Legal Secretary",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Legislative Assistant": {
+            "id": 16,
+            "title": "Legislative Assistant",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Legislator": {
+            "id": 17,
+            "title": "Legislator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Magistrate": {
+            "id": 18,
+            "title": "Magistrate",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Paralegal": {
+            "id": 19,
+            "title": "Paralegal",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Patent Agent": {
+            "id": 20,
+            "title": "Patent Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Patent Lawyer": {
+            "id": 21,
+            "title": "Patent Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Probate Lawyer": {
+            "id": 22,
+            "title": "Probate Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Real Estate Lawyer": {
+            "id": 23,
+            "title": "Real Estate Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Tax Lawyer": {
+            "id": 24,
+            "title": "Tax Lawyer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "law-enforcement-and-security": {
+        "Border Patrol Agent": {
+            "id": 1,
+            "title": "Border Patrol Agent",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Customs Inspector": {
+            "id": 2,
+            "title": "Customs Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Detective": {
+            "id": 3,
+            "title": "Detective",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Harbor, Lake & Waterways Police": {
+            "id": 4,
+            "title": "Harbor, Lake & Waterways Police",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Immigration Inspector": {
+            "id": 5,
+            "title": "Immigration Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Intelligence Analyst": {
+            "id": 6,
+            "title": "Intelligence Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Intelligence Specialist": {
+            "id": 7,
+            "title": "Intelligence Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Narcotics Investigator": {
+            "id": 8,
+            "title": "Narcotics Investigator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Parole Officer": {
+            "id": 9,
+            "title": "Parole Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Police and Detectives Supervisor": {
+            "id": 10,
+            "title": "Police and Detectives Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Police Artist": {
+            "id": 11,
+            "title": "Police Artist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Police Detective": {
+            "id": 12,
+            "title": "Police Detective",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Police Identification and Records Officers": {
+            "id": 13,
+            "title": "Police Identification and Records Officers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Police Officer": {
+            "id": 14,
+            "title": "Police Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Security and Fire Alarm Systems Installers": {
+            "id": 15,
+            "title": "Security and Fire Alarm Systems Installers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Sheriffs": {
+            "id": 16,
+            "title": "Sheriffs",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Transit and Railroad Police": {
+            "id": 17,
+            "title": "Transit and Railroad Police",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "emergency-and-social-services": {
+        "Emergency Management Specialist": {
+            "id": 1,
+            "title": "Emergency Management Specialist",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Emergency Medical Technician": {
+            "id": 2,
+            "title": "Emergency Medical Technician",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fire Inspector": {
+            "id": 3,
+            "title": "Fire Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fire Investigator": {
+            "id": 4,
+            "title": "Fire Investigator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fire Prevention Engineer": {
+            "id": 5,
+            "title": "Fire Prevention Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Fire Protection Engineer": {
+            "id": 6,
+            "title": "Fire Protection Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Firefighter": {
+            "id": 7,
+            "title": "Firefighter",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Forest Fire Fighting and Prevention Supervisor": {
+            "id": 8,
+            "title": "Forest Fire Fighting and Prevention Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Probation Officer": {
+            "id": 9,
+            "title": "Probation Officer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Social and Community Service Managers": {
+            "id": 10,
+            "title": "Social and Community Service Managers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Social and Human Service Assistants": {
+            "id": 11,
+            "title": "Social and Human Service Assistants",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Social Welfare Administrator": {
+            "id": 12,
+            "title": "Social Welfare Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "government-administration": {
+        "Congressional Aide": {
+            "id": 1,
+            "title": "Congressional Aide",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Government Budget Analyst": {
+            "id": 2,
+            "title": "Government Budget Analyst",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Government Property Inspector": {
+            "id": 3,
+            "title": "Government Property Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Government Service Executives": {
+            "id": 4,
+            "title": "Government Service Executives",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "ground-transportation": {
+        "Bus Driver (School)": {
+            "id": 1,
+            "title": "Bus Driver (School)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Delivery Driver": {
+            "id": 2,
+            "title": "Delivery Driver",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Locomotive Operator": {
+            "id": 3,
+            "title": "Locomotive Operator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Railroad Conductors and Yardmasters": {
+            "id": 4,
+            "title": "Railroad Conductors and Yardmasters",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Railroad Inspector": {
+            "id": 5,
+            "title": "Railroad Inspector",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Taxi Driver": {
+            "id": 6,
+            "title": "Taxi Driver",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Traffic Administrator (Freight, Passenger)": {
+            "id": 7,
+            "title": "Traffic Administrator (Freight, Passenger)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Transportation Supervisor": {
+            "id": 8,
+            "title": "Transportation Supervisor",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Truck Driver (Long Distance)": {
+            "id": 9,
+            "title": "Truck Driver (Long Distance)",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Truck Mechanic": {
+            "id": 10,
+            "title": "Truck Mechanic",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "aviation": {
+        "Air Traffic Controller": {
+            "id": 1,
+            "title": "Air Traffic Controller",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Airline Flight Control Administrator": {
+            "id": 2,
+            "title": "Airline Flight Control Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Airline Flight Operations Administrator": {
+            "id": 3,
+            "title": "Airline Flight Operations Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Airline Flight Reservations Administrator": {
+            "id": 4,
+            "title": "Airline Flight Reservations Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Airport Administrator": {
+            "id": 5,
+            "title": "Airport Administrator",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Airport Engineer": {
+            "id": 6,
+            "title": "Airport Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Highway Patrol Pilot": {
+            "id": 7,
+            "title": "Highway Patrol Pilot",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Pilot": {
+            "id": 8,
+            "title": "Pilot",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "maritime": {
+        "Marine Engineer": {
+            "id": 1,
+            "title": "Marine Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Marine Architect": {
+            "id": 2,
+            "title": "Marine Architect",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ship Engineers": {
+            "id": 3,
+            "title": "Ship Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ship Master": {
+            "id": 4,
+            "title": "Ship Master",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Ship Pilot": {
+            "id": 5,
+            "title": "Ship Pilot",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    },
+    "logistics-and-planning": {
+        "Cargo and Freight Agents": {
+            "id": 1,
+            "title": "Cargo and Freight Agents",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Logistics Analysts": {
+            "id": 2,
+            "title": "Logistics Analysts",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Logistics Engineers": {
+            "id": 3,
+            "title": "Logistics Engineers",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Transportation Engineer": {
+            "id": 4,
+            "title": "Transportation Engineer",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        },
+        "Transportation Planners": {
+            "id": 5,
+            "title": "Transportation Planners",
+            "icon": null,
+            "jobTasks": null,
+            "earnings": null,
+            "earningsDetails": null,
+            "training": null,
+            "dataSources": []
+        }
+    }
+}
