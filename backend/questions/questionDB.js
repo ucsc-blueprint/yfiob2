@@ -56,6 +56,8 @@ export async function getAllResponses(username){
     return res;
 }
 
+
+
 export async function getResponse(username, questionNumber){
     const responsesReference = collection(db, "userResponses")
     
@@ -76,7 +78,22 @@ export async function getResponse(username, questionNumber){
     }
 }
 
+export async function deleteAllResponses(username, questionNumber){
+    const responsesReference = collection(db, "userResponses")
 
+    const q = query(
+        responsesReference, 
+        where("username", '==', username), 
+        where("questionNumber", "==", questionNumber)
+    );
+
+    const docs = await getDocs(q);
+    const batch = writeBatch(db);
+    docs.forEach((doc) => {
+        batch.delete(doc.ref);
+    });
+    await batch.commit();
+}
 
 
 

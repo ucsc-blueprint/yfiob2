@@ -4,6 +4,7 @@
 import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -21,9 +22,11 @@ import {
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
+import { deleteAllResponses } from "../../../backend/questions/questionDB";
 
 
 export default function QuizResultsPage() {
+  const router = useRouter();
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
   useEffect(() => {
@@ -65,6 +68,11 @@ export default function QuizResultsPage() {
   })
   );
   
+  const handleTakeQuizAgain = () => {
+    deleteAllResponses("Akshay").then(() => {
+      router.replace("/pre-quiz")
+    });
+  }
   
 
   const topJobs = [
@@ -87,6 +95,7 @@ export default function QuizResultsPage() {
   const [shareEmail, setShareEmail] = useState("");
   const [showShareModal, setShowShareModal] = useState(false);
   const [shareModalEmail, setShareModalEmail] = useState("");
+
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -216,12 +225,12 @@ export default function QuizResultsPage() {
           <div>
             <p className="italic mb-2">Not Happy with your Results?</p>
             <p className="mb-4 text-gray-700">Take the quiz again here!</p>
-            <Link
-              href="/take-quiz"
-              className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+            <button
+              className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+              onClick={handleTakeQuizAgain}
             >
               Retake Quiz
-            </Link>
+            </button>
           </div>
         </div>
       </section>
