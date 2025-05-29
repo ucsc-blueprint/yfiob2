@@ -24,3 +24,15 @@ export async function getAllIndustries(){
     const industriesArr = Object.entries(industries).sort();
     return industriesArr;
 }
+
+// Checks  if the user is an admin
+export async function checkIsAdmin(email){
+    const responsesReference = collection(db, "users")
+    const q = query(
+        responsesReference, 
+        where("email", '==', email), 
+    );
+    // Returns array of users answer chocies
+    const docs = await getDocs(q);
+    return docs.docs[0].data().isAdmin;
+}

@@ -3,27 +3,62 @@
 import BoxButton from "../../components/BoxButton.jsx";
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from "react";
-
 import Link from "next/link";
 import Image from "next/image";
-
-import { signOut, onAuthStateChanged } from "firebase/auth";
+import { signOut, onAuthStateChanged, getAuth } from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import { doc, getDoc } from "firebase/firestore";
+import { checkIsAdmin } from "../../../backend/adminFuncs/adminUtils.js";
 
 
 export const Navbar = () => {
+  const [isAdmin, setIsAdmin] = useState(false);
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const router = useRouter();
+  const auth = getAuth();
+
+  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
+// const firebaseConfig = {
+//   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
+//   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
+//   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
+//   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
+//   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
+//   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
+//   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
+// };
+
+//   // // Initialize Firebase
+//   const app = initializeApp(firebaseConfig);
+
+//   // // Initialize Cloud Firestore and get a reference to the service
+//   const db = getFirestore(app);
+
 
   useEffect(() => {
-    const unsubscribe = onAuthStateChanged(auth, (user) => {
+    const unsubscribe = onAuthStateChanged(auth, async (user) => {
       setIsLoggedIn(!!user);
+
+      if (user) {
+        // Fetch all users and find the current user
+        const email = user.email;
+        if (email) {
+          // Put the checkIsAdmin function fro, adminUtils.js here
+          const isAdmin = await checkIsAdmin(email);
+          console.log("user is admin:", isAdmin);
+        } else {
+          setIsAdmin(false);
+          console.log("User not found in Firestore");
+        }
+      } else {
+        setIsAdmin(false);
+      }
     });
 
-    return () => unsubscribe;
+    return () => unsubscribe();
   }, []);
 
   const handleLoginClick = () => {
@@ -35,10 +70,12 @@ export const Navbar = () => {
       await signOut(auth);
       alert("Logout successful!");
       router.push("/login");
+      setIsAdmin(false);
     } catch (error) {
       alert("Logout failed: " + error.message);
     }
   };
+  // console.log("Admin status: ", isAdmin);
 
   return (
     <div className="bg-white shadow-md font-lato">
