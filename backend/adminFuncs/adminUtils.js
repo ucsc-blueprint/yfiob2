@@ -32,7 +32,15 @@ export async function checkIsAdmin(email){
         responsesReference, 
         where("email", '==', email), 
     );
+  
     // Returns array of users answer chocies
-    const docs = await getDocs(q);
-    return docs.docs[0].data().isAdmin;
+    const docs = await getDocs(q); // This line is giving me permission issues
+    if (docs.empty) {
+        return false; // User not found
+    }
+    const data = docs.docs[0].data();
+    if (!data.isAdmin) {
+        return false;
+    }
+    return data.isAdmin;
 }

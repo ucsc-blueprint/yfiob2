@@ -2,7 +2,7 @@
 
 import BoxButton from "../../components/BoxButton.jsx";
 import { useRouter } from 'next/navigation';
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut, onAuthStateChanged, getAuth } from "firebase/auth";
@@ -12,30 +12,13 @@ import { checkIsAdmin } from "../../../backend/adminFuncs/adminUtils.js";
 
 
 export const Navbar = () => {
-  const [isAdmin, setIsAdmin] = useState(false);
+  const isAdmin = useRef(false); // Initialize isAdmin variable
   const [isOpen, setIsOpen] = useState(false);
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
   const [isLoggedIn, setIsLoggedIn] = useState(false);
 
   const router = useRouter();
   const auth = getAuth();
-
-  // For Firebase JS SDK v7.20.0 and later, measurementId is optional
-// const firebaseConfig = {
-//   apiKey: process.env.NEXT_PUBLIC_FIREBASE_API_KEY,
-//   authDomain: process.env.NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.NEXT_PUBLIC_FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET,
-//   messagingSenderId: process.env.NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID,
-//   appId: process.env.NEXT_PUBLIC_FIREBASE_APP_ID,
-//   measurementId: process.env.NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID,
-// };
-
-//   // // Initialize Firebase
-//   const app = initializeApp(firebaseConfig);
-
-//   // // Initialize Cloud Firestore and get a reference to the service
-//   const db = getFirestore(app);
 
 
   useEffect(() => {
@@ -46,16 +29,13 @@ export const Navbar = () => {
         // Fetch all users and find the current user
         const email = user.email;
         if (email) {
-          // Put the checkIsAdmin function fro, adminUtils.js here
-          const isAdmin = await checkIsAdmin(email);
-          console.log("user is admin:", isAdmin);
+          // Put the checkIsAdmin function from adminUtils.js here
+          console.log("User email:", email);
+          isAdmin.current = await checkIsAdmin(email);
         } else {
-          setIsAdmin(false);
           console.log("User not found in Firestore");
         }
-      } else {
-        setIsAdmin(false);
-      }
+      } 
     });
 
     return () => unsubscribe();
@@ -70,12 +50,14 @@ export const Navbar = () => {
       await signOut(auth);
       alert("Logout successful!");
       router.push("/login");
-      setIsAdmin(false);
+      isAdmin.current = false; // Reset isAdmin state on logout
     } catch (error) {
       alert("Logout failed: " + error.message);
     }
   };
-  // console.log("Admin status: ", isAdmin);
+
+  // ERASE COMMENT ONCE FINISHED - Kartikeya Kumaria
+  console.log("isAdmin:", isAdmin.current);
 
   return (
     <div className="bg-white shadow-md font-lato">
