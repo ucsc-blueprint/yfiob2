@@ -18,17 +18,15 @@ function getQuestions(educationLevel) {
 export default function QuizClient({ grade }) {
     const router = useRouter();
     const searchParams = useSearchParams();
-    const isValid = searchParams.get('valid') === 'true';
+    const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
 
-    // If not a valid session, redirect to choose-account-type
     useEffect(() => {
         if (!isValid) {
-            router.push(`/choose-account-type?grade=${grade}`)
+            router.push(`/choose-account-type?grade=${grade}`);
         }
     }, [isValid, router, grade]);
 
-    // map grade → index
     const gradeToIndex = {
         "elementary-school": 0,
         "middle-school": 1,
@@ -126,17 +124,14 @@ export default function QuizClient({ grade }) {
     };
     const color = gradeColor[grade] || "blue";
 
-    // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
 
     return (
         <>
-            {/* Navbar sits on top */}
             <div className="relative z-10">
                 <Navbar />
             </div>
 
-            {/* full‐screen background under the navbar */}
             <div
                 className={`
           fixed
@@ -188,16 +183,16 @@ export default function QuizClient({ grade }) {
                 </div>
 
                 {isLoading && (
-                    <div className="mt-2 text-sm text-gray-500">
-                        Matching with careers...
-                    </div>
+                    <div className="mt-2 text-sm text-gray-500">Matching with careers...</div>
                 )}
                 {questionNum === questionsForLevel.length - 1 && (
                     <div className="mt-6 flex flex-col justify-center">
-                        <button onClick={handleSubmit} className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
+                        <button
+                            onClick={handleSubmit}
+                            className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700"
+                        >
                             Submit
                         </button>
-                        
                     </div>
                 )}
             </div>
