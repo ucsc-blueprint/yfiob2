@@ -17,6 +17,35 @@ import FileExportIcon from "../../../components/FileExportIcon";
 
 const clipLength = 30;
 
+function exportJSON(data) {
+    const json = JSON.stringify(data, null, 2);
+    const blob = new Blob([json], { type: "application/json" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "data.json";
+    a.click();
+}
+
+function exportCSV(data) {
+    const items = data.map((item) => item.data);
+    const replacer = (key, value) => (value === null ? "" : value); // specify how you want to handle null values here
+    const header = Object.keys(items[0]);
+    const csv = [
+        header.join(","), // header row first
+        ...items.map((row) =>
+            header.map((fieldName) => JSON.stringify(row[fieldName], replacer)).join(",")
+        ),
+    ].join("\r\n");
+
+    const blob = new Blob([csv], { type: "text/csv" });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement("a");
+    a.href = url;
+    a.download = "data.csv";
+    a.click();
+}
+
 function CustomSearch(props) {
     return (
         <div className="w-64 border-black border-[1px] rounded-md">
@@ -50,12 +79,49 @@ function ExportButton({ onClick }) {
     return (
         <button
             onClick={(e) => onClick(e)}
-            className="bg-[#185D6D] rounded-md flex items-center ml-3 text-white"
+            className="bg-[#185D6D] rounded-md flex items-center ml-3 text-white w-[9.2rem]"
         >
             <FileExportIcon className="mx-2 text-white" style={{ transform: "scale(0.8)" }} />
             <p className="mr-2">Export as...</p>
             <ArrowDropDownIcon className="mr-3" style={{ transform: "scale(0.8)" }} />
         </button>
+    );
+}
+
+function ExportPopup({ shown, setShown, data }) {
+    if (!shown) return null;
+
+    return (
+        <div className="absolute z-50 w-[9.2rem] mt-8">
+            <div className="flex flex-col">
+                <button
+                    onClick={() => {
+                        setShown(false);
+                        exportJSON(data);
+                    }}
+                    className="bg-white border-black border-[1px] flex items-center ml-3 text-black w-full"
+                >
+                    <FileExportIcon
+                        className="mx-2 text-black"
+                        style={{ transform: "scale(0.8)" }}
+                    />
+                    <p className="mr-2">JSON</p>
+                </button>
+                <button
+                    onClick={() => {
+                        setShown(false);
+                        exportCSV(data);
+                    }}
+                    className="bg-white border-black border-[1px] border-t-0 rounded-b-md flex items-center ml-3 text-black w-full"
+                >
+                    <FileExportIcon
+                        className="mx-2 text-black"
+                        style={{ transform: "scale(0.8)" }}
+                    />
+                    <p className="mr-2">CSV</p>
+                </button>
+            </div>
+        </div>
     );
 }
 
@@ -187,6 +253,7 @@ export default function AdminPage() {
     const [zipcode, setZipcode] = useState(null);
     const [school, setSchool] = useState("");
     const [shown, setShown] = useState(false);
+    const [exportShown, setExportShown] = useState(false);
 
     useEffect(() => {
         getData("users").then(setData);
@@ -257,8 +324,13 @@ export default function AdminPage() {
                         <div className="flex flex-row">
                             <ExportButton
                                 onClick={() => {
-                                    console.log("HI");
+                                    setExportShown(!exportShown);
                                 }}
+                            />
+                            <ExportPopup
+                                shown={exportShown}
+                                setShown={setShown}
+                                data={data.filter((item) => filterFunction(item, search))}
                             />
                         </div>
                     </div>
