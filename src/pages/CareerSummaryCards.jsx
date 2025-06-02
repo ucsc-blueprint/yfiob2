@@ -113,4 +113,4 @@ export const CareerSummaryCards = ({ Industry, CardData, Level, Index, SetIndex,
 	);
 };
 
-	
+export default CareerSummaryCards;

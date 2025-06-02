@@ -16,15 +16,32 @@ algorithm:
 6c) increment the score of the industry by 1 in the JSON object
 6d) if the industry is not in the JSON object, initialize it with a score of 1
 
-7) add the key/value pairs of the json to a max heap
-8) pop the k-highest elements from the max heap and return them as an array of industries
+7) add the key/value pairs of the json to a list
+8) get the k-highest elements from the list and return them as an array of industries
 9) return the array of industries
 */
 
-import { db } from "../../firebaseConfig"; // Adjust the import path as necessary
-import { collection, getDocs, query, where} from "firebase/firestore";
+//import { db } from "../firebase.js";
+import {db} from "../../src/utils/firebase.js"
+import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy} from "firebase/firestore";
 
-async function getTopKIndustries(username, k) {
+export default async function storeTopKIndustries(username, k) {
+    const industryReference  = collection(db, "userTopKIndustries")
+    const industriesFoundQuery = query(industryReference, where("username", "==", username));
+    const industriesFound = await getDocs(industriesFoundQuery);
+    for (const doc of industriesFound.docs) {
+        const docRef = doc.ref;
+        await deleteDoc(docRef);
+    }
+    //delete all previous entries of the user in the database
+    const userResponsesFoundRef = collection(db, "userTopKIndustries");
+    const responseFoundRef = query(userResponsesFoundRef, where("username", "==", username));
+    const responsesFound = await getDocs(responseFoundRef);
+    for (const doc of responsesFound.docs) {
+        const docRef = doc.ref;
+        await deleteDoc(docRef);
+    }
+
     // Step 1: Initialize a JSON object to store the industries and their scores
     const industries = {};
 
@@ -42,8 +59,9 @@ async function getTopKIndustries(username, k) {
     // Step 5: Process each response
     for (const doc of responses.docs) {
         const questionData = doc.data();
-        const questionNumber = questionData.questionNumber;
+        const questionFullNumber = questionData.questionNumber;
         const optionSelected = questionData.optionSelected;
+        const questionNumber = questionFullNumber.split("-")[0];
 
         // Step 6a: Get the question category
         const categoryQuery = query(questionsRef, where("questionNumber", "==", questionNumber));
@@ -52,7 +70,6 @@ async function getTopKIndustries(username, k) {
         for (const categoryDoc of categoryDocs.docs) {
             const categoryData = categoryDoc.data();
             const category = categoryData.questionCategory;
-
             // Step 6b: Get the industry of the selected option
             const industryQuery = query(
                 questionClassificationRef,
@@ -64,7 +81,6 @@ async function getTopKIndustries(username, k) {
             for (const industryDoc of industryDocs.docs) {
                 const industryData = industryDoc.data();
                 const industry = industryData.industry;
-
                 // Step 6c: Increment the score of the industry
                 if (industry in industries) {
                     industries[industry] += 1;
@@ -74,12 +90,72 @@ async function getTopKIndustries(username, k) {
             }
         }
     }
+    
+    const arr = Object.entries(industries)
 
-    // Step 7: Return the industries object
+    insertionSort(arr);
+
+    if(k > arr.length) {
+        k = arr.length;
+    }
+
+    var totalTopIndustryCount = 0;
+    for(let i = 0; i < k; i++){
+        totalTopIndustryCount += arr[i][1];
+    }
+
+    //saving the top k industries to the database
+    const addPromises = [];
+    for(let i = 0; i < k; i++){
+        addPromises.push(
+            addDoc(industryReference, { 
+                username: username,
+                industry: arr[i][0],
+                ranking: Number(i),
+                percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
+            })
+        );
+    }
+    await Promise.all(addPromises);
+}
+
+// Step 7: Return the sorted industries object
+function insertionSort(arr) {
+    for (let i = 1; i < arr.length; i++){
+        const current = arr[i];
+        const currentVal = current[1];
+        let j = i - 1;
+        while (j >= 0 && arr[j][1] < currentVal){
+            arr[j + 1] = arr[j]
+            j--;
+        }
+        arr[j + 1] = current;
+    }
+    return arr;
+}
+
+
+export async function getTopKIndustries(username){
+    const industriesFoundQuery = query(collection(db, "userTopKIndustries"), where("username", "==", username), orderBy("percentage"));
+    const industriesFound = await getDocs(industriesFoundQuery);
+    const industries = [];
+
+    for (const doc of industriesFound.docs) {
+        const data = doc.data();
+        industries.push([data.industry, data.percentage]);
+    }
+    console.log(industries);
     return industries;
 }
 
-getTopKIndustries("Akshay", 5).then((result) => {
-    console.log(result);
-});
+export async function getCareersForIndustry(industry){
+    const careersFoundQuery = query(collection(db, "careers"), where("industry", "==", industry));
+    const careersFound = await getDocs(careersFoundQuery);
+    const careers = [];
 
+    for (const doc of careersFound.docs) {
+        const data = doc.data();
+        careers.push(data.careers);
+    }
+    return careers;
+}

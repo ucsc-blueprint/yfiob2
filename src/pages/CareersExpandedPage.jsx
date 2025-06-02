@@ -1,5 +1,5 @@
-import { Navbar } from "../components/Navbar"
-import { CareersCardExpanded } from "../components/CareersExpanded";
+import { Navbar } from "../components/Navbar/Navbar"
+import { CareersCardExpanded } from "../components/CareersCardExpanded/CareersCardExpanded";
 
 // import { CareersCard } from "./components/CareersCard";
 // import { CareersCardExpanded } from "./components/CareersCardExpanded"
@@ -59,3 +59,5 @@ export const CareersExpandedPage = ({educationLevel, nextJob}) => {
     </div>
   );
 }
+
+export default CareersExpandedPage;

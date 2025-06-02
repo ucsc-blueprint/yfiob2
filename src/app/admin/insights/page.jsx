@@ -4,25 +4,54 @@ import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
 import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
+import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
 
-export default async function AdminInsights() {
+export default function AdminInsights() {
   // TODO: fetch these from Firebase
   
   // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
   // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
+  const [industriesRecommended, setIndustriesRecommended] = useState([]);
+
+  const gradeColor = {
+    0: "border-t-[20px] border-[#90BD00]",
+    1: "border-t-[20px] border-[#BDBD00]",
+    2: "border-t-[20px] border-[#BD7800]",
+    3: "border-t-[20px] border-[#BD4500]",
+  };
+  
+  useEffect(()=> {
+    console.log("in useeffect")
+    const getData = async () => {
+      getAllIndustries().then((data)=>{
+        setIndustriesRecommended(data);
+      });
+    }
+    getData();
+  }, [])
 
   let last7DaysGrowth = 0;
-  const readyForCollegePercent = 75;
+  let readyForCollegePercent = 0;
   const mostClickedCareer = "Agricultural Engineer";
 
   let assessmentsTaken = 0;
-  let users = [];
-  let submissions = [];
+  const [users, getUsers] = useState([]);
+  const [submissions, getSubmissions] = useState([]);
   const schools = {};
   let topTrendingSchool = "Unknown";
   
+  useEffect(() => {
+    const getNewData = async () => {
+      const users = await getData("users");
+      const submissions = await getData("submissions");
+      getUsers(users);
+      getSubmissions(submissions);
+    };
+    getNewData();
+  }, []);
+
   try {
-    users = await getData("users");
+    // users = await getData("users");
     console.log("Users: ", users);
 
     for (let i = 0; i < users.length; i++) {
@@ -49,31 +78,31 @@ export default async function AdminInsights() {
 
 
 
-    const fetchSubmissions = async () => { 
-      try {
-        const querySnapshot = await getDocs(collection(db, "submissions"));
-      } catch (error) {
-        console.error("Error fetching submissions:", error);
-      }
-    }
-    fetchSubmissions();
+  //   const fetchSubmissions = async () => { 
+  //     try {
+  //       const querySnapshot = await getDocs(collection(db, "submissions"));
+  //     } catch (error) {
+  //       console.error("Error fetching submissions:", error);
+  //     }
+  //   }
+  //   fetchSubmissions();
 
 
-  const handleSubmissionAdd = async () => {
-    try {
-      const docRef = await addDoc(collection(db, "submissions"), {
-        __userID: "Aviel'sFakeID",
-        readyForCollege: true,
-        timestamp: new Date(),
-      });
-      assessmentsTaken + 1;
-      console.log("Document written with ID: ", docRef.id);
-    } catch (error) {
-      console.error("Error adding document: ", error);
-    }
-  }
+  // const handleSubmissionAdd = async () => {
+  //   try {
+  //     const docRef = await addDoc(collection(db, "submissions"), {
+  //       __userID: "Aviel'sFakeID",
+  //       readyForCollege: true,
+  //       timestamp: new Date(),
+  //     });
+  //     assessmentsTaken + 1;
+  //     console.log("Document written with ID: ", docRef.id);
+  //   } catch (error) {
+  //     console.error("Error adding document: ", error);
+  //   }
+  // }
 
-  submissions = await getData("submissions")
+  // submissions = await getData("submissions")
   try {
       console.log("You submitted your Quiz", submissions);
       assessmentsTaken = submissions.length;
@@ -81,20 +110,53 @@ export default async function AdminInsights() {
       console.error("Error fetching submission data:", error);
   }
   try {
-    let timestamp = new Date();
+    const currentDate = new Date();
+    // Calculate date 7 days ago
+    const sevenDaysAgo = new Date();
+    sevenDaysAgo.setDate(sevenDaysAgo.getDate() - 7);
+    
     last7DaysGrowth = submissions.filter((submission) => {
-      const submissionDate = new Date(submission.timestamp);
-      const diffTime = Math.abs(timestamp - submissionDate);
-      const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
-      return diffDays <= 7;
+      // Check if submission and timestamp exist
+      if (!submission || !submission.data || !submission.data.timestamp) {
+        return false;
+      }
+      
+      // Handle Firestore timestamp conversion
+      let submissionDate;
+      if (submission.data.timestamp && typeof submission.data.timestamp.toDate === 'function') {
+        // Firebase Timestamp object (use toDate() method)
+        submissionDate = submission.data.timestamp.toDate();
+      } else if (submission.data.timestamp && submission.data.timestamp.seconds) {
+        // Firebase timestamp stored as seconds/nanoseconds
+        submissionDate = new Date(submission.data.timestamp.seconds * 1000);
+      } else if (submission.data.timestamp instanceof Date) {
+        // Already a JavaScript Date
+        submissionDate = submission.data.timestamp;
+      } else if (typeof submission.data.timestamp === 'string') {
+        // String timestamp
+        submissionDate = new Date(submission.data.timestamp);
+      } else {
+        // Unable to parse timestamp
+        console.log("Unparseable timestamp:", submission.data.timestamp);
+        return false;
+      }
+      
+      // Compare to see if it's within the last 7 days
+      return submissionDate >= sevenDaysAgo && submissionDate <= currentDate;
     }).length;
+    
+    console.log("Last 7 days growth:", last7DaysGrowth);
   } catch (error) {
     console.error("Error calculating last 7 days growth:", error);
   }
 
-
-
-  
+  try {
+    readyForCollegePercent = (submissions.filter((submission) => {
+      return submission.data.readyForCollege === true;
+    }).length / submissions.length) * 100;
+  } catch (error) {
+    console.error("Error calculating ready for college percent:", error);
+  }
 
   // TODO: fetch sectors array from Firebase, with percent & a color code
   const sectors = [
@@ -147,14 +209,14 @@ export default async function AdminInsights() {
             </div>
           </div>
 
-          <div className="grid grid-cols-2 gap-4">
+          {/* <div className="grid grid-cols-2 gap-4">
             <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
               Add Submission
             </button>
             <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
               Add ReadyForCollege
             </button>
-          </div>
+          </div> */}
 
           {/* Three summary cards */}
           <div className="grid grid-cols-2 gap-4">
@@ -205,17 +267,24 @@ export default async function AdminInsights() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
-              {sectors.map((sector, i) => (
+            <div className="grid grid-cols-3 gap-6">
+  {industriesRecommended.map(([industryName, percentage], idx) => (
+    <div
+      key={industryName}
+      className="bg-white rounded-lg shadow overflow-hidden"
+    >
                 <div
-                  key={i}
-                  className={`border-t-4 ${sector.color} bg-white rounded-lg p-4`}
-                >
-                  <p className="text-2xl font-bold">{sector.percent}%</p>
-                  <p className="text-gray-500 text-sm">{sector.label}</p>
+                  className={`h-6 ${
+                    gradeColor[idx]
+                  }`}
+                />
+                <div className="p-6 text-center">
+                  <p className="text-4xl font-bold">{percentage}%</p>
+                  <p className="mt-2 text-gray-600">{industryName}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </div>
