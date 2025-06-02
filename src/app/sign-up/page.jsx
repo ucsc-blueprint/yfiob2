@@ -2,6 +2,7 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import TextBox from "../../components/TextBox/TextBox.jsx";
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button.jsx";
 import { addData } from "../../utils/addData.js";
 import schoolData from "./schools.json";
