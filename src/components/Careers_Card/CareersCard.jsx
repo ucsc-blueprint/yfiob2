@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const backgroundColor = {
-    "elementary-school": "bg-[#2CA9F6]",
-    "middle-school": "bg-[#75D122]",
-    "high-school": "bg-[#FF9E1E]",
+    "elementary-school": "bg-blue-400",
+    "middle-school": "bg-green-400",
+    "high-school": "bg-orange-400",
 };
 
 const jignaHue = {
@@ -20,15 +20,16 @@ export const CareersCard = ({
     image = "/assets/jigna.svg",
     href,
 }) => {
+
     return (
         <a href={href}>
             <div
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
             >
                 <header
-                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center`}
+                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold h-[99px] items-center text-center`}
                 >
-                    <div>{title}</div>
+                    {title}
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image

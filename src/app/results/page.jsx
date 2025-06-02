@@ -1,7 +1,7 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
@@ -23,22 +23,37 @@ import {
 } from "@heroicons/react/outline";
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
 import { deleteAllResponses } from "../../../backend/questions/questionDB";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
 export default function QuizResultsPage() {
   const router = useRouter();
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
+  const auth = getAuth();
+  const [username, setUsername] = useState("Guest");
   useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUsername(user.email);
+            console.log("User is signed in:", username);
+        }
+    });
+  }, [auth, username]);
+
+  useEffect(() => {
+    if(username === "Guest") {
+      return;
+    }
     const fetchData = async () => {
-      getTopKIndustries("Akshay").then((industries) => {
+      getTopKIndustries(username).then((industries) => {
         console.log("Top K Industries:", industries);
         setIndustries(industries);
         
       });
     }
     fetchData();
-  }, []);
+  }, [username]);
 
   useEffect(() => {
     const fetchCareers = async () => {
@@ -69,8 +84,13 @@ export default function QuizResultsPage() {
   );
   
   const handleTakeQuizAgain = () => {
-    deleteAllResponses("Akshay").then(() => {
-      router.replace("/pre-quiz")
+    if(username === "Guest") {
+      router.replace("/pre-quiz");
+      return;
+    }
+
+    deleteAllResponses(username).then(() => {
+      router.replace("/pre-quiz");
     });
   }
   
@@ -183,9 +203,11 @@ export default function QuizResultsPage() {
         {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
-          {careers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
-          ))}
+          {careers.map((job, i) => {
+            console.log("Job:", job);
+            return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+          })
+          }
         </div>
       </section>
 

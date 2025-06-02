@@ -1,5 +1,5 @@
 import { db } from "../../src/utils/firebase.js";
-import { collection, getDocs, query, where, limit, addDoc, updateDoc} from "firebase/firestore";
+import { collection, getDocs, query, where, limit, addDoc, updateDoc, writeBatch} from "firebase/firestore";
 
 export async function storeResponse(username, questionNumber, questionResponse){
     /*
@@ -78,13 +78,12 @@ export async function getResponse(username, questionNumber){
     }
 }
 
-export async function deleteAllResponses(username, questionNumber){
+export async function deleteAllResponses(username){
     const responsesReference = collection(db, "userResponses")
 
     const q = query(
         responsesReference, 
         where("username", '==', username), 
-        where("questionNumber", "==", questionNumber)
     );
 
     const docs = await getDocs(q);
