@@ -2,6 +2,7 @@
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useState, useEffect } from "react";
 import TextBox from "../../components/TextBox/TextBox.jsx";
+import { useRouter } from "next/navigation";
 import Button from "../../components/Button.jsx";
 import { addData } from "../../utils/addData.js";
 import schoolData from "./schools.json";
@@ -13,13 +14,16 @@ export const Page = () => {
     const [isAdmin, setIsAdmin] = useState(false);
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [firstName, setFirstName] = useState("");
+    const [lastName, setLastName] = useState("");
     const [school, setSchool] = useState("");
     const [grade, setGrade] = useState("");
     const [studentID, setStudentID] = useState("");
     const [searchTerm, setSearchTerm] = useState("");
     const [isDropdownVisible, setIsDropdownVisible] = useState(false);
     const [filteredSchools, setFilteredSchools] = useState([]);
-    
+    const router = useRouter();
+
     // State for grade dropdown
     const [gradeSearchTerm, setGradeSearchTerm] = useState("");
     const [isGradeDropdownVisible, setIsGradeDropdownVisible] = useState(false);
@@ -60,6 +64,8 @@ export const Page = () => {
           email.trim() === "" ||
           password.trim() === "" ||
           school.trim() === "" ||
+          firstName.trim() === "" ||
+          lastName.trim() === "" ||
           grade.trim() === "" ||
           studentID.trim() === ""
         ) {
@@ -82,14 +88,16 @@ export const Page = () => {
             school,
             grade,
             studentID,
+            firstName,
+            lastName,
             isAdmin,
           };
-      
+          //console.log("User data to save: ", userData);
           // Save additional data to Firestore
           await addData("users", userData);
       
           alert("User registered and data saved successfully");
-      
+          router.push(`/`);
         } catch (error) {
           console.error("Error during signup: ", error);
           alert("Error saving data: " + error.message);
@@ -109,6 +117,34 @@ export const Page = () => {
                 Sign up
               </h1>
 
+              {/* Name Input */}
+              <p className="text-left font-lato font-normal text-[20px]">
+                First Name
+              </p>
+              <TextBox
+                type="text"
+                Placeholder={"First Name"}
+                onChange={(e) => setFirstName(e.target.value)}
+                value={firstName}
+                id="firstName"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
+
+              <p className="text-left font-lato font-normal text-[20px]">
+                Last Name
+              </p>
+
+              <TextBox
+                type="text"
+                Placeholder={"Last Name"}
+                onChange={(e) => setLastName(e.target.value)}
+                value={lastName}
+                id="lastName"
+                onFocus={(e) => (e.target.style.color = "black")}
+                onBlur={(e) => (e.target.style.color = "#898989")}
+              />
+
               {/* Email Input */}
               <p className="text-left font-lato font-normal text-[20px]">
                 Email
@@ -127,6 +163,7 @@ export const Page = () => {
               <p className="text-left font-lato font-normal text-[20px]">
                 Password
               </p>
+
               <TextBox
                 type="password"
                 Placeholder="Password"
