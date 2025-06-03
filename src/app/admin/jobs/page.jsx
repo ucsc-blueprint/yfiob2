@@ -81,14 +81,14 @@ function Page() {
 
 	function JobItem({ job }) {
 		return (
-			<div key={job.id}>
-				<div className="flex bg-red-800 border-amber-600" id={job.name}>
-					<div className="flex">
+			<div className="mx-2 p-2" key={job.id}>
+				<div className="flex" id={job.name}>
+					<div className="flex gap-2">
 						<p>ICON</p>
 						<p>{job.name}</p>
 					</div>
-					<div className="flex ml-auto">
-						<button>EDIT</button>
+					<div className="ml-auto flex gap-2">
+						<button><img src="/assets/pencil-icon.svg" alt="pencil icon"/></button>
 						<button
 							onClick={async () => {
 								await deleteData("careers", job.id);
@@ -98,7 +98,7 @@ function Page() {
 								setJobData(newData);
 							}}
 						>
-							DELETE
+							<img src="/assets/delete-icon.svg" alt="pencil icon"/>
 						</button>
 					</div>
 				</div>
@@ -110,8 +110,9 @@ function Page() {
 		const toggled = open.includes(name);
 		return (
 			<div>
-				<div className="w-full bg-[#185D6D1A] text-[20px] flex my-8">
+				<div className="w-full bg-[#185D6D1A] text-[20px] flex items-center justify-center rounded-[5px]">
 					<button
+						className="rounded-3xl bg-white m-2  h-[30px] w-[30px] flex justify-center items-center"
 						onClick={() => {
 							if (open.includes(name)) {
 								setOpen(open.filter((t) => t !== name));
@@ -120,7 +121,7 @@ function Page() {
 							}
 						}}
 					>
-						{toggled ? "^" : ">"}
+						{toggled ? <img src="/assets/arrow-down.svg" alt='arrow down icon'/> : <img src="/assets/arrow-up.svg" alt='arrow up icon'/>}
 					</button>
 					<div>{name}</div>
 					<button
@@ -128,7 +129,7 @@ function Page() {
 							openRef.current = name;
 							setPopupOpen(true);
 						}}
-						className="ml-auto text-[#072b33] font-extralight border-[#185d6d] px-5 rounded-md border-[2px]"
+						className="ml-auto text-[#072b33] font-[100] bg-[#185D6D1A] border-[#185d6d] px-5 rounded-md border-[1px] mr-2"
 					>
 						+ Add job
 					</button>
@@ -167,28 +168,28 @@ function Page() {
 			/>
 			<AdminNavbar />
 			<div className="flex justify-center">
-				<div className="w-[80vw] outline outline-black h-[100vw]">
-					<div className="flex gap-2 mt-20">
+				<div className="w-[80vw] h-[100vw]">
+					<div className="flex gap-2 mt-10">
 						<img src="/assets/suitcase.svg" alt="suitcase"/>
 						<div>
 							<h1 className="text-[1.8rem] font-bold">Jobs</h1>
 							<p className="text-[20px]">Students are recommended job sectors, which contain individual jobs.</p>
 						</div>
 					</div>
-					<div>
+					<div className="overflow-y-auto no-scrollbar">
 						{jobData.map((industry, index) => {
 							return (
-								// <div className="my-8">
-								<JobContainer key={index} name={industry.name}>
-									{industry.jobs.map((job) => {
-										if (job.name) {
-											return <JobItem key={job.id} job={job} />;
-										} else {
-											return <></>;
-										}
-									})}
+								<div className="my-8 outline-[#104c5a1a] border-[1px] rounded-md">
+									<JobContainer key={index} name={industry.name}>
+										{industry.jobs.map((job) => {
+											if (job.name) {
+												return <><JobItem key={job.id} job={job} /><hr className="border-[#888888] border-1"/></>;
+											} else {
+												return <></>;
+											}
+										})}
 								</JobContainer>
-								// </div>
+								</div>
 							);
 						})}
 					</div>
