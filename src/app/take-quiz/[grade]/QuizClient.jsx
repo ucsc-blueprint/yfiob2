@@ -20,6 +20,7 @@ export default function QuizClient({ grade }) {
     const searchParams = useSearchParams();
     const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
+    
 
     useEffect(() => {
         if (!isValid) {
@@ -103,6 +104,7 @@ export default function QuizClient({ grade }) {
         Object.values(q.sub_questions).map((sub, sIndex) => {
             const questionId = `${qIndex}-${sIndex}`;
             return (
+                
                 <QuestionCard
                     key={questionId}
                     advice={q.question}
@@ -151,7 +153,7 @@ export default function QuizClient({ grade }) {
                     >
                         <BackArrow />
                     </button>
-
+                
                     <div className="flex flex-col items-center">
                         {questionsObject[questionNum]?.[randomNum] ?? (
                             <QuestionCard

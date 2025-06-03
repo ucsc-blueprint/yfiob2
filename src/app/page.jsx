@@ -16,7 +16,7 @@ function App() {
             if (user) {
                 // User is signed in
                 console.log("User is signed in:", user.uid);
-                router.push(`/take-quiz/${grade}?valid=true`); // Call the function when user exists
+                router.push(`/college-interest?grade=${grade}&valid=true`);
             } else {
                 router.push(`/choose-account-type?=${grade}`);
                 console.log("User is signed out");
