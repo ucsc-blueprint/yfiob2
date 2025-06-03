@@ -6,6 +6,7 @@ import addData from "../../../utils/addData";
 import getData from "../../../utils/getData";
 import deleteData from "../../../utils/deleteData";
 import JobPopup from "../../../components/JobPopup";
+import Suitcase from "../../../assets/suitcase.svg"
 
 function parseJobs(jobData) {
 	let jobs = {};
@@ -81,7 +82,7 @@ function Page() {
 	function JobItem({ job }) {
 		return (
 			<div key={job.id}>
-				<div className="flex" id={job.name}>
+				<div className="flex bg-red-800 border-amber-600" id={job.name}>
 					<div className="flex">
 						<p>ICON</p>
 						<p>{job.name}</p>
@@ -109,7 +110,7 @@ function Page() {
 		const toggled = open.includes(name);
 		return (
 			<div>
-				<div className="w-full bg-red-300 flex">
+				<div className="w-full bg-[#185D6D1A] text-[20px] flex my-8">
 					<button
 						onClick={() => {
 							if (open.includes(name)) {
@@ -127,9 +128,9 @@ function Page() {
 							openRef.current = name;
 							setPopupOpen(true);
 						}}
-						className="ml-auto"
+						className="ml-auto text-[#072b33] font-extralight border-[#185d6d] px-5 rounded-md border-[2px]"
 					>
-						add job
+						+ Add job
 					</button>
 				</div>
 
@@ -166,10 +167,18 @@ function Page() {
 			/>
 			<AdminNavbar />
 			<div className="flex justify-center">
-				<div className="w-[80vw] bg-red-300 h-[100vw]">
+				<div className="w-[80vw] outline outline-black h-[100vw]">
+					<div className="flex gap-2 mt-20">
+						<img src="/assets/suitcase.svg" alt="suitcase"/>
+						<div>
+							<h1 className="text-[1.8rem] font-bold">Jobs</h1>
+							<p className="text-[20px]">Students are recommended job sectors, which contain individual jobs.</p>
+						</div>
+					</div>
 					<div>
 						{jobData.map((industry, index) => {
 							return (
+								// <div className="my-8">
 								<JobContainer key={index} name={industry.name}>
 									{industry.jobs.map((job) => {
 										if (job.name) {
@@ -179,6 +188,7 @@ function Page() {
 										}
 									})}
 								</JobContainer>
+								// </div>
 							);
 						})}
 					</div>
