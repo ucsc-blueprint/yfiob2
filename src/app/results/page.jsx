@@ -28,8 +28,17 @@ import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 export default function QuizResultsPage() {
   const router = useRouter();
+
+  // get the query parameter for the grade and set it to the state
+  const searchParams = new URLSearchParams(window.location.search);
+  const gradeParam = searchParams.get("grade");
+  const grade = gradeParam ? gradeParam : "elementary-school";
+ 
+
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
+  const [secondCareers, setSecondCareers] = useState([]);
+  const [thirdCareers, setThirdCareers] = useState([]);
   const auth = getAuth();
   const [username, setUsername] = useState("Guest");
   useEffect(() => {
@@ -63,6 +72,16 @@ export default function QuizResultsPage() {
           console.log("Careers for Top Industry:", careers);
           setCareers(careers);
         });
+        const secondIndustry = industries[industries.length - 2][0];
+        getCareersForIndustry(secondIndustry).then((secondCareers) => {
+          console.log("Careers for Second Industry:", secondCareers);
+          setSecondCareers(secondCareers);
+        }); 
+        const thirdIndustry = industries[industries.length - 3][0]
+        getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
+          console.log("Careers for Third Industry:", thirdCareers);
+          setThirdCareers(thirdCareers);
+        });      
       }
     }
     if (industries.length > 0) {
@@ -205,7 +224,7 @@ export default function QuizResultsPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
           {careers.map((job, i) => {
             console.log("Job:", job);
-            return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            return <CareersCard grade={grade} key={i} title={job} description={""} educationLevel={""}/>
           })
           }
         </div>
@@ -264,12 +283,6 @@ export default function QuizResultsPage() {
         </h4>
       </section>
 
-      {/* Gray grid section with extra top padding */}
-      <section className="bg-gray-100 pt-16 px-4 pb-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-        </div>
-      </section>
 
       {/* Modal for sharing results */}
       {showShareModal && (
@@ -303,6 +316,28 @@ export default function QuizResultsPage() {
           </div>
         </div>
       )}
+      <section className="bg-gray-100 py-12">
+        <div className="font-kumbh text-lg text-center py-5">{industries.length > 0 && industries[industries.length - 2][0]}</div>
+        <div className="flex flex-row justify-center max-w-6xl mx-auto gap-8 px-4">
+          {secondCareers.map((job, i) => {
+            console.log("Job:", job);
+            return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+          })
+          }
+        </div>
+      </section>
+      <section className="bg-gray-100 py-12">
+        <div className="text-center text-lg font-kumbh py-5">{industries.length > 0 && industries[industries.length - 3][0]}</div>
+        <div className="flex flex-row justify-center items-center w-screen">
+          <div className="w-full">
+            {thirdCareers.map((job, i) => {
+              console.log("Job:", job);
+              return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            })
+            }
+          </div>
+        </div>
+      </section>
     </div>
   );
 }

@@ -5,6 +5,7 @@ const backgroundColor = {
     "elementary-school": "bg-blue-400",
     "middle-school": "bg-green-400",
     "high-school": "bg-orange-400",
+    "default": "bg-[#979CA8]"
 };
 
 const jignaHue = {
@@ -16,7 +17,7 @@ const jignaHue = {
 export const CareersCard = ({
     title,
     description,
-    grade,
+    grade="default",
     image = "/assets/jigna.svg",
     href,
 }) => {
@@ -27,9 +28,11 @@ export const CareersCard = ({
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-kumbh bg-white shadow-md`}
             >
                 <header
-                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold h-[99px] items-center text-center`}
+                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] text-white font-semibold h-[99px] items-center text-center`}
                 >
+                    <div>
                     {title}
+                    </div>
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image
