@@ -327,15 +327,13 @@ export default function QuizResultsPage() {
         </div>
       </section>
       <section className="bg-gray-100 py-12">
-        <div className="text-center text-lg font-kumbh py-5">{industries.length > 0 && industries[industries.length - 3][0]}</div>
-        <div className="flex flex-row justify-center items-center w-screen">
-          <div className="w-full">
+        <div className="font-kumbh text-lg text-center py-5">{industries.length > 0 && industries[industries.length - 3][0]}</div>
+        <div className="flex flex-row justify-center max-w-6xl mx-auto gap-8 px-4">
             {thirdCareers.map((job, i) => {
               console.log("Job:", job);
               return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
             })
             }
-          </div>
         </div>
       </section>
     </div>
