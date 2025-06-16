@@ -4,12 +4,31 @@ import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
 import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
+import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
 
 export default function AdminInsights() {
   // TODO: fetch these from Firebase
   
   // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
   // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
+  const [industriesRecommended, setIndustriesRecommended] = useState([]);
+
+  const gradeColor = {
+    0: "border-t-[20px] border-[#90BD00]",
+    1: "border-t-[20px] border-[#BDBD00]",
+    2: "border-t-[20px] border-[#BD7800]",
+    3: "border-t-[20px] border-[#BD4500]",
+  };
+
+  
+  useEffect(()=> {
+    const getData = async () => {
+      getAllIndustries().then((data)=>{
+        setIndustriesRecommended(data);
+      });
+    }
+    getData();
+  }, [])
 
   let last7DaysGrowth = 0;
   let readyForCollegePercent = 0;
@@ -152,6 +171,21 @@ export default function AdminInsights() {
     { percent: 25, label: "Agricultural and Engineering", color: "border-red-500" },
   ];
 
+  const getColor = (percentage) => {
+    switch (percentage) {
+      case percentage > 15:
+        return "border-green-500";
+      case percentage > 10:
+        return "border-yellow-500";
+      case percentage > 5:
+        return "border-orange-500";
+      case percentage > 0:
+        return "border-red-500";
+      default:
+        return "border-gray-300";
+    }
+  }
+
   return (
     <>
       <AdminNavbar />
@@ -248,17 +282,24 @@ export default function AdminInsights() {
               </p>
             </div>
 
-            <div className="grid grid-cols-3 gap-4">
-              {sectors.map((sector, i) => (
+            <div className="grid grid-cols-3 gap-6">
+  {industriesRecommended.map(([industryName, percentage], idx) => (
+    <div
+      key={idx}
+      className="bg-white rounded-lg shadow overflow-hidden"
+    >
                 <div
-                  key={i}
-                  className={`border-t-4 ${sector.color} bg-white rounded-lg p-4`}
-                >
-                  <p className="text-2xl font-bold">{sector.percent}%</p>
-                  <p className="text-gray-500 text-sm">{sector.label}</p>
+                  className={`h-6 ${
+                    getColor(percentage)
+                  }`}
+                />
+                <div className="p-6 text-center">
+                  <p className="text-4xl font-bold">{percentage}%</p>
+                  <p className="mt-2 text-gray-600">{industryName}</p>
                 </div>
-              ))}
-            </div>
+              </div>
+            ))}
+          </div>
           </div>
         </div>
       </div>
