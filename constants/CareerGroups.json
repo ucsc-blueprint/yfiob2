@@ -14,7 +14,8 @@
                     "Zoologist",
                     "Wildlife Biologist",
                     "Wildlife Control Agent"
-                ]
+                ],
+                "image": "/characters/AnimalScience.svg"
             },
             "plant-science-and-gardening": {
                 "title": "Plant Science & Gardening",
@@ -24,7 +25,8 @@
                     "Greenhouse and Nursery Manager",
                     "Horticulturist",
                     "Plant Breeder"
-                ]
+                ],
+                "image": "/characters/PlantScience&Gardening.svg"
             },
             "environmental-conservation": {
                 "title": "Environmental Conservation",
@@ -42,7 +44,8 @@
                     "Soil Conservationist",
                     "Soil Engineer",
                     "Soil Scientist"
-                ]
+                ],
+                "image": "/characters/EnvironmentalConservation.svg"
             },
             "aquatic-science": {
                 "title": "Aquatic Science",
@@ -51,7 +54,8 @@
                     "Marine and Aquatic Biologist",
                     "Marine Surveyor",
                     "Oceanographer"
-                ]
+                ],
+                "image": "/characters/AquaticScience.svg"
             },
             "farming-and-ranching": {
                 "title": "Farming & Ranching",
@@ -62,7 +66,8 @@
                     "Farm Product Buyer",
                     "Farm Products Purchasing Agent",
                     "Farmers and Ranchers"
-                ]
+                ],
+                "image": "/characters/Farming&Ranching.svg"
             },
             "forestry": {
                 "title": "Forestry",
@@ -72,7 +77,8 @@
                     "Forest and Conservation Workers",
                     "Logging Equipment Operators",
                     "Logging Worker Supervisor"
-                ]
+                ],
+                "image": "/characters/Forestry.svg"
             }
         }
     },
