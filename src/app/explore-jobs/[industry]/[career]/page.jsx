@@ -1,4 +1,5 @@
 import ExploreJobsClient from "./ExploreJobsClient";
+import {Suspense} from "react";
 
 const careersData = await require("../../../../../constants/CareerGroups.json");
 const JobData = await require("../../../../../constants/JobData.json");
@@ -24,10 +25,12 @@ export default async function Page({ params }) {
     const { industry, career } = await params;
     const careerJobsData = JobData[career];
     return (
+        <Suspense>
         <ExploreJobsClient
             industry={industry}
             career={career}
             careerJobsData={careerJobsData}
         />
+        </Suspense>
     );
 }

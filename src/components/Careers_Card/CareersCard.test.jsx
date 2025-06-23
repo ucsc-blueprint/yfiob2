@@ -1,5 +1,5 @@
 import CareersCard from "./CareersCard";
-import { render, fireEvent, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 
 test("Elementary-school page rendered", async () => {
     render(

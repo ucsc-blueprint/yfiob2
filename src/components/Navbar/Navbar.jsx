@@ -1,6 +1,5 @@
 "use client";
 
-import BoxButton from "../../components/BoxButton.jsx";
 import { useRouter } from 'next/navigation';
 import { useState, useEffect } from "react";
 
