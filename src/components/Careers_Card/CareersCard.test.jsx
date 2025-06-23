@@ -16,7 +16,7 @@ test("Elementary-school page rendered", async () => {
     const image = screen.getByRole("img");
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute("src", expect.stringContaining("placehold.co"));
-    expect(image).toHaveStyle({ filter: "hue-rotate(180deg)" });
+    expect(image).toHaveStyle({ filter: "hue-rotate(20deg)" });
 });
 
 test("Middle-school page rendered", async () => {
@@ -34,7 +34,7 @@ test("Middle-school page rendered", async () => {
     const image = screen.getByRole("img");
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute("src", expect.stringContaining("placehold.co"));
-    expect(image).toHaveStyle({ filter: "hue-rotate(60deg)" });
+    expect(image).toHaveStyle({ filter: "hue-rotate(270deg)" });
 });
 
 test("High-school page rendered", async () => {
@@ -52,7 +52,7 @@ test("High-school page rendered", async () => {
     const image = screen.getByRole("img");
     expect(image).toBeInTheDocument();
     expect(image).toHaveAttribute("src", expect.stringContaining("placehold.co"));
-    expect(image).toHaveStyle({ filter: "hue-rotate(0deg)" });
+    expect(image).toHaveStyle({ filter: "hue-rotate(200deg)" });
 });
 test("Default values are used when optional props are not provided", async () => {
     render(
@@ -70,5 +70,5 @@ test("Default values are used when optional props are not provided", async () =>
     ).toBeInTheDocument();
     const image = screen.getByRole("img");
     expect(image).toBeInTheDocument();
-    expect(image).toHaveAttribute("src", expect.stringContaining("jigna.svg"));
+    expect(image).toHaveAttribute("src", expect.stringContaining("/characters/Template.svg"));
 });

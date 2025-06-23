@@ -74,9 +74,23 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                         <div className="flex flex-col md:flex-row items-center mb-6">
                             <div className="md:w-1/3 flex justify-center mb-4 md:mb-0">
                                 <div className="relative w-32 h-32">
-                                    <div className="bg-orange-200 w-full h-full rounded flex items-center justify-center">
+                                    <div className="w-full h-full rounded flex items-center justify-center">
                                         <div className="text-4xl">
-                                            {selectedJob?.icon || "😊"}
+                                            {selectedJob?.icon ? (
+                                                <img
+                                                    src={selectedJob.icon} // choose icon from json file
+                                                    alt={selectedJob.title || "Job icon"}
+                                                    className="w-full h-full object-contain"
+                                                />
+                                            ) : (
+                                                <span
+                                                    className="text-4xl" // if null, place emoji
+                                                    role="img"
+                                                    aria-label="Smiley face emoji"
+                                                >
+                                                    😊
+                                                </span>
+                                            )}
                                         </div>
                                     </div>
                                 </div>
