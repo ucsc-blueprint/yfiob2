@@ -1,6 +1,5 @@
 "use client";
 
-import React from "react";
 import { Navbar } from "../components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
 import { auth } from "../utils/firebase";

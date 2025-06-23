@@ -1,5 +1,6 @@
 import CareersClient from "./CareersClient";
 const CareerGroups = await require("../../../../constants/CareerGroups.json");
+import {Suspense} from "react";
 
 export async function generateStaticParams() {
     const params = Object.keys(CareerGroups).map((key) => ({
@@ -13,5 +14,9 @@ export async function generateStaticParams() {
 export default async function Page({ params }) {
     const { industry } = await params;
 
-    return <CareersClient industry={industry} />;
+    return (
+        <Suspense>
+        <CareersClient industry={industry} />
+        </Suspense>
+    );
 }

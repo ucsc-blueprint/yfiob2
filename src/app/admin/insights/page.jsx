@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
-import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
 import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
