@@ -1,6 +1,7 @@
 import CareersClient from "./CareersClient";
-const CareerGroups = await require("../../../../constants/CareerGroups.json");
 import {Suspense} from "react";
+
+const CareerGroups = await require("../../../../constants/CareerGroups.json");
 
 export async function generateStaticParams() {
     const params = Object.keys(CareerGroups).map((key) => ({
