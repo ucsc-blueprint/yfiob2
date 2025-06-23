@@ -2,6 +2,9 @@
 	"name": "yfiob2",
 	"version": "0.1.0",
 	"private": true,
+	"engines": {
+  		"node": "18.x"
+	},
 	"dependencies": {
 		"@heroicons/react": "^1.0.6",
 		"@testing-library/user-event": "^13.5.0",
@@ -17,7 +20,7 @@
 	"scripts": {
 		"dev": "next dev",
 		"build": "next build",
-		"start": "npx serve@latest ./build",
+		"start": "npx start",
 		"test": "react-scripts test"
 	},
 	"eslintConfig": {
