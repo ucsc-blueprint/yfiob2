@@ -174,13 +174,14 @@ export default function QuizResultsPage() {
           <ChevronDownIcon className="ml-2 h-4 w-4" />
         </button>
         <div className="flex space-x-2">
-          <Link
-            href="/take-quiz"
+          <button
+            type="button"
+            onClick={handleTakeQuizAgain}
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
           >
             <RefreshIcon className="mr-2 h-4 w-4" />
             Retake Quiz
-          </Link>
+          </button>
           <button
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
             onClick={() => setShowShareModal(true)}
