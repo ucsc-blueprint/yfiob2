@@ -22,7 +22,7 @@ algorithm:
 */
 
 //import { db } from "../firebase.js";
-import {db} from "../../src/utils/firebase.js"
+import {db} from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
 
 
@@ -45,85 +45,68 @@ export default async function storeTopKIndustries(username, k, grade) {
         const docRef = doc.ref;
         await deleteDoc(docRef);
     }
-    //delete all previous entries of the user in the database
-    const userResponsesFoundRef = collection(db, "userTopKIndustries");
-    const responseFoundRef = query(userResponsesFoundRef, where("username", "==", username));
-    const responsesFound = await getDocs(responseFoundRef);
-    for (const doc of responsesFound.docs) {
-        const docRef = doc.ref;
-        await deleteDoc(docRef);
+
+    const questionsRef = collection(db, "questions");
+    const questionClassificationRef = collection(db, "questionClassification");
+    
+    //using batch reads to minimize number of queries to the database
+
+    const allQuestions = {};
+    const allQuestionDocs = await getDocs(questionsRef);
+    for (const doc of allQuestionDocs.docs) {
+        const data = doc.data();
+        allQuestions[data.questionNumber] = data.questionCategory;
     }
 
-    // Step 1: Initialize a JSON object to store the industries and their scores
+    const allClassifications = {};
+    const allClassificationDocs = await getDocs(questionClassificationRef);
+    for (const doc of allClassificationDocs.docs) {
+        const data = doc.data();
+        const key = `${data.questionCategory}|${data.optionSelected}`;
+        allClassifications[key] = data.industry;
+    }
+
+    console.log(allQuestions);
+    console.log(allClassifications);
+
     const industries = {};
 
-    // Step 2: Get all question responses of the user from the database
     const userResponsesRef = collection(db, "userResponses");
     const responseRef = query(userResponsesRef, where("username", "==", username));
     const responses = await getDocs(responseRef);
 
-    // Step 3: Initialize a reference to the question classification collection in the database
-    const questionClassificationRef = collection(db, "questionClassification");
-
-    // Step 4: Initialize a reference to the questions collection in the database to get the question category
-    const questionsRef = collection(db, "questions");
-
-    // Step 5: Process each response
     for (const doc of responses.docs) {
         const questionData = doc.data();
         const questionFullNumber = questionData.questionNumber;
-        const optionSelected = questionData.optionSelected;
+        const optionSelectedStr = (parseInt(questionData.optionSelected) + 1)
+        const optionSelected = optionSelectedStr.toString();
+        
         const questionNumber = questionFullNumber.split("-")[0];
 
-        // Step 6a: Get the question category
-        const categoryQuery = query(questionsRef, where("questionNumber", "==", questionNumber));
-        const categoryDocs = await getDocs(categoryQuery);
-
-        for (const categoryDoc of categoryDocs.docs) {
-            const categoryData = categoryDoc.data();
-            const category = categoryData.questionCategory;
-            // Step 6b: Get the industry of the selected option
-            const industryQuery = query(
-                questionClassificationRef,
-                where("questionCategory", "==", category),
-                where("optionSelected", "==", optionSelected.toString())
-            );
-            const industryDocs = await getDocs(industryQuery);
-
-            for (const industryDoc of industryDocs.docs) {
-                const industryData = industryDoc.data();
-                const industry = industryData.industry;
-                // Step 6c: Increment the score of the industry
-                if (industry in industries) {
-                    industries[industry] += 1;
-                } else {
-                    industries[industry] = 1;
-                }
-            }
+        const category = allQuestions[questionNumber];
+        const industryKey = `${category}|${optionSelected}`;
+        const industry = allClassifications[industryKey];
+        if (industry in industries) {
+            industries[industry] += 1;
+        } else {
+            industries[industry] = 1;
         }
     }
-    
-    const arr = Object.entries(industries)
 
-    insertionSort(arr);
+    const arr = Object.entries(industries).sort((a, b) => b[1] - a[1]);
+    if (k > arr.length) k = arr.length;
 
-    if(k > arr.length) {
-        k = arr.length;
-    }
-
-    var totalTopIndustryCount = 0;
-    for(let i = 0; i < k; i++){
+    let totalTopIndustryCount = 0;
+    for (let i = 0; i < k; i++) {
         totalTopIndustryCount += arr[i][1];
     }
 
-    //saving the top k industries to the database
-    
-    for(let i = 0; i < k; i++){
+    for (let i = 0; i < k; i++) {
         addPromises.push(
             addDoc(industryReference, { 
-                username: username,
+                username,
                 industry: arr[i][0],
-                ranking: Number(i),
+                ranking: i,
                 percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
             })
         );
@@ -131,20 +114,6 @@ export default async function storeTopKIndustries(username, k, grade) {
     await Promise.all(addPromises);
 }
 
-// Step 7: Return the sorted industries object
-function insertionSort(arr) {
-    for (let i = 1; i < arr.length; i++){
-        const current = arr[i];
-        const currentVal = current[1];
-        let j = i - 1;
-        while (j >= 0 && arr[j][1] < currentVal){
-            arr[j + 1] = arr[j]
-            j--;
-        }
-        arr[j + 1] = current;
-    }
-    return arr;
-}
 
 
 export async function getTopKIndustries(username){
