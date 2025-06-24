@@ -22,25 +22,50 @@ import {
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
-import { deleteAllResponses } from "../../../backend/questions/questionDB";
+import { deleteAllResponses, getGradeOfMostRecentSubmission } from "../../../backend/questions/questionDB";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
 export default function QuizResultsPage() {
   const router = useRouter();
 
-  // get the query parameter for the grade and set it to the state
-  const searchParams = new URLSearchParams(window.location.search);
-  const gradeParam = searchParams.get("grade");
-  const grade = gradeParam ? gradeParam : "elementary-school";
- 
-
+  const [gradeParam, setGradeParam] = useState("");
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
   const [secondCareers, setSecondCareers] = useState([]);
   const [thirdCareers, setThirdCareers] = useState([]);
   const auth = getAuth();
   const [username, setUsername] = useState("Guest");
+
+  useEffect(() => {
+    if (typeof window !== "undefined") {
+      const searchParams = new URLSearchParams(window.location.search);
+      const grade = searchParams.get("grade");
+      if (grade) setGradeParam(grade);
+    }
+  }, []);
+
+  useEffect(()=> {
+    console.log("Grade parameter:", gradeParam);
+    const checkGradeOfRecentSubmission = async () => {
+      await getGradeOfMostRecentSubmission(username).then((grade) => {
+        console.log("Grade of most recent submission:", grade);
+        if (grade) {
+          console.log("Grade of most recent submission:", grade);
+          gradeParam = grade;
+        } else {
+          router.replace("/pre-quiz");
+        }
+      });
+    }
+
+    if(!gradeParam && username !== "Guest") {
+      checkGradeOfRecentSubmission();
+    }
+  }, [gradeParam, username])
+ 
+
+  
   useEffect(() => {
     onAuthStateChanged(auth, (user) => {
         if (user) {
@@ -224,7 +249,7 @@ export default function QuizResultsPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
           {careers.map((job, i) => {
             console.log("Job:", job);
-            return <CareersCard grade={grade} key={i} title={job} description={""} educationLevel={""}/>
+            return <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           })
           }
         </div>

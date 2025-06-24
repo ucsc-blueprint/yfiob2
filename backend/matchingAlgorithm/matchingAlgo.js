@@ -23,10 +23,22 @@ algorithm:
 
 //import { db } from "../firebase.js";
 import {db} from "../../src/utils/firebase.js"
-import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy} from "firebase/firestore";
+import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
 
-export default async function storeTopKIndustries(username, k) {
+
+export default async function storeTopKIndustries(username, k, grade) {
     const industryReference  = collection(db, "userTopKIndustries")
+    const addPromises = [];
+    const submitReference = collection(db, "submissions")
+
+    addPromises.push(
+        addDoc(submitReference, { 
+            username: username,
+            timestamp: serverTimestamp(),
+            grade: grade
+        })
+    );
+
     const industriesFoundQuery = query(industryReference, where("username", "==", username));
     const industriesFound = await getDocs(industriesFoundQuery);
     for (const doc of industriesFound.docs) {
@@ -105,7 +117,7 @@ export default async function storeTopKIndustries(username, k) {
     }
 
     //saving the top k industries to the database
-    const addPromises = [];
+    
     for(let i = 0; i < k; i++){
         addPromises.push(
             addDoc(industryReference, { 

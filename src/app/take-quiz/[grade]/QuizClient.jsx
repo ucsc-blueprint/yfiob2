@@ -110,7 +110,7 @@ export default function QuizClient({ grade }) {
 
     function handleSubmit() {
         setIsLoading(true);
-        storeTopKIndustries(username, 3).then(() => {
+        storeTopKIndustries(username, 3, grade).then(() => {
             router.replace(`/results/?grade=${grade}`);
         });
     }
