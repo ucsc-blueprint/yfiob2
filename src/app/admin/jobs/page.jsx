@@ -2,7 +2,7 @@
 
 import { useEffect, useRef, useState } from "react";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
-import addData from "../../../utils/addData";
+import { addData } from "../../../utils/addData";
 import getData from "../../../utils/getData";
 import deleteData from "../../../utils/deleteData";
 import JobPopup from "../../../components/JobPopup";
@@ -50,6 +50,7 @@ function Page() {
 	const [open, setOpen] = useState([]);
 	const [popupOpen, setPopupOpen] = useState(false);
 	const openRef = useRef(null);
+	const [jobToEdit, setJobToEdit] = useState(null);
 
 	async function addJob(
 		name,
@@ -84,11 +85,19 @@ function Page() {
 			<div className="mx-2 p-2" key={job.id}>
 				<div className="flex" id={job.name}>
 					<div className="flex gap-2">
-						<p>ICON</p>
+						<img src="/assets/business-icon.svg" alt="suitcase"/>
 						<p>{job.name}</p>
 					</div>
 					<div className="ml-auto flex gap-2">
-						<button><img src="/assets/pencil-icon.svg" alt="pencil icon"/></button>
+					<button
+						onClick={() => {
+							openRef.current = job.industry;
+							setJobToEdit(job);
+							setPopupOpen(true);
+						}}
+					>
+						<img src="/assets/pencil-icon.svg" alt="pencil icon"/>
+					</button>
 						<button
 							onClick={async () => {
 								await deleteData("careers", job.id);
@@ -127,6 +136,7 @@ function Page() {
 					<button
 						onClick={() => {
 							openRef.current = name;
+							setJobToEdit(null);
 							setPopupOpen(true);
 						}}
 						className="ml-auto text-[#072b33] font-[100] bg-[#185D6D1A] border-[#185d6d] px-5 rounded-md border-[1px] mr-2"
@@ -154,6 +164,7 @@ function Page() {
 				isOpen={popupOpen}
 				onClose={() => {
 					setPopupOpen(false);
+					setJobToEdit(null);
 				}}
 				onSubmit={(data) => {
 					addJob(
@@ -165,6 +176,7 @@ function Page() {
 						data.industry
 					);
 				}}
+				jobToEdit={jobToEdit}
 			/>
 			<AdminNavbar />
 			<div className="flex justify-center">

@@ -2,7 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 
-const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
+const JobPopup = ({ isOpen, onClose, onSubmit, openRef, jobToEdit }) => {
 	const [formData, setFormData] = useState({
 		name: "",
 		description: "",
@@ -13,13 +13,28 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 	});
 
 	useEffect(() => {
-		if (isOpen && openRef.current) {
-			setFormData((prev) => ({
-				...prev,
-				industry: openRef.current,
-			}));
+		if (isOpen) {
+			if (jobToEdit) {
+				setFormData({
+					name: jobToEdit.name || "",
+					description: jobToEdit.description || "",
+					experience: jobToEdit.experienceRequired || "",
+					salary: jobToEdit.salary || "",
+					industry: jobToEdit.industry || "",
+					photos: jobToEdit.photos || [],
+				});
+			} else {
+				setFormData({
+					name: "",
+					description: "",
+					experience: "",
+					salary: "",
+					industry: openRef.current || "",
+					photos: [],
+				});
+			}
 		}
-	}, [isOpen, openRef]);
+	}, [isOpen, jobToEdit, openRef]);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
@@ -47,18 +62,18 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 
 	return (
 		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-			<div className="bg-white rounded-lg p-6 w-full max-w-md relative">
+			<div className="bg-white rounded-lg p-6 w-full max-w-xl relative">
 				<button
 					className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
 					onClick={onClose}
 				>
 					×
 				</button>
-				<h2 className="text-xl font-bold mb-4">Add Job Details</h2>
+				<h2 className="text-xl font-bold mb-4">Job</h2>
 				<form onSubmit={handleSubmit} className="space-y-4">
 					<div className="form-group">
 						<label htmlFor="name" className="block text-sm font-medium text-gray-700">
-							Job Name:
+							Title:
 						</label>
 						<input
 							type="text"
@@ -67,7 +82,7 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 							value={formData.name}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 py-2 block w-full rounded-md bg-[#F0F0F0] border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 						/>
 					</div>
 
@@ -84,7 +99,7 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 							value={formData.description}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 block w-full rounded-md bg-[#F0F0F0] border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 						/>
 					</div>
 
@@ -95,14 +110,14 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						>
 							Experience Required:
 						</label>
-						<input
+						<textarea
 							type="text"
 							id="experience"
 							name="experience"
 							value={formData.experience}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 py-2 block w-full rounded-md bg-[#F0F0F0] border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 						/>
 					</div>
 
@@ -113,14 +128,14 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						>
 							Salary:
 						</label>
-						<input
+						<textarea
 							type="text"
 							id="salary"
 							name="salary"
 							value={formData.salary}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 py-2 block w-full rounded-md bg-[#F0F0F0] border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 						/>
 					</div>
 
