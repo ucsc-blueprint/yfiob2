@@ -3,14 +3,20 @@ import { useState } from "react";
 import { Navbar } from "../../../../components/Navbar/Navbar";
 import CareerBackButton from "../../../../components/CareerBackButton";
 import { useSearchParams } from "next/navigation";
-const CareerGroups = await require("../../../../../constants/CareerGroups.json");
+const CareerGroups = require("../../../../../constants/CareerGroups.json");
 
 const lorem =
     "Commodo aliqua eu elit aliqua ea eu deserunt. Sunt commodo ex pariatur magna do consectetur sit incididunt exercitation do Lorem. Do ea non ad mollit.";
 
+const iconHue = {
+    "elementary-school": "hue-rotate(20deg)",
+    "middle-school": "hue-rotate(270deg)",
+    "high-school": "hue-rotate(200deg)",
+};
+
 export default function ExploreJobsClient({ industry, career, careerJobsData }) {
     const searchParams = useSearchParams();
-    const grade = searchParams.get("grade");
+    const grade = searchParams.get("grade") ?? "elementary-school";
     const careerTitle = CareerGroups[industry]["careers"][career].title;
     const industryTitle = CareerGroups[industry].title;
     const careerJobs = CareerGroups[industry]["careers"][career].jobs;
@@ -48,10 +54,7 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                         <div className="border border-gray-200">
                             {careerJobs?.map((job, index) => {
                                 const jobData = careerJobsData[job];
-                                console.log(jobData);
-
                                 if (jobData == null) return <div key={index}></div>;
-
                                 return (
                                     <div
                                         key={index}
@@ -81,6 +84,7 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                                                     src={selectedJob.icon} // choose icon from json file
                                                     alt={selectedJob.title || "Job icon"}
                                                     className="w-full h-full object-contain"
+                                                    style={{ filter: iconHue[grade] }}
                                                 />
                                             ) : (
                                                 <span
@@ -108,7 +112,6 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                             <h3 className="text-xl font-bold mb-2">Job Tasks:</h3>
                             <p className="text-sm">{selectedJob?.jobTasks || lorem}</p>
                         </div>
-
                         <div className="mb-6">
                             <h3 className="text-xl font-bold mb-2">Earnings:</h3>
                             <div className="text-xl font-bold text-green-800 mb-2">
@@ -116,7 +119,6 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                             </div>
                             <p className="text-sm">{selectedJob?.earningsDetails || lorem}</p>
                         </div>
-
                         <div>
                             <h3 className="text-xl font-bold mb-2">Training:</h3>
                             <p className="text-sm">{selectedJob?.training || lorem}</p>

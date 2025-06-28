@@ -3,7 +3,7 @@
         "Animal Breeder": {
             "id": 1,
             "title": "Animal Breeder",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -13,7 +13,7 @@
         "Animal Caretaker": {
             "id": 2,
             "title": "Animal Caretaker",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -23,7 +23,7 @@
         "Animal Scientist": {
             "id": 3,
             "title": "Animal Scientist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -33,7 +33,7 @@
         "Animal Trainer": {
             "id": 4,
             "title": "Animal Trainer",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -43,7 +43,7 @@
         "Veterinarian (VMD)": {
             "id": 5,
             "title": "Veterinarian (VMD)",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -53,7 +53,7 @@
         "Zoo Veterinarian": {
             "id": 6,
             "title": "Zoo Veterinarian",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -63,7 +63,7 @@
         "Zoologist": {
             "id": 7,
             "title": "Zoologist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -73,7 +73,7 @@
         "Wildlife Biologist": {
             "id": 8,
             "title": "Wildlife Biologist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -83,7 +83,7 @@
         "Wildlife Control Agent": {
             "id": 9,
             "title": "Wildlife Control Agent",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AnimalScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -95,7 +95,7 @@
         "Botanist": {
             "id": 1,
             "title": "Botanist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -105,7 +105,7 @@
         "Crop Workers Supervisor": {
             "id": 2,
             "title": "Crop Workers Supervisor",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -115,7 +115,7 @@
         "Greenhouse and Nursery Manager": {
             "id": 3,
             "title": "Greenhouse and Nursery Manager",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -125,7 +125,7 @@
         "Horticulturist": {
             "id": 4,
             "title": "Horticulturist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -135,7 +135,7 @@
         "Plant Breeder": {
             "id": 5,
             "title": "Plant Breeder",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -147,7 +147,7 @@
         "Conservation Scientist": {
             "id": 1,
             "title": "Conservation Scientist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -157,7 +157,7 @@
         "Environmental Compliance Inspector": {
             "id": 2,
             "title": "Environmental Compliance Inspector",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -167,7 +167,7 @@
         "Environmental Disease Analyst": {
             "id": 3,
             "title": "Environmental Disease Analyst",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -177,7 +177,7 @@
         "Environmental Economists": {
             "id": 4,
             "title": "Environmental Economists",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -187,7 +187,7 @@
         "Environmental Engineer": {
             "id": 5,
             "title": "Environmental Engineer",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -197,7 +197,7 @@
         "Environmental Planner": {
             "id": 6,
             "title": "Environmental Planner",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -207,7 +207,7 @@
         "Environmental Research Analyst": {
             "id": 7,
             "title": "Environmental Research Analyst",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -217,7 +217,7 @@
         "Environmental Restoration Planners": {
             "id": 8,
             "title": "Environmental Restoration Planners",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -227,7 +227,7 @@
         "Environmental Technician": {
             "id": 9,
             "title": "Environmental Technician",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -237,7 +237,7 @@
         "Soil Conservation Technician": {
             "id": 10,
             "title": "Soil Conservation Technician",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -247,7 +247,7 @@
         "Soil Conservationist": {
             "id": 11,
             "title": "Soil Conservationist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -257,7 +257,7 @@
         "Soil Engineer": {
             "id": 12,
             "title": "Soil Engineer",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -267,7 +267,7 @@
         "Soil Scientist": {
             "id": 13,
             "title": "Soil Scientist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -279,7 +279,7 @@
         "Aquaculture Specialist": {
             "id": 1,
             "title": "Aquaculture Specialist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AquaticScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -289,7 +289,7 @@
         "Marine and Aquatic Biologist": {
             "id": 2,
             "title": "Marine and Aquatic Biologist",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AquaticScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -299,7 +299,7 @@
         "Marine Surveyor": {
             "id": 3,
             "title": "Marine Surveyor",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AquaticScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -309,7 +309,7 @@
         "Oceanographer": {
             "id": 4,
             "title": "Oceanographer",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/AquaticScience.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -321,7 +321,7 @@
         "Farm and Ranch Manager": {
             "id": 1,
             "title": "Farm and Ranch Manager",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -331,7 +331,7 @@
         "Farm Equipment Mechanic": {
             "id": 2,
             "title": "Farm Equipment Mechanic",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -341,7 +341,7 @@
         "Farm Management Advisor": {
             "id": 3,
             "title": "Farm Management Advisor",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -351,7 +351,7 @@
         "Farm Product Buyer": {
             "id": 4,
             "title": "Farm Product Buyer",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -361,7 +361,7 @@
         "Farm Products Purchasing Agent": {
             "id": 5,
             "title": "Farm Products Purchasing Agent",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -371,7 +371,7 @@
         "Farmers and Ranchers": {
             "id": 6,
             "title": "Farmers and Ranchers",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -383,7 +383,7 @@
         "Forester": {
             "id": 1,
             "title": "Forester",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Forestry.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -393,7 +393,7 @@
         "Forest and Conservation Technician": {
             "id": 2,
             "title": "Forest and Conservation Technician",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Forestry.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -403,7 +403,7 @@
         "Forest and Conservation Workers": {
             "id": 3,
             "title": "Forest and Conservation Workers",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Forestry.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -413,7 +413,7 @@
         "Logging Equipment Operators": {
             "id": 4,
             "title": "Logging Equipment Operators",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Forestry.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -423,7 +423,7 @@
         "Logging Worker Supervisor": {
             "id": 5,
             "title": "Logging Worker Supervisor",
-            "icon": null,
+            "icon": "/characters/Agriculture&NaturalResources/Forestry.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -435,7 +435,7 @@
         "Actor/Actress": {
             "id": 1,
             "title": "Actor/Actress",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -445,7 +445,7 @@
         "Dancer": {
             "id": 2,
             "title": "Dancer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -455,7 +455,7 @@
         "Choreographer": {
             "id": 3,
             "title": "Choreographer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -465,7 +465,7 @@
         "Musician": {
             "id": 4,
             "title": "Musician",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -475,7 +475,7 @@
         "Singer": {
             "id": 5,
             "title": "Singer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -485,7 +485,7 @@
         "Music Arrangers and Orchestrators": {
             "id": 6,
             "title": "Music Arrangers and Orchestrators",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -495,7 +495,7 @@
         "Music Director": {
             "id": 7,
             "title": "Music Director",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -505,7 +505,7 @@
         "Theater and Media Director": {
             "id": 8,
             "title": "Theater and Media Director",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Performing Arts.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -517,7 +517,7 @@
         "Fine Artist": {
             "id": 1,
             "title": "Fine Artist",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -527,7 +527,7 @@
         "Illustrator": {
             "id": 2,
             "title": "Illustrator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -537,7 +537,7 @@
         "Cartoonist (Publications)": {
             "id": 3,
             "title": "Cartoonist (Publications)",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -547,7 +547,7 @@
         "Graphic Designer": {
             "id": 4,
             "title": "Graphic Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -557,7 +557,7 @@
         "Set Designer": {
             "id": 5,
             "title": "Set Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -567,7 +567,7 @@
         "Set Illustrator": {
             "id": 6,
             "title": "Set Illustrator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -577,7 +577,7 @@
         "Sculptors": {
             "id": 7,
             "title": "Sculptors",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -587,7 +587,7 @@
         "Exhibit Artist": {
             "id": 8,
             "title": "Exhibit Artist",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -597,7 +597,7 @@
         "Exhibit Designer": {
             "id": 9,
             "title": "Exhibit Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -607,7 +607,7 @@
         "Furniture Designer": {
             "id": 10,
             "title": "Furniture Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -617,7 +617,7 @@
         "Toy Designer": {
             "id": 11,
             "title": "Toy Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -627,7 +627,7 @@
         "Fashion Artist": {
             "id": 12,
             "title": "Fashion Artist",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -637,7 +637,7 @@
         "Fashion Designer": {
             "id": 13,
             "title": "Fashion Designer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -647,7 +647,7 @@
         "Fashion Coordinator": {
             "id": 14,
             "title": "Fashion Coordinator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -657,7 +657,7 @@
         "Makeup Artists - Theatrical": {
             "id": 15,
             "title": "Makeup Artists - Theatrical",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -669,7 +669,7 @@
         "Broadcast News Analyst": {
             "id": 1,
             "title": "Broadcast News Analyst",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -679,7 +679,7 @@
         "Broadcast Technician": {
             "id": 2,
             "title": "Broadcast Technician",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -689,7 +689,7 @@
         "Film Editor": {
             "id": 3,
             "title": "Film Editor",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -699,7 +699,7 @@
         "Cinematographer": {
             "id": 4,
             "title": "Cinematographer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -709,7 +709,7 @@
         "Radio & TV Announcer": {
             "id": 5,
             "title": "Radio & TV Announcer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -719,7 +719,7 @@
         "Radio & TV News Commentator": {
             "id": 6,
             "title": "Radio & TV News Commentator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -729,7 +729,7 @@
         "Radio & TV Newscaster": {
             "id": 7,
             "title": "Radio & TV Newscaster",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -739,7 +739,7 @@
         "Radio & TV Producer": {
             "id": 8,
             "title": "Radio & TV Producer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -749,7 +749,7 @@
         "Radio & TV Program Director": {
             "id": 9,
             "title": "Radio & TV Program Director",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -759,7 +759,7 @@
         "Radio & TV Sports Announcer": {
             "id": 10,
             "title": "Radio & TV Sports Announcer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -769,7 +769,7 @@
         "Radio & TV Station Administrator": {
             "id": 11,
             "title": "Radio & TV Station Administrator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -779,7 +779,7 @@
         "Radio & TV Talk Show Host": {
             "id": 12,
             "title": "Radio & TV Talk Show Host",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -789,7 +789,7 @@
         "Disc Jockey": {
             "id": 13,
             "title": "Disc Jockey",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -801,7 +801,7 @@
         "Writer / Author": {
             "id": 1,
             "title": "Writer / Author",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -811,7 +811,7 @@
         "Copy Writer": {
             "id": 2,
             "title": "Copy Writer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -821,7 +821,7 @@
         "Screen Writer": {
             "id": 3,
             "title": "Screen Writer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -831,7 +831,7 @@
         "Script Editor": {
             "id": 4,
             "title": "Script Editor",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -841,7 +841,7 @@
         "Editorial Writer, Newspapers & Magazines": {
             "id": 5,
             "title": "Editorial Writer, Newspapers & Magazines",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -851,7 +851,7 @@
         "Newspaper Editor": {
             "id": 6,
             "title": "Newspaper Editor",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -861,7 +861,7 @@
         "Publications Editor": {
             "id": 7,
             "title": "Publications Editor",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -873,7 +873,7 @@
         "Art Director": {
             "id": 1,
             "title": "Art Director",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -883,7 +883,7 @@
         "Artists Agent (Manager)": {
             "id": 2,
             "title": "Artists Agent (Manager)",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -893,7 +893,7 @@
         "Museum Curator": {
             "id": 3,
             "title": "Museum Curator",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -903,7 +903,7 @@
         "Museum Technicians and Conservators": {
             "id": 4,
             "title": "Museum Technicians and Conservators",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -913,7 +913,7 @@
         "Art Appraiser": {
             "id": 5,
             "title": "Art Appraiser",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -923,7 +923,7 @@
         "Art Restorer": {
             "id": 6,
             "title": "Art Restorer",
-            "icon": null,
+            "icon": "/characters/ArtsMedia&Entertainment/Art Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -935,7 +935,7 @@
         "Construction Manager": {
             "id": 1,
             "title": "Construction Manager",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Construction Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -945,7 +945,7 @@
         "Building Inspector": {
             "id": 2,
             "title": "Building Inspector",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Construction Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -955,7 +955,7 @@
         "Construction Carpenter": {
             "id": 3,
             "title": "Construction Carpenter",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Construction Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -965,7 +965,7 @@
         "Building Maintenance Mechanic": {
             "id": 4,
             "title": "Building Maintenance Mechanic",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Construction Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -975,7 +975,7 @@
         "Facilities Planner": {
             "id": 5,
             "title": "Facilities Planner",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Construction Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -987,7 +987,7 @@
         "Electrician": {
             "id": 1,
             "title": "Electrician",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -997,7 +997,7 @@
         "Electrician Helpers": {
             "id": 2,
             "title": "Electrician Helpers",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1007,7 +1007,7 @@
         "Plumber (Plumbing Contractor)": {
             "id": 3,
             "title": "Plumber (Plumbing Contractor)",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1017,7 +1017,7 @@
         "Pipefitter": {
             "id": 4,
             "title": "Pipefitter",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1027,7 +1027,7 @@
         "Sheet Metal Workers": {
             "id": 5,
             "title": "Sheet Metal Workers",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1037,7 +1037,7 @@
         "Mason": {
             "id": 6,
             "title": "Mason",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1047,7 +1047,7 @@
         "Roofer": {
             "id": 7,
             "title": "Roofer",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1057,7 +1057,7 @@
         "Painter": {
             "id": 8,
             "title": "Painter",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1067,7 +1067,7 @@
         "HVAC Technician": {
             "id": 9,
             "title": "HVAC Technician",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1077,7 +1077,7 @@
         "Cabinet Maker": {
             "id": 10,
             "title": "Cabinet Maker",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1087,7 +1087,7 @@
         "Boilermakers": {
             "id": 11,
             "title": "Boilermakers",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1097,7 +1097,7 @@
         "Reinforcing Iron and Rebar Workers": {
             "id": 12,
             "title": "Reinforcing Iron and Rebar Workers",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Skilled Trades.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1109,7 +1109,7 @@
         "Crane Operator": {
             "id": 1,
             "title": "Crane Operator",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1119,7 +1119,7 @@
         "Bulldozer / Grader Operator": {
             "id": 2,
             "title": "Bulldozer / Grader Operator",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1129,7 +1129,7 @@
         "Excavating Machine Operator": {
             "id": 3,
             "title": "Excavating Machine Operator",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1139,7 +1139,7 @@
         "Excavating Supervisor": {
             "id": 4,
             "title": "Excavating Supervisor",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1149,7 +1149,7 @@
         "Heavy Equipment Mechanic": {
             "id": 5,
             "title": "Heavy Equipment Mechanic",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1159,7 +1159,7 @@
         "Heavy Machine Operator": {
             "id": 6,
             "title": "Heavy Machine Operator",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1171,7 +1171,7 @@
         "Building Maintenance Mechanic": {
             "id": 1,
             "title": "Building Maintenance Mechanic",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Building Maintenance.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1181,7 +1181,7 @@
         "Janitorial Supervisors": {
             "id": 2,
             "title": "Janitorial Supervisors",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Building Maintenance.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1191,7 +1191,7 @@
         "Housekeeping Supervisors": {
             "id": 3,
             "title": "Housekeeping Supervisors",
-            "icon": null,
+            "icon": "/characters/Building&ConstructionTrades/Building Maintenance.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1203,7 +1203,7 @@
         "Accountant": {
             "id": 1,
             "title": "Accountant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1213,7 +1213,7 @@
         "Accounting Clerk": {
             "id": 2,
             "title": "Accounting Clerk",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1223,7 +1223,7 @@
         "Auditor": {
             "id": 3,
             "title": "Auditor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1233,7 +1233,7 @@
         "Bookkeeper": {
             "id": 4,
             "title": "Bookkeeper",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1243,7 +1243,7 @@
         "Budget Accountant": {
             "id": 5,
             "title": "Budget Accountant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1253,7 +1253,7 @@
         "Budget Analyst": {
             "id": 6,
             "title": "Budget Analyst",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1263,7 +1263,7 @@
         "Certified Public Accountant (CPA)": {
             "id": 7,
             "title": "Certified Public Accountant (CPA)",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1273,7 +1273,7 @@
         "Cost Accountant": {
             "id": 8,
             "title": "Cost Accountant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1283,7 +1283,7 @@
         "County or City Auditor": {
             "id": 9,
             "title": "County or City Auditor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1293,7 +1293,7 @@
         "Internal Auditor": {
             "id": 10,
             "title": "Internal Auditor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1303,7 +1303,7 @@
         "Property Accountant": {
             "id": 11,
             "title": "Property Accountant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1313,7 +1313,7 @@
         "Tax Accountant": {
             "id": 12,
             "title": "Tax Accountant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1323,7 +1323,7 @@
         "Tax Auditor": {
             "id": 13,
             "title": "Tax Auditor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1333,7 +1333,7 @@
         "Tax Preparer": {
             "id": 14,
             "title": "Tax Preparer",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Accounting & Auditing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1345,7 +1345,7 @@
         "Actuary": {
             "id": 1,
             "title": "Actuary",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1355,7 +1355,7 @@
         "Financial Analyst": {
             "id": 2,
             "title": "Financial Analyst",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1365,7 +1365,7 @@
         "Financial Examiner": {
             "id": 3,
             "title": "Financial Examiner",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1375,7 +1375,7 @@
         "Financial Manager": {
             "id": 4,
             "title": "Financial Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1385,7 +1385,7 @@
         "Financial Planner": {
             "id": 5,
             "title": "Financial Planner",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1395,7 +1395,7 @@
         "Financial Quantitative Analysts": {
             "id": 6,
             "title": "Financial Quantitative Analysts",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1405,7 +1405,7 @@
         "Loan Officer": {
             "id": 7,
             "title": "Loan Officer",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1415,7 +1415,7 @@
         "Loan Counselor": {
             "id": 8,
             "title": "Loan Counselor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1425,7 +1425,7 @@
         "Securities Broker": {
             "id": 9,
             "title": "Securities Broker",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1435,7 +1435,7 @@
         "Securities and Commodities Sales Agent": {
             "id": 10,
             "title": "Securities and Commodities Sales Agent",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1445,7 +1445,7 @@
         "Insurance Agent": {
             "id": 11,
             "title": "Insurance Agent",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1455,7 +1455,7 @@
         "Insurance Adjuster": {
             "id": 12,
             "title": "Insurance Adjuster",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1465,7 +1465,7 @@
         "Insurance Claim Examiner": {
             "id": 13,
             "title": "Insurance Claim Examiner",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1475,7 +1475,7 @@
         "Insurance Claims Adjuster": {
             "id": 14,
             "title": "Insurance Claims Adjuster",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1485,7 +1485,7 @@
         "Insurance Underwriter": {
             "id": 15,
             "title": "Insurance Underwriter",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Financial Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1497,7 +1497,7 @@
         "Administrative Assistant": {
             "id": 1,
             "title": "Administrative Assistant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1507,7 +1507,7 @@
         "Administrative Service Manager": {
             "id": 2,
             "title": "Administrative Service Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1517,7 +1517,7 @@
         "Benefits Manager": {
             "id": 3,
             "title": "Benefits Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1527,7 +1527,7 @@
         "Chief Executives": {
             "id": 4,
             "title": "Chief Executives",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1537,7 +1537,7 @@
         "Chief Financial Officer": {
             "id": 5,
             "title": "Chief Financial Officer",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1547,7 +1547,7 @@
         "Chief Sustainability Officers": {
             "id": 6,
             "title": "Chief Sustainability Officers",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1557,7 +1557,7 @@
         "Compliance Managers": {
             "id": 7,
             "title": "Compliance Managers",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1567,7 +1567,7 @@
         "Compliance Officer": {
             "id": 8,
             "title": "Compliance Officer",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1577,7 +1577,7 @@
         "Compensation Administrator": {
             "id": 9,
             "title": "Compensation Administrator",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1587,7 +1587,7 @@
         "Compensation Specialist": {
             "id": 10,
             "title": "Compensation Specialist",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1597,7 +1597,7 @@
         "Employment Administrator": {
             "id": 11,
             "title": "Employment Administrator",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1607,7 +1607,7 @@
         "Employment and Placement Specialist": {
             "id": 12,
             "title": "Employment and Placement Specialist",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1617,7 +1617,7 @@
         "Human Resources Management Advisor": {
             "id": 13,
             "title": "Human Resources Management Advisor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1627,7 +1627,7 @@
         "Human Resources Management Consultant": {
             "id": 14,
             "title": "Human Resources Management Consultant",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1637,7 +1637,7 @@
         "Manager": {
             "id": 15,
             "title": "Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1647,7 +1647,7 @@
         "Office Supervisor": {
             "id": 16,
             "title": "Office Supervisor",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1657,7 +1657,7 @@
         "Project Management Specialists": {
             "id": 17,
             "title": "Project Management Specialists",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1667,7 +1667,7 @@
         "Purchasing Agent": {
             "id": 18,
             "title": "Purchasing Agent",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1677,7 +1677,7 @@
         "Purchasing Manager": {
             "id": 19,
             "title": "Purchasing Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1687,7 +1687,7 @@
         "Storage and Distribution Manager": {
             "id": 20,
             "title": "Storage and Distribution Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1697,7 +1697,7 @@
         "Supply Chain Managers": {
             "id": 21,
             "title": "Supply Chain Managers",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Management & Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1709,7 +1709,7 @@
         "Sales Representative (all types)": {
             "id": 1,
             "title": "Sales Representative (all types)",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1719,7 +1719,7 @@
         "Sales Engineers": {
             "id": 2,
             "title": "Sales Engineers",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1729,7 +1729,7 @@
         "Sales Managers": {
             "id": 3,
             "title": "Sales Managers",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1739,7 +1739,7 @@
         "Retail Store Manager": {
             "id": 4,
             "title": "Retail Store Manager",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1749,7 +1749,7 @@
         "Retail Buyer": {
             "id": 5,
             "title": "Retail Buyer",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1759,7 +1759,7 @@
         "Real Estate Broker": {
             "id": 6,
             "title": "Real Estate Broker",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1769,7 +1769,7 @@
         "Real Estate Appraiser": {
             "id": 7,
             "title": "Real Estate Appraiser",
-            "icon": null,
+            "icon": "/characters/Business&Finance/Sales & Brokerage.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1781,7 +1781,7 @@
         "Elementary School Teacher": {
             "id": 1,
             "title": "Elementary School Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1791,7 +1791,7 @@
         "High School Teacher": {
             "id": 2,
             "title": "High School Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1801,7 +1801,7 @@
         "Middle School Teacher": {
             "id": 3,
             "title": "Middle School Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1811,7 +1811,7 @@
         "Preschool Teacher": {
             "id": 4,
             "title": "Preschool Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1821,7 +1821,7 @@
         "Special Ed Teachers (all levels)": {
             "id": 5,
             "title": "Special Ed Teachers (all levels)",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1831,7 +1831,7 @@
         "Career / Technical Education Teacher": {
             "id": 6,
             "title": "Career / Technical Education Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1841,7 +1841,7 @@
         "Outdoor Education Teacher": {
             "id": 7,
             "title": "Outdoor Education Teacher",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1851,7 +1851,7 @@
         "Literacy and Remedial Education Teachers": {
             "id": 8,
             "title": "Literacy and Remedial Education Teachers",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1861,7 +1861,7 @@
         "Professor (all subjects)": {
             "id": 9,
             "title": "Professor (all subjects)",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1871,7 +1871,7 @@
         "Graduate Teaching Assistant": {
             "id": 10,
             "title": "Graduate Teaching Assistant",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1881,7 +1881,7 @@
         "Vocational Education Instructors": {
             "id": 11,
             "title": "Vocational Education Instructors",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Teaching.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1893,7 +1893,7 @@
         "School Administrator": {
             "id": 1,
             "title": "School Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1903,7 +1903,7 @@
         "Registrar Administrator": {
             "id": 2,
             "title": "Registrar Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1913,7 +1913,7 @@
         "Curriculum and Assessment Director": {
             "id": 3,
             "title": "Curriculum and Assessment Director",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1923,7 +1923,7 @@
         "Student Admissions Administrator": {
             "id": 4,
             "title": "Student Admissions Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1933,7 +1933,7 @@
         "Student Affairs Administrator": {
             "id": 5,
             "title": "Student Affairs Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1943,7 +1943,7 @@
         "Special Education Administrator": {
             "id": 6,
             "title": "Special Education Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1953,7 +1953,7 @@
         "Preschool Administrator": {
             "id": 7,
             "title": "Preschool Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1963,7 +1963,7 @@
         "Elementary School Administrator": {
             "id": 8,
             "title": "Elementary School Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1973,7 +1973,7 @@
         "High School Administrator": {
             "id": 9,
             "title": "High School Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1983,7 +1983,7 @@
         "Middle School Administrator": {
             "id": 10,
             "title": "Middle School Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Educational Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -1995,7 +1995,7 @@
         "Academic Advisor": {
             "id": 1,
             "title": "Academic Advisor",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2005,7 +2005,7 @@
         "Admissions Counselor": {
             "id": 2,
             "title": "Admissions Counselor",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2015,7 +2015,7 @@
         "Guidance Counselor": {
             "id": 3,
             "title": "Guidance Counselor",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2025,7 +2025,7 @@
         "Counselor": {
             "id": 4,
             "title": "Counselor",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2035,7 +2035,7 @@
         "Job Development Specialist": {
             "id": 5,
             "title": "Job Development Specialist",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2045,7 +2045,7 @@
         "Day Care Center Administrator": {
             "id": 6,
             "title": "Day Care Center Administrator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2055,7 +2055,7 @@
         "Child Support Investigator": {
             "id": 7,
             "title": "Child Support Investigator",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2065,7 +2065,7 @@
         "Child Support Services Worker": {
             "id": 8,
             "title": "Child Support Services Worker",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2075,7 +2075,7 @@
         "Childcare Workers": {
             "id": 9,
             "title": "Childcare Workers",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2087,7 +2087,7 @@
         "Family Caseworker": {
             "id": 1,
             "title": "Family Caseworker",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Child & Family Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2097,7 +2097,7 @@
         "Social Worker": {
             "id": 2,
             "title": "Social Worker",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Child & Family Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2107,7 +2107,7 @@
         "Healthcare Social Workers": {
             "id": 3,
             "title": "Healthcare Social Workers",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Child & Family Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2117,7 +2117,7 @@
         "Youth Services Specialist": {
             "id": 4,
             "title": "Youth Services Specialist",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Child & Family Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2127,7 +2127,7 @@
         "Marriage and Family Therapists": {
             "id": 5,
             "title": "Marriage and Family Therapists",
-            "icon": null,
+            "icon": "/characters/EducationChildDev&FamServices/Child & Family Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2139,7 +2139,7 @@
         "Solar Energy Installation Managers": {
             "id": 1,
             "title": "Solar Energy Installation Managers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2149,7 +2149,7 @@
         "Solar Energy Systems Designer": {
             "id": 2,
             "title": "Solar Energy Systems Designer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2159,7 +2159,7 @@
         "Solar Energy Systems Engineers": {
             "id": 3,
             "title": "Solar Energy Systems Engineers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2169,7 +2169,7 @@
         "Solar Sales Representatives and Assessors": {
             "id": 4,
             "title": "Solar Sales Representatives and Assessors",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2179,7 +2179,7 @@
         "Solar Thermal Installers and Technicians": {
             "id": 5,
             "title": "Solar Thermal Installers and Technicians",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2189,7 +2189,7 @@
         "Wind Energy Engineer": {
             "id": 6,
             "title": "Wind Energy Engineer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2199,7 +2199,7 @@
         "Wind Energy Operations Managers": {
             "id": 7,
             "title": "Wind Energy Operations Managers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2209,7 +2209,7 @@
         "Wind Energy Project Managers": {
             "id": 8,
             "title": "Wind Energy Project Managers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2219,7 +2219,7 @@
         "Wind Turbine Service Technicians": {
             "id": 9,
             "title": "Wind Turbine Service Technicians",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2229,7 +2229,7 @@
         "Nuclear Power Reactor Operator": {
             "id": 10,
             "title": "Nuclear Power Reactor Operator",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2239,7 +2239,7 @@
         "Nuclear Engineer": {
             "id": 11,
             "title": "Nuclear Engineer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2249,7 +2249,7 @@
         "Nuclear Fuels Research Engineer": {
             "id": 12,
             "title": "Nuclear Fuels Research Engineer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2259,7 +2259,7 @@
         "Nuclear Monitoring Technician": {
             "id": 13,
             "title": "Nuclear Monitoring Technician",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2269,7 +2269,7 @@
         "Power Plant Operators": {
             "id": 14,
             "title": "Power Plant Operators",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2281,7 +2281,7 @@
         "Environmental Engineer": {
             "id": 1,
             "title": "Environmental Engineer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2291,7 +2291,7 @@
         "Environmental Compliance Inspector": {
             "id": 2,
             "title": "Environmental Compliance Inspector",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2301,7 +2301,7 @@
         "Environmental Technician": {
             "id": 3,
             "title": "Environmental Technician",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2311,7 +2311,7 @@
         "Hazardous Materials Removal Worker": {
             "id": 4,
             "title": "Hazardous Materials Removal Worker",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2321,7 +2321,7 @@
         "Hazardous Waste Management Analyst": {
             "id": 5,
             "title": "Hazardous Waste Management Analyst",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2331,7 +2331,7 @@
         "Industrial Air Pollution Analyst": {
             "id": 6,
             "title": "Industrial Air Pollution Analyst",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2341,7 +2341,7 @@
         "Industrial Ecologists": {
             "id": 7,
             "title": "Industrial Ecologists",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2351,7 +2351,7 @@
         "Industrial Hygienist": {
             "id": 8,
             "title": "Industrial Hygienist",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2361,7 +2361,7 @@
         "Industrial Safety and Health Engineer": {
             "id": 9,
             "title": "Industrial Safety and Health Engineer",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2371,7 +2371,7 @@
         "Occupational Safety & Health Inspector": {
             "id": 10,
             "title": "Occupational Safety & Health Inspector",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2381,7 +2381,7 @@
         "Water Pollution Control Inspector": {
             "id": 11,
             "title": "Water Pollution Control Inspector",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2391,7 +2391,7 @@
         "Water Resource Specialists": {
             "id": 12,
             "title": "Water Resource Specialists",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2401,7 +2401,7 @@
         "Water Treatment Plant Operators": {
             "id": 13,
             "title": "Water Treatment Plant Operators",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2411,7 +2411,7 @@
         "Water/Wastewater Engineers": {
             "id": 14,
             "title": "Water/Wastewater Engineers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2423,7 +2423,7 @@
         "Power Distributors and Dispatchers": {
             "id": 1,
             "title": "Power Distributors and Dispatchers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Utilities Operations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2433,7 +2433,7 @@
         "Power-Line Installer and Mechanic": {
             "id": 2,
             "title": "Power-Line Installer and Mechanic",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Utilities Operations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2443,7 +2443,7 @@
         "Gas Plant Operator": {
             "id": 3,
             "title": "Gas Plant Operator",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Utilities Operations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2455,7 +2455,7 @@
         "Chief Sustainability Officers": {
             "id": 1,
             "title": "Chief Sustainability Officers",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2465,7 +2465,7 @@
         "Sustainability Specialists": {
             "id": 2,
             "title": "Sustainability Specialists",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2475,7 +2475,7 @@
         "Energy Auditor": {
             "id": 3,
             "title": "Energy Auditor",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2485,7 +2485,7 @@
         "Brownfield Redevelopment Specialist": {
             "id": 4,
             "title": "Brownfield Redevelopment Specialist",
-            "icon": null,
+            "icon": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2497,7 +2497,7 @@
         "Aeronautical & Aerospace Engineer": {
             "id": 1,
             "title": "Aeronautical & Aerospace Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2507,7 +2507,7 @@
         "Agricultural Engineer": {
             "id": 2,
             "title": "Agricultural Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2517,7 +2517,7 @@
         "Bioengineers and Biomedical Engineers": {
             "id": 3,
             "title": "Bioengineers and Biomedical Engineers",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2527,7 +2527,7 @@
         "Chemical Engineer": {
             "id": 4,
             "title": "Chemical Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2537,7 +2537,7 @@
         "Civil Engineer": {
             "id": 5,
             "title": "Civil Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2547,7 +2547,7 @@
         "Electrical Engineer": {
             "id": 6,
             "title": "Electrical Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2557,7 +2557,7 @@
         "Electronics Engineer": {
             "id": 7,
             "title": "Electronics Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2567,7 +2567,7 @@
         "Environmental Engineer": {
             "id": 8,
             "title": "Environmental Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2577,7 +2577,7 @@
         "Industrial Engineer": {
             "id": 9,
             "title": "Industrial Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2587,7 +2587,7 @@
         "Mechanical Engineer": {
             "id": 10,
             "title": "Mechanical Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2597,7 +2597,7 @@
         "Nuclear Engineer": {
             "id": 11,
             "title": "Nuclear Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2607,7 +2607,7 @@
         "Mining Engineer": {
             "id": 12,
             "title": "Mining Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2617,7 +2617,7 @@
         "Petroleum Engineer": {
             "id": 13,
             "title": "Petroleum Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2627,7 +2627,7 @@
         "Robotics Engineers": {
             "id": 14,
             "title": "Robotics Engineers",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2637,7 +2637,7 @@
         "Structural Engineer": {
             "id": 15,
             "title": "Structural Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2647,7 +2647,7 @@
         "Transportation Engineer": {
             "id": 16,
             "title": "Transportation Engineer",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2657,7 +2657,7 @@
         "Validation Engineers": {
             "id": 17,
             "title": "Validation Engineers",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Engineering Disciplines.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2669,7 +2669,7 @@
         "Architect": {
             "id": 1,
             "title": "Architect",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2679,7 +2679,7 @@
         "Architectural Drafters": {
             "id": 2,
             "title": "Architectural Drafters",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2689,7 +2689,7 @@
         "Landscape Architect": {
             "id": 3,
             "title": "Landscape Architect",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2699,7 +2699,7 @@
         "Landscape Contractor": {
             "id": 4,
             "title": "Landscape Contractor",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2709,7 +2709,7 @@
         "Urban and Regional Planner": {
             "id": 5,
             "title": "Urban and Regional Planner",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2719,7 +2719,7 @@
         "City Planning Aide": {
             "id": 6,
             "title": "City Planning Aide",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Architecture and Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2731,7 +2731,7 @@
         "Engineering Technician": {
             "id": 1,
             "title": "Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2741,7 +2741,7 @@
         "Aerospace Engineering Technician": {
             "id": 2,
             "title": "Aerospace Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2751,7 +2751,7 @@
         "Civil Engineering Technician": {
             "id": 3,
             "title": "Civil Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2761,7 +2761,7 @@
         "Electrical Engineering Technician": {
             "id": 4,
             "title": "Electrical Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2771,7 +2771,7 @@
         "Mechanical Engineering Technician": {
             "id": 5,
             "title": "Mechanical Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2781,7 +2781,7 @@
         "Industrial Engineering Technician": {
             "id": 6,
             "title": "Industrial Engineering Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2791,7 +2791,7 @@
         "Surveyor": {
             "id": 7,
             "title": "Surveyor",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2801,7 +2801,7 @@
         "Surveying Technicians": {
             "id": 8,
             "title": "Surveying Technicians",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2811,7 +2811,7 @@
         "Mapping Technician": {
             "id": 9,
             "title": "Mapping Technician",
-            "icon": null,
+            "icon": "/characters/Engineering&Architecture/Technical Support.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2823,7 +2823,7 @@
         "Fashion Artist": {
             "id": 1,
             "title": "Fashion Artist",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Fashion Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2833,7 +2833,7 @@
         "Fashion Coordinator": {
             "id": 2,
             "title": "Fashion Coordinator",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Fashion Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2843,7 +2843,7 @@
         "Fashion Designer": {
             "id": 3,
             "title": "Fashion Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Fashion Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2853,7 +2853,7 @@
         "Makeup Artists": {
             "id": 4,
             "title": "Makeup Artists",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Fashion Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2865,7 +2865,7 @@
         "Interior Designer": {
             "id": 1,
             "title": "Interior Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2875,7 +2875,7 @@
         "Set Designer": {
             "id": 2,
             "title": "Set Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2885,7 +2885,7 @@
         "Set Illustrator": {
             "id": 3,
             "title": "Set Illustrator",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2895,7 +2895,7 @@
         "Exhibit Designer": {
             "id": 4,
             "title": "Exhibit Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2905,7 +2905,7 @@
         "Furniture Designer": {
             "id": 5,
             "title": "Furniture Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2915,7 +2915,7 @@
         "Toy Designer": {
             "id": 6,
             "title": "Toy Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2927,7 +2927,7 @@
         "Textile Designer": {
             "id": 1,
             "title": "Textile Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Textile & Product Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2937,7 +2937,7 @@
         "Ornamental-Metalwork Designer": {
             "id": 2,
             "title": "Ornamental-Metalwork Designer",
-            "icon": null,
+            "icon": "/characters/Fashion&InteriorDesign/Textile & Product Design.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2949,7 +2949,7 @@
         "Acute Care Nurse": {
             "id": 1,
             "title": "Acute Care Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2959,7 +2959,7 @@
         "Community Health Nurse": {
             "id": 2,
             "title": "Community Health Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2969,7 +2969,7 @@
         "Hospital Nurse": {
             "id": 3,
             "title": "Hospital Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2979,7 +2979,7 @@
         "Nurse": {
             "id": 4,
             "title": "Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2989,7 +2989,7 @@
         "Nurse Anesthetists": {
             "id": 5,
             "title": "Nurse Anesthetists",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -2999,7 +2999,7 @@
         "Nurse Midwives": {
             "id": 6,
             "title": "Nurse Midwives",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3009,7 +3009,7 @@
         "Nurse Practitioner": {
             "id": 7,
             "title": "Nurse Practitioner",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3019,7 +3019,7 @@
         "Nurses Aide": {
             "id": 8,
             "title": "Nurses Aide",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3029,7 +3029,7 @@
         "Private Nurse": {
             "id": 9,
             "title": "Private Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3039,7 +3039,7 @@
         "Registered Nurses": {
             "id": 10,
             "title": "Registered Nurses",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3049,7 +3049,7 @@
         "School Nurse": {
             "id": 11,
             "title": "School Nurse",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Nursing.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3061,7 +3061,7 @@
         "Anesthesiologist (MD)": {
             "id": 1,
             "title": "Anesthesiologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3071,7 +3071,7 @@
         "Cardiologist (MD)": {
             "id": 2,
             "title": "Cardiologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3081,7 +3081,7 @@
         "Dermatologist (MD)": {
             "id": 3,
             "title": "Dermatologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3091,7 +3091,7 @@
         "Family Practitioner (MD)": {
             "id": 4,
             "title": "Family Practitioner (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3101,7 +3101,7 @@
         "General Internal Medicine Physicians": {
             "id": 5,
             "title": "General Internal Medicine Physicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3111,7 +3111,7 @@
         "Neurologists": {
             "id": 6,
             "title": "Neurologists",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3121,7 +3121,7 @@
         "Obstetrician (MD)": {
             "id": 7,
             "title": "Obstetrician (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3131,7 +3131,7 @@
         "Occupational Physician (MD)": {
             "id": 8,
             "title": "Occupational Physician (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3141,7 +3141,7 @@
         "Ophthalmologist (MD)": {
             "id": 9,
             "title": "Ophthalmologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3151,7 +3151,7 @@
         "Orthodontist (MD)": {
             "id": 10,
             "title": "Orthodontist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3161,7 +3161,7 @@
         "Pathologist (MD)": {
             "id": 11,
             "title": "Pathologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3171,7 +3171,7 @@
         "Pediatric Dentist": {
             "id": 12,
             "title": "Pediatric Dentist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3181,7 +3181,7 @@
         "Pediatrician (MD)": {
             "id": 13,
             "title": "Pediatrician (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3191,7 +3191,7 @@
         "Plastic Surgeon": {
             "id": 14,
             "title": "Plastic Surgeon",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3201,7 +3201,7 @@
         "Preventive Medicine Physicians": {
             "id": 15,
             "title": "Preventive Medicine Physicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3211,7 +3211,7 @@
         "Psychiatrist (MD)": {
             "id": 16,
             "title": "Psychiatrist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3221,7 +3221,7 @@
         "Radiologist (MD)": {
             "id": 17,
             "title": "Radiologist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3231,7 +3231,7 @@
         "Sports Medicine Physicians": {
             "id": 18,
             "title": "Sports Medicine Physicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3241,7 +3241,7 @@
         "Sports Physician (Orthopedist)": {
             "id": 19,
             "title": "Sports Physician (Orthopedist)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3251,7 +3251,7 @@
         "Surgeons (MD)": {
             "id": 20,
             "title": "Surgeons (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3261,7 +3261,7 @@
         "Urologists": {
             "id": 21,
             "title": "Urologists",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3273,7 +3273,7 @@
         "Art Therapist": {
             "id": 1,
             "title": "Art Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3283,7 +3283,7 @@
         "Athletic Trainer": {
             "id": 2,
             "title": "Athletic Trainer",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3293,7 +3293,7 @@
         "Clinical Psychologist": {
             "id": 3,
             "title": "Clinical Psychologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3303,7 +3303,7 @@
         "Clinical Sociologist": {
             "id": 4,
             "title": "Clinical Sociologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3313,7 +3313,7 @@
         "Counseling Psychologist": {
             "id": 5,
             "title": "Counseling Psychologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3323,7 +3323,7 @@
         "Developmental Psychologist": {
             "id": 6,
             "title": "Developmental Psychologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3333,7 +3333,7 @@
         "Educational Therapist": {
             "id": 7,
             "title": "Educational Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3343,7 +3343,7 @@
         "Exercise Physiologist": {
             "id": 8,
             "title": "Exercise Physiologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3353,7 +3353,7 @@
         "Manual Arts Therapist": {
             "id": 9,
             "title": "Manual Arts Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3363,7 +3363,7 @@
         "Marriage and Family Therapists": {
             "id": 10,
             "title": "Marriage and Family Therapists",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3373,7 +3373,7 @@
         "Massage Therapist": {
             "id": 11,
             "title": "Massage Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3383,7 +3383,7 @@
         "Mental Health Counselor": {
             "id": 12,
             "title": "Mental Health Counselor",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3393,7 +3393,7 @@
         "Occupational Therapist": {
             "id": 13,
             "title": "Occupational Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3403,7 +3403,7 @@
         "Physical Therapist": {
             "id": 14,
             "title": "Physical Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3413,7 +3413,7 @@
         "Recreational Therapist": {
             "id": 15,
             "title": "Recreational Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3423,7 +3423,7 @@
         "Speech Pathologist": {
             "id": 16,
             "title": "Speech Pathologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3433,7 +3433,7 @@
         "Speech-Language Pathology Assistants": {
             "id": 17,
             "title": "Speech-Language Pathology Assistants",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3443,7 +3443,7 @@
         "Vocational Rehabilitation Counselor": {
             "id": 18,
             "title": "Vocational Rehabilitation Counselor",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Therapists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3455,7 +3455,7 @@
         "Anesthesiologist Assistants": {
             "id": 1,
             "title": "Anesthesiologist Assistants",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3465,7 +3465,7 @@
         "Cardiovascular Technologist": {
             "id": 2,
             "title": "Cardiovascular Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3475,7 +3475,7 @@
         "EEG Technician/Technologist": {
             "id": 3,
             "title": "EEG Technician/Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3485,7 +3485,7 @@
         "Endoscopy Technicians": {
             "id": 4,
             "title": "Endoscopy Technicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3495,7 +3495,7 @@
         "Medical Appliance Technician": {
             "id": 5,
             "title": "Medical Appliance Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3505,7 +3505,7 @@
         "Medical Assistant": {
             "id": 6,
             "title": "Medical Assistant",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3515,7 +3515,7 @@
         "Medical Equipment Technician": {
             "id": 7,
             "title": "Medical Equipment Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3525,7 +3525,7 @@
         "Medical Laboratory Technician": {
             "id": 8,
             "title": "Medical Laboratory Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3535,7 +3535,7 @@
         "Medical Photographer": {
             "id": 9,
             "title": "Medical Photographer",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3545,7 +3545,7 @@
         "Medical Records Technician": {
             "id": 10,
             "title": "Medical Records Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3555,7 +3555,7 @@
         "Medical Secretary": {
             "id": 11,
             "title": "Medical Secretary",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3565,7 +3565,7 @@
         "Medical Technologist": {
             "id": 12,
             "title": "Medical Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3575,7 +3575,7 @@
         "Nuclear Medicine Technologist": {
             "id": 13,
             "title": "Nuclear Medicine Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3585,7 +3585,7 @@
         "Nuclear Monitoring Technician": {
             "id": 14,
             "title": "Nuclear Monitoring Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3595,7 +3595,7 @@
         "Ophthalmic Laboratory Technician": {
             "id": 15,
             "title": "Ophthalmic Laboratory Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3605,7 +3605,7 @@
         "Ophthalmic Medical Technicians": {
             "id": 16,
             "title": "Ophthalmic Medical Technicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3615,7 +3615,7 @@
         "Ophthalmic Medical Technologists": {
             "id": 17,
             "title": "Ophthalmic Medical Technologists",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3625,7 +3625,7 @@
         "Orthodontic Assistant": {
             "id": 18,
             "title": "Orthodontic Assistant",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3635,7 +3635,7 @@
         "Orthodontic Laboratory Technician": {
             "id": 19,
             "title": "Orthodontic Laboratory Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3645,7 +3645,7 @@
         "Phlebotomist": {
             "id": 20,
             "title": "Phlebotomist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3655,7 +3655,7 @@
         "Physical Therapy Assistant": {
             "id": 21,
             "title": "Physical Therapy Assistant",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3665,7 +3665,7 @@
         "Radiologic Technicians": {
             "id": 22,
             "title": "Radiologic Technicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3675,7 +3675,7 @@
         "Radiologic Technologist": {
             "id": 23,
             "title": "Radiologic Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3685,7 +3685,7 @@
         "Respiratory Care Technician": {
             "id": 24,
             "title": "Respiratory Care Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3695,7 +3695,7 @@
         "Respiratory Therapist": {
             "id": 25,
             "title": "Respiratory Therapist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3705,7 +3705,7 @@
         "Respiratory Therapy Technicians": {
             "id": 26,
             "title": "Respiratory Therapy Technicians",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3715,7 +3715,7 @@
         "Surgical Assistants": {
             "id": 27,
             "title": "Surgical Assistants",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3725,7 +3725,7 @@
         "Surgical Technician/Technologist": {
             "id": 28,
             "title": "Surgical Technician/Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3735,7 +3735,7 @@
         "Ultrasound Technologist": {
             "id": 29,
             "title": "Ultrasound Technologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3747,7 +3747,7 @@
         "Dental Assistant": {
             "id": 1,
             "title": "Dental Assistant",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3757,7 +3757,7 @@
         "Dental Hygienist": {
             "id": 2,
             "title": "Dental Hygienist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3767,7 +3767,7 @@
         "Dental Laboratory Technician": {
             "id": 3,
             "title": "Dental Laboratory Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3777,7 +3777,7 @@
         "Dentist (DDS)": {
             "id": 4,
             "title": "Dentist (DDS)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3787,7 +3787,7 @@
         "Orthodontist (MD)": {
             "id": 5,
             "title": "Orthodontist (MD)",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3797,7 +3797,7 @@
         "Periodontist": {
             "id": 6,
             "title": "Periodontist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Dental Professions.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3809,7 +3809,7 @@
         "Pharmacist": {
             "id": 1,
             "title": "Pharmacist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Pharmacy.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3819,7 +3819,7 @@
         "Pharmacy Technician": {
             "id": 2,
             "title": "Pharmacy Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Pharmacy.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3831,7 +3831,7 @@
         "Psychiatric Aide": {
             "id": 1,
             "title": "Psychiatric Aide",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Mental Health.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3841,7 +3841,7 @@
         "Psychiatric Technician": {
             "id": 2,
             "title": "Psychiatric Technician",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Mental Health.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3851,7 +3851,7 @@
         "Clinical Psychologist": {
             "id": 3,
             "title": "Clinical Psychologist",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Mental Health.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3861,7 +3861,7 @@
         "Mental Health Counselor": {
             "id": 4,
             "title": "Mental Health Counselor",
-            "icon": null,
+            "icon": "/characters/HealthScience&MedTechnology/Mental Health.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3873,7 +3873,7 @@
         "Hotel Manager": {
             "id": 1,
             "title": "Hotel Manager",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Hospitality Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3883,7 +3883,7 @@
         "Spa Manager": {
             "id": 2,
             "title": "Spa Manager",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Hospitality Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3893,7 +3893,7 @@
         "Restaurant Manager": {
             "id": 3,
             "title": "Restaurant Manager",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Hospitality Management.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3905,7 +3905,7 @@
         "Baker": {
             "id": 1,
             "title": "Baker",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3915,7 +3915,7 @@
         "Bartender": {
             "id": 2,
             "title": "Bartender",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3925,7 +3925,7 @@
         "Catering Administrator": {
             "id": 3,
             "title": "Catering Administrator",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3935,7 +3935,7 @@
         "Chef": {
             "id": 4,
             "title": "Chef",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3945,7 +3945,7 @@
         "Food & Drug Inspector": {
             "id": 5,
             "title": "Food & Drug Inspector",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3955,7 +3955,7 @@
         "Food Science Technicians": {
             "id": 6,
             "title": "Food Science Technicians",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3965,7 +3965,7 @@
         "Food Technologist": {
             "id": 7,
             "title": "Food Technologist",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Food Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3977,7 +3977,7 @@
         "Camp Director": {
             "id": 1,
             "title": "Camp Director",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3987,7 +3987,7 @@
         "Fitness Trainer": {
             "id": 2,
             "title": "Fitness Trainer",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -3997,7 +3997,7 @@
         "Recreation Worker": {
             "id": 3,
             "title": "Recreation Worker",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4007,7 +4007,7 @@
         "Sports Events Planner": {
             "id": 4,
             "title": "Sports Events Planner",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4017,7 +4017,7 @@
         "Sports Agent": {
             "id": 5,
             "title": "Sports Agent",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4029,7 +4029,7 @@
         "Travel Agent": {
             "id": 1,
             "title": "Travel Agent",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Travel & Tourism.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4039,7 +4039,7 @@
         "Travel Counselor": {
             "id": 2,
             "title": "Travel Counselor",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Travel & Tourism.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4049,7 +4049,7 @@
         "Tour Guides and Escorts": {
             "id": 3,
             "title": "Tour Guides and Escorts",
-            "icon": null,
+            "icon": "/characters/HospitalityTourism&Recreation/Travel & Tourism.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4061,7 +4061,7 @@
         "Computer Programmer": {
             "id": 1,
             "title": "Computer Programmer",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4071,7 +4071,7 @@
         "Computer and Information Scientists": {
             "id": 2,
             "title": "Computer and Information Scientists",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4081,7 +4081,7 @@
         "Software Developers - Applications": {
             "id": 3,
             "title": "Software Developers - Applications",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4091,7 +4091,7 @@
         "Software Quality Assurance Analysts and Testers": {
             "id": 4,
             "title": "Software Quality Assurance Analysts and Testers",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4101,7 +4101,7 @@
         "Web Administrators": {
             "id": 5,
             "title": "Web Administrators",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4111,7 +4111,7 @@
         "Web Art Director": {
             "id": 6,
             "title": "Web Art Director",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4121,7 +4121,7 @@
         "Webmaster": {
             "id": 7,
             "title": "Webmaster",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4131,7 +4131,7 @@
         "Video Game Designer": {
             "id": 8,
             "title": "Video Game Designer",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Software & Web Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4143,7 +4143,7 @@
         "Computer Hardware Technician": {
             "id": 1,
             "title": "Computer Hardware Technician",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4153,7 +4153,7 @@
         "Computer Network Architects": {
             "id": 2,
             "title": "Computer Network Architects",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4163,7 +4163,7 @@
         "Computer Network Support Specialists": {
             "id": 3,
             "title": "Computer Network Support Specialists",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4173,7 +4173,7 @@
         "Computer Systems Analyst": {
             "id": 4,
             "title": "Computer Systems Analyst",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4183,7 +4183,7 @@
         "Computer Systems Engineer": {
             "id": 5,
             "title": "Computer Systems Engineer",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4193,7 +4193,7 @@
         "Computer User Support Specialist": {
             "id": 6,
             "title": "Computer User Support Specialist",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4203,7 +4203,7 @@
         "Information Security Analysts": {
             "id": 7,
             "title": "Information Security Analysts",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4213,7 +4213,7 @@
         "IT Administrator (Information Technology)": {
             "id": 8,
             "title": "IT Administrator (Information Technology)",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4223,7 +4223,7 @@
         "Information Technology Project Managers": {
             "id": 9,
             "title": "Information Technology Project Managers",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/IT Support & Networking.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4235,7 +4235,7 @@
         "Computer Hardware Engineers": {
             "id": 1,
             "title": "Computer Hardware Engineers",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Hardware & Systems.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4245,7 +4245,7 @@
         "Computer Technician": {
             "id": 2,
             "title": "Computer Technician",
-            "icon": null,
+            "icon": "/characters/Information&ComTechnology/Hardware & Systems.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4257,7 +4257,7 @@
         "Aircraft Assembler": {
             "id": 1,
             "title": "Aircraft Assembler",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4267,7 +4267,7 @@
         "Engine and Machine Assemblers": {
             "id": 2,
             "title": "Engine and Machine Assemblers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4277,7 +4277,7 @@
         "Machinist": {
             "id": 3,
             "title": "Machinist",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4287,7 +4287,7 @@
         "Model Maker": {
             "id": 4,
             "title": "Model Maker",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4297,7 +4297,7 @@
         "Model Makers, Metal and Plastic": {
             "id": 5,
             "title": "Model Makers, Metal and Plastic",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4307,7 +4307,7 @@
         "Team Assemblers": {
             "id": 6,
             "title": "Team Assemblers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4319,7 +4319,7 @@
         "Quality Control Inspector": {
             "id": 1,
             "title": "Quality Control Inspector",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Quality Control.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4329,7 +4329,7 @@
         "Quality Control Managers": {
             "id": 2,
             "title": "Quality Control Managers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Quality Control.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4339,7 +4339,7 @@
         "Quality Control Technician": {
             "id": 3,
             "title": "Quality Control Technician",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Quality Control.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4349,7 +4349,7 @@
         "Precision Devices Inspectors and Testers": {
             "id": 4,
             "title": "Precision Devices Inspectors and Testers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Quality Control.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4361,7 +4361,7 @@
         "Commercial Designer": {
             "id": 1,
             "title": "Commercial Designer",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4371,7 +4371,7 @@
         "Industrial Designer": {
             "id": 2,
             "title": "Industrial Designer",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4381,7 +4381,7 @@
         "Manufacturing Engineers": {
             "id": 3,
             "title": "Manufacturing Engineers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4391,7 +4391,7 @@
         "Product Planner": {
             "id": 4,
             "title": "Product Planner",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4401,7 +4401,7 @@
         "Product Safety Engineer": {
             "id": 5,
             "title": "Product Safety Engineer",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4411,7 +4411,7 @@
         "Tool and Die Makers": {
             "id": 6,
             "title": "Tool and Die Makers",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4421,7 +4421,7 @@
         "Tool and Machine Designer": {
             "id": 7,
             "title": "Tool and Machine Designer",
-            "icon": null,
+            "icon": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4433,7 +4433,7 @@
         "Advertising Account Manager": {
             "id": 1,
             "title": "Advertising Account Manager",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4443,7 +4443,7 @@
         "Advertising Agency Coordinator": {
             "id": 2,
             "title": "Advertising Agency Coordinator",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4453,7 +4453,7 @@
         "Advertising Sales Agent": {
             "id": 3,
             "title": "Advertising Sales Agent",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4463,7 +4463,7 @@
         "Market Research Analyst": {
             "id": 4,
             "title": "Market Research Analyst",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4473,7 +4473,7 @@
         "Marketing Managers": {
             "id": 5,
             "title": "Marketing Managers",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4483,7 +4483,7 @@
         "Search Marketing Strategists": {
             "id": 6,
             "title": "Search Marketing Strategists",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Marketing & Advertising.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4495,7 +4495,7 @@
         "Sales Representative (all types)": {
             "id": 1,
             "title": "Sales Representative (all types)",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4505,7 +4505,7 @@
         "Sales Engineers": {
             "id": 2,
             "title": "Sales Engineers",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4515,7 +4515,7 @@
         "Sales Managers": {
             "id": 3,
             "title": "Sales Managers",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4525,7 +4525,7 @@
         "Retail Sales Department Supervisor": {
             "id": 4,
             "title": "Retail Sales Department Supervisor",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4535,7 +4535,7 @@
         "Customer Service Representative": {
             "id": 5,
             "title": "Customer Service Representative",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4545,7 +4545,7 @@
         "Customer Service Supervisor": {
             "id": 6,
             "title": "Customer Service Supervisor",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Sales.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4557,7 +4557,7 @@
         "Fund Raiser": {
             "id": 1,
             "title": "Fund Raiser",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Public Relations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4567,7 +4567,7 @@
         "Fundraising Manager": {
             "id": 2,
             "title": "Fundraising Manager",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Public Relations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4577,7 +4577,7 @@
         "Public Relations Manager": {
             "id": 3,
             "title": "Public Relations Manager",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Public Relations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4587,7 +4587,7 @@
         "Public Relations Specialist": {
             "id": 4,
             "title": "Public Relations Specialist",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Public Relations.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4599,7 +4599,7 @@
         "Barber": {
             "id": 1,
             "title": "Barber",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Personal Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4609,7 +4609,7 @@
         "Cosmetologist (Hair Stylist)": {
             "id": 2,
             "title": "Cosmetologist (Hair Stylist)",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Personal Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4619,7 +4619,7 @@
         "Manicurists and Pedicurists": {
             "id": 3,
             "title": "Manicurists and Pedicurists",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Personal Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4629,7 +4629,7 @@
         "Personal Service Supervisor": {
             "id": 4,
             "title": "Personal Service Supervisor",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Personal Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4639,7 +4639,7 @@
         "Skin Care Specialist": {
             "id": 5,
             "title": "Skin Care Specialist",
-            "icon": null,
+            "icon": "/characters/MarketingSales&Services/Personal Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4651,7 +4651,7 @@
         "Administrative Law Judge": {
             "id": 1,
             "title": "Administrative Law Judge",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4661,7 +4661,7 @@
         "Admiralty Lawyer": {
             "id": 2,
             "title": "Admiralty Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4671,7 +4671,7 @@
         "Appeals Examiner": {
             "id": 3,
             "title": "Appeals Examiner",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4681,7 +4681,7 @@
         "Arbitrator": {
             "id": 4,
             "title": "Arbitrator",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4691,7 +4691,7 @@
         "Attorney": {
             "id": 5,
             "title": "Attorney",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4701,7 +4701,7 @@
         "Bailiff": {
             "id": 6,
             "title": "Bailiff",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4711,7 +4711,7 @@
         "Corporation Lawyer": {
             "id": 7,
             "title": "Corporation Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4721,7 +4721,7 @@
         "Correction Officer": {
             "id": 8,
             "title": "Correction Officer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4731,7 +4731,7 @@
         "Court Reporter": {
             "id": 9,
             "title": "Court Reporter",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4741,7 +4741,7 @@
         "Criminal Lawyer": {
             "id": 10,
             "title": "Criminal Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4751,7 +4751,7 @@
         "Judge": {
             "id": 11,
             "title": "Judge",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4761,7 +4761,7 @@
         "Law Clerks": {
             "id": 12,
             "title": "Law Clerks",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4771,7 +4771,7 @@
         "Lawyer": {
             "id": 13,
             "title": "Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4781,7 +4781,7 @@
         "Legal Assistant": {
             "id": 14,
             "title": "Legal Assistant",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4791,7 +4791,7 @@
         "Legal Secretary": {
             "id": 15,
             "title": "Legal Secretary",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4801,7 +4801,7 @@
         "Legislative Assistant": {
             "id": 16,
             "title": "Legislative Assistant",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4811,7 +4811,7 @@
         "Legislator": {
             "id": 17,
             "title": "Legislator",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4821,7 +4821,7 @@
         "Magistrate": {
             "id": 18,
             "title": "Magistrate",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4831,7 +4831,7 @@
         "Paralegal": {
             "id": 19,
             "title": "Paralegal",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4841,7 +4841,7 @@
         "Patent Agent": {
             "id": 20,
             "title": "Patent Agent",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4851,7 +4851,7 @@
         "Patent Lawyer": {
             "id": 21,
             "title": "Patent Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4861,7 +4861,7 @@
         "Probate Lawyer": {
             "id": 22,
             "title": "Probate Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4871,7 +4871,7 @@
         "Real Estate Lawyer": {
             "id": 23,
             "title": "Real Estate Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4881,7 +4881,7 @@
         "Tax Lawyer": {
             "id": 24,
             "title": "Tax Lawyer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Legal & Judicial.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4893,7 +4893,7 @@
         "Border Patrol Agent": {
             "id": 1,
             "title": "Border Patrol Agent",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4903,7 +4903,7 @@
         "Customs Inspector": {
             "id": 2,
             "title": "Customs Inspector",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4913,7 +4913,7 @@
         "Detective": {
             "id": 3,
             "title": "Detective",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4923,7 +4923,7 @@
         "Harbor, Lake & Waterways Police": {
             "id": 4,
             "title": "Harbor, Lake & Waterways Police",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4933,7 +4933,7 @@
         "Immigration Inspector": {
             "id": 5,
             "title": "Immigration Inspector",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4943,7 +4943,7 @@
         "Intelligence Analyst": {
             "id": 6,
             "title": "Intelligence Analyst",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4953,7 +4953,7 @@
         "Intelligence Specialist": {
             "id": 7,
             "title": "Intelligence Specialist",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4963,7 +4963,7 @@
         "Narcotics Investigator": {
             "id": 8,
             "title": "Narcotics Investigator",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4973,7 +4973,7 @@
         "Parole Officer": {
             "id": 9,
             "title": "Parole Officer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4983,7 +4983,7 @@
         "Police and Detectives Supervisor": {
             "id": 10,
             "title": "Police and Detectives Supervisor",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -4993,7 +4993,7 @@
         "Police Artist": {
             "id": 11,
             "title": "Police Artist",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5003,7 +5003,7 @@
         "Police Detective": {
             "id": 12,
             "title": "Police Detective",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5013,7 +5013,7 @@
         "Police Identification and Records Officers": {
             "id": 13,
             "title": "Police Identification and Records Officers",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5023,7 +5023,7 @@
         "Police Officer": {
             "id": 14,
             "title": "Police Officer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5033,7 +5033,7 @@
         "Security and Fire Alarm Systems Installers": {
             "id": 15,
             "title": "Security and Fire Alarm Systems Installers",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5043,7 +5043,7 @@
         "Sheriffs": {
             "id": 16,
             "title": "Sheriffs",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5053,7 +5053,7 @@
         "Transit and Railroad Police": {
             "id": 17,
             "title": "Transit and Railroad Police",
-            "icon": null,
+            "icon": "/characters/PublicServices/Law Enforcement & Security.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5065,7 +5065,7 @@
         "Emergency Management Specialist": {
             "id": 1,
             "title": "Emergency Management Specialist",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5075,7 +5075,7 @@
         "Emergency Medical Technician": {
             "id": 2,
             "title": "Emergency Medical Technician",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5085,7 +5085,7 @@
         "Fire Inspector": {
             "id": 3,
             "title": "Fire Inspector",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5095,7 +5095,7 @@
         "Fire Investigator": {
             "id": 4,
             "title": "Fire Investigator",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5105,7 +5105,7 @@
         "Fire Prevention Engineer": {
             "id": 5,
             "title": "Fire Prevention Engineer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5115,7 +5115,7 @@
         "Fire Protection Engineer": {
             "id": 6,
             "title": "Fire Protection Engineer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5125,7 +5125,7 @@
         "Firefighter": {
             "id": 7,
             "title": "Firefighter",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5135,7 +5135,7 @@
         "Forest Fire Fighting and Prevention Supervisor": {
             "id": 8,
             "title": "Forest Fire Fighting and Prevention Supervisor",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5145,7 +5145,7 @@
         "Probation Officer": {
             "id": 9,
             "title": "Probation Officer",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5155,7 +5155,7 @@
         "Social and Community Service Managers": {
             "id": 10,
             "title": "Social and Community Service Managers",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5165,7 +5165,7 @@
         "Social and Human Service Assistants": {
             "id": 11,
             "title": "Social and Human Service Assistants",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5175,7 +5175,7 @@
         "Social Welfare Administrator": {
             "id": 12,
             "title": "Social Welfare Administrator",
-            "icon": null,
+            "icon": "/characters/PublicServices/Emergency & Social Services.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5187,7 +5187,7 @@
         "Congressional Aide": {
             "id": 1,
             "title": "Congressional Aide",
-            "icon": null,
+            "icon": "/characters/PublicServices/Government Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5197,7 +5197,7 @@
         "Government Budget Analyst": {
             "id": 2,
             "title": "Government Budget Analyst",
-            "icon": null,
+            "icon": "/characters/PublicServices/Government Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5207,7 +5207,7 @@
         "Government Property Inspector": {
             "id": 3,
             "title": "Government Property Inspector",
-            "icon": null,
+            "icon": "/characters/PublicServices/Government Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5217,7 +5217,7 @@
         "Government Service Executives": {
             "id": 4,
             "title": "Government Service Executives",
-            "icon": null,
+            "icon": "/characters/PublicServices/Government Administration.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5229,7 +5229,7 @@
         "Bus Driver (School)": {
             "id": 1,
             "title": "Bus Driver (School)",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5239,7 +5239,7 @@
         "Delivery Driver": {
             "id": 2,
             "title": "Delivery Driver",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5249,7 +5249,7 @@
         "Locomotive Operator": {
             "id": 3,
             "title": "Locomotive Operator",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5259,7 +5259,7 @@
         "Railroad Conductors and Yardmasters": {
             "id": 4,
             "title": "Railroad Conductors and Yardmasters",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5269,7 +5269,7 @@
         "Railroad Inspector": {
             "id": 5,
             "title": "Railroad Inspector",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5279,7 +5279,7 @@
         "Taxi Driver": {
             "id": 6,
             "title": "Taxi Driver",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5289,7 +5289,7 @@
         "Traffic Administrator (Freight, Passenger)": {
             "id": 7,
             "title": "Traffic Administrator (Freight, Passenger)",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5299,7 +5299,7 @@
         "Transportation Supervisor": {
             "id": 8,
             "title": "Transportation Supervisor",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5309,7 +5309,7 @@
         "Truck Driver (Long Distance)": {
             "id": 9,
             "title": "Truck Driver (Long Distance)",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5319,7 +5319,7 @@
         "Truck Mechanic": {
             "id": 10,
             "title": "Truck Mechanic",
-            "icon": null,
+            "icon": "/characters/Transportation/Ground Transportation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5331,7 +5331,7 @@
         "Air Traffic Controller": {
             "id": 1,
             "title": "Air Traffic Controller",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5341,7 +5341,7 @@
         "Airline Flight Control Administrator": {
             "id": 2,
             "title": "Airline Flight Control Administrator",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5351,7 +5351,7 @@
         "Airline Flight Operations Administrator": {
             "id": 3,
             "title": "Airline Flight Operations Administrator",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5361,7 +5361,7 @@
         "Airline Flight Reservations Administrator": {
             "id": 4,
             "title": "Airline Flight Reservations Administrator",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5371,7 +5371,7 @@
         "Airport Administrator": {
             "id": 5,
             "title": "Airport Administrator",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5381,7 +5381,7 @@
         "Airport Engineer": {
             "id": 6,
             "title": "Airport Engineer",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5391,7 +5391,7 @@
         "Highway Patrol Pilot": {
             "id": 7,
             "title": "Highway Patrol Pilot",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5401,7 +5401,7 @@
         "Pilot": {
             "id": 8,
             "title": "Pilot",
-            "icon": null,
+            "icon": "/characters/Transportation/Aviation.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5413,7 +5413,7 @@
         "Marine Engineer": {
             "id": 1,
             "title": "Marine Engineer",
-            "icon": null,
+            "icon": "/characters/Transportation/Maritime.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5423,7 +5423,7 @@
         "Marine Architect": {
             "id": 2,
             "title": "Marine Architect",
-            "icon": null,
+            "icon": "/characters/Transportation/Maritime.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5433,7 +5433,7 @@
         "Ship Engineers": {
             "id": 3,
             "title": "Ship Engineers",
-            "icon": null,
+            "icon": "/characters/Transportation/Maritime.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5443,7 +5443,7 @@
         "Ship Master": {
             "id": 4,
             "title": "Ship Master",
-            "icon": null,
+            "icon": "/characters/Transportation/Maritime.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5453,7 +5453,7 @@
         "Ship Pilot": {
             "id": 5,
             "title": "Ship Pilot",
-            "icon": null,
+            "icon": "/characters/Transportation/Maritime.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5465,7 +5465,7 @@
         "Cargo and Freight Agents": {
             "id": 1,
             "title": "Cargo and Freight Agents",
-            "icon": null,
+            "icon": "/characters/Transportation/Logistics & Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5475,7 +5475,7 @@
         "Logistics Analysts": {
             "id": 2,
             "title": "Logistics Analysts",
-            "icon": null,
+            "icon": "/characters/Transportation/Logistics & Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5485,7 +5485,7 @@
         "Logistics Engineers": {
             "id": 3,
             "title": "Logistics Engineers",
-            "icon": null,
+            "icon": "/characters/Transportation/Logistics & Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5495,7 +5495,7 @@
         "Transportation Engineer": {
             "id": 4,
             "title": "Transportation Engineer",
-            "icon": null,
+            "icon": "/characters/Transportation/Logistics & Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
@@ -5505,7 +5505,7 @@
         "Transportation Planners": {
             "id": 5,
             "title": "Transportation Planners",
-            "icon": null,
+            "icon": "/characters/Transportation/Logistics & Planning.svg",
             "jobTasks": null,
             "earnings": null,
             "earningsDetails": null,
