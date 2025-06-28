@@ -80,7 +80,8 @@
                 ],
                 "image": "/characters/Agriculture&NaturalResources/Forestry.svg"
             }
-        }
+        },
+        "image": "/icons/Agriculture&NaturalResources.svg"
     },
     "arts-media-and-entertainment": {
         "title": "Arts, Media, and Entertainment",
@@ -164,7 +165,8 @@
                 ],
                 "image": "/characters/ArtsMedia&Entertainment/Art Management.svg"
             }
-        }
+        },
+        "image": "/icons/ArtsMedia&Entertainment.svg"
     },
     "building-and-construction-trades": {
         "title": "Building and Construction Trades",
@@ -219,7 +221,8 @@
                 ],
                 "image": "/characters/Building&ConstructionTrades/Building Maintenance.svg"
             }
-        }
+        },
+        "image": "/icons/Building&ConstructionTrades.svg"
     },
     "business-and-finance": {
         "title": "Business and Finance",
@@ -305,7 +308,8 @@
                 ],
                 "image": "/characters/Business&Finance/Sales & Brokerage.svg"
             }
-        }
+        },
+        "image": "/icons/Business&Finance.svg"
     },
     "education-child-development-and-family-services": {
         "title": "Education, Child Development, and Family Services",
@@ -369,7 +373,8 @@
                 ],
                 "image": "/characters/EducationChildDev&FamServices/Child & Family Services.svg"
             }
-        }
+        },
+        "image": "/icons/EducationChildDev&FamServices.svg"
     },
     "energy-environment-and-utilities": {
         "title": "Energy, Environment, and Utilities",
@@ -433,7 +438,8 @@
                 ],
                 "image": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg"
             }
-        }
+        },
+        "image": "/icons/EnergyEnvironment&Utilities.svg"
     },
     "engineering-and-architecture": {
         "title": "Engineering and Architecture",
@@ -488,7 +494,8 @@
                 ],
                 "image": "/characters/Engineering&Architecture/Technical Support.svg"
             }
-        }
+        },
+        "image": "/icons/Engineering&Architecture.svg"
     },
     "fashion-and-interior-design": {
         "title": "Fashion and Interior Design",
@@ -520,7 +527,8 @@
                 "jobs": ["Textile Designer", "Ornamental-Metalwork Designer"],
                 "image": "/characters/Fashion&InteriorDesign/Textile & Product Design.svg"
             }
-        }
+        },
+        "image": "/icons/Fashion&InteriorDesign.svg"
     },
     "health-science-and-medical-technology": {
         "title": "Health Science and Medical Technology",
@@ -655,7 +663,8 @@
                 ],
                 "image": "/characters/HealthScience&MedTechnology/Mental Health.svg"
             }
-        }
+        },
+        "image": "/icons/HealthScience&MedTechnology.svg"
     },
     "hospitality-tourism-and-recreation": {
         "title": "Hospitality, Tourism, and Recreation",
@@ -694,7 +703,8 @@
                 "jobs": ["Travel Agent", "Travel Counselor", "Tour Guides and Escorts"],
                 "image": "/characters/HospitalityTourism&Recreation/Travel & Tourism.svg"
             }
-        }
+        },
+        "image": "/icons/HospitalityTourism&Recreation.svg"
     },
     "information-and-communication-technology": {
         "title": "Information and Communication Technology",
@@ -733,7 +743,8 @@
                 "jobs": ["Computer Hardware Engineers", "Computer Technician"],
                 "image": "/characters/Information&ComTechnology/Hardware & Systems.svg"
             }
-        }
+        },
+        "image": "/icons/Information&ComTechnology.svg"
     },
     "manufacturing-and-product-development": {
         "title": "Manufacturing and Product Development",
@@ -773,7 +784,8 @@
                 ],
                 "image": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg"
             }
-        }
+        },
+        "image": "/icons/Manufacturing&ProductDevelopment.svg"
     },
     "marketing-sales-and-services": {
         "title": "Marketing, Sales, and Services",
@@ -823,7 +835,8 @@
                 ],
                 "image": "/characters/MarketingSales&Services/Personal Services.svg"
             }
-        }
+        },
+        "image": "/icons/MarketingSales&Services.svg"
     },
     "public-services": {
         "title": "Public Services",
@@ -909,7 +922,8 @@
                 ],
                 "image": "/characters/PublicServices/Government Administration.svg"
             }
-        }
+        },
+        "image": "/icons/PublicServices.svg"
     },
     "transportation": {
         "title": "Transportation",
@@ -966,6 +980,7 @@
                 ],
                 "image": "/characters/Transportation/Logistics & Planning.svg"
             }
-        }
+        },
+        "image": "/icons/Transportation.svg"
     }
 }
