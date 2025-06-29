@@ -15,7 +15,7 @@ export default function CareersClient({ industry }) {
         key: key,
         title: CareerGroups[industry].careers[key].title,
         description: null, //TODO: MAKE IT PULL FROM A DATA FILE
-        image: null, //TODO: MAKE IT PULL FROM A DATA FILE
+        image: CareerGroups[industry].careers[key].image,
     }));
 
     console.log(grade);
