@@ -27,8 +27,12 @@ export const Navbar = () => {
       }
     });
 
-    return () => unsubscribe();
-  }, []);
+    return () => {
+      if (typeof unsubscribe === 'function') {
+        unsubscribe();
+      }
+    };
+  }, [authInstance]);
 
   const handleLoginClick = () => {
     router.push('/login');
