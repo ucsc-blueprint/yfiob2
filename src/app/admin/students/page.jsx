@@ -14,6 +14,8 @@ import getData from "../../../utils/getData";
 import EditSquareIcon from "../../../components/EditSquareIcon";
 import ArrowDropDownIcon from "../../../components/ArrowDropDownIcon";
 import FileExportIcon from "../../../components/FileExportIcon";
+import AdminStudentPopup from "../../../components/AdminStudentPopup";
+import { getTopKIndustries } from "../../../../backend/matchingAlgorithm/matchingAlgo";
 
 const clipLength = 30;
 
@@ -75,7 +77,7 @@ function FilterButton({ onClick }) {
     );
 }
 
-function ExportButton({ onClick }) {
+function ExportButton({ onClick, shown }) {
     return (
         <button
             onClick={(e) => onClick(e)}
@@ -83,7 +85,14 @@ function ExportButton({ onClick }) {
         >
             <FileExportIcon className="mx-2 text-white" style={{ transform: "scale(0.8)" }} />
             <p className="mr-2">Export as...</p>
-            <ArrowDropDownIcon className="mr-3" style={{ transform: "scale(0.8)" }} />
+            <ArrowDropDownIcon
+                className="mr-3"
+                style={{
+                    transform: "scale(0.8)",
+                    rotate: `${shown ? "180deg" : "0deg"}`,
+                    transition: "rotate 0.2s ease-in-out",
+                }}
+            />
         </button>
     );
 }
@@ -160,22 +169,6 @@ function InfoCards({ text, weight, start = false, end = false, title = false }) 
     );
 }
 
-function StudentRow({ studentNum, firstName, lastName, grade, zipcode, school }) {
-    return (
-        <div className="flex flex-row items-center w-full my-5">
-            <p className="w-9">{studentNum}</p>
-            <div className="grid grid-cols-10 w-full">
-                <InfoCards weight={2} start text={`${firstName}`} />
-                <InfoCards weight={2} text={`${lastName}`} />
-                <InfoCards weight={1} text={`${grade}`} />
-                <InfoCards weight={2} text={`${zipcode}`} />
-                <InfoCards weight={3} end text={`${school}`} />
-            </div>
-            <OptionsIcon className="ml-3 w-5" style={{ transform: "scale(0.8)" }} />
-        </div>
-    );
-}
-
 function PageSelector({ data, currentPage, setCurrentPage }) {
     const maxPages = Math.ceil(data.length / 8) + 1;
 
@@ -188,7 +181,6 @@ function PageSelector({ data, currentPage, setCurrentPage }) {
                 : currentPage + 3
             : "";
 
-    console.log(currentPage);
     return (
         <div className="flex flex-row-reverse w-1/3">
             <span className="grow ml-3 whitespace-nowrap">{`out of ${maxPages}`}</span>
@@ -226,25 +218,6 @@ function PageSelector({ data, currentPage, setCurrentPage }) {
     );
 }
 
-function UserRows({ data, currentPage, filterFunction, search }) {
-    const filtered = data.filter((item) => filterFunction(item, search));
-    return filtered.slice(currentPage * 8, currentPage * 8 + 8).map((item, index) => {
-        const u = item.data;
-        return (
-            <div key={u.id || index}>
-                <StudentRow
-                    studentNum={currentPage * 8 + index + 1}
-                    firstName={u.firstName || ""}
-                    lastName={u.lastName || ""}
-                    grade={u.grade}
-                    zipcode={Math.floor(u.zipcode)}
-                    school={u.school || ""}
-                />
-            </div>
-        );
-    });
-}
-
 export default function AdminPage() {
     const [data, setData] = useState([]);
     const [search, setSearch] = useState("");
@@ -254,6 +227,82 @@ export default function AdminPage() {
     const [school, setSchool] = useState("");
     const [shown, setShown] = useState(false);
     const [exportShown, setExportShown] = useState(false);
+    const [studentShown, setStudentShown] = useState(false);
+    const [topIndutries, setTopIndustries] = useState([]);
+    const [studentData, setStudentData] = useState({
+        first: "firstName",
+        last: "lastName",
+        email: "email@gmail.com",
+        school: "schoolName",
+        zipcode: "11111",
+        grade: "12",
+        id: null,
+    });
+
+    function StudentRow({
+        studentNum,
+        firstName,
+        lastName,
+        grade,
+        zipcode,
+        school,
+        data,
+        id,
+    }) {
+        return (
+            <div className="flex flex-row items-center w-full my-5">
+                <p className="w-9">{studentNum}</p>
+                <div className="grid grid-cols-10 w-full">
+                    <InfoCards weight={2} start text={`${firstName}`} />
+                    <InfoCards weight={2} text={`${lastName}`} />
+                    <InfoCards weight={1} text={`${grade}`} />
+                    <InfoCards weight={2} text={`${zipcode}`} />
+                    <InfoCards weight={3} end text={`${school}`} />
+                </div>
+                <OptionsIcon
+                    className="ml-3 w-5"
+                    style={{ transform: "scale(0.8)" }}
+                    onClick={async () => {
+                        setStudentData({ ...data, id });
+                        const topIndustries = await getTopKIndustries(data.email);
+                        console.log(topIndustries);
+                        const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7"];
+                        const formattedIndustries = topIndustries.map(
+                            ([industry, percentage], index) => ({
+                                name: industry,
+                                value: percentage,
+                                fill: colors[index % colors.length],
+                            })
+                        );
+                        setTopIndustries(formattedIndustries);
+                        setStudentShown(true);
+                    }}
+                />
+            </div>
+        );
+    }
+
+    function UserRows({ data, currentPage, filterFunction, search }) {
+        const filtered = data.filter((item) => filterFunction(item, search));
+        return filtered.slice(currentPage * 8, currentPage * 8 + 8).map((item, index) => {
+            const u = item.data;
+            const id = item.id;
+            return (
+                <div key={u.id || index}>
+                    <StudentRow
+                        studentNum={currentPage * 8 + index + 1}
+                        firstName={u.firstName || ""}
+                        lastName={u.lastName || ""}
+                        grade={u.grade}
+                        zipcode={Math.floor(u.zipcode)}
+                        school={u.school || ""}
+                        data={u}
+                        id={id}
+                    />
+                </div>
+            );
+        });
+    }
 
     useEffect(() => {
         getData("users").then(setData);
@@ -283,6 +332,13 @@ export default function AdminPage() {
 
     return (
         <>
+            <AdminStudentPopup
+                shown={studentShown}
+                setShown={setStudentShown}
+                studentData={studentData}
+                setData={setData}
+                topIndustries={topIndutries}
+            />
             <AdminNavbar />
             <div className="flex justify-center w-[100vw]">
                 <div className="w-[70vw] p-10">
@@ -323,6 +379,7 @@ export default function AdminPage() {
                         </div>
                         <div className="flex flex-row">
                             <ExportButton
+                                shown={exportShown}
                                 onClick={() => {
                                     setExportShown(!exportShown);
                                 }}
