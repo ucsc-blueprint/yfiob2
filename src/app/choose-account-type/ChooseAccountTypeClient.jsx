@@ -38,10 +38,10 @@ export const Page = () => {
                     />
                     {/* Content Wrapper */}
                     <div className="w-[502px] space-y-6">
-                        <h1 className="font-medium font-kumbh text-[40px] leading-[40px] tracking-normal text-center">
+                        <h1 className="font-medium font-sans text-[40px] leading-[40px] tracking-normal text-center">
                             Career Quiz
                         </h1>
-                        <p className="font-medium text-[26px] leading-[40px] tracking-normal text-center font-kumbh pb-6">
+                        <p className="font-medium text-[26px] leading-[40px] tracking-normal text-center font-sans pb-6">
                             Would you like to save your results?
                         </p>
                         {/* Account Options Box */}
