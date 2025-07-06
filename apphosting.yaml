@@ -23,17 +23,17 @@ runConfig:
   #   secret: mySecretRef
 
 env:
-  - variable: NEXT_PUBLIC_FIREBASE_API_KEY
+  - variable: NEXT_PUBLIC_API_KEY
     value: AIzaSyCxq73CeS0qBuvys639Tv-OB5BDJxpu73c
-  - variable: NEXT_PUBLIC_FIREBASE_AUTH_DOMAIN
+  - variable: NEXT_PUBLIC_AUTH_DOMAIN
     value: yfiob2.firebaseapp.com
-  - variable: NEXT_PUBLIC_FIREBASE_PROJECT_ID
+  - variable: NEXT_PUBLIC_PROJECT_ID
     value: yfiob2
-  - variable: NEXT_PUBLIC_FIREBASE_STORAGE_BUCKET
+  - variable: NEXT_PUBLIC_STORAGE_BUCKET
     value: yfiob2.firebasestorage.app
-  - variable: NEXT_PUBLIC_FIREBASE_MESSAGING_SENDER_ID
+  - variable: NEXT_PUBLIC_MESSAGING_SENDER_ID
     value: 893610088121 
-  - variable: NEXT_PUBLIC_FIREBASE_APP_ID
+  - variable: NEXT_PUBLIC_APP_ID
     value: 1:893610088121:web:f3c9f9f6677d84ee9dad68
-  - variable: NEXT_PUBLIC_FIREBASE_MEASUREMENT_ID
+  - variable: NEXT_PUBLIC_MEASUREMENT_ID
     value: G-06T4YREEV4
