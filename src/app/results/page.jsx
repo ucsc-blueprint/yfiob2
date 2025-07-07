@@ -94,7 +94,7 @@ export default function QuizResultsPage() {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          console.log("Careers for Top Industry:", careers);
+          console.log("Careers for Top Industry " + topIndustry + ":" + careers);
           setCareers(careers);
         });
         const secondIndustry = industries[industries.length - 2][0];
@@ -343,23 +343,23 @@ export default function QuizResultsPage() {
         </div>
       )}
       <section className="bg-gray-100 py-12">
-        <div className="font-kumbh text-lg text-center py-5">{industries.length > 0 && industries[industries.length - 2][0]}</div>
-        <div className="flex flex-row justify-center max-w-6xl mx-auto gap-8 px-4">
-          {secondCareers.map((job, i) => {
-            console.log("Job:", job);
-            return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
-          })
-          }
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 2][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {secondCareers.map((job, i) => (
+            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+          ))}
         </div>
       </section>
       <section className="bg-gray-100 py-12">
-        <div className="font-kumbh text-lg text-center py-5">{industries.length > 0 && industries[industries.length - 3][0]}</div>
-        <div className="flex flex-row justify-center max-w-6xl mx-auto gap-8 px-4">
-            {thirdCareers.map((job, i) => {
-              console.log("Job:", job);
-              return <CareersCard key={i} title={job} description={""} educationLevel={""}/>
-            })
-            }
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 3][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {thirdCareers.map((job, i) => (
+            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+          ))}
         </div>
       </section>
     </div>
