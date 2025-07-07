@@ -249,7 +249,7 @@ export default function QuizResultsPage() {
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {careers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -346,7 +346,7 @@ export default function QuizResultsPage() {
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {secondCareers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -356,7 +356,7 @@ export default function QuizResultsPage() {
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {thirdCareers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
