@@ -22,7 +22,7 @@ export default function ExploreIndustriesClient() {
     const grade = searchParams.get("grade") ?? "elementary-school";
 
     const HeaderSection = () => (
-        <div className="flex flex-col items-center font-kumbh py-10">
+        <div className="flex flex-col items-center font-primary py-10">
             <div
                 className={`flex items-center text-[36px] mb-7 px-5 py-2 rounded-lg text-white font-[500] ${backgroundColor[grade]}`}
             >

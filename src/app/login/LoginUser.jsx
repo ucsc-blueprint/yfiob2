@@ -14,7 +14,7 @@ export function LoginUser() {
     const router = useRouter();
     const [loggedinflag, setLogin] = useState(false);
     const searchParams = useSearchParams();
-    const grade = searchParams.get('grade') || "elementary-school";
+    const grade = searchParams.get("grade") || "elementary-school";
 
     // Redirect logged-in users to another page
     useEffect(() => {
@@ -55,12 +55,12 @@ export function LoginUser() {
                 {/* Centered Login Content */}
                 <div className="flex-grow flex items-center justify-center">
                     <div className="w-[502px] space-y-6">
-                        <h1 className="text-4xl font-lato font-bold text-[40px] leading-[40px] tracking-normal text-center mb-8">
+                        <h1 className="text-4xl font-secondary font-bold text-[40px] leading-[40px] tracking-normal text-center mb-8">
                             Login
                         </h1>
                         {/* Email Input */}
                         <div className="space-y-1">
-                            <p className="text-left font-lato font-normal text-[20px]">
+                            <p className="text-left font-secondary font-normal text-[20px]">
                                 Email
                             </p>
                             <TextBox
@@ -74,7 +74,7 @@ export function LoginUser() {
                         </div>
                         {/* Password Input */}
                         <div className="space-y-1">
-                            <p className="text-left font-lato font-normal text-[20px]">
+                            <p className="text-left font-secondary font-normal text-[20px]">
                                 Password
                             </p>
                             <TextBox
@@ -89,7 +89,7 @@ export function LoginUser() {
                         {/* Log In Button */}
                         <Button text="Log In" size="big" onClick={handleLogin} />
                         {/* Sign Up Link */}
-                        <p className="text-center font-lato text-[20px]">
+                        <p className="text-center font-secondary text-[20px]">
                             Don't have an account?{" "}
                             <Link href="/sign-up" className="text-[#4C78E7]">
                                 Sign Up!
