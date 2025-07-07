@@ -250,7 +250,7 @@ export default function QuizResultsPage() {
         <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
           {careers.map((job, i) => {
             console.log("Job:", job);
-            return <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+            return <CareersCard key={i} title={job} description={""} educationLevel={""}/>;
           })
           }
         </div>
