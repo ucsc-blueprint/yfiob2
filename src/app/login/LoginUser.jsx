@@ -21,7 +21,7 @@ export function LoginUser() {
         const unsubscribe = onAuthStateChanged(auth, (user) => {
             if (user) {
                 // If the user is logged in, redirect them to the profile page
-                router.push(`/take-quiz/${grade}?valid=true`); // Change this to the desired page
+                router.push(`/`); // Change this to the desired page
             }
         });
 
@@ -39,7 +39,7 @@ export function LoginUser() {
             // If successful, you can get the user data from userCredential.user
             alert("Login successful!");
             // Navigate to the quiz with the grade and valid=true parameter
-            router.push(`/take-quiz/${grade}?valid=true`);
+            router.push(`/`);
             setLogin(true);
             console.log(userCredential.user); // Log the user data for debugging
         } catch (error) {

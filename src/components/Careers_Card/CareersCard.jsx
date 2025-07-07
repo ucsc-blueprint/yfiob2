@@ -1,5 +1,4 @@
 import Image from "next/image";
-import React from "react";
 
 const backgroundColor = {
     "elementary-school": "bg-blue-400",
@@ -9,16 +8,16 @@ const backgroundColor = {
 };
 
 const jignaHue = {
-    "elementary-school": "hue-rotate(180deg)",
-    "middle-school": "hue-rotate(60deg)",
-    "high-school": "hue-rotate(0deg)",
+    "elementary-school": "hue-rotate(20deg)",
+    "middle-school": "hue-rotate(270deg)",
+    "high-school": "hue-rotate(200deg)",
 };
 
 export const CareersCard = ({
     title,
     description,
-    grade="default",
-    image = "/assets/jigna.svg",
+    grade,
+    image = "/characters/Template.svg",
     href,
 }) => {
 

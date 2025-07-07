@@ -1,6 +1,10 @@
 const nextConfig = {
-    output: "export", // Outputs a Single-Page Application (SPA).
-    distDir: "./build", // Changes the build output directory to `./build`.
+    // Remove static export for Firebase App Hosting compatibility
+    // output: "export", // This was causing the routes-manifest.json issue
+    
+    // Use default distDir for Firebase App Hosting
+    // distDir: "./build", // Firebase App Hosting expects .next directory
+    
     images: {
         unoptimized: true,
         remotePatterns: [
@@ -10,6 +14,9 @@ const nextConfig = {
             },
         ],
     },
+    
+    // Ensure proper trailing slash handling
+    trailingSlash: false,
 };
 
 export default nextConfig;
