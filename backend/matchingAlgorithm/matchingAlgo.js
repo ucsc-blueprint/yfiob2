@@ -133,10 +133,16 @@ export async function getCareersForIndustry(industry){
     const careersFoundQuery = query(collection(db, "careers"), where("industry", "==", industry));
     const careersFound = await getDocs(careersFoundQuery);
     const careers = [];
-
+    let count = 0;
     for (const doc of careersFound.docs) {
         const data = doc.data();
         careers.push(data.careers);
+        count++;
+        if (count >= 4) break;
     }
     return careers;
 }
+
+getCareersForIndustry("Energy, Environment and Utilities").then((careers) => {
+    console.log("Careers for Software Development:", careers);
+});
