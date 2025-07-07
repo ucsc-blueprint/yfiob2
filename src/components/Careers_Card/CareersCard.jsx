@@ -4,7 +4,7 @@ const backgroundColor = {
     "elementary-school": "bg-blue-400",
     "middle-school": "bg-green-400",
     "high-school": "bg-orange-400",
-    "default": "bg-[#979CA8]"
+    "default": "bg-gray-700"
 };
 
 const jignaHue = {
@@ -16,7 +16,7 @@ const jignaHue = {
 export const CareersCard = ({
     title,
     description,
-    grade,
+    grade="default",
     image = "/characters/Template.svg",
     href,
 }) => {
