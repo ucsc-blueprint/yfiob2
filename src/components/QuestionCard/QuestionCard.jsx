@@ -1,4 +1,3 @@
-import React from "react";
 
 const agreeArray = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 

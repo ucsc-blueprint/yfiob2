@@ -1,14 +1,9 @@
-import React from "react";
 import {
     render,
     screen,
     fireEvent,
-    getByTestId,
-    getByAltText,
-    getAllByTestId,
 } from "@testing-library/react";
 import { CareersCardExpanded } from "./CareersCardExpanded";
-import { act } from "react";
 
 // describe block is used to group related tests
 describe("CareersCardExpanded", () => {
