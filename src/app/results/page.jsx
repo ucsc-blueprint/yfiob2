@@ -1,9 +1,10 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -21,30 +22,91 @@ import {
   PaperAirplaneIcon,
 } from "@heroicons/react/outline";
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
+import { deleteAllResponses, getGradeOfMostRecentSubmission } from "../../../backend/questions/questionDB";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
 export default function QuizResultsPage() {
+  const router = useRouter();
+
+  const [gradeParam, setGradeParam] = useState("");
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
+  const [secondCareers, setSecondCareers] = useState([]);
+  const [thirdCareers, setThirdCareers] = useState([]);
+  const auth = getAuth();
+  const [username, setUsername] = useState("Guest");
+
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const searchParams = new URLSearchParams(window.location.search);
+      const grade = searchParams.get("grade");
+      if (grade) setGradeParam(grade);
+    }
+  }, []);
+
+  useEffect(()=> {
+    console.log("Grade parameter:", gradeParam);
+    const checkGradeOfRecentSubmission = async () => {
+      await getGradeOfMostRecentSubmission(username).then((grade) => {
+        console.log("Grade of most recent submission:", grade);
+        if (grade) {
+          console.log("Grade of most recent submission:", grade);
+          gradeParam = grade;
+        } else {
+          router.replace("/pre-quiz");
+        }
+      });
+    }
+
+    if(!gradeParam && username !== "Guest") {
+      checkGradeOfRecentSubmission();
+    }
+  }, [gradeParam, username])
+ 
+
+  
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUsername(user.email);
+            console.log("User is signed in:", username);
+        }
+    });
+  }, [auth, username]);
+
+  useEffect(() => {
+    if(username === "Guest") {
+      return;
+    }
     const fetchData = async () => {
-      getTopKIndustries("Akshay").then((industries) => {
+      getTopKIndustries(username).then((industries) => {
         console.log("Top K Industries:", industries);
         setIndustries(industries);
         
       });
     }
     fetchData();
-  }, []);
+  }, [username]);
 
   useEffect(() => {
     const fetchCareers = async () => {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          console.log("Careers for Top Industry:", careers);
+          console.log("Careers for Top Industry " + topIndustry + ":" + careers);
           setCareers(careers);
         });
+        const secondIndustry = industries[industries.length - 2][0];
+        getCareersForIndustry(secondIndustry).then((secondCareers) => {
+          console.log("Careers for Second Industry:", secondCareers);
+          setSecondCareers(secondCareers);
+        }); 
+        const thirdIndustry = industries[industries.length - 3][0]
+        getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
+          console.log("Careers for Third Industry:", thirdCareers);
+          setThirdCareers(thirdCareers);
+        });      
       }
     }
     if (industries.length > 0) {
@@ -65,6 +127,16 @@ export default function QuizResultsPage() {
   })
   );
   
+  const handleTakeQuizAgain = () => {
+    if(username === "Guest") {
+      router.replace("/pre-quiz");
+      return;
+    }
+
+    deleteAllResponses(username).then(() => {
+      router.replace("/pre-quiz");
+    });
+  }
   
 
   const topJobs = [
@@ -88,6 +160,7 @@ export default function QuizResultsPage() {
   const [showShareModal, setShowShareModal] = useState(false);
   const [shareModalEmail, setShareModalEmail] = useState("");
 
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
@@ -101,13 +174,14 @@ export default function QuizResultsPage() {
           <ChevronDownIcon className="ml-2 h-4 w-4" />
         </button>
         <div className="flex space-x-2">
-          <Link
-            href="/take-quiz"
+          <button
+            type="button"
+            onClick={handleTakeQuizAgain}
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
           >
             <RefreshIcon className="mr-2 h-4 w-4" />
             Retake Quiz
-          </Link>
+          </button>
           <button
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
             onClick={() => setShowShareModal(true)}
@@ -173,9 +247,9 @@ export default function QuizResultsPage() {
 
         {/* Green cards section */}
       <section className="bg-green-50 py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {careers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -216,12 +290,12 @@ export default function QuizResultsPage() {
           <div>
             <p className="italic mb-2">Not Happy with your Results?</p>
             <p className="mb-4 text-gray-700">Take the quiz again here!</p>
-            <Link
-              href="/take-quiz"
-              className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+            <button
+              className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+              onClick={handleTakeQuizAgain}
             >
               Retake Quiz
-            </Link>
+            </button>
           </div>
         </div>
       </section>
@@ -233,12 +307,6 @@ export default function QuizResultsPage() {
         </h4>
       </section>
 
-      {/* Gray grid section with extra top padding */}
-      <section className="bg-gray-100 pt-16 px-4 pb-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-        </div>
-      </section>
 
       {/* Modal for sharing results */}
       {showShareModal && (
@@ -272,6 +340,26 @@ export default function QuizResultsPage() {
           </div>
         </div>
       )}
+      <section className="bg-gray-100 py-12">
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 2][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {secondCareers.map((job, i) => (
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          ))}
+        </div>
+      </section>
+      <section className="bg-gray-100 py-12">
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 3][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {thirdCareers.map((job, i) => (
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }
