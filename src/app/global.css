@@ -5,6 +5,10 @@
 @layer base {
     :root {
         --font-primary: "industry", sans-serif;
-        --font-secondary: "Kumbh Sans", sans-serif;
+        --font-secondary: Georgia, "Times New Roman", Times, serif;
+    }
+
+    body {
+        font-family: var(--font-secondary);
     }
 }

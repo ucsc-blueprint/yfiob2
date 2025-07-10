@@ -30,7 +30,7 @@ export default function ExploreIndustriesClient() {
             </div>
             <div className="font-[500] flex flex-col items-center">
                 <h1 className="text-[40px]">Explore Careers</h1>
-                <h2 className="text-[26px]">Choose a career area to begin!</h2>
+                <h2 className="text-[26px] font-secondary">Choose a career area to begin!</h2>
             </div>
         </div>
     );
