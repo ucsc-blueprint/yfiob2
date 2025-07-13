@@ -2,9 +2,10 @@ import Image from "next/image";
 import React from "react";
 
 const backgroundColor = {
-    "elementary-school": "bg-[#2CA9F6]",
-    "middle-school": "bg-[#75D122]",
-    "high-school": "bg-[#FF9E1E]",
+    "elementary-school": "bg-blue-400",
+    "middle-school": "bg-green-400",
+    "high-school": "bg-orange-400",
+    "default": "bg-gray-700"
 };
 
 const jignaHue = {
@@ -16,19 +17,24 @@ const jignaHue = {
 export const CareersCard = ({
     title,
     description,
-    grade,
+    grade="default",
     image = "/characters/Template.svg",
     href,
 }) => {
+
+    const safeGrade = grade && grade.length > 0 ? grade : "default";
+    console.log("Grade:", safeGrade);
     return (
         <a href={href}>
             <div
                 className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] bg-white shadow-md`}
             >
                 <header
-                    className={`${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
+                    className={`${backgroundColor[safeGrade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white font-semibold h-[99px] items-center text-center font-primary`}
                 >
-                    <div>{title}</div>
+                    <div>
+                    {title}
+                    </div>
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image

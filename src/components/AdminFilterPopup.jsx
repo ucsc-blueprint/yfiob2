@@ -74,7 +74,7 @@ export default function AdminFilterPopup({
 
     return (
         <div
-            className="fixed top-0 left-0 w-screen h-screen backdrop-blur-md z-50"
+            className="absolute mt-4 z-50"
             onClick={(e) => e.target.id === "close" && setShown(false)}
         >
             <div className="flex items-center justify-center w-full h-full" id="close">

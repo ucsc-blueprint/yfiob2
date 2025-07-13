@@ -7,10 +7,10 @@ import { db } from "./firebase";
  * @param {JSON} docId - The id of the document to be deleted
  */
 export default async function deleteData(collectionName, docId) {
-	try {
-		await deleteDoc(doc(db, collectionName, docId));
-		console.log("Document deleted");
-	} catch (e) {
-		console.error("Error adding document: ", e);
-	}
+    try {
+        await deleteDoc(doc(db, collectionName, docId));
+        console.log("Document deleted");
+    } catch (e) {
+        console.error("Error adding document: ", e);
+    }
 }
