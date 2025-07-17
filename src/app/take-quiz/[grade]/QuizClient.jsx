@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
@@ -9,6 +9,7 @@ import ForwardArrow from "../../../components/ForwardArrow.jsx";
 import questions from "../../../../questions.json";
 import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
 import storeTopKIndustries from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);
@@ -16,7 +17,20 @@ function getQuestions(educationLevel) {
 }
 
 export default function QuizClient({ grade }) {
+    
     const router = useRouter();
+    
+    const auth = getAuth();
+    const [username, setUsername] = useState("Guest");
+    useEffect(() => {
+        onAuthStateChanged(auth, (user) => {
+            if (user) {
+                setUsername(user.email);
+                console.log("User is signed in:", username);
+            }
+        });
+    }, [auth, username]);
+
     const searchParams = useSearchParams();
     const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
@@ -55,14 +69,14 @@ export default function QuizClient({ grade }) {
 
     useEffect(() => {
         const getData = async () => {
-            const data = await getAllResponses("Akshay");
+            const data = await getAllResponses(username);
             mergeWithState(data);
             return data;
         };
         getData().then((res) => {
             console.log(res);
         });
-    }, []);
+    }, [username]);
 
     function mergeWithState(data) {
         for (const responseObj of data) {
@@ -84,7 +98,7 @@ export default function QuizClient({ grade }) {
 
     function handleAnswerSelect(value, questionId) {
         const insertData = async () => {
-            await storeResponse("Akshay", questionId, value);
+            await storeResponse(username, questionId, value);
         };
         insertData();
 
@@ -96,8 +110,8 @@ export default function QuizClient({ grade }) {
 
     function handleSubmit() {
         setIsLoading(true);
-        storeTopKIndustries("Akshay", 3).then(() => {
-            router.replace("/results");
+        storeTopKIndustries(username, 3, grade).then(() => {
+            router.replace(`/results/?grade=${grade}`);
         });
     }
 
@@ -148,7 +162,7 @@ export default function QuizClient({ grade }) {
           flex flex-col justify-center items-center
         `}
             >
-                <div className="font-sans text-[40px] py-10">Career Quiz</div>
+                <div className="font-primary text-[40px] py-10">Career Quiz</div>
                 <div className="flex items-center">
                     <button
                         className="mr-10"

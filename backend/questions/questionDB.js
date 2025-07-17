@@ -1,5 +1,5 @@
 import { db } from "../../src/utils/firebase.js";
-import { collection, getDocs, query, where, limit, addDoc, updateDoc} from "firebase/firestore";
+import { collection, getDocs, query, where, limit, addDoc, updateDoc, writeBatch, orderBy} from "firebase/firestore";
 
 export async function storeResponse(username, questionNumber, questionResponse){
     /*
@@ -56,6 +56,8 @@ export async function getAllResponses(username){
     return res;
 }
 
+
+
 export async function getResponse(username, questionNumber){
     const responsesReference = collection(db, "userResponses")
     
@@ -76,7 +78,39 @@ export async function getResponse(username, questionNumber){
     }
 }
 
+export async function deleteAllResponses(username){
+    const responsesReference = collection(db, "userResponses")
 
+    const q = query(
+        responsesReference, 
+        where("username", '==', username), 
+    );
+
+    const docs = await getDocs(q);
+    const batch = writeBatch(db);
+    docs.forEach((doc) => {
+        batch.delete(doc.ref);
+    });
+    await batch.commit();
+}
+
+export async function getGradeOfMostRecentSubmission(username) {
+    const submissionsReference = collection(db, "submissions");
+
+    const q = query(
+        submissionsReference,
+        where("username", "==", username),
+        orderBy("timestamp", "desc"),
+        limit(1)
+    );
+
+    const docs = await getDocs(q);
+    if (!docs.empty) {
+        return docs.docs[0].data().grade;
+    } else {
+        return null; 
+    }
+}
 
 
 

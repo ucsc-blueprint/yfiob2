@@ -9,8 +9,8 @@ function App() {
             {/* Rest of content */}
             <div className="max-w-7xl mx-auto py-10 px-4">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-sans">Explore Careers</h2>
-                    <p className="mt-2 font-sans">Choose your grade level to begin!</p>
+                    <h2 className="text-2xl font-primary">Explore Careers</h2>
+                    <p className="mt-2 font-primary">Choose your grade level to begin!</p>
                 </div>
                 <div className="flex items-center justify-center space-x-8">
                     <Link href="/explore-industries?grade=elementary-school">

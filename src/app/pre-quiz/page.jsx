@@ -30,8 +30,8 @@ function App() {
             <div className="flex-grow flex items-center justify-center pt-0">
                 <div className="max-w-6xl w-full px-8 pt-0 pb-20">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-sans">Career Quiz</h2>
-                        <p className="mt-3 font-sans text-lg">
+                        <h2 className="text-3xl font-primary">Career Quiz</h2>
+                        <p className="mt-3 font-primary text-lg">
                             Choose your grade level to begin!
                         </p>
                     </div>

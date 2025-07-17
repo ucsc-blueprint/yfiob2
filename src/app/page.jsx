@@ -29,7 +29,7 @@ function App() {
             <Navbar />
             {/* Top Section */}
             <div className="bg-[#E8F6FF] h-[40vh] flex flex-col items-center justify-center">
-                <h1 className="text-3xl font-sans mb-4">
+                <h1 className="text-3xl font-primary mb-4">
                     Discover a career path that matches your unique interests!
                 </h1>
                 <div className="flex items-center justify-center space-x-40 mt-6">
@@ -64,8 +64,8 @@ function App() {
             {/* Career Quiz Section */}
             <div className="max-w-7xl mx-auto py-10 px-4">
                 <div className="text-center mb-8">
-                    <h2 className="text-2xl font-sans">Career Quiz</h2>
-                    <p className="mt-2 font-sans">Choose your grade level to begin!</p>
+                    <h2 className="text-2xl font-primary">Career Quiz</h2>
+                    <p className="mt-2 font-secondary">Choose your grade level to begin!</p>
                 </div>
                 <div className="flex items-center justify-center space-x-8">
                     <button

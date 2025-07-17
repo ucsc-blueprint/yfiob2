@@ -7,9 +7,8 @@ module.exports = {
 
     theme: {
         fontFamily: {
-            lato: ["lato-regular", "Lato"],
-            kumbh: ["'Kumbh Sans'", "sans-serif"],
-            sans: ["industry", "sans-serif"],
+            primary: "var(--font-primary)",
+            secondary: "var(--font-secondary)",
         },
         extend: {},
     },

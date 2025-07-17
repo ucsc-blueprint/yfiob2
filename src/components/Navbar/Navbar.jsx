@@ -1,28 +1,37 @@
 "use client";
 
 import { useRouter } from "next/navigation";
-import { useState, useEffect } from "react";
-
+import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
-
-import { signOut, onAuthStateChanged } from "firebase/auth";
+import { signOut, onAuthStateChanged, getAuth } from "firebase/auth";
 import { auth } from "../../utils/firebase";
+import { checkIsAdmin } from "../../../backend/adminFuncs/adminUtils.js";
 
 export const Navbar = () => {
+    const isAdmin = useRef(false);
     const [isOpen, setIsOpen] = useState(false);
     const [isDropdownOpen, setIsDropdownOpen] = useState(false);
     const [isLoggedIn, setIsLoggedIn] = useState(false);
-
     const router = useRouter();
+    const authInstance = getAuth();
 
     useEffect(() => {
-        const unsubscribe = onAuthStateChanged(auth, (user) => {
+        const unsubscribe = onAuthStateChanged(authInstance, async (user) => {
             setIsLoggedIn(!!user);
+
+            if (user?.email) {
+                isAdmin.current = await checkIsAdmin(user.email);
+                console.log("isAdmin:", isAdmin.current);
+            }
         });
 
-        return () => unsubscribe;
-    }, []);
+        return () => {
+            if (typeof unsubscribe === "function") {
+                unsubscribe();
+            }
+        };
+    }, [authInstance]);
 
     const handleLoginClick = () => {
         router.push("/login");
@@ -30,16 +39,17 @@ export const Navbar = () => {
 
     const handleLogout = async () => {
         try {
-            await signOut(auth);
+            await signOut(authInstance);
             alert("Logout successful!");
             router.push("/login");
+            isAdmin.current = false;
         } catch (error) {
             alert("Logout failed: " + error.message);
         }
     };
 
     return (
-        <div className="bg-white shadow-md">
+        <div className="bg-white shadow-md font-lato">
             <div className="flex items-center justify-between px-6 h-[20vw] md:h-auto">
                 {/* Logo */}
                 <div className="font-bold py-2 z-30">
@@ -80,7 +90,7 @@ export const Navbar = () => {
                 </button>
 
                 {/* Navigation Links - Desktop */}
-                <div className="font-lato">
+                <div className="font-secondary">
                     <Link href={"/"} className="px-3 hover:text-[#4C78E7] py-1 text-[1.1rem]">
                         Home
                     </Link>
@@ -103,13 +113,13 @@ export const Navbar = () => {
                     <div className="hidden md:flex px-6 relative">
                         <button
                             onClick={() => setIsDropdownOpen(!isDropdownOpen)}
-                            className={`flex items-center justify-center w-[180px] h-[62px] text-[20px] font-semibold font-sans ${
+                            className={`flex items-center justify-center w-[180px] h-[62px] text-[20px] font-semibold font-primary ${
                                 isDropdownOpen
                                     ? "bg-[#1A6567] text-white rounded-t-[10px] rounded-b-none"
                                     : "bg-[#1A6567] text-white rounded-[10px]"
                             } shadow-md transition-all`}
                         >
-                            <span className="font-sans">Profile</span>
+                            <span className="font-primary">Profile</span>
                             <span className="ml-2">
                                 {isDropdownOpen ? (
                                     <svg
@@ -225,15 +235,15 @@ export const Navbar = () => {
                     <div className="hidden md:flex px-6">
                         <button
                             onClick={handleLoginClick}
-                            className="flex items-center justify-center w-[180px] h-[62px] text-[20px] font-semibold font-sans bg-[#1A6567] text-white rounded-[10px] shadow-md transition-all"
+                            className="flex items-center justify-center w-[180px] h-[62px] text-[20px] font-semibold font-primary bg-[#1A6567] text-white rounded-[10px] shadow-md transition-all"
                         >
-                            <span className="font-sans">Login</span>
+                            <span className="font-primary">Login</span>
                         </button>
                     </div>
                 )}
             </div>
 
-            {/* Navigation Links - Mobile */}
+            {/* Mobile Menu */}
             <div
                 className={`absolute z-0 left-0 w-full bg-white shadow-md flex flex-col items-center transition-transform duration-300 md:hidden p-6 ${
                     isOpen ? "translate-y-8" : "-translate-y-[200%]"
@@ -247,7 +257,7 @@ export const Navbar = () => {
                     Home
                 </Link>
                 <Link
-                    href={"/take-quiz"}
+                    href={"/pre-quiz"}
                     onClick={() => setIsOpen(false)}
                     className="text-lg text-black hover:text-blue-600 p-2"
                 >
@@ -260,9 +270,18 @@ export const Navbar = () => {
                 >
                     Explore Careers
                 </Link>
+                {isAdmin.current && (
+                    <Link
+                        href="/admin"
+                        onClick={() => setIsOpen(false)}
+                        className="text-lg text-black hover:text-blue-600 p-2 font-semibold"
+                    >
+                        Admin
+                    </Link>
+                )}
                 {isLoggedIn ? (
                     <Link
-                        href={"/results"}
+                        href="/results"
                         onClick={() => setIsOpen(false)}
                         className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white m-2"
                     >

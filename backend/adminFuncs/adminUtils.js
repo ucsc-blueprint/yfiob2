@@ -24,3 +24,23 @@ export async function getAllIndustries(){
     const industriesArr = Object.entries(industries).sort();
     return industriesArr;
 }
+
+// Checks  if the user is an admin
+export async function checkIsAdmin(email){
+    const responsesReference = collection(db, "users")
+    const q = query(
+        responsesReference, 
+        where("email", '==', email), 
+    );
+  
+    // Returns array of users answer chocies
+    const docs = await getDocs(q); // This line is giving me permission issues
+    if (docs.empty) {
+        return false; // User not found
+    }
+    const data = docs.docs[0].data();
+    if (!data.isAdmin) {
+        return false;
+    }
+    return data.isAdmin;
+}
