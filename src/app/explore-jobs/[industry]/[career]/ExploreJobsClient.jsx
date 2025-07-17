@@ -22,7 +22,7 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
     const careerJobs = CareerGroups[industry]["careers"][career].jobs;
 
     const HeaderSection = () => (
-        <div className="flex flex-col items-center font-kumbh py-10">
+        <div className="flex flex-col items-center font-primary py-10">
             <div className="font-[500] flex flex-col items-center">
                 <h1 className="text-[40px]">{careerTitle}</h1>
             </div>
@@ -48,7 +48,7 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                 <div className="flex flex-col md:flex-row gap-6">
                     {/* Left Sidebar - Job List */}
                     <div className="w-full md:w-1/3">
-                        <div className="bg-blue-500 text-white p-4 text-center font-bold">
+                        <div className="bg-blue-500 text-white p-4 text-center font-bold font-primary">
                             Jobs/Occupations
                         </div>
                         <div className="border border-gray-200">
@@ -81,14 +81,14 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                                         <div className="text-4xl">
                                             {selectedJob?.icon ? (
                                                 <img
-                                                    src={selectedJob.icon} // choose icon from json file
+                                                    src={selectedJob.icon}
                                                     alt={selectedJob.title || "Job icon"}
                                                     className="w-full h-full object-contain"
                                                     style={{ filter: iconHue[grade] }}
                                                 />
                                             ) : (
                                                 <span
-                                                    className="text-4xl" // if null, place emoji
+                                                    className="text-4xl"
                                                     role="img"
                                                     aria-label="Smiley face emoji"
                                                 >
@@ -101,7 +101,7 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
                             </div>
 
                             <div className="md:w-2/3">
-                                <h2 className="text-2xl font-bold text-center md:text-left">
+                                <h2 className="text-2xl font-bold text-center md:text-left font-primary">
                                     {selectedJob?.title}
                                 </h2>
                             </div>
@@ -109,18 +109,18 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
 
                         {/* Job details sections */}
                         <div className="mb-6">
-                            <h3 className="text-xl font-bold mb-2">Job Tasks:</h3>
+                            <h3 className="text-xl font-bold mb-2 font-primary">Job Tasks:</h3>
                             <p className="text-sm">{selectedJob?.jobTasks || lorem}</p>
                         </div>
                         <div className="mb-6">
-                            <h3 className="text-xl font-bold mb-2">Earnings:</h3>
+                            <h3 className="text-xl font-bold mb-2 font-primary">Earnings:</h3>
                             <div className="text-xl font-bold text-green-800 mb-2">
                                 ${selectedJob?.earnings?.toLocaleString() || "1234"}
                             </div>
                             <p className="text-sm">{selectedJob?.earningsDetails || lorem}</p>
                         </div>
                         <div>
-                            <h3 className="text-xl font-bold mb-2">Training:</h3>
+                            <h3 className="text-xl font-bold mb-2 font-primary">Training:</h3>
                             <p className="text-sm">{selectedJob?.training || lorem}</p>
                         </div>
                     </div>

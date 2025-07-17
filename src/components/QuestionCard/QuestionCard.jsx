@@ -1,4 +1,3 @@
-
 const agreeArray = ["Strongly Disagree", "Disagree", "Neutral", "Agree", "Strongly Agree"];
 
 export const QuestionCard = ({
@@ -35,14 +34,14 @@ export const QuestionCard = ({
 
     return (
         <div
-            className={`bg-slate-300 w-[66vw] h-[51vh] rounded-[20px] font-lato shadow-md overflow-hidden`}
+            className={`bg-slate-300 w-[66vw] h-[51vh] rounded-[20px] font-secondary shadow-md overflow-hidden`}
         >
             <div
                 className={`${bgColor} h-[10%] w-[25%] rounded-tl-[20px]`}
                 style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
             ></div>
             <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col justify-center overflow-y-auto overlfow-x-hidden">
-                <div className={`font-lato italic ${gcolor} mb-5 pl-[11.5%]`}>
+                <div className={`font-secondary italic ${gcolor} mb-5 pl-[11.5%]`}>
                     "Don't worry about time, money, training, or education. Just think do you
                     enjoy it?"
                 </div>

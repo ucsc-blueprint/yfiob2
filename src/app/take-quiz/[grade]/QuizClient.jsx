@@ -162,7 +162,7 @@ export default function QuizClient({ grade }) {
           flex flex-col justify-center items-center
         `}
             >
-                <div className="font-kumbh text-[40px] py-10">Career Quiz</div>
+                <div className="font-primary text-[40px] py-10">Career Quiz</div>
                 <div className="flex items-center">
                     <button
                         className="mr-10"

@@ -38,15 +38,17 @@ export const Page = () => {
                     />
                     {/* Content Wrapper */}
                     <div className="w-[502px] space-y-6">
-                        <h1 className="font-medium font-kumbh text-[40px] leading-[40px] tracking-normal text-center">
+                        <h1 className="font-medium font-primary text-[40px] leading-[40px] tracking-normal text-center">
                             Career Quiz
                         </h1>
-                        <p className="font-medium text-[26px] leading-[40px] tracking-normal text-center font-kumbh pb-6">
+                        <p className="font-medium text-[26px] leading-[40px] tracking-normal text-center font-primary pb-6">
                             Would you like to save your results?
                         </p>
                         {/* Account Options Box */}
                         <div className="bg-white h-[422px] w-[489px] rounded-[20px] shadow-[0px_4px_9.4px_rgba(0,0,0,0.1)] flex flex-col justify-center items-center">
-                            <p className="font-lato font-normal text-lg">Create an account</p>
+                            <p className="font-secondary font-normal text-lg">
+                                Create an account
+                            </p>
                             <div className="w-full px-[51px] h-[57px] my-[15px]">
                                 <BoxButton
                                     text="Sign Up"
@@ -54,7 +56,7 @@ export const Page = () => {
                                     onClick={handleSignUpClick}
                                 />
                             </div>
-                            <p className="font-lato font-normal text-lg mt-2">
+                            <p className="font-secondary font-normal text-lg mt-2">
                                 Already have an account?
                             </p>
                             <div className="w-full px-[51px] h-[57px] my-4">
@@ -67,7 +69,9 @@ export const Page = () => {
                             <div className="w-full px-[51px] my-4">
                                 <div className="flex items-center justify-between w-full">
                                     <div className="flex-1 h-px bg-black" />
-                                    <p className="px-4 text-sm font-lato text-black">OR</p>
+                                    <p className="px-4 text-sm font-secondary text-black">
+                                        OR
+                                    </p>
                                     <div className="flex-1 h-px bg-black" />
                                 </div>
                             </div>
