@@ -70,7 +70,7 @@ export default function QuizClient({ grade }) {
     useEffect(() => {
         const getData = async () => {
             const data = await getAllResponses(username);
-            mergeWithState(data);
+            mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
             return data;
         };
         getData().then((res) => {
