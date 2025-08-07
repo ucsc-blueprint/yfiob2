@@ -118,7 +118,7 @@ function Page() {
 	function JobContainer({ children, name }) {
 		const toggled = open.includes(name);
 		return (
-			<div>
+			<div className="my-8 outline-[#104c5a1a] border-[1px] rounded-md">
 				<div className="w-full bg-[#185D6D1A] text-[20px] flex items-center justify-center rounded-[5px]">
 					<button
 						className="rounded-3xl bg-white m-2  h-[30px] w-[30px] flex justify-center items-center"
@@ -191,8 +191,7 @@ function Page() {
 					<div className="overflow-y-auto no-scrollbar">
 						{jobData.map((industry, index) => {
 							return (
-								<div className="my-8 outline-[#104c5a1a] border-[1px] rounded-md">
-									<JobContainer key={index} name={industry.name}>
+								<JobContainer key={index} name={industry.name}>
 										{industry.jobs.map((job) => {
 											if (job.name) {
 												return <><JobItem key={job.id} job={job} /><hr className="border-[#888888] border-1"/></>;
@@ -201,7 +200,6 @@ function Page() {
 											}
 										})}
 								</JobContainer>
-								</div>
 							);
 						})}
 					</div>
