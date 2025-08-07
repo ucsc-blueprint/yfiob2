@@ -27,7 +27,7 @@ export const CareersCard = ({
     return (
         <a href={href}>
             <div
-                className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] bg-white shadow-md`}
+                className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
             >
                 <header
                     className={`${backgroundColor[safeGrade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white font-semibold h-[99px] items-center text-center font-primary`}

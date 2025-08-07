@@ -111,7 +111,7 @@ export default function QuizResultsPage() {
     }
     if (industries.length > 0) {
       fetchCareers();
-    }
+    }})
 
     useEffect(() => {
         const fetchCareers = async () => {
@@ -228,112 +228,60 @@ export default function QuizResultsPage() {
 
       {/* Full-screen hero */}
       <section className="flex flex-col items-center justify-center bg-white min-h-[calc(100vh-80px)] px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
-            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[industries.length - 1][0]}</h1>
-          </div>
-          <img
-            src="/assets/ResultsPuzzlePiece.svg"
-            alt="Puzzle piece"
-            className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
-          />
-        </div>
-        <div className="w-full max-w-4xl h-80 mt-8">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={chartData}
-              margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
-              barGap={0}
-              barCategoryGap="-20%"
-            >
-              <XAxis
-                dataKey="name"
-                axisLine={false}
-                tickLine={false}
-                interval={0}
-                height={60}
-                tick={{ fill: "#555", fontSize: 16 }}
+          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
+              <div className="text-center md:text-left">
+                  <h2 className="text-2xl font-semibold">
+                      Your Most Ideal Career Pathway Is:
+                  </h2>
+                  <h1 className="mt-4 text-5xl font-bold">
+                      {industries.length > 0 && industries[industries.length - 1][0]}
+                  </h1>
+              </div>
+              <img
+                  src="/assets/ResultsPuzzlePiece.svg"
+                  alt="Puzzle piece"
+                  className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
               />
-              <Tooltip formatter={val => `${val}%`} cursor={false} />
-              <Bar dataKey="value" isAnimationActive={false} barSize={140}>
-                {chartData.map((entry, idx) => (
-                  <Cell key={idx} fill={entry.fill} />
-                ))}
-                <LabelList
-                  dataKey="value"
-                  position="top"
-                  formatter={val => `${val}%`}
-                  style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
-                />
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-        <h3 className="text-center text-2xl font-bold">
-            Your top job recommendations for{" "}
-            <span className="font-extrabold text-green-700">
-          {industries.length > 0 && industries[industries.length - 1][0]}
-            </span>
+          </div>
+          <div className="w-full max-w-4xl h-80 mt-8">
+              <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                      data={chartData}
+                      margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
+                      barGap={0}
+                      barCategoryGap="-20%"
+                  >
+                      <XAxis
+                          dataKey="name"
+                          axisLine={false}
+                          tickLine={false}
+                          interval={0}
+                          height={60}
+                          tick={{ fill: "#555", fontSize: 16 }}
+                      />
+                      <Tooltip formatter={(val) => `${val}%`} cursor={false} />
+                      <Bar dataKey="value" isAnimationActive={false} barSize={140}>
+                          {chartData.map((entry, idx) => (
+                              <Cell key={idx} fill={entry.fill} />
+                          ))}
+                          <LabelList
+                              dataKey="value"
+                              position="top"
+                              formatter={(val) => `${val}%`}
+                              style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
+                          />
+                      </Bar>
+                  </BarChart>
+              </ResponsiveContainer>
+          </div>
+          <h3 className="text-center text-2xl font-bold">
+              Your top job recommendations for{" "}
+              <span className="font-extrabold text-green-700">
+                  {industries.length > 0 && industries[industries.length - 1][0]}
+              </span>
           </h3>
       </section>
-
-            {/* Full-screen hero */}
-            <section className="flex flex-col items-center justify-center bg-white min-h-[calc(100vh-80px)] px-4">
-                <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
-                    <div className="text-center md:text-left">
-                        <h2 className="text-2xl font-semibold">
-                            Your Most Ideal Career Pathway Is:
-                        </h2>
-                        <h1 className="mt-4 text-5xl font-bold">
-                            {industries.length > 0 && industries[industries.length - 1][0]}
-                        </h1>
-                    </div>
-                    <img
-                        src="/assets/ResultsPuzzlePiece.svg"
-                        alt="Puzzle piece"
-                        className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
-                    />
-                </div>
-                <div className="w-full max-w-4xl h-80 mt-8">
-                    <ResponsiveContainer width="100%" height="100%">
-                        <BarChart
-                            data={chartData}
-                            margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
-                            barGap={0}
-                            barCategoryGap="-20%"
-                        >
-                            <XAxis
-                                dataKey="name"
-                                axisLine={false}
-                                tickLine={false}
-                                interval={0}
-                                height={60}
-                                tick={{ fill: "#555", fontSize: 16 }}
-                            />
-                            <Tooltip formatter={(val) => `${val}%`} cursor={false} />
-                            <Bar dataKey="value" isAnimationActive={false} barSize={140}>
-                                {chartData.map((entry, idx) => (
-                                    <Cell key={idx} fill={entry.fill} />
-                                ))}
-                                <LabelList
-                                    dataKey="value"
-                                    position="top"
-                                    formatter={(val) => `${val}%`}
-                                    style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
-                                />
-                            </Bar>
-                        </BarChart>
-                    </ResponsiveContainer>
-                </div>
-                <h3 className="text-center text-2xl font-bold">
-                    Your top job recommendations for{" "}
-                    <span className="font-extrabold text-green-700">
-                        {industries.length > 0 && industries[industries.length - 1][0]}
-                    </span>
-                </h3>
-            </section>
-        {/* Green cards section */}
+      {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {careers.map((job, i) => (

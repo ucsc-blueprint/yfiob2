@@ -250,21 +250,21 @@ export const Navbar = () => {
                 }`}
             >
                 <Link
-                    href="/"
+                    href={"/"}
                     onClick={() => setIsOpen(false)}
                     className="text-lg text-black hover:text-blue-600 p-2"
                 >
                     Home
                 </Link>
                 <Link
-                    href="/take-quiz"
+                    href={"/pre-quiz"}
                     onClick={() => setIsOpen(false)}
                     className="text-lg text-black hover:text-blue-600 p-2"
                 >
                     Take Quiz!
                 </Link>
                 <Link
-                    href="/choose-grade-level"
+                    href={"/choose-grade-level"}
                     onClick={() => setIsOpen(false)}
                     className="text-lg text-black hover:text-blue-600 p-2"
                 >
@@ -289,7 +289,7 @@ export const Navbar = () => {
                     </Link>
                 ) : (
                     <Link
-                        href="/login"
+                        href={"/login"}
                         onClick={() => setIsOpen(false)}
                         className="text-lg text-black bg-[#4C78E757] px-5 py-2 rounded-full hover:text-white m-2"
                     >

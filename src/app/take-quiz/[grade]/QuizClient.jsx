@@ -32,13 +32,13 @@ export default function QuizClient({ grade }) {
     }, [auth, username]);
 
     const searchParams = useSearchParams();
-    const isValid = searchParams.get('valid') === 'true';
+    const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
 
     // If not a valid session, redirect to choose-account-type
     useEffect(() => {
         if (!isValid) {
-            router.push(`/choose-account-type?grade=${grade}`)
+            router.push(`/choose-account-type?grade=${grade}`);
         }
     }, [isValid, router, grade]);
 
@@ -70,7 +70,7 @@ export default function QuizClient({ grade }) {
     useEffect(() => {
         const getData = async () => {
             const data = await getAllResponses(username);
-            mergeWithState(data);
+            mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
             return data;
         };
         getData().then((res) => {
@@ -202,16 +202,16 @@ export default function QuizClient({ grade }) {
                 </div>
 
                 {isLoading && (
-                    <div className="mt-2 text-sm text-gray-500">
-                        Matching with careers...
-                    </div>
+                    <div className="mt-2 text-sm text-gray-500">Matching with careers...</div>
                 )}
                 {questionNum === questionsForLevel.length - 1 && (
                     <div className="mt-6 flex flex-col justify-center">
-                        <button onClick={handleSubmit} className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
+                        <button
+                            onClick={handleSubmit}
+                            className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700"
+                        >
                             Submit
                         </button>
-                        
                     </div>
                 )}
             </div>
