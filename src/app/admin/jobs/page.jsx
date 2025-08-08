@@ -85,7 +85,7 @@ function Page() {
 			<div className="mx-2 p-2" key={job.id}>
 				<div className="flex" id={job.name}>
 					<div className="flex gap-2">
-						<img src="/assets/business-icon.svg" alt="suitcase"/>
+						<img src="/assets/business_center.svg" alt="suitcase"/>
 						<p>{job.name}</p>
 					</div>
 					<div className="ml-auto flex gap-2">
