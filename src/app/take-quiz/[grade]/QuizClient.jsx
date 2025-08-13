@@ -134,9 +134,9 @@ export default function QuizClient({ grade }) {
     );
 
     const gradeColor = {
-        "elementary-school": "bg-[#9AD7F8]",
-        "middle-school": "bg-[#BAE98E]",
-        "high-school": "bg-[#FFC273]",
+        "elementary-school": "bg-[#A8DEED]",
+        "middle-school": "bg-[#B8CB71]",
+        "high-school": "bg-[#FFD85F]",
     };
     const color = gradeColor[grade] || "blue";
 
