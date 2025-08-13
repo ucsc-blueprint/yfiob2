@@ -7,9 +7,9 @@ import { Navbar } from "../../components/Navbar/Navbar";
 const CareerGroups = await require("../../../constants/CareerGroups.json");
 
 const backgroundColor = {
-    "elementary-school": "bg-[#185D6D]",
-    "middle-school": "bg-[#6C7632]",
-    "high-school": "bg-[#974B18]",
+    "elementary-school": "bg-darkBlue",
+    "middle-school": "bg-darkGreen",
+    "high-school": "bg-darkOrange",
 };
 const gradeName = {
     "elementary-school": "Grades K - 5",

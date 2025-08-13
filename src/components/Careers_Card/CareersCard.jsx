@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const backgroundColor = {
-    "elementary-school": "[#185D6D]",
-    "middle-school": "[#6C7632]",
-    "high-school": "[#974B18]",
+    "elementary-school": "darkBlue",
+    "middle-school": "darkGreen",
+    "high-school": "darkOrange",
 };
 
 const jignaColor = {
