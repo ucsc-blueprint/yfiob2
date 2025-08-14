@@ -23,9 +23,9 @@ const jignaColor = {
 };
 
 const jignaHue = {
-    "elementary-school": "hue-rotate(0deg)",
-    "middle-school": "hue-rotate(-75deg)",
-    "high-school": "hue-rotate(215deg)",
+    "elementary-school": "hue-rotate(20deg)",
+    "middle-school": "hue-rotate(270deg)",
+    "high-school": "hue-rotate(200deg)",
 };
 
 export const CareersCard = ({
