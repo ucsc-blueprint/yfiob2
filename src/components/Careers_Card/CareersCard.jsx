@@ -44,7 +44,7 @@ export const CareersCard = ({
                 className={`border-2 border-${backgroundColor[grade]} no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
             >
                 <header
-                    className={`bg-${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center`}
+                    className={`bg-${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
                 >
                     <div>
                     {title}
