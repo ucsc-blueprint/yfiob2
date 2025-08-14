@@ -2,10 +2,24 @@ import Image from "next/image";
 import React from "react";
 
 const backgroundColor = {
-    "elementary-school": "bg-blue-400",
-    "middle-school": "bg-green-400",
-    "high-school": "bg-orange-400",
-    "default": "bg-gray-700"
+    "elementary-school": "darkBlue",
+    "middle-school": "darkGreen",
+    "high-school": "darkOrange",
+};
+
+const jignaColor = {
+  "elementary-school": {
+    "#A8E6F1": "#A8E6F1", // example alt light color
+    "#185D6D": "#185D6D", // example alt dark color
+  },
+  "middle-school": {
+    "#A8E6F1": "#D8EF88", // light blue → yellow
+    "#185D6D": "#4F5C25", // dark blue → brown
+  },
+  "high-school": {
+    "#A8E6F1": "#FFD969", // light blue → lavender
+    "#185D6D": "#824014", // dark blue → deep purple
+  },
 };
 
 const jignaHue = {
@@ -27,10 +41,10 @@ export const CareersCard = ({
     return (
         <a href={href}>
             <div
-                className={`no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
+                className={`border-2 border-${backgroundColor[grade]} no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
             >
                 <header
-                    className={`${backgroundColor[safeGrade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white font-semibold h-[99px] items-center text-center font-primary`}
+                    className={`bg-${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
                 >
                     <div>
                     {title}
