@@ -1,5 +1,3 @@
-const { buildQueries } = require("@testing-library/dom")
-
 module.exports = {
     content: [
         "./src/app/**/*.{js,ts,jsx,tsx}",
