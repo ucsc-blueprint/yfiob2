@@ -31,7 +31,7 @@ function CollegeCard({ onResponse, grade }) {
     };
 
     return (
-        <div className="bg-slate-400 w-full max-w-4xl mx-auto h-[50vh] min-h-[400px] rounded-[20px] font-lato shadow-md overflow-hidden">
+        <div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-secondary shadow-md overflow-hidden">
             <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex">
                 <div className="w-2/5 h-full flex flex-col">
                     <div className="grow relative mb-1 rounded-md overflow-hidden">

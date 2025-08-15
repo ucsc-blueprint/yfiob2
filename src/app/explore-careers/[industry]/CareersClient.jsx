@@ -15,13 +15,13 @@ export default function CareersClient({ industry }) {
         key: key,
         title: CareerGroups[industry].careers[key].title,
         description: null, //TODO: MAKE IT PULL FROM A DATA FILE
-        image: null, //TODO: MAKE IT PULL FROM A DATA FILE
+        image: CareerGroups[industry].careers[key].image,
     }));
 
     console.log(grade);
 
     const HeaderSection = () => (
-        <div className="flex flex-col items-center font-kumbh py-[7.5rem]">
+        <div className="flex flex-col items-center font-primary py-[7.5rem]">
             <div className="font-[500] flex flex-col items-center">
                 <h1 className="text-[40px]">{CareerGroups[industry].title}</h1>
             </div>

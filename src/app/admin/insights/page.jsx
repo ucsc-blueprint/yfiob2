@@ -1,7 +1,5 @@
 "use client";
 import { useEffect, useState } from "react";
-import { collection, addDoc, getDocs, Timestamp } from "firebase/firestore";
-import { db } from "../../../utils/firebase.js";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import getData from "../../../utils/getData";
 import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
@@ -19,9 +17,9 @@ export default function AdminInsights() {
     2: "border-t-[20px] border-[#BD7800]",
     3: "border-t-[20px] border-[#BD4500]",
   };
+
   
   useEffect(()=> {
-    console.log("in useeffect")
     const getData = async () => {
       getAllIndustries().then((data)=>{
         setIndustriesRecommended(data);
@@ -171,6 +169,21 @@ export default function AdminInsights() {
     { percent: 25, label: "Agricultural and Engineering", color: "border-red-500" },
   ];
 
+  const getColor = (percentage) => {
+    switch (percentage) {
+      case percentage > 15:
+        return "border-green-500";
+      case percentage > 10:
+        return "border-yellow-500";
+      case percentage > 5:
+        return "border-orange-500";
+      case percentage > 0:
+        return "border-red-500";
+      default:
+        return "border-gray-300";
+    }
+  }
+
   return (
     <>
       <AdminNavbar />
@@ -270,12 +283,12 @@ export default function AdminInsights() {
             <div className="grid grid-cols-3 gap-6">
   {industriesRecommended.map(([industryName, percentage], idx) => (
     <div
-      key={industryName}
+      key={idx}
       className="bg-white rounded-lg shadow overflow-hidden"
     >
                 <div
                   className={`h-6 ${
-                    gradeColor[idx]
+                    getColor(percentage)
                   }`}
                 />
                 <div className="p-6 text-center">

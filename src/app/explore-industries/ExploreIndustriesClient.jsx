@@ -7,9 +7,9 @@ import { Navbar } from "../../components/Navbar/Navbar";
 const CareerGroups = await require("../../../constants/CareerGroups.json");
 
 const backgroundColor = {
-    "elementary-school": "bg-[#2CA9F6]",
-    "middle-school": "bg-[#75D122]",
-    "high-school": "bg-[#FF9E1E]",
+    "elementary-school": "bg-darkBlue",
+    "middle-school": "bg-darkGreen",
+    "high-school": "bg-darkOrange",
 };
 const gradeName = {
     "elementary-school": "Grades K - 5",
@@ -22,7 +22,7 @@ export default function ExploreIndustriesClient() {
     const grade = searchParams.get("grade") ?? "elementary-school";
 
     const HeaderSection = () => (
-        <div className="flex flex-col items-center font-kumbh py-10">
+        <div className="flex flex-col items-center font-primary py-10">
             <div
                 className={`flex items-center text-[36px] mb-7 px-5 py-2 rounded-lg text-white font-[500] ${backgroundColor[grade]}`}
             >
@@ -30,7 +30,7 @@ export default function ExploreIndustriesClient() {
             </div>
             <div className="font-[500] flex flex-col items-center">
                 <h1 className="text-[40px]">Explore Careers</h1>
-                <h2 className="text-[26px]">Choose a career area to begin!</h2>
+                <h2 className="text-[26px] font-secondary">Choose a career area to begin!</h2>
             </div>
         </div>
     );

@@ -19,6 +19,9 @@ export default function RootLayout({ children }) {
                     rel="stylesheet"
                 />
 
+                {/*industry font*/}
+                <link rel="stylesheet" href="https://use.typekit.net/dvf3sqy.css" />
+
                 <meta charSet="UTF-8" />
                 <link rel="icon" href="/assets/YFIOBLogo.png" />
                 <meta name="viewport" content="width=device-width, initial-scale=1" />

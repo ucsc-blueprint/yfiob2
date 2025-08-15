@@ -1,32 +1,31 @@
 // Incorporate useStates to save the user's input
-'use client';
+"use client";
 
-export default function TextBox({Placeholder, onChange, onFocus, onBlur, value, id, type}) {
-
-
+export default function TextBox({ Placeholder, onChange, onFocus, onBlur, value, id, type }) {
     return (
         <>
-        <input 
-        type={type ? type : "text"}
-        placeholder={Placeholder}
-        color='#FFFFFF'
-        className = "focus:outline-none"
-        style={{width: "502px",
-            height: "61px",
-            borderRadius: "10px",
-            textIndent: '30px',
-            fontFamily: "Lato",
-            color: "#898989",
-            fontWeight: 400,
-            lineHeight: '20px',
-            fontSize: '20px',
-        }}
-        onChange={onChange}
-        onFocus={onFocus}
-        onBlur={onBlur}
-        value={value}
-        id={id}
-        />
+            <input
+                type={type ? type : "text"}
+                placeholder={Placeholder}
+                color="#FFFFFF"
+                className="focus:outline-none"
+                style={{
+                    width: "502px",
+                    height: "61px",
+                    borderRadius: "10px",
+                    textIndent: "30px",
+                    fontFamily: "secondary",
+                    color: "#898989",
+                    fontWeight: 400,
+                    lineHeight: "20px",
+                    fontSize: "20px",
+                }}
+                onChange={onChange}
+                onFocus={onFocus}
+                onBlur={onBlur}
+                value={value}
+                id={id}
+            />
         </>
     );
 }

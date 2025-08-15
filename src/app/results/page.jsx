@@ -1,9 +1,10 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { useEffect, useState } from "react";
+import { use, useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
+import { useRouter } from "next/navigation";
 import {
   BarChart,
   Bar,
@@ -15,47 +16,120 @@ import {
 } from "recharts";
 import CareersCard from "../../components/Careers_Card/CareersCard";
 import {
-  ChevronDownIcon,
-  RefreshIcon,
-  ShareIcon,
-  PaperAirplaneIcon,
+    ChevronDownIcon,
+    RefreshIcon,
+    ShareIcon,
+    PaperAirplaneIcon,
 } from "@heroicons/react/outline";
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
+import { deleteAllResponses, getGradeOfMostRecentSubmission } from "../../../backend/questions/questionDB";
+import { getAuth, onAuthStateChanged } from "firebase/auth";
 
 
 export default function QuizResultsPage() {
+  const router = useRouter();
+
+  const [gradeParam, setGradeParam] = useState("");
   const [industries, setIndustries] = useState([]);
   const [careers, setCareers] = useState([]);
+  const [secondCareers, setSecondCareers] = useState([]);
+  const [thirdCareers, setThirdCareers] = useState([]);
+  const auth = getAuth();
+  const [username, setUsername] = useState("Guest");
+
   useEffect(() => {
+    if (typeof window !== "undefined") {
+      const searchParams = new URLSearchParams(window.location.search);
+      const grade = searchParams.get("grade");
+      if (grade) setGradeParam(grade);
+    }
+  }, []);
+
+  useEffect(()=> {
+    console.log("Grade parameter:", gradeParam);
+    const checkGradeOfRecentSubmission = async () => {
+      await getGradeOfMostRecentSubmission(username).then((grade) => {
+        console.log("Grade of most recent submission:", grade);
+        if (grade) {
+          console.log("Grade of most recent submission:", grade);
+          gradeParam = grade;
+        } else {
+          router.replace("/pre-quiz");
+        }
+      });
+    }
+
+    if(!gradeParam && username !== "Guest") {
+      checkGradeOfRecentSubmission();
+    }
+  }, [gradeParam, username])
+ 
+
+  
+  useEffect(() => {
+    onAuthStateChanged(auth, (user) => {
+        if (user) {
+            setUsername(user.email);
+            console.log("User is signed in:", username);
+        }
+    });
+  }, [auth, username]);
+
+  useEffect(() => {
+    if(username === "Guest") {
+      return;
+    }
     const fetchData = async () => {
-      getTopKIndustries("Akshay").then((industries) => {
+      getTopKIndustries(username).then((industries) => {
         console.log("Top K Industries:", industries);
         setIndustries(industries);
         
       });
     }
     fetchData();
-  }, []);
+  }, [username]);
 
   useEffect(() => {
     const fetchCareers = async () => {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          console.log("Careers for Top Industry:", careers);
+          console.log("Careers for Top Industry " + topIndustry + ":" + careers);
           setCareers(careers);
         });
+        const secondIndustry = industries[industries.length - 2][0];
+        getCareersForIndustry(secondIndustry).then((secondCareers) => {
+          console.log("Careers for Second Industry:", secondCareers);
+          setSecondCareers(secondCareers);
+        }); 
+        const thirdIndustry = industries[industries.length - 3][0]
+        getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
+          console.log("Careers for Third Industry:", thirdCareers);
+          setThirdCareers(thirdCareers);
+        });      
       }
     }
     if (industries.length > 0) {
       fetchCareers();
-    }
+    }})
 
-  }, [industries]);
+    useEffect(() => {
+        const fetchCareers = async () => {
+            if (industries.length > 0) {
+                const topIndustry = industries[industries.length - 1][0];
+                getCareersForIndustry(topIndustry).then((careers) => {
+                    console.log("Careers for Top Industry:", careers);
+                    setCareers(careers);
+                });
+            }
+        };
+        if (industries.length > 0) {
+            fetchCareers();
+        }
+    }, [industries]);
 
-  
-  // Static data
-  console.log("Industries:", industries);
+    // Static data
+    console.log("Industries:", industries);
 
   const colors = ["#C8E6C9", "#A5D6A7", "#4CAF50"];
   const chartData = industries.map((industry, index) => ({
@@ -65,28 +139,61 @@ export default function QuizResultsPage() {
   })
   );
   
-  
+  const handleTakeQuizAgain = () => {
+    if(username === "Guest") {
+      router.replace("/pre-quiz");
+      return;
+    }
 
-  const topJobs = [
-    { title: "Agricultural Architect", description: "Design sustainable farm layouts and eco-friendly irrigation systems.", imageUrl: "/jigna-small.svg" },
-    { title: "Farm Manager", description: "Oversee daily operations, budgeting, and crop planning on a commercial farm.", imageUrl: "/jigna-small.svg" },
-    { title: "Soil Conservationist", description: "Work with landowners to protect soil health and prevent erosion.", imageUrl: "/jigna-small.svg" },
-    { title: "Agricultural Engineer", description: "Develop agricultural machinery and automation solutions.", imageUrl: "/jigna-small.svg" },
-  ];
+    deleteAllResponses(username).then(() => {
+      router.replace("/pre-quiz");
+    });
+  }
 
-  const otherJobsTitles = [
-    "Environmental Scientist","Hydrologist","Food Scientist","Landscape Designer",
-    "Wildlife Biologist","Agricultural Economist","Conservation Officer","Forestry Technician"
-  ];
-  const otherJobs = otherJobsTitles.map(title => ({
-    title,
-    description: "",
-    imageUrl: "/jigna-small.svg",
-  }));
+    const topJobs = [
+        {
+            title: "Agricultural Architect",
+            description:
+                "Design sustainable farm layouts and eco-friendly irrigation systems.",
+            imageUrl: "/jigna-small.svg",
+        },
+        {
+            title: "Farm Manager",
+            description:
+                "Oversee daily operations, budgeting, and crop planning on a commercial farm.",
+            imageUrl: "/jigna-small.svg",
+        },
+        {
+            title: "Soil Conservationist",
+            description: "Work with landowners to protect soil health and prevent erosion.",
+            imageUrl: "/jigna-small.svg",
+        },
+        {
+            title: "Agricultural Engineer",
+            description: "Develop agricultural machinery and automation solutions.",
+            imageUrl: "/jigna-small.svg",
+        },
+    ];
 
-  const [shareEmail, setShareEmail] = useState("");
-  const [showShareModal, setShowShareModal] = useState(false);
-  const [shareModalEmail, setShareModalEmail] = useState("");
+    const otherJobsTitles = [
+        "Environmental Scientist",
+        "Hydrologist",
+        "Food Scientist",
+        "Landscape Designer",
+        "Wildlife Biologist",
+        "Agricultural Economist",
+        "Conservation Officer",
+        "Forestry Technician",
+    ];
+    const otherJobs = otherJobsTitles.map((title) => ({
+        title,
+        description: "",
+        imageUrl: "/jigna-small.svg",
+    }));
+
+    const [shareEmail, setShareEmail] = useState("");
+    const [showShareModal, setShowShareModal] = useState(false);
+    const [shareModalEmail, setShareModalEmail] = useState("");
 
   return (
     <div className="min-h-screen flex flex-col bg-white">
@@ -101,13 +208,14 @@ export default function QuizResultsPage() {
           <ChevronDownIcon className="ml-2 h-4 w-4" />
         </button>
         <div className="flex space-x-2">
-          <Link
-            href="/take-quiz"
+          <button
+            type="button"
+            onClick={handleTakeQuizAgain}
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
           >
             <RefreshIcon className="mr-2 h-4 w-4" />
             Retake Quiz
-          </Link>
+          </button>
           <button
             className="flex items-center border border-blue-600 text-blue-600 rounded px-4 py-2 hover:bg-blue-50 transition"
             onClick={() => setShowShareModal(true)}
@@ -120,62 +228,64 @@ export default function QuizResultsPage() {
 
       {/* Full-screen hero */}
       <section className="flex flex-col items-center justify-center bg-white min-h-[calc(100vh-80px)] px-4">
-        <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
-          <div className="text-center md:text-left">
-            <h2 className="text-2xl font-semibold">Your Most Ideal Career Pathway Is:</h2>
-            <h1 className="mt-4 text-5xl font-bold">{industries.length > 0 && industries[industries.length - 1][0]}</h1>
-          </div>
-          <img
-            src="/assets/ResultsPuzzlePiece.svg"
-            alt="Puzzle piece"
-            className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
-          />
-        </div>
-        <div className="w-full max-w-4xl h-80 mt-8">
-          <ResponsiveContainer width="100%" height="100%">
-            <BarChart
-              data={chartData}
-              margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
-              barGap={0}
-              barCategoryGap="-20%"
-            >
-              <XAxis
-                dataKey="name"
-                axisLine={false}
-                tickLine={false}
-                interval={0}
-                height={60}
-                tick={{ fill: "#555", fontSize: 16 }}
+          <div className="flex flex-col md:flex-row items-center justify-center w-full max-w-4xl">
+              <div className="text-center md:text-left">
+                  <h2 className="text-2xl font-semibold">
+                      Your Most Ideal Career Pathway Is:
+                  </h2>
+                  <h1 className="mt-4 text-5xl font-bold">
+                      {industries.length > 0 && industries[industries.length - 1][0]}
+                  </h1>
+              </div>
+              <img
+                  src="/assets/ResultsPuzzlePiece.svg"
+                  alt="Puzzle piece"
+                  className="w-40 h-auto mt-6 md:mt-0 md:ml-8"
               />
-              <Tooltip formatter={val => `${val}%`} cursor={false} />
-              <Bar dataKey="value" isAnimationActive={false} barSize={140}>
-                {chartData.map((entry, idx) => (
-                  <Cell key={idx} fill={entry.fill} />
-                ))}
-                <LabelList
-                  dataKey="value"
-                  position="top"
-                  formatter={val => `${val}%`}
-                  style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
-                />
-              </Bar>
-            </BarChart>
-          </ResponsiveContainer>
-        </div>
-        <h3 className="text-center text-2xl font-bold">
-            Your top job recommendations for{" "}
-            <span className="font-extrabold text-green-700">
-          {industries.length > 0 && industries[industries.length - 1][0]}
-            </span>
+          </div>
+          <div className="w-full max-w-4xl h-80 mt-8">
+              <ResponsiveContainer width="100%" height="100%">
+                  <BarChart
+                      data={chartData}
+                      margin={{ top: 20, right: 0, left: 0, bottom: 60 }}
+                      barGap={0}
+                      barCategoryGap="-20%"
+                  >
+                      <XAxis
+                          dataKey="name"
+                          axisLine={false}
+                          tickLine={false}
+                          interval={0}
+                          height={60}
+                          tick={{ fill: "#555", fontSize: 16 }}
+                      />
+                      <Tooltip formatter={(val) => `${val}%`} cursor={false} />
+                      <Bar dataKey="value" isAnimationActive={false} barSize={140}>
+                          {chartData.map((entry, idx) => (
+                              <Cell key={idx} fill={entry.fill} />
+                          ))}
+                          <LabelList
+                              dataKey="value"
+                              position="top"
+                              formatter={(val) => `${val}%`}
+                              style={{ fill: "#333", fontWeight: 700, fontSize: 18 }}
+                          />
+                      </Bar>
+                  </BarChart>
+              </ResponsiveContainer>
+          </div>
+          <h3 className="text-center text-2xl font-bold">
+              Your top job recommendations for{" "}
+              <span className="font-extrabold text-green-700">
+                  {industries.length > 0 && industries[industries.length - 1][0]}
+              </span>
           </h3>
       </section>
-
-
-        {/* Green cards section */}
+      {/* Green cards section */}
       <section className="bg-green-50 py-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 px-4">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
           {careers.map((job, i) => (
-            <CareersCard key={i} title={job} description={""} educationLevel={""}/>
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
           ))}
         </div>
       </section>
@@ -216,29 +326,22 @@ export default function QuizResultsPage() {
           <div>
             <p className="italic mb-2">Not Happy with your Results?</p>
             <p className="mb-4 text-gray-700">Take the quiz again here!</p>
-            <Link
-              href="/take-quiz"
-              className="inline-block bg-green-600 text-white px-6 py-2 rounded-full hover:bg-green-700 transition"
+            <button
+              className="bg-red-600 text-white px-6 py-2 rounded-full hover:bg-red-700 transition"
+              onClick={handleTakeQuizAgain}
             >
               Retake Quiz
-            </Link>
+            </button>
           </div>
         </div>
       </section>
 
-      {/* White heading for other recs */}
-      <section className="bg-white pb-8">
-        <h4 className="text-center text-2xl font-semibold">
-          Your other career recommendations
-        </h4>
-      </section>
-
-      {/* Gray grid section with extra top padding */}
-      <section className="bg-gray-100 pt-16 px-4 pb-12">
-        <div className="max-w-6xl mx-auto grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4 gap-8">
-
-        </div>
-      </section>
+            {/* White heading for other recs */}
+            <section className="bg-white pb-8">
+                <h4 className="text-center text-2xl font-semibold">
+                    Your other career recommendations
+                </h4>
+            </section>
 
       {/* Modal for sharing results */}
       {showShareModal && (
@@ -272,6 +375,26 @@ export default function QuizResultsPage() {
           </div>
         </div>
       )}
+      <section className="bg-gray-100 py-12">
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 2][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {secondCareers.map((job, i) => (
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          ))}
+        </div>
+      </section>
+      <section className="bg-gray-100 py-12">
+        <div className="font-kumbh text-lg text-center py-5">
+          {industries.length > 0 && industries[industries.length - 3][0]}
+        </div>
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
+          {thirdCareers.map((job, i) => (
+            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          ))}
+        </div>
+      </section>
     </div>
   );
 }

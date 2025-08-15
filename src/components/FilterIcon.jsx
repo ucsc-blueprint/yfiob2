@@ -1,21 +1,25 @@
 import * as React from "react";
-const FilterIcon = (props) => (
-	<svg
-		xmlns="http://www.w3.org/2000/svg"
-		width={33}
-		height={34}
-		fill="none"
-		{...props}
-	>
-		<g fill="#000" clipPath="url(#filterIcon)">
-			<path d="M16.5 31.438a14.438 14.438 0 1 1 0-28.876 14.438 14.438 0 0 1 0 28.875Zm0 2.062a16.5 16.5 0 1 0 0-33 16.5 16.5 0 0 0 0 33Z" />
-			<path d="M14.438 24.219a1.031 1.031 0 0 1 1.03-1.032h2.063a1.031 1.031 0 1 1 0 2.063H15.47a1.031 1.031 0 0 1-1.031-1.031Zm-4.126-6.188A1.031 1.031 0 0 1 11.345 17h10.312a1.031 1.031 0 1 1 0 2.063H11.344a1.031 1.031 0 0 1-1.031-1.032Zm-4.124-6.187a1.031 1.031 0 0 1 1.03-1.031h18.563a1.031 1.031 0 1 1 0 2.062H7.22a1.031 1.031 0 0 1-1.032-1.031Z" />
-		</g>
-		<defs>
-			<clipPath id="filterIcon">
-				<path fill="#fff" d="M0 .5h33v33H0z" />
-			</clipPath>
-		</defs>
-	</svg>
+const SvgComponent = (props) => (
+    <svg xmlns="http://www.w3.org/2000/svg" width={24} height={24} fill="none" {...props}>
+        <mask
+            id="abcaa"
+            width={24}
+            height={24}
+            x={0}
+            y={0}
+            maskUnits="userSpaceOnUse"
+            style={{
+                maskType: "alpha",
+            }}
+        >
+            <path fill="#D9D9D9" d="M0 0h24v24H0z" />
+        </mask>
+        <g mask="url(#abcaa)">
+            <path
+                fill="currentColor"
+                d="M11 20a.967.967 0 0 1-.712-.288A.968.968 0 0 1 10 19v-6L4.2 5.6c-.25-.333-.287-.683-.112-1.05S4.567 4 5 4h14c.433 0 .738.183.913.55.175.367.137.717-.113 1.05L14 13v6c0 .283-.096.52-.287.712A.968.968 0 0 1 13 20h-2Zm1-7.7L16.95 6h-9.9L12 12.3Z"
+            />
+        </g>
+    </svg>
 );
-export default FilterIcon;
+export default SvgComponent;
