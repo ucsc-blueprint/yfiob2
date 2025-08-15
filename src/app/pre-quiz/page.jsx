@@ -20,13 +20,16 @@ function App() {
     }, []);
 
     const handleGradeClick = (grade) => {
-        if (loading) return;
-        if (user) {
-            router.push(`/college-interest?grade=${grade}&valid=true`);
-        } else {
-            router.push(`/choose-account-type?grade=${grade}`);
-        }
-    };
+        const userAuth = auth;
+
+        onAuthStateChanged(userAuth, (user) => {
+            if (user) {
+                router.push(`/college-interest?${grade}?valid=true`);
+            } else {
+                router.push(`/choose-account-type?=${grade}`);
+            }
+        });
+    }
 
     return (
         <div className="min-h-screen flex flex-col">
@@ -36,8 +39,8 @@ function App() {
             <div className="flex-grow flex items-center justify-center pt-0">
                 <div className="max-w-6xl w-full px-8 pt-0 pb-20">
                     <div className="text-center mb-12">
-                        <h2 className="text-3xl font-kumbh">Career Quiz</h2>
-                        <p className="mt-3 font-kumbh text-lg">
+                        <h2 className="text-3xl font-primary">Career Quiz</h2>
+                        <p className="mt-3 font-primary text-lg">
                             Choose your grade level to begin!
                         </p>
                     </div>
@@ -45,7 +48,6 @@ function App() {
                         <button
                             onClick={() => handleGradeClick("elementary-school")}
                             className="flex flex-col items-center cursor-pointer focus:outline-none"
-                            disabled={loading}
                         >
                             <img
                                 src="/assets/K-5PuzzlePiece.svg"
@@ -56,7 +58,6 @@ function App() {
                         <button
                             onClick={() => handleGradeClick("middle-school")}
                             className="flex flex-col items-center cursor-pointer focus:outline-none"
-                            disabled={loading}
                         >
                             <img
                                 src="/assets/6-8PuzzlePiece.svg"
@@ -67,7 +68,6 @@ function App() {
                         <button
                             onClick={() => handleGradeClick("high-school")}
                             className="flex flex-col items-center cursor-pointer focus:outline-none"
-                            disabled={loading}
                         >
                             <img
                                 src="/assets/9-12PuzzlePiece.svg"
