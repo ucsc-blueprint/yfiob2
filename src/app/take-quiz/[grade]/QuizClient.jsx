@@ -10,6 +10,8 @@ import questions from "../../../../questions.json";
 import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
 import storeTopKIndustries from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
+import QuizResultsPage from "../../results/page.jsx";
+import storeTopKIndustriesGuest from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);
@@ -110,9 +112,19 @@ export default function QuizClient({ grade }) {
 
     function handleSubmit() {
         setIsLoading(true);
-        storeTopKIndustries(username, 3, grade).then(() => {
-            router.replace(`/results/?grade=${grade}`);
-        });
+        // TODO: if guest then take data and send it to the results page function
+        if (username == "Guest"){
+            console.log("going to function")
+            storeTopKIndustriesGuest(answers, 3, grade);
+            //router.replace(`/results/?grade=${grade}`);
+            console.log("out of function")
+        }
+        else {
+            console.log("going to wrong function")
+            storeTopKIndustries(username, 3, grade).then(() => {
+                router.replace(`/results/?grade=${grade}`);
+            });
+        }
     }
 
     const questionsObject = questionsForLevel.map((q, qIndex) =>

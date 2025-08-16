@@ -15,7 +15,7 @@ function App() {
             if (user) {
                 router.push(`/take-quiz/${grade}?valid=true`);
             } else {
-                router.push(`/choose-account-type?=${grade}`);
+                router.push(`/choose-account-type?grade=${grade}`);
             }
         });
     };

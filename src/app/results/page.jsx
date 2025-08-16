@@ -52,7 +52,7 @@ export default function QuizResultsPage() {
         console.log("Grade of most recent submission:", grade);
         if (grade) {
           console.log("Grade of most recent submission:", grade);
-          gradeParam = grade;
+          setGradeParam(grade);
         } else {
           router.replace("/pre-quiz");
         }
@@ -113,20 +113,20 @@ export default function QuizResultsPage() {
       fetchCareers();
     }})
 
-    useEffect(() => {
-        const fetchCareers = async () => {
-            if (industries.length > 0) {
-                const topIndustry = industries[industries.length - 1][0];
-                getCareersForIndustry(topIndustry).then((careers) => {
-                    console.log("Careers for Top Industry:", careers);
-                    setCareers(careers);
-                });
-            }
-        };
-        if (industries.length > 0) {
-            fetchCareers();
-        }
-    }, [industries]);
+    // useEffect(() => {
+    //     const fetchCareers = async () => {
+    //         if (industries.length > 0) {
+    //             const topIndustry = industries[industries.length - 1][0];
+    //             getCareersForIndustry(topIndustry).then((careers) => {
+    //                 console.log("Careers for Top Industry:", careers);
+    //                 setCareers(careers);
+    //             });
+    //         }
+    //     };
+    //     if (industries.length > 0) {
+    //         fetchCareers();
+    //     }
+    // }, [industries]);
 
     // Static data
     console.log("Industries:", industries);

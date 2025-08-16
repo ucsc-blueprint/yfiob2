@@ -25,6 +25,83 @@ algorithm:
 import {db} from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
 
+export async function storeTopKIndustriesGuest(answers, k, grade){
+    console.log("in function")
+    console.log("in function")
+    const industryReference  = collection(db, "userTopKIndustries")
+    const addPromises = [];
+    const submitReference = collection(db, "submissions")
+
+    addPromises.push(
+        addDoc(submitReference, { 
+            username: "Guest",
+            timestamp: serverTimestamp(),
+            grade: grade
+        })
+    );
+
+    const questionsRef = collection(db, "questions");
+    const questionClassificationRef = collection(db, "questionClassification");
+
+    //using batch reads to minimize number of queries to the database
+
+    const allQuestions = {};
+    const allQuestionDocs = await getDocs(questionsRef);
+    for (const doc of allQuestionDocs.docs) {
+        const data = doc.data();
+        allQuestions[data.questionNumber] = data.questionCategory;
+    }
+
+    const allClassifications = {};
+    const allClassificationDocs = await getDocs(questionClassificationRef);
+    for (const doc of allClassificationDocs.docs) {
+        const data = doc.data();
+        const key = `${data.questionCategory}|${data.optionSelected}`;
+        allClassifications[key] = data.industry;
+    }
+
+    const industries = {};
+
+    const responses = answers;
+
+    for (const doc of responses.docs) {
+        const questionData = doc.data();
+        const questionFullNumber = questionData.questionNumber;
+        const optionSelectedStr = (parseInt(questionData.optionSelected) + 1)
+        const optionSelected = optionSelectedStr.toString();
+        
+        const questionNumber = questionFullNumber.split("-")[0];
+
+        const category = allQuestions[questionNumber];
+        const industryKey = `${category}|${optionSelected}`;
+        const industry = allClassifications[industryKey];
+        if (industry in industries) {
+            industries[industry] += 1;
+        } else {
+            industries[industry] = 1;
+        }
+    }
+console.log("in function")
+    const arr = Object.entries(industries).sort((a, b) => b[1] - a[1]);
+    if (k > arr.length) k = arr.length;
+
+    let totalTopIndustryCount = 0;
+    for (let i = 0; i < k; i++) {
+        totalTopIndustryCount += arr[i][1];
+    }
+
+    for (let i = 0; i < k; i++) {
+        console.log(
+                username,
+                arr[i][0],
+                i,
+                Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
+        )
+    }
+    await Promise.all(addPromises);
+
+    return;
+}
 
 export default async function storeTopKIndustries(username, k, grade) {
     const industryReference  = collection(db, "userTopKIndustries")
