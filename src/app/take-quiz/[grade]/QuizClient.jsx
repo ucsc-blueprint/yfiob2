@@ -36,13 +36,14 @@ export default function QuizClient({ grade }) {
     const [isLoading, setIsLoading] = useState(false);
     const isInterestCollege = searchParams.get("collegeInterest") === "Yes" || searchParams.get("collegeInterest") === "Maybe";
     
-
+    // If not a valid session, redirect to choose-account-type
     useEffect(() => {
         if (!isValid) {
             router.push(`/choose-account-type?grade=${grade}`);
         }
     }, [isValid, router, grade]);
 
+    // map grade → index
     const gradeToIndex = {
         "elementary-school": 0,
         "middle-school": 1,
@@ -141,14 +142,16 @@ export default function QuizClient({ grade }) {
     };
     const color = gradeColor[grade] || "blue";
 
+    // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
 
     return (
         <>
+            {/* Navbar sits on top */}
             <div className="relative z-10">
                 <Navbar />
             </div>
-
+            {/* full‐screen background under the navbar */}
             <div
                 className={`
           fixed

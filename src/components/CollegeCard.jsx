@@ -33,6 +33,7 @@ function CollegeCard({ onResponse }) {
     return (
         <div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-secondary shadow-md overflow-hidden">
             <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex">
+                {/* Images */}
                 <div className="w-2/5 h-full flex flex-col">
                     <div className="grow relative mb-1 rounded-md overflow-hidden">
                         <Image

@@ -41,6 +41,8 @@ function App() {
             <div className="z-10 relative">
                 <Navbar />
             </div>
+            
+            {/* Centered content - fixed overlap issue */}
             <div className="flex-grow flex items-center justify-center pt-0">
                 <div className="max-w-6xl w-full px-8 pt-0 pb-20">
                     <div className="text-center mb-12">
