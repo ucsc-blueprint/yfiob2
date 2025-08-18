@@ -34,6 +34,7 @@ export default function QuizClient({ grade }) {
     const searchParams = useSearchParams();
     const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
+    const isInterestCollege = searchParams.get("collegeInterest") === "Yes" || searchParams.get("collegeInterest") === "Maybe";
     
 
     useEffect(() => {
@@ -109,7 +110,7 @@ export default function QuizClient({ grade }) {
 
     function handleSubmit() {
         setIsLoading(true);
-        storeTopKIndustries(username, 3, grade).then(() => {
+        storeTopKIndustries(username, 3, grade, isInterestCollege).then(() => {
             router.replace(`/results/?grade=${grade}`);
         });
     }

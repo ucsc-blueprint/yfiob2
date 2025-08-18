@@ -150,8 +150,10 @@ export default function AdminInsights() {
 
   try {
     readyForCollegePercent = (submissions.filter((submission) => {
-      return submission.data.readyForCollege === true;
-    }).length / submissions.length) * 100;
+      return submission.data.readyForCollege === true && submission.data.grade === "high-school";
+    }).length / (submissions.filter((submission) => {
+      return submission.data.grade === "high-school";
+    }).length)) * 100;
   } catch (error) {
     console.error("Error calculating ready for college percent:", error);
   }

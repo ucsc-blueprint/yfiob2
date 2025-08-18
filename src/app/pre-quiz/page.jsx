@@ -24,9 +24,14 @@ function App() {
 
         onAuthStateChanged(userAuth, (user) => {
             if (user) {
-                router.push(`/college-interest?${grade}?valid=true`);
+                if (grade == "high-school"){
+                    router.push(`/college-interest?grade=${grade}&valid=true`);
+                }
+                else{
+                    router.push(`/take-quiz/${grade}?valid=true`);
+                }
             } else {
-                router.push(`/choose-account-type?=${grade}`);
+                router.push(`/choose-account-type?grade=${grade}`);
             }
         });
     }

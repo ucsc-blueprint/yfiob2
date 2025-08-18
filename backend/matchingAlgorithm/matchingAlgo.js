@@ -26,7 +26,7 @@ import {db} from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
 
 
-export default async function storeTopKIndustries(username, k, grade) {
+export default async function storeTopKIndustries(username, k, grade, collegeAnswer) {
     const industryReference  = collection(db, "userTopKIndustries")
     const addPromises = [];
     const submitReference = collection(db, "submissions")
@@ -35,7 +35,8 @@ export default async function storeTopKIndustries(username, k, grade) {
         addDoc(submitReference, { 
             username: username,
             timestamp: serverTimestamp(),
-            grade: grade
+            grade: grade,
+            readyForCollege: collegeAnswer || undefined
         })
     );
 
