@@ -141,3 +141,6 @@ export async function getCareersForIndustry(industry){
     return careers;
 }
 
+getCareersForIndustry("Hospitality, Tourism, and Recreation").then((careers) => {
+    console.log("Careers for Hospitality, Tourism, and Recreation:", careers);
+});
