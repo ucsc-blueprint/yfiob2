@@ -84,7 +84,7 @@ function Page() {
 			<div className="mx-2 p-2" key={job.id}>
 				<div className="flex" id={job.name}>
 					<div className="flex gap-2">
-						<img src="/assets/business_center.svg" alt="suitcase"/>
+						<img src="/assets/business_center.svg" alt="briefcase"/>
 						<p>{job.name}</p>
 					</div>
 					<div className="ml-auto flex gap-2">
@@ -120,8 +120,8 @@ function Page() {
 			<div className="my-8 outline-[#104c5a1a] border-[1px] rounded-md">
 				<div className="w-full bg-[#185D6D1A] text-[20px] flex items-center justify-center rounded-[5px]">
 					<button
-						className="rounded-3xl bg-white m-2  h-[30px] w-[30px] flex justify-center items-center"
-						onClick={() => {
+							className="flex"
+							onClick={() => {
 							if (open.includes(name)) {
 								setOpen(open.filter((t) => t !== name));
 							} else {
@@ -129,9 +129,11 @@ function Page() {
 							}
 						}}
 					>
+						<div className="rounded-3xl bg-white m-2  h-[30px] w-[30px] flex justify-center items-center">
 						{toggled ? <img src="/assets/arrow-down.svg" alt='arrow down icon'/> : <img src="/assets/arrow-up.svg" alt='arrow up icon'/>}
+						</div>
+					<div className="m-2">{name}</div>
 					</button>
-					<div>{name}</div>
 					<button
 						onClick={() => {
 							openRef.current = name;
