@@ -1,6 +1,6 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Fragment } from "react";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
 import { addData } from "../../../utils/addData";
 import getData from "../../../utils/getData";
@@ -194,9 +194,9 @@ function Page() {
 								<JobContainer key={index} name={industry.name}>
 										{industry.jobs.map((job) => {
 											if (job.name) {
-												return <><JobItem key={job.id} job={job} /><hr className="border-[#888888] border-1"/></>;
+												return <Fragment key={job.id}><JobItem job={job} /><hr className="border-[#888888] border-1"/></Fragment>;
 											} else {
-												return <></>;
+												return null;
 											}
 										})}
 								</JobContainer>
