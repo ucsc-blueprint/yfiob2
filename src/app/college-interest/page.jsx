@@ -48,7 +48,6 @@ function CollegeInterestPage() {
                     <div className="flex justify-center">
                         <CollegeCard
                             onResponse={handleCollegeInterestResponse}
-                            grade={grade}
                         />
                     </div>
                 </div>

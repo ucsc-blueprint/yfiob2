@@ -21,7 +21,7 @@ function Button({ children, isSelected, onClick }) {
     );
 }
 
-function CollegeCard({ onResponse, grade }) {
+function CollegeCard({ onResponse }) {
     const [selectedAnswer, setSelectedAnswer] = useState(null);
 
     const handleAnswerSelect = (index) => {
