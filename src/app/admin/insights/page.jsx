@@ -244,7 +244,7 @@ export default function AdminInsights() {
 
             <div className="bg-white p-6 rounded-lg shadow text-center">
               <p className="text-3xl font-bold">
-                {readyForCollegePercent}%
+                {readyForCollegePercent.toFixed(2)}%
               </p>
               <p className="text-gray-500 text-sm">
                 responded “ready for college”
