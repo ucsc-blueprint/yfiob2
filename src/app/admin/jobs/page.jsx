@@ -6,7 +6,6 @@ import { addData } from "../../../utils/addData";
 import getData from "../../../utils/getData";
 import deleteData from "../../../utils/deleteData";
 import JobPopup from "../../../components/JobPopup";
-import Suitcase from "../../../assets/suitcase.svg"
 
 function parseJobs(jobData) {
 	let jobs = {};
@@ -107,7 +106,7 @@ function Page() {
 								setJobData(newData);
 							}}
 						>
-							<img src="/assets/delete-icon.svg" alt="pencil icon"/>
+							<img src="/assets/delete-icon.svg" alt="delete icon"/>
 						</button>
 					</div>
 				</div>
