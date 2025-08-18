@@ -26,18 +26,63 @@ import {db} from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
 
 
-export default async function storeTopKIndustries(username, k, grade, collegeAnswer) {
+const allQuestions = {
+  '0': 'physical',
+  '1': 'observe',
+  '2': 'creative',
+  '3': 'teach',
+  '4': 'lead',
+  '5': 'engineer'
+}
+const allClassifications = {
+  'physical|5': 'Building and Construction Trades',
+  'creative|3': 'Hospitality, Tourism, and Recreation',
+  'teach|1': 'Energy, Environment and Utilities',
+  'teach|5': 'Hospitality, Tourism, and Recreation',
+  'physical|4': 'Fashion and Interior Design',
+  'creative|5': 'Fashion and Interior Design',
+  'lead|5': 'Manufacturing and Product Development',
+  'physical|3': 'Energy, Environment, and Utilities',
+  'engineer|3': 'Agriculture and Natural Resources',
+  'observe|4': 'Agriculture and Natural Resources',
+  'teach|4': 'Business and Finance',
+  'lead|1': 'Agriculture and Natural Resources',
+  'observe|3': 'Health Science and Medical Technology',
+  'lead|3': 'Fashion and Interior Design',
+  'physical|1': 'Information and Communication Technologies',
+  'physical|2': 'Hospitatility, Tourism, and Recreation',
+  'engineer|2': 'Information and Communication Technologies',
+  'creative|1': 'Building and Construction Trades',
+  'teach|3': 'Building and Construction Trades',
+  'observe|1': 'Information and Communication Technologies',
+  'engineer|1': 'Arts, Media and Entertainment',
+  'creative|2': 'Agriculture and Natural Resources',
+  'teach|2': 'Public Services',
+  'engineer|5': 'Engineering and Architecture',
+  'engineer|4': 'Marketing, Sales, and Service',
+  'lead|4': 'Arts, Media, and Entertainment',
+  'observe|2': 'Arts, Media and Entertainment',
+  'creative|4': 'Marketing, Sales, and Service',
+  'lead|2': 'Health Science and Medical Technology',
+  'observe|5': 'Engineering and Architecture'
+}
+
+export default async function storeTopKIndustries(username, k, grade = "", collegeAnswer = "") {
     const industryReference  = collection(db, "userTopKIndustries")
     const addPromises = [];
     const submitReference = collection(db, "submissions")
 
+    const submissionData = { 
+        username: username,
+        timestamp: serverTimestamp(),
+        grade: grade,
+    }
+
+    if (collegeAnswer) {
+        submissionData["readyForCollege"] = collegeAnswer;
+    }
     addPromises.push(
-        addDoc(submitReference, { 
-            username: username,
-            timestamp: serverTimestamp(),
-            grade: grade,
-            readyForCollege: collegeAnswer || undefined
-        })
+        addDoc(submitReference, submissionData)
     );
 
     const industriesFoundQuery = query(industryReference, where("username", "==", username));
@@ -47,28 +92,6 @@ export default async function storeTopKIndustries(username, k, grade, collegeAns
         await deleteDoc(docRef);
     }
 
-    const questionsRef = collection(db, "questions");
-    const questionClassificationRef = collection(db, "questionClassification");
-    
-    //using batch reads to minimize number of queries to the database
-
-    const allQuestions = {};
-    const allQuestionDocs = await getDocs(questionsRef);
-    for (const doc of allQuestionDocs.docs) {
-        const data = doc.data();
-        allQuestions[data.questionNumber] = data.questionCategory;
-    }
-
-    const allClassifications = {};
-    const allClassificationDocs = await getDocs(questionClassificationRef);
-    for (const doc of allClassificationDocs.docs) {
-        const data = doc.data();
-        const key = `${data.questionCategory}|${data.optionSelected}`;
-        allClassifications[key] = data.industry;
-    }
-
-    console.log(allQuestions);
-    console.log(allClassifications);
 
     const industries = {};
 
@@ -78,6 +101,7 @@ export default async function storeTopKIndustries(username, k, grade, collegeAns
 
     for (const doc of responses.docs) {
         const questionData = doc.data();
+        console.log(questionData)
         const questionFullNumber = questionData.questionNumber;
         const optionSelectedStr = (parseInt(questionData.optionSelected) + 1)
         const optionSelected = optionSelectedStr.toString();
@@ -93,6 +117,7 @@ export default async function storeTopKIndustries(username, k, grade, collegeAns
             industries[industry] = 1;
         }
     }
+    console.log(industries);
 
     const arr = Object.entries(industries).sort((a, b) => b[1] - a[1]);
     if (k > arr.length) k = arr.length;
@@ -101,6 +126,7 @@ export default async function storeTopKIndustries(username, k, grade, collegeAns
     for (let i = 0; i < k; i++) {
         totalTopIndustryCount += arr[i][1];
     }
+    console.log(arr);
 
     for (let i = 0; i < k; i++) {
         addPromises.push(
@@ -141,4 +167,3 @@ export async function getCareersForIndustry(industry){
     }
     return careers;
 }
-

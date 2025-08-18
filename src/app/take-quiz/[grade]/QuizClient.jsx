@@ -21,12 +21,14 @@ export default function QuizClient({ grade }) {
     const router = useRouter();
     
     const auth = getAuth();
-    const [username, setUsername] = useState("Guest");
+    const [username, setUsername] = useState(null);
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.email);
                 console.log("User is signed in:", username);
+            } else{
+                setUsername("Guest");
             }
         });
     }, [auth, username]);
@@ -71,7 +73,10 @@ export default function QuizClient({ grade }) {
     useEffect(() => {
         const getData = async () => {
             const data = await getAllResponses(username);
-            mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            console.log("responses", data)
+            if (data.length > 0){
+                mergeWithState(data);  
+            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
             return data;
         };
         getData().then((res) => {
