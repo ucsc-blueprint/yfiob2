@@ -33,7 +33,7 @@ function App() {
     }
 
     if (loading){
-        return <p>Loading Next Screen...</p>
+        return <p>Loading Quiz...</p>
     }
 
     return (
