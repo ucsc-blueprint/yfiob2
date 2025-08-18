@@ -20,20 +20,20 @@ function App() {
     }, []);
 
     const handleGradeClick = (grade) => {
-        const userAuth = auth;
-
-        onAuthStateChanged(userAuth, (user) => {
-            if (user) {
-                if (grade == "high-school"){
-                    router.push(`/college-interest?grade=${grade}&valid=true`);
-                }
-                else{
-                    router.push(`/take-quiz/${grade}?valid=true`);
-                }
-            } else {
-                router.push(`/choose-account-type?grade=${grade}`);
+        if (user) {
+            if (grade == "high-school"){
+                router.push(`/college-interest?grade=${grade}&valid=true`);
             }
-        });
+            else{
+                router.push(`/take-quiz/${grade}?valid=true`);
+            }
+        } else {
+            router.push(`/choose-account-type?grade=${grade}`);
+        }
+    }
+
+    if (loading){
+        return <p>Loading Next Screen...</p>
     }
 
     return (
