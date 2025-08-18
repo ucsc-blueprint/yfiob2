@@ -63,6 +63,7 @@ export async function storeTopKIndustriesGuest(answers, k, grade){
     const industries = {};
 
     const responses = answers;
+    console.log(answers)
 
     for (const doc of responses.docs) {
         const questionData = doc.data();
@@ -151,6 +152,8 @@ export default async function storeTopKIndustries(username, k, grade) {
     const userResponsesRef = collection(db, "userResponses");
     const responseRef = query(userResponsesRef, where("username", "==", username));
     const responses = await getDocs(responseRef);
+
+    console.log(responses);
 
     for (const doc of responses.docs) {
         const questionData = doc.data();

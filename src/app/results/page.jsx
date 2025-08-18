@@ -46,12 +46,12 @@ export default function QuizResultsPage() {
   }, []);
 
   useEffect(()=> {
-    console.log("Grade parameter:", gradeParam);
+    // console.log("Grade parameter:", gradeParam);
     const checkGradeOfRecentSubmission = async () => {
       await getGradeOfMostRecentSubmission(username).then((grade) => {
-        console.log("Grade of most recent submission:", grade);
+        // console.log("Grade of most recent submission:", grade);
         if (grade) {
-          console.log("Grade of most recent submission:", grade);
+          // console.log("Grade of most recent submission:", grade);
           setGradeParam(grade);
         } else {
           router.replace("/pre-quiz");
@@ -70,7 +70,7 @@ export default function QuizResultsPage() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             setUsername(user.email);
-            console.log("User is signed in:", username);
+            // console.log("User is signed in:", username);
         }
     });
   }, [auth, username]);
@@ -81,7 +81,7 @@ export default function QuizResultsPage() {
     }
     const fetchData = async () => {
       getTopKIndustries(username).then((industries) => {
-        console.log("Top K Industries:", industries);
+        // console.log("Top K Industries:", industries);
         setIndustries(industries);
         
       });
@@ -94,17 +94,17 @@ export default function QuizResultsPage() {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          console.log("Careers for Top Industry " + topIndustry + ":" + careers);
+          // console.log("Careers for Top Industry " + topIndustry + ":" + careers);
           setCareers(careers);
         });
         const secondIndustry = industries[industries.length - 2][0];
         getCareersForIndustry(secondIndustry).then((secondCareers) => {
-          console.log("Careers for Second Industry:", secondCareers);
+          // console.log("Careers for Second Industry:", secondCareers);
           setSecondCareers(secondCareers);
         }); 
         const thirdIndustry = industries[industries.length - 3][0]
         getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
-          console.log("Careers for Third Industry:", thirdCareers);
+          // console.log("Careers for Third Industry:", thirdCareers);
           setThirdCareers(thirdCareers);
         });      
       }
@@ -129,7 +129,7 @@ export default function QuizResultsPage() {
     // }, [industries]);
 
     // Static data
-    console.log("Industries:", industries);
+    // console.log("Industries:", industries);
 
   const colors = ["#C8E6C9", "#A5D6A7", "#4CAF50"];
   const chartData = industries.map((industry, index) => ({
@@ -317,7 +317,7 @@ export default function QuizResultsPage() {
               />
               <button
                 className="bg-blue-600 text-white px-6 py-2 rounded-r-full hover:bg-blue-700 transition"
-                onClick={() => console.log("Send to:", shareEmail)}
+                // onClick={() => console.log("Send to:", shareEmail)}
               >
                 Send &rarr;
               </button>

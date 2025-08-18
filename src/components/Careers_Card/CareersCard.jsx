@@ -37,7 +37,7 @@ export const CareersCard = ({
 }) => {
 
     const safeGrade = grade && grade.length > 0 ? grade : "default";
-    console.log("Grade:", safeGrade);
+    // console.log("Grade:", safeGrade);
     return (
         <a href={href}>
             <div

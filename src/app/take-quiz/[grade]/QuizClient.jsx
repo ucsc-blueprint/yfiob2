@@ -11,7 +11,7 @@ import { getAllResponses, storeResponse } from "../../../../backend/questions/qu
 import storeTopKIndustries from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
 import QuizResultsPage from "../../results/page.jsx";
-import storeTopKIndustriesGuest from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
+import { storeTopKIndustriesGuest } from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);
@@ -28,7 +28,14 @@ export default function QuizClient({ grade }) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.email);
-                console.log("User is signed in:", username);
+                const getData = async () => {
+                    const data = await getAllResponses(username);
+                    mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+                    return data;
+                };
+                getData().then((res) => {
+                    console.log(res);
+                });
             }
         });
     }, [auth, username]);
@@ -69,17 +76,6 @@ export default function QuizClient({ grade }) {
         }
     }, [questionNum, randomNum, savedRandomNums]);
 
-    useEffect(() => {
-        const getData = async () => {
-            const data = await getAllResponses(username);
-            mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
-            return data;
-        };
-        getData().then((res) => {
-            console.log(res);
-        });
-    }, [username]);
-
     function mergeWithState(data) {
         for (const responseObj of data) {
             const answerStr = responseObj["questionNumber"];
@@ -110,12 +106,12 @@ export default function QuizClient({ grade }) {
         }));
     }
 
-    function handleSubmit() {
+    async function handleSubmit() {
         setIsLoading(true);
         // TODO: if guest then take data and send it to the results page function
         if (username == "Guest"){
             console.log("going to function")
-            storeTopKIndustriesGuest(answers, 3, grade);
+            await storeTopKIndustriesGuest(answers, 3, grade);
             //router.replace(`/results/?grade=${grade}`);
             console.log("out of function")
         }
