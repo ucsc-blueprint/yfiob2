@@ -1,5 +1,5 @@
 "use client";
-
+import React, { useEffect, useState } from "react";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
 import { auth } from "../../utils/firebase";
@@ -7,25 +7,41 @@ import { onAuthStateChanged } from "firebase/auth";
 
 function App() {
     const router = useRouter();
+    const [user, setUser] = useState(null);
+    const [loading, setLoading] = useState(true);
+
+    useEffect(() => {
+        const unsubscribe = onAuthStateChanged(auth, (user) => {
+            setUser(user);
+            setLoading(false);
+        });
+
+        return () => unsubscribe();
+    }, []);
 
     const handleGradeClick = (grade) => {
-        const userAuth = auth;
-
-        onAuthStateChanged(userAuth, (user) => {
-            if (user) {
-                router.push(`/take-quiz/${grade}?valid=true`);
-            } else {
-                router.push(`/choose-account-type?=${grade}`);
+        if (user) {
+            if (grade == "high-school"){
+                router.push(`/college-interest?grade=${grade}&valid=true`);
             }
-        });
-    };
+            else{
+                router.push(`/take-quiz/${grade}?valid=true`);
+            }
+        } else {
+            router.push(`/choose-account-type?grade=${grade}`);
+        }
+    }
+
+    if (loading){
+        return <p>Loading Quiz...</p>
+    }
 
     return (
         <div className="min-h-screen flex flex-col">
             <div className="z-10 relative">
                 <Navbar />
             </div>
-
+            
             {/* Centered content - fixed overlap issue */}
             <div className="flex-grow flex items-center justify-center pt-0">
                 <div className="max-w-6xl w-full px-8 pt-0 pb-20">

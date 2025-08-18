@@ -21,7 +21,12 @@ export const Page = () => {
 
     const goToQuiz = () => {
         // Guest users don't need validation
-        router.push(`/take-quiz/${grade}?valid=true`);
+        if (grade == "high-school"){
+            router.push(`/college-interest?grade=${grade}&valid=true`);
+        }
+        else{
+            router.push(`/take-quiz/${grade}?valid=true`);
+        }
     };
 
     return (

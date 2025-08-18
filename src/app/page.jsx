@@ -15,9 +15,14 @@ function App() {
             if (user) {
                 // User is signed in
                 console.log("User is signed in:", user.uid);
-                router.push(`/take-quiz/${grade}?valid=true`); // Call the function when user exists
+                if (grade == "high-school"){
+                    router.push(`/college-interest?grade=${grade}&valid=true`);
+                }
+                else{
+                    router.push(`/take-quiz/${grade}?valid=true`);
+                }
             } else {
-                router.push(`/choose-account-type?=${grade}`);
+                router.push(`/choose-account-type?grade=${grade}`);
                 console.log("User is signed out");
                 // Optional: Handle signed out state
             }

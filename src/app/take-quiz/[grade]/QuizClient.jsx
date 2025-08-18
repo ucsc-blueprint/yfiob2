@@ -34,7 +34,8 @@ export default function QuizClient({ grade }) {
     const searchParams = useSearchParams();
     const isValid = searchParams.get("valid") === "true";
     const [isLoading, setIsLoading] = useState(false);
-
+    const isInterestCollege = searchParams.get("collegeInterest") === "Yes" || searchParams.get("collegeInterest") === "Maybe";
+    
     // If not a valid session, redirect to choose-account-type
     useEffect(() => {
         if (!isValid) {
@@ -110,7 +111,7 @@ export default function QuizClient({ grade }) {
 
     function handleSubmit() {
         setIsLoading(true);
-        storeTopKIndustries(username, 3, grade).then(() => {
+        storeTopKIndustries(username, 3, grade, isInterestCollege).then(() => {
             router.replace(`/results/?grade=${grade}`);
         });
     }
@@ -119,6 +120,7 @@ export default function QuizClient({ grade }) {
         Object.values(q.sub_questions).map((sub, sIndex) => {
             const questionId = `${qIndex}-${sIndex}`;
             return (
+                
                 <QuestionCard
                     key={questionId}
                     advice={q.question}
@@ -149,7 +151,6 @@ export default function QuizClient({ grade }) {
             <div className="relative z-10">
                 <Navbar />
             </div>
-
             {/* full‐screen background under the navbar */}
             <div
                 className={`
@@ -170,7 +171,7 @@ export default function QuizClient({ grade }) {
                     >
                         <BackArrow />
                     </button>
-
+                
                     <div className="flex flex-col items-center">
                         {questionsObject[questionNum]?.[randomNum] ?? (
                             <QuestionCard

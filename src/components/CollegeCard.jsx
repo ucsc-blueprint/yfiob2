@@ -1,6 +1,7 @@
 "use client";
 
 import Image from "next/image";
+import { useState } from "react";
 import UniversityCampus from "./UniversityCampus";
 
 const agreeArray = ["Yes", "Maybe", "No"];
@@ -20,7 +21,15 @@ function Button({ children, isSelected, onClick }) {
     );
 }
 
-export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
+function CollegeCard({ onResponse }) {
+    const [selectedAnswer, setSelectedAnswer] = useState(null);
+
+    const handleAnswerSelect = (index) => {
+        setSelectedAnswer(index);
+
+        onResponse(agreeArray[index]);
+    };
+
     return (
         <div className="bg-slate-400 w-[66vw] h-[50vh] rounded-[20px] font-secondary shadow-md overflow-hidden">
             <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex">
@@ -30,7 +39,7 @@ export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
                         <Image
                             fill
                             className="object-cover"
-                            src={"collegeExterior.png"}
+                            src={"/collegeExterior.png"}
                             alt="College"
                         />
                     </div>
@@ -38,7 +47,7 @@ export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
                         <Image
                             fill
                             className="object-cover"
-                            src={"collegeInterior.png"}
+                            src={"/collegeInterior.png"}
                             alt="College"
                         />
                     </div>
@@ -56,7 +65,7 @@ export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
                                 <Button
                                     key={agree}
                                     isSelected={selectedAnswer === index}
-                                    onClick={() => onAnswerSelect(index)}
+                                    onClick={() => handleAnswerSelect(index)}
                                 >
                                     {agree}
                                 </Button>
@@ -67,4 +76,6 @@ export const CollegeCard = ({ selectedAnswer, onAnswerSelect = () => {} }) => {
             </div>
         </div>
     );
-};
+}
+
+export default CollegeCard;

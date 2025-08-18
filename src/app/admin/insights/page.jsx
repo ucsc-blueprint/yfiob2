@@ -150,8 +150,10 @@ export default function AdminInsights() {
 
   try {
     readyForCollegePercent = (submissions.filter((submission) => {
-      return submission.data.readyForCollege === true;
-    }).length / submissions.length) * 100;
+      return submission.data.readyForCollege === true && submission.data.grade === "high-school";
+    }).length / (submissions.filter((submission) => {
+      return submission.data.grade === "high-school";
+    }).length)) * 100;
   } catch (error) {
     console.error("Error calculating ready for college percent:", error);
   }
@@ -242,7 +244,7 @@ export default function AdminInsights() {
 
             <div className="bg-white p-6 rounded-lg shadow text-center">
               <p className="text-3xl font-bold">
-                {readyForCollegePercent}%
+                {readyForCollegePercent.toFixed(2)}%
               </p>
               <p className="text-gray-500 text-sm">
                 responded “ready for college”
