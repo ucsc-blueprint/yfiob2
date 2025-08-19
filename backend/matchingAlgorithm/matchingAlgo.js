@@ -67,6 +67,28 @@ const allClassifications = {
   'observe|5': 'Engineering and Architecture'
 }
 
+const loadFromLocalStorage = () => {
+    const storedAnswers = localStorage.getItem("answers");
+    if (storedAnswers) {
+        return JSON.parse(storedAnswers);
+    }
+    return null;
+}
+
+const getQuestionsFromFirebase = async (username) => {
+    const userResponsesRef = collection(db, "userResponses");
+    const responseRef = query(userResponsesRef, where("username", "==", username));
+    const responses = await getDocs(responseRef);
+
+    const questions = [];
+    responses.forEach((doc) => {
+        const data = doc.data();
+        const questionNum = data.questionNumber.split("-")[0];
+        questions[questionNum] = data.optionSelected;
+    });
+    return questions;
+}
+
 export default async function storeTopKIndustries(username, k, grade = "", collegeAnswer = "") {
     const industryReference  = collection(db, "userTopKIndustries")
     const addPromises = [];
@@ -95,22 +117,18 @@ export default async function storeTopKIndustries(username, k, grade = "", colle
 
     const industries = {};
 
-    const userResponsesRef = collection(db, "userResponses");
-    const responseRef = query(userResponsesRef, where("username", "==", username));
-    const responses = await getDocs(responseRef);
+    const responsesLocal = loadFromLocalStorage();
+    const responses =  responsesLocal ? responsesLocal : await getQuestionsFromFirebase(username);
+    console.log(responses);
 
-    for (const doc of responses.docs) {
-        const questionData = doc.data();
-        console.log(questionData)
-        const questionFullNumber = questionData.questionNumber;
-        const optionSelectedStr = (parseInt(questionData.optionSelected) + 1)
-        const optionSelected = optionSelectedStr.toString();
-        
-        const questionNumber = questionFullNumber.split("-")[0];
-
+    for (let questionNumber = 0; questionNumber < responses.length; questionNumber++) {
+        const optionSelected = (responses[questionNumber] + 1).toString();
         const category = allQuestions[questionNumber];
+
         const industryKey = `${category}|${optionSelected}`;
         const industry = allClassifications[industryKey];
+        console.log(`Question: ${questionNumber}, Option: ${optionSelected}, Industry: ${industry}`);
+
         if (industry in industries) {
             industries[industry] += 1;
         } else {
@@ -167,3 +185,5 @@ export async function getCareersForIndustry(industry){
     }
     return careers;
 }
+
+storeTopKIndustries("b@a.com", 3, "high-school", "yes")

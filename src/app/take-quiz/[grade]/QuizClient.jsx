@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
@@ -22,6 +22,8 @@ export default function QuizClient({ grade }) {
     
     const auth = getAuth();
     const [username, setUsername] = useState(null);
+
+
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
@@ -43,7 +45,7 @@ export default function QuizClient({ grade }) {
         if (!isValid) {
             router.push(`/choose-account-type?grade=${grade}`);
         }
-    }, [isValid, router, grade]);
+    }, [isValid]);
 
     // map grade → index
     const gradeToIndex = {
@@ -56,6 +58,17 @@ export default function QuizClient({ grade }) {
     const [questionNum, setQuestionNum] = useState(0);
     const [savedRandomNums, setSavedRandomNums] = useState({});
     const [answers, setAnswers] = useState({});
+
+    console.log("Questions for level:", questionsForLevel);
+
+    const localStorageAnswers = localStorage.getItem("answers");
+    const localStorageArray = localStorageAnswers 
+        ? JSON.parse(localStorageAnswers) 
+        : Array(questionsForLevel.length).fill(-1);
+
+    if (!localStorageAnswers) {
+        localStorage.setItem("answers", JSON.stringify(localStorageArray));
+    }
 
     const randomNum =
         savedRandomNums[questionNum] ??
@@ -71,9 +84,10 @@ export default function QuizClient({ grade }) {
     }, [questionNum, randomNum, savedRandomNums]);
 
     useEffect(() => {
+        if (!username) return;
+
         const getData = async () => {
             const data = await getAllResponses(username);
-            console.log("responses", data)
             if (data.length > 0){
                 mergeWithState(data);  
             }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
@@ -87,9 +101,8 @@ export default function QuizClient({ grade }) {
     function mergeWithState(data) {
         for (const responseObj of data) {
             const answerStr = responseObj["questionNumber"];
-            const answerStrSplit = answerStr.split("-");
-            const questionNum = answerStrSplit[0];
-            const randomQuestionNum = parseInt(answerStrSplit[1]);
+            const [questionNum, randomQuestionNum] = answerStr.split("-");
+
             setSavedRandomNums((prev) => ({
                 ...prev,
                 [questionNum]: randomQuestionNum,
@@ -103,11 +116,17 @@ export default function QuizClient({ grade }) {
     }
 
     function handleAnswerSelect(value, questionId) {
-        const insertData = async () => {
-            await storeResponse(username, questionId, value);
-        };
-        insertData();
+        const questionNum = parseInt(questionId.split("-")[0]);
 
+        const insertData = async () => {       
+            localStorageArray[questionNum] = value;   
+            localStorage.setItem("answers", JSON.stringify(localStorageArray));
+            storeResponse(username, questionId, value);
+            console.log(localStorage.getItem("answers"));
+        };
+        
+        
+        insertData();
         setAnswers((prevAnswers) => ({
             ...prevAnswers,
             [questionId]: value,
@@ -149,6 +168,7 @@ export default function QuizClient({ grade }) {
 
     // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
+    const allAnswered = localStorageArray.every(ans => ans !== -1);
 
     return (
         <>
@@ -210,7 +230,7 @@ export default function QuizClient({ grade }) {
                 {isLoading && (
                     <div className="mt-2 text-sm text-gray-500">Matching with careers...</div>
                 )}
-                {questionNum === questionsForLevel.length - 1 && (
+                {allAnswered && (
                     <div className="mt-6 flex flex-col justify-center">
                         <button
                             onClick={handleSubmit}
