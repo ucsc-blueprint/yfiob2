@@ -171,6 +171,42 @@ export default function AdminNavbar({page}) {
                             </div>
                         )}
                     </div>
+					
+			{/* Mobile Menu */}
+            <div
+                className={`absolute z-0 left-0 w-full bg-white shadow-md flex flex-col items-center transition-transform duration-300 md:hidden p-6 ${
+                    isOpen ? "translate-y-40" : "-translate-y-[200%]"
+                }`}
+            >
+                <Link
+                    href={"/admin/insights"}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg text-black hover:text-[#1A6567] p-2"
+                >
+                    Insights
+                </Link>
+                <Link
+                    href={"/admin/jobs"}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg text-black hover:text-[#1A6567] p-2"
+                >
+                    Jobs
+                </Link>
+				<Link
+                    href={"/admin/students"}
+                    onClick={() => setIsOpen(false)}
+                    className="text-lg text-black hover:text-[#1A6567] p-2"
+                >
+                    Students
+                </Link>
+                    <Link
+                        href="/admin/insights" //Can create a dropdown menu here
+                        onClick={() => setIsOpen(false)}
+                        className="text-lg text-white bg-[#1A6567] px-5 py-2 rounded-[10px] m-2"
+                    >
+                        Admin
+                    </Link>
+			</div>
 			</div>
 		</>
 	);

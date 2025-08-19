@@ -339,7 +339,7 @@ export default function AdminPage() {
                 setData={setData}
                 topIndustries={topIndutries}
             />
-            <AdminNavbar page={"students"}/>
+            <AdminNavbar page="students"/>
             <div className="flex justify-center w-full">
                 <div className="w-[70vw] p-10">
                     <div className="flex flex-row justify-between">
