@@ -49,12 +49,12 @@ const allClassifications = {
   'lead|1': 'Agriculture and Natural Resources',
   'observe|3': 'Health Science and Medical Technology',
   'lead|3': 'Fashion and Interior Design',
-  'physical|1': 'Information and Communication Technologies',
+  'physical|1': 'Information and Communication Technology',
   'physical|2': 'Hospitatility, Tourism, and Recreation',
-  'engineer|2': 'Information and Communication Technologies',
+  'engineer|2': 'Information and Communication Technology',
   'creative|1': 'Building and Construction Trades',
   'teach|3': 'Building and Construction Trades',
-  'observe|1': 'Information and Communication Technologies',
+  'observe|1': 'Information and Communication Technology',
   'engineer|1': 'Arts, Media and Entertainment',
   'creative|2': 'Agriculture and Natural Resources',
   'teach|2': 'Public Services',
@@ -185,5 +185,3 @@ export async function getCareersForIndustry(industry){
     }
     return careers;
 }
-
-storeTopKIndustries("b@a.com", 3, "high-school", "yes")

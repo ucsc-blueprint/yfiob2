@@ -80,6 +80,7 @@ export async function getResponse(username, questionNumber){
 
 export async function deleteAllResponses(username){
     const responsesReference = collection(db, "userResponses")
+    localStorage.removeItem("answers");
 
     const q = query(
         responsesReference, 
