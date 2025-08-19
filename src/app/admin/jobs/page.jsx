@@ -179,7 +179,7 @@ function Page() {
 				}}
 				jobToEdit={jobToEdit}
 			/>
-			<AdminNavbar />
+			<AdminNavbar page={"jobs"}/>
 			<div className="flex justify-center">
 				<div className="w-[80vw] h-[100vw]">
 					<div className="flex gap-2 mt-10">

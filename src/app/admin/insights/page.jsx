@@ -188,7 +188,7 @@ export default function AdminInsights() {
 
   return (
     <>
-      <AdminNavbar />
+      <AdminNavbar page={"insights"}/>
       <div className="min-h-screen flex flex-col items-center bg-gray-100 py-10">
         <div className="w-[850px] space-y-8">
           {/* Header */}
