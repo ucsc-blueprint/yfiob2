@@ -59,7 +59,6 @@ export default function QuizClient({ grade }) {
     const [savedRandomNums, setSavedRandomNums] = useState({});
     const [answers, setAnswers] = useState({});
 
-    console.log("Questions for level:", questionsForLevel);
 
     const localStorageAnswers = localStorage.getItem("answers");
     const localStorageArray = localStorageAnswers 
