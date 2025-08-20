@@ -37,7 +37,7 @@ const allQuestions = {
 const allClassifications = {
   'physical|5': 'Building and Construction Trades',
   'creative|3': 'Hospitality, Tourism, and Recreation',
-  'teach|1': 'Energy, Environment and Utilities',
+  'teach|1': 'Energy, Environment, and Utilities',
   'teach|5': 'Hospitality, Tourism, and Recreation',
   'physical|4': 'Fashion and Interior Design',
   'creative|5': 'Fashion and Interior Design',
