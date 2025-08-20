@@ -7,7 +7,7 @@ function App() {
             <Navbar />
 
             {/* Top Section */}
-            <div className="bg-[#E8F6FF] h-[40vh] flex flex-col items-center justify-center">
+            <div className="bg-[#E6FAFF] h-[40vh] flex flex-col items-center justify-center">
                 <h1 className="text-3xl font-primary mb-4">
                     Explore pathways and careers to pursue!
                 </h1>
