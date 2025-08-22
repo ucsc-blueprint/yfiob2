@@ -81,7 +81,7 @@ export const Page = () => {
                 studentID,
             };
 
-            await addData("users", userData);
+            await addData("users", userData, user.uid);
 
             alert("User registered and data saved successfully");
 
