@@ -76,9 +76,7 @@ export default function QuizResultsPage() {
   }, [auth, username]);
 
   useEffect(() => {
-    if(username === "Guest") {
-      return;
-    }
+    
     const fetchData = async () => {
       getTopKIndustries(username).then((industries) => {
         console.log("Top K Industries:", industries);

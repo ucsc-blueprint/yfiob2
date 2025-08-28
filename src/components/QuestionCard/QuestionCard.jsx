@@ -31,6 +31,7 @@ export const QuestionCard = ({
     const tColor = textColor[grade];
     const puzzleImg = puzzleColor[grade];
     const gcolor = textColor[3];
+    console.log("selected answer", selectedAnswer);
 
     return (
         <div

@@ -57,17 +57,29 @@ export default function QuizClient({ grade }) {
     const [questionsForLevel] = useState(() => getQuestions(educationLevel));
     const [questionNum, setQuestionNum] = useState(0);
     const [savedRandomNums, setSavedRandomNums] = useState({});
-    const [answers, setAnswers] = useState({});
+    const [answers, setAnswers] = useState([]);
+
+    useEffect(()=> {
+        if (answers.length > 0){
+            return;
+        }else {
+            const localStorageAnswers = localStorage.getItem("answers");
+            console.log(localStorageAnswers);
+            const localStorageArray = localStorageAnswers 
+                ? JSON.parse(localStorageAnswers) 
+                : Array(questionsForLevel.length).fill(-1);
+
+            console.log(localStorageArray);
+            if (!localStorageAnswers) {
+                localStorage.setItem("answers", JSON.stringify(localStorageArray));
+            }
+            setAnswers(localStorageArray);
+            console.log(answers);
+        }
+    }, [answers]);
 
 
-    const localStorageAnswers = localStorage.getItem("answers");
-    const localStorageArray = localStorageAnswers 
-        ? JSON.parse(localStorageAnswers) 
-        : Array(questionsForLevel.length).fill(-1);
-
-    if (!localStorageAnswers) {
-        localStorage.setItem("answers", JSON.stringify(localStorageArray));
-    }
+    
 
     const randomNum =
         savedRandomNums[questionNum] ??
@@ -82,54 +94,21 @@ export default function QuizClient({ grade }) {
         }
     }, [questionNum, randomNum, savedRandomNums]);
 
-    useEffect(() => {
-        if (!username) return;
-
-        const getData = async () => {
-            const data = await getAllResponses(username);
-            if (data.length > 0){
-                mergeWithState(data);  
-            }                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        
-            return data;
-        };
-        getData().then((res) => {
-            console.log(res);
-        });
-    }, [username]);
-
-    function mergeWithState(data) {
-        for (const responseObj of data) {
-            const answerStr = responseObj["questionNumber"];
-            const [questionNum, randomQuestionNum] = answerStr.split("-");
-
-            setSavedRandomNums((prev) => ({
-                ...prev,
-                [questionNum]: randomQuestionNum,
-            }));
-
-            setAnswers((prevAnswers) => ({
-                ...prevAnswers,
-                [answerStr]: responseObj["optionSelected"],
-            }));
-        }
-    }
-
     function handleAnswerSelect(value, questionId) {
         const questionNum = parseInt(questionId.split("-")[0]);
 
-        const insertData = async () => {       
-            localStorageArray[questionNum] = value;   
-            localStorage.setItem("answers", JSON.stringify(localStorageArray));
+        const insertData = async () => {
+            const newAnswers = [...answers];
+            newAnswers[questionNum] = value;
+            setAnswers(newAnswers);
+            //localStorageArray[questionNum] = value;
+            localStorage.setItem("answers", JSON.stringify(newAnswers));
             storeResponse(username, questionId, value);
             console.log(localStorage.getItem("answers"));
         };
         
         
         insertData();
-        setAnswers((prevAnswers) => ({
-            ...prevAnswers,
-            [questionId]: value,
-        }));
     }
 
     function handleSubmit() {
@@ -150,7 +129,7 @@ export default function QuizClient({ grade }) {
                     question={sub.statement}
                     questionNumber={q.question_id}
                     totalQuestions={questionsForLevel.length}
-                    selectedAnswer={answers[questionId]}
+                    selectedAnswer={answers[questionNum]}
                     onAnswerSelect={(answer) => handleAnswerSelect(answer, questionId)}
                     grade={grade}
                 />
@@ -167,7 +146,8 @@ export default function QuizClient({ grade }) {
 
     // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
-    const allAnswered = localStorageArray.every(ans => ans !== -1);
+    const allAnswered = answers.length > 0 && answers.every(ans => ans !== -1);
+    console.log(answers[questionNum]);
 
     return (
         <>
@@ -203,13 +183,16 @@ export default function QuizClient({ grade }) {
                                 question=""
                                 questionNumber="1"
                                 totalQuestions={questionsForLevel.length}
-                                selectedAnswer={answers[currentQuestionId]}
+                                selectedAnswer={answers[questionNum]}
                                 grade={grade}
-                                onAnswerSelect={(answer) =>
-                                    setAnswers((prev) => ({
-                                        ...prev,
-                                        [currentQuestionId]: answer,
-                                    }))
+                                onAnswerSelect={
+                                    (answer) => {
+                                        setAnswers((prev) => {
+                                            const newAnswers = [...prev];
+                                            newAnswers[questionNum] = answer;
+                                            return newAnswers;
+                                        });
+                                    }
                                 }
                             />
                         )}
