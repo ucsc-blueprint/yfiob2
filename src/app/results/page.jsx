@@ -139,11 +139,6 @@ export default function QuizResultsPage() {
   );
   
   const handleTakeQuizAgain = () => {
-    if(username === "Guest") {
-      router.replace("/pre-quiz");
-      return;
-    }
-
     deleteAllResponses(username).then(() => {
       router.replace("/pre-quiz");
     });
