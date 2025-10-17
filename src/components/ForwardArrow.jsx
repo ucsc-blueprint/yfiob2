@@ -1,4 +1,3 @@
-import * as React from "react";
 const ForwardArrow = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={15} height={28} fill="none" {...props}>
         <path

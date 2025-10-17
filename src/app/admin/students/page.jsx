@@ -265,7 +265,6 @@ export default function AdminPage() {
                     onClick={async () => {
                         setStudentData({ ...data, id });
                         const topIndustries = await getTopKIndustries(data.email);
-                        console.log(topIndustries);
                         const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7"];
                         const formattedIndustries = topIndustries.map(
                             ([industry, percentage], index) => ({

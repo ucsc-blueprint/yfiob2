@@ -15,7 +15,7 @@ function App() {
             if (user) {
                 // User is signed in
                 console.log("User is signed in:", user.uid);
-                if (grade == "high-school"){
+                if (grade === "high-school"){
                     router.push(`/college-interest?grade=${grade}&valid=true`);
                 }
                 else{

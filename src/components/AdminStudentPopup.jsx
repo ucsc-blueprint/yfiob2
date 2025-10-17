@@ -14,8 +14,6 @@ import {
 } from "recharts";
 
 function BarCharts({ data }) {
-    console.log(data);
-
     return (
         <div className="flex justify-center items-center w-full bg-white py-6 rounded-br-md">
             <div style={{ width: "100%", height: 220 }}>
@@ -150,8 +148,6 @@ export default function AdminStudentPopup({
     }
 
     if (!shown) return null;
-
-    console.log(topIndustries);
 
     return (
         <>

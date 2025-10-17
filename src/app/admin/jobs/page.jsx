@@ -59,14 +59,6 @@ function Page() {
 		photos,
 		industry
 	) {
-		console.log({
-			careers: name,
-			description: description,
-			experienceRequired: experienceRequired,
-			salary: salary,
-			photos: photos,
-			industry: industry,
-		});
 		addData("careers", {
 			careers: name,
 			description: description,
