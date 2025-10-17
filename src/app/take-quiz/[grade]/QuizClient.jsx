@@ -1,6 +1,6 @@
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
@@ -21,11 +21,15 @@ export default function QuizClient({ grade }) {
     const router = useRouter();
     
     const auth = getAuth();
-    const [username, setUsername] = useState("Guest");
+    const [username, setUsername] = useState(null);
+
+
     useEffect(() => {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.email);
+            } else{
+                setUsername("Guest");
             }
         });
     }, [auth, username]);
@@ -40,7 +44,7 @@ export default function QuizClient({ grade }) {
         if (!isValid) {
             router.push(`/choose-account-type?grade=${grade}`);
         }
-    }, [isValid, router, grade]);
+    }, [isValid]);
 
     // map grade → index
     const gradeToIndex = {
@@ -52,7 +56,29 @@ export default function QuizClient({ grade }) {
     const [questionsForLevel] = useState(() => getQuestions(educationLevel));
     const [questionNum, setQuestionNum] = useState(0);
     const [savedRandomNums, setSavedRandomNums] = useState({});
-    const [answers, setAnswers] = useState({});
+    const [answers, setAnswers] = useState([]);
+
+    useEffect(()=> {
+        if (answers.length > 0){
+            return;
+        }else {
+            const localStorageAnswers = localStorage.getItem("answers");
+            console.log(localStorageAnswers);
+            const localStorageArray = localStorageAnswers 
+                ? JSON.parse(localStorageAnswers) 
+                : Array(questionsForLevel.length).fill(-1);
+
+            console.log(localStorageArray);
+            if (!localStorageAnswers) {
+                localStorage.setItem("answers", JSON.stringify(localStorageArray));
+            }
+            setAnswers(localStorageArray);
+            console.log(answers);
+        }
+    }, [answers]);
+
+
+    
 
     const randomNum =
         savedRandomNums[questionNum] ??
@@ -92,17 +118,21 @@ export default function QuizClient({ grade }) {
             }));
         }
     }
-
     function handleAnswerSelect(value, questionId) {
-        const insertData = async () => {
-            await storeResponse(username, questionId, value);
-        };
-        insertData();
+        const questionNum = parseInt(questionId.split("-")[0]);
 
-        setAnswers((prevAnswers) => ({
-            ...prevAnswers,
-            [questionId]: value,
-        }));
+        const insertData = async () => {
+            const newAnswers = [...answers];
+            newAnswers[questionNum] = value;
+            setAnswers(newAnswers);
+            //localStorageArray[questionNum] = value;
+            localStorage.setItem("answers", JSON.stringify(newAnswers));
+            storeResponse(username, questionId, value);
+            console.log(localStorage.getItem("answers"));
+        };
+        
+        
+        insertData();
     }
 
     function handleSubmit() {
@@ -123,7 +153,7 @@ export default function QuizClient({ grade }) {
                     question={sub.statement}
                     questionNumber={q.question_id}
                     totalQuestions={questionsForLevel.length}
-                    selectedAnswer={answers[questionId]}
+                    selectedAnswer={answers[questionNum]}
                     onAnswerSelect={(answer) => handleAnswerSelect(answer, questionId)}
                     grade={grade}
                 />
@@ -140,6 +170,8 @@ export default function QuizClient({ grade }) {
 
     // creates a unique ID for each question
     const currentQuestionId = `${questionNum}-${savedRandomNums[questionNum] ?? randomNum}`;
+    const allAnswered = answers.length > 0 && answers.every(ans => ans !== -1);
+    console.log(answers[questionNum]);
 
     return (
         <>
@@ -175,13 +207,16 @@ export default function QuizClient({ grade }) {
                                 question=""
                                 questionNumber="1"
                                 totalQuestions={questionsForLevel.length}
-                                selectedAnswer={answers[currentQuestionId]}
+                                selectedAnswer={answers[questionNum]}
                                 grade={grade}
-                                onAnswerSelect={(answer) =>
-                                    setAnswers((prev) => ({
-                                        ...prev,
-                                        [currentQuestionId]: answer,
-                                    }))
+                                onAnswerSelect={
+                                    (answer) => {
+                                        setAnswers((prev) => {
+                                            const newAnswers = [...prev];
+                                            newAnswers[questionNum] = answer;
+                                            return newAnswers;
+                                        });
+                                    }
                                 }
                             />
                         )}
@@ -201,7 +236,7 @@ export default function QuizClient({ grade }) {
                 {isLoading && (
                     <div className="mt-2 text-sm text-gray-500">Matching with careers...</div>
                 )}
-                {questionNum === questionsForLevel.length - 1 && (
+                {allAnswered && (
                     <div className="mt-6 flex flex-col justify-center">
                         <button
                             onClick={handleSubmit}

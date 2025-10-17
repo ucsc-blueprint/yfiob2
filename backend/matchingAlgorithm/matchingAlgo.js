@@ -24,69 +24,91 @@ algorithm:
 //import { db } from "../firebase.js";
 import {db} from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, addDoc, deleteDoc, orderBy, serverTimestamp} from "firebase/firestore";
+import { CAREERS, ALL_QUESTIONS, ALL_CLASSIFICATIONS } from "./constants.js";
 
-
-export default async function storeTopKIndustries(username, k, grade, collegeAnswer) {
-    const industryReference  = collection(db, "userTopKIndustries")
-    const addPromises = [];
-    const submitReference = collection(db, "submissions")
-
-    addPromises.push(
-        addDoc(submitReference, { 
-            username: username,
-            timestamp: serverTimestamp(),
-            grade: grade,
-            readyForCollege: collegeAnswer || undefined
-        })
-    );
-
-    const industriesFoundQuery = query(industryReference, where("username", "==", username));
-    const industriesFound = await getDocs(industriesFoundQuery);
-    for (const doc of industriesFound.docs) {
-        const docRef = doc.ref;
-        await deleteDoc(docRef);
+const loadFromLocalStorage = () => {
+    const storedAnswers = localStorage.getItem("answers");
+    if (storedAnswers) {
+        return JSON.parse(storedAnswers);
     }
+    return null;
+}
 
-    const questionsRef = collection(db, "questions");
-    const questionClassificationRef = collection(db, "questionClassification");
-    
-    //using batch reads to minimize number of queries to the database
-
-    const allQuestions = {};
-    const allQuestionDocs = await getDocs(questionsRef);
-    for (const doc of allQuestionDocs.docs) {
-        const data = doc.data();
-        allQuestions[data.questionNumber] = data.questionCategory;
-    }
-
-    const allClassifications = {};
-    const allClassificationDocs = await getDocs(questionClassificationRef);
-    for (const doc of allClassificationDocs.docs) {
-        const data = doc.data();
-        const key = `${data.questionCategory}|${data.optionSelected}`;
-        allClassifications[key] = data.industry;
-    }
-
-    console.log(allQuestions);
-    console.log(allClassifications);
-
-    const industries = {};
-
+const getQuestionsFromFirebase = async (username) => {
     const userResponsesRef = collection(db, "userResponses");
     const responseRef = query(userResponsesRef, where("username", "==", username));
     const responses = await getDocs(responseRef);
 
-    for (const doc of responses.docs) {
-        const questionData = doc.data();
-        const questionFullNumber = questionData.questionNumber;
-        const optionSelectedStr = (parseInt(questionData.optionSelected) + 1)
-        const optionSelected = optionSelectedStr.toString();
-        
-        const questionNumber = questionFullNumber.split("-")[0];
+    const questions = [];
+    responses.forEach((doc) => {
+        const data = doc.data();
+        const questionNum = data.questionNumber.split("-")[0];
+        questions[questionNum] = data.optionSelected;
+    });
+    return questions;
+}
 
-        const category = allQuestions[questionNumber];
+export default async function storeTopKIndustries(username, k, grade = "", collegeAnswer = "") {
+    const industryReference  = collection(db, "userTopKIndustries");
+    const addPromises = [];
+    const submitReference = collection(db, "submissions");
+
+    const submissionData = { 
+        username: username,
+        timestamp: serverTimestamp(),
+        grade: grade,
+    };
+
+    if (collegeAnswer) {
+        submissionData["readyForCollege"] = collegeAnswer;
+    }
+
+    try {
+        addPromises.push(
+            addDoc(submitReference, submissionData)
+        );
+    } catch (error) {
+        console.error("Error adding submission:", error);
+    }
+
+    try {
+        const industriesFoundQuery = query(industryReference, where("username", "==", username));
+        const industriesFound = await getDocs(industriesFoundQuery);
+        for (const doc of industriesFound.docs) {
+            const docRef = doc.ref;
+            try {
+                await deleteDoc(docRef);
+            } catch (error) {
+                console.error("Error deleting document:", error);
+            }
+        }
+    } catch (error) {
+        console.error("Error querying/deleting industries:", error);
+    }
+
+    const industries = {};
+
+    let responses = null;
+    try {
+        const responsesLocal = loadFromLocalStorage();
+        responses = responsesLocal ? responsesLocal : await getQuestionsFromFirebase(username);
+    } catch (error) {
+        console.error("Error loading responses:", error);
+        responses = [];
+    }
+
+    if (!responses || responses.length === 0) {
+        console.warn("No responses found, skipping industry calculation.");
+        return;
+    }
+
+    for (let questionNumber = 0; questionNumber < responses.length; questionNumber++) {
+        const optionSelected = (responses[questionNumber] + 1).toString();
+        const category = ALL_QUESTIONS[questionNumber];
+
         const industryKey = `${category}|${optionSelected}`;
-        const industry = allClassifications[industryKey];
+        const industry = ALL_CLASSIFICATIONS[industryKey];
+
         if (industry in industries) {
             industries[industry] += 1;
         } else {
@@ -102,22 +124,48 @@ export default async function storeTopKIndustries(username, k, grade, collegeAns
         totalTopIndustryCount += arr[i][1];
     }
 
+    const localIndustries = [];
+
     for (let i = 0; i < k; i++) {
-        addPromises.push(
-            addDoc(industryReference, { 
-                username,
+        try {
+            addPromises.push(
+                addDoc(industryReference, { 
+                    username,
+                    industry: arr[i][0],
+                    ranking: i,
+                    percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
+                })
+            );
+
+            localIndustries.unshift({
                 industry: arr[i][0],
                 ranking: i,
                 percentage: Number(((arr[i][1] / totalTopIndustryCount) * 100).toFixed(2))
-            })
-        );
+            });
+        } catch (error) {
+            console.error("Error adding industry doc:", error);
+        }
     }
-    await Promise.all(addPromises);
+    console.log("Local Industries:", localIndustries);
+    localStorage.setItem("topKIndustries", JSON.stringify(localIndustries));
+
+    try {
+        await Promise.all(addPromises);
+    } catch (error) {
+        console.error("Error awaiting addPromises:", error);
+    }
 }
 
 
 
 export async function getTopKIndustries(username){
+    const localIndustries = localStorage.getItem("topKIndustries");
+    if (localIndustries){
+        return JSON.parse(localIndustries).map(industry => [industry.industry, industry.percentage]);
+    }
+    if (username === "Guest") {
+        return [];
+    }
     const industriesFoundQuery = query(collection(db, "userTopKIndustries"), where("username", "==", username), orderBy("percentage"));
     const industriesFound = await getDocs(industriesFoundQuery);
     const industries = [];
@@ -131,14 +179,5 @@ export async function getTopKIndustries(username){
 }
 
 export async function getCareersForIndustry(industry){
-    const careersFoundQuery = query(collection(db, "careers"), where("industry", "==", industry));
-    const careersFound = await getDocs(careersFoundQuery);
-    const careers = [];
-
-    for (const doc of careersFound.docs) {
-        const data = doc.data();
-        careers.push(data.careers);
-    }
-    return careers;
+    return CAREERS[industry] || [];
 }
-

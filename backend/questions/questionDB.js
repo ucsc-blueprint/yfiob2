@@ -1,3 +1,4 @@
+import { use } from "react";
 import { db } from "../../src/utils/firebase.js";
 import { collection, getDocs, query, where, limit, addDoc, updateDoc, writeBatch, orderBy} from "firebase/firestore";
 
@@ -80,7 +81,11 @@ export async function getResponse(username, questionNumber){
 
 export async function deleteAllResponses(username){
     const responsesReference = collection(db, "userResponses")
-
+    localStorage.removeItem("answers");
+    localStorage.removeItem("topKIndustries");
+    if (username === "Guest") {
+        return;
+    }
     const q = query(
         responsesReference, 
         where("username", '==', username), 

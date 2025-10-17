@@ -12,13 +12,13 @@ module.exports = {
         },
         extend: {
             colors: {
-            darkBlue: '#1D7387',
-            lightBlue: '#A8DEED',
-            orange: '#F58220',
-            darkOrange: '#974B18',
-            yellow: '#FFD85F',
-            darkGreen: '#6C7632',
-            lightGreen: '#B9CB71'
+            darkBlue: "var(--color-primary-blue)",
+            lightBlue: "var(--color-secondary-blue)",
+            darkOrange: "var(--color-primary-orange)",
+            orange: "var(--color-secondary-orange)",
+            yellow: "var(--color-primary-yellow)",
+            darkGreen: "var(--color-primary-green)",
+            lightGreen: "var(--color-secondary-green)"
             }
         },
     },

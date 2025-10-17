@@ -1,0 +1,16 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --color-primary-orange:#974B18;
+        --color-secondary-orange: #F58220;
+        --color-primary-blue: #1D7387;
+        --color-secondary-blue: #A8DEED;
+        --color-primary-green: #6C7632;
+        --color-secondary-green: #B9CB71;
+        --color-primary-yellow: #FFD85F;
+    }
+}
+
