@@ -36,8 +36,6 @@ export const CareersCard = ({
     href,
 }) => {
 
-    // I have no idea why this var exists
-    const safeGrade = grade && grade.length > 0 ? grade : "default";
     return (
         <a href={href}>
             <div
