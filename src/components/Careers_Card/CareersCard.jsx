@@ -36,8 +36,8 @@ export const CareersCard = ({
     href,
 }) => {
 
-    const safeGrade = grade && grade.length > 0 ? grade : "elementary-school";
-    console.log("grade:", safeGrade);
+  const safeGrade = grade && grade.length > 0 ? grade : "elementary-school";
+
     return (
         <a href={href}>
             <div
@@ -46,9 +46,7 @@ export const CareersCard = ({
                 <header
                     className={`bg-${backgroundColor[safeGrade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
                 >
-                    <div>
-                    {title}
-                    </div>
+                    <div> {title} </div>
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image

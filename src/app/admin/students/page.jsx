@@ -50,7 +50,7 @@ function exportCSV(data) {
 
 function CustomSearch(props) {
     return (
-        <div className="w-64 border-black border-[1px] rounded-md">
+        <div className="w-full border-black border-[1px] rounded-md">
             <div className="flex flex-row mb-0">
                 <input
                     className="field-sizing-content outline-none min-w-1 mx-3 grow"
@@ -265,7 +265,6 @@ export default function AdminPage() {
                     onClick={async () => {
                         setStudentData({ ...data, id });
                         const topIndustries = await getTopKIndustries(data.email);
-                        console.log(topIndustries);
                         const colors = ["#FF6B6B", "#4ECDC4", "#45B7D1", "#96CEB4", "#FFEAA7"];
                         const formattedIndustries = topIndustries.map(
                             ([industry, percentage], index) => ({
@@ -339,8 +338,8 @@ export default function AdminPage() {
                 setData={setData}
                 topIndustries={topIndutries}
             />
-            <AdminNavbar />
-            <div className="flex justify-center w-[100vw]">
+            <AdminNavbar page="students"/>
+            <div className="flex justify-center w-full">
                 <div className="w-[70vw] p-10">
                     <div className="flex flex-row justify-between">
                         <div className="pb-5 flex flex-row items-center">
@@ -393,7 +392,7 @@ export default function AdminPage() {
                     </div>
                     <div className="h-[38rem]">
                         <div className="flex">
-                            <div className="w-9" />
+                            <div className="w-10" />
                             <div className="grid grid-cols-10 w-full">
                                 <InfoCards title weight={2} start text="First Name" />
                                 <InfoCards title weight={2} text="Last Name" />

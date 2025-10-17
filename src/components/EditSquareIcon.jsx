@@ -1,4 +1,3 @@
-import * as React from "react";
 const EditSquareIcon = (props) => (
     <svg xmlns="http://www.w3.org/2000/svg" width={41} height={41} fill="none" {...props}>
         <path

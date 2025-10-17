@@ -1,8 +1,8 @@
 "use client";
 
-import { useEffect, useRef, useState } from "react";
+import { useEffect, useRef, useState, Fragment } from "react";
 import AdminNavbar from "../../../components/AdminNavbar/AdminNavbar";
-import addData from "../../../utils/addData";
+import { addData } from "../../../utils/addData";
 import getData from "../../../utils/getData";
 import deleteData from "../../../utils/deleteData";
 import JobPopup from "../../../components/JobPopup";
@@ -49,6 +49,7 @@ function Page() {
 	const [open, setOpen] = useState([]);
 	const [popupOpen, setPopupOpen] = useState(false);
 	const openRef = useRef(null);
+	const [jobToEdit, setJobToEdit] = useState(null);
 
 	async function addJob(
 		name,
@@ -58,14 +59,6 @@ function Page() {
 		photos,
 		industry
 	) {
-		console.log({
-			careers: name,
-			description: description,
-			experienceRequired: experienceRequired,
-			salary: salary,
-			photos: photos,
-			industry: industry,
-		});
 		addData("careers", {
 			careers: name,
 			description: description,
@@ -80,14 +73,22 @@ function Page() {
 
 	function JobItem({ job }) {
 		return (
-			<div key={job.id}>
+			<div className="mx-2 p-2" key={job.id}>
 				<div className="flex" id={job.name}>
-					<div className="flex">
-						<p>ICON</p>
+					<div className="flex gap-2">
+						<img src="/assets/business_center.svg" alt="briefcase"/>
 						<p>{job.name}</p>
 					</div>
-					<div className="flex ml-auto">
-						<button>EDIT</button>
+					<div className="ml-auto flex gap-2">
+					<button
+						onClick={() => {
+							openRef.current = job.industry;
+							setJobToEdit(job);
+							setPopupOpen(true);
+						}}
+					>
+						<img src="/assets/pencil-icon.svg" alt="pencil icon"/>
+					</button>
 						<button
 							onClick={async () => {
 								await deleteData("careers", job.id);
@@ -97,7 +98,7 @@ function Page() {
 								setJobData(newData);
 							}}
 						>
-							DELETE
+							<img src="/assets/delete-icon.svg" alt="delete icon"/>
 						</button>
 					</div>
 				</div>
@@ -108,10 +109,11 @@ function Page() {
 	function JobContainer({ children, name }) {
 		const toggled = open.includes(name);
 		return (
-			<div>
-				<div className="w-full bg-red-300 flex">
+			<div className="my-8 outline-[#104c5a1a] border-[1px] rounded-md">
+				<div className="w-full bg-[#185D6D1A] text-[20px] flex items-center justify-center rounded-[5px]">
 					<button
-						onClick={() => {
+							className="flex"
+							onClick={() => {
 							if (open.includes(name)) {
 								setOpen(open.filter((t) => t !== name));
 							} else {
@@ -119,17 +121,20 @@ function Page() {
 							}
 						}}
 					>
-						{toggled ? "^" : ">"}
+						<div className="rounded-3xl bg-white m-2  h-[30px] w-[30px] flex justify-center items-center">
+						{toggled ? <img src="/assets/arrow-down.svg" alt='arrow down icon'/> : <img src="/assets/arrow-up.svg" alt='arrow up icon'/>}
+						</div>
+					<div className="m-2">{name}</div>
 					</button>
-					<div>{name}</div>
 					<button
 						onClick={() => {
 							openRef.current = name;
+							setJobToEdit(null);
 							setPopupOpen(true);
 						}}
-						className="ml-auto"
+						className="ml-auto text-[#072b33] font-[100] bg-[#185D6D1A] border-[#185d6d] px-5 rounded-md border-[1px] mr-2"
 					>
-						add job
+						+ Add job
 					</button>
 				</div>
 
@@ -152,6 +157,7 @@ function Page() {
 				isOpen={popupOpen}
 				onClose={() => {
 					setPopupOpen(false);
+					setJobToEdit(null);
 				}}
 				onSubmit={(data) => {
 					addJob(
@@ -163,21 +169,29 @@ function Page() {
 						data.industry
 					);
 				}}
+				jobToEdit={jobToEdit}
 			/>
-			<AdminNavbar />
+			<AdminNavbar page="jobs"/>
 			<div className="flex justify-center">
-				<div className="w-[80vw] bg-red-300 h-[100vw]">
-					<div>
+				<div className="w-[80vw] h-[100vw]">
+					<div className="flex gap-2 mt-10">
+						<img src="/assets/suitcase.svg" alt="suitcase"/>
+						<div>
+							<h1 className="text-[1.8rem] font-bold">Jobs</h1>
+							<p className="text-[20px]">Students are recommended job sectors, which contain individual jobs.</p>
+						</div>
+					</div>
+					<div className="overflow-y-auto no-scrollbar">
 						{jobData.map((industry, index) => {
 							return (
 								<JobContainer key={index} name={industry.name}>
-									{industry.jobs.map((job) => {
-										if (job.name) {
-											return <JobItem key={job.id} job={job} />;
-										} else {
-											return <></>;
-										}
-									})}
+										{industry.jobs.map((job) => {
+											if (job.name) {
+												return <Fragment key={job.id}><JobItem job={job} /><hr className="border-[#888888] border-1"/></Fragment>;
+											} else {
+												return null;
+											}
+										})}
 								</JobContainer>
 							);
 						})}

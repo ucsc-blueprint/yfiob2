@@ -1,8 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
-const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
+const JobPopup = ({ isOpen, onClose, onSubmit, openRef, jobToEdit }) => {
 	const [formData, setFormData] = useState({
 		name: "",
 		description: "",
@@ -13,27 +13,34 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 	});
 
 	useEffect(() => {
-		if (isOpen && openRef.current) {
-			setFormData((prev) => ({
-				...prev,
-				industry: openRef.current,
-			}));
+		if (isOpen) {
+			if (jobToEdit) {
+				setFormData({
+					name: jobToEdit.name || "",
+					description: jobToEdit.description || "",
+					experience: jobToEdit.experienceRequired || "",
+					salary: jobToEdit.salary || "",
+					industry: jobToEdit.industry || "",
+					photos: jobToEdit.photos || [],
+				});
+			} else {
+				setFormData({
+					name: "",
+					description: "",
+					experience: "",
+					salary: "",
+					industry: openRef.current || "",
+					photos: [],
+				});
+			}
 		}
-	}, [isOpen, openRef]);
+	}, [isOpen, jobToEdit, openRef]);
 
 	const handleChange = (e) => {
 		const { name, value } = e.target;
 		setFormData((prev) => ({
 			...prev,
 			[name]: value,
-		}));
-	};
-
-	const handlePhotoChange = (e) => {
-		const files = Array.from(e.target.files);
-		setFormData((prev) => ({
-			...prev,
-			photos: files,
 		}));
 	};
 
@@ -47,18 +54,19 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 
 	return (
 		<div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-			<div className="bg-white rounded-lg p-6 w-full max-w-md relative">
+			<div className="bg-white rounded-lg p-5 w-full max-w-xl relative">
 				<button
 					className="absolute top-2 right-2 text-gray-500 hover:text-gray-700"
 					onClick={onClose}
 				>
 					×
 				</button>
-				<h2 className="text-xl font-bold mb-4">Add Job Details</h2>
+				<h2 className="text-[1.8rem] font-bold mb-4">Job</h2>
+				<hr className="mb-3" style={{ borderColor: 'black', borderWidth: '1px'}}/>
 				<form onSubmit={handleSubmit} className="space-y-4">
 					<div className="form-group">
 						<label htmlFor="name" className="block text-sm font-medium text-gray-700">
-							Job Name:
+							Title:
 						</label>
 						<input
 							type="text"
@@ -67,7 +75,7 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 							value={formData.name}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 p-2 block w-full rounded-md bg-[#F0F0F0]"
 						/>
 					</div>
 
@@ -84,7 +92,7 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 							value={formData.description}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 p-2 block w-full rounded-md bg-[#F0F0F0]"
 						/>
 					</div>
 
@@ -95,14 +103,14 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						>
 							Experience Required:
 						</label>
-						<input
+						<textarea
 							type="text"
 							id="experience"
 							name="experience"
 							value={formData.experience}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 p-2 block w-full rounded-md bg-[#F0F0F0]"
 						/>
 					</div>
 
@@ -113,14 +121,14 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						>
 							Salary:
 						</label>
-						<input
+						<textarea
 							type="text"
 							id="salary"
 							name="salary"
 							value={formData.salary}
 							onChange={handleChange}
 							required
-							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
+							className="mt-1 p-2 block w-full rounded-md bg-[#F0F0F0]"
 						/>
 					</div>
 
@@ -142,24 +150,6 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						/>
 					</div>
 
-					<div className="form-group">
-						<label
-							htmlFor="photos"
-							className="block text-sm font-medium text-gray-700"
-						>
-							Photos:
-						</label>
-						<input
-							type="file"
-							id="photos"
-							name="photos"
-							onChange={handlePhotoChange}
-							multiple
-							accept="image/*"
-							className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
-						/>
-					</div>
-
 					<div className="flex justify-end space-x-3 mt-6">
 						<button
 							type="button"
@@ -170,7 +160,7 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef }) => {
 						</button>
 						<button
 							type="submit"
-							className="px-4 py-2 text-sm font-medium text-white bg-indigo-600 rounded-md hover:bg-indigo-700"
+							className="px-4 py-2 text-sm font-medium text-white bg-[#185D6D] rounded-md hover:bg-[#185D6D]-700"
 						>
 							Submit
 						</button>

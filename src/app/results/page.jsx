@@ -46,13 +46,10 @@ export default function QuizResultsPage() {
   }, []);
 
   useEffect(()=> {
-    console.log("Grade parameter:", gradeParam);
     const checkGradeOfRecentSubmission = async () => {
       await getGradeOfMostRecentSubmission(username).then((grade) => {
-        console.log("Grade of most recent submission:", grade);
         if (grade) {
-          console.log("Grade of most recent submission:", grade);
-          gradeParam = grade;
+          setGradeParam(grade);
         } else {
           router.replace("/pre-quiz");
         }
@@ -70,7 +67,6 @@ export default function QuizResultsPage() {
     onAuthStateChanged(auth, (user) => {
         if (user) {
             setUsername(user.email);
-            console.log("User is signed in:", username);
         }
     });
   }, [auth, username]);
@@ -79,7 +75,6 @@ export default function QuizResultsPage() {
     
     const fetchData = async () => {
       getTopKIndustries(username).then((industries) => {
-        console.log("Top K Industries:", industries);
         setIndustries(industries);
         
       });
@@ -92,17 +87,14 @@ export default function QuizResultsPage() {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          console.log("Careers for Top Industry " + topIndustry + ":" + careers);
           setCareers(careers);
         });
         const secondIndustry = industries[industries.length - 2][0];
         getCareersForIndustry(secondIndustry).then((secondCareers) => {
-          console.log("Careers for Second Industry:", secondCareers);
           setSecondCareers(secondCareers);
         }); 
         const thirdIndustry = industries[industries.length - 3][0]
         getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
-          console.log("Careers for Third Industry:", thirdCareers);
           setThirdCareers(thirdCareers);
         });      
       }
@@ -117,7 +109,6 @@ export default function QuizResultsPage() {
             if (industries.length > 0) {
                 const topIndustry = industries[industries.length - 1][0];
                 getCareersForIndustry(topIndustry).then((careers) => {
-                    console.log("Careers for Top Industry:", careers);
                     setCareers(careers);
                 });
             }
@@ -126,9 +117,6 @@ export default function QuizResultsPage() {
             fetchCareers();
         }
     }, [industries]);
-
-    // Static data
-    console.log("Industries:", industries);
 
   const colors = ["#C8E6C9", "#A5D6A7", "#4CAF50"];
   const chartData = industries.map((industry, index) => ({

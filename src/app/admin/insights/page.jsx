@@ -5,19 +5,7 @@ import getData from "../../../utils/getData";
 import { getAllIndustries } from "../../../../backend/adminFuncs/adminUtils.js";
 
 export default function AdminInsights() {
-  // TODO: fetch these from Firebase
-  
-  // const [assesmentsTaken, setAssesmentsTaken] = useState(0);
-  // const [last7DaysGrowth, setLast7DaysGrowth] = useState(0);
   const [industriesRecommended, setIndustriesRecommended] = useState([]);
-
-  const gradeColor = {
-    0: "border-t-[20px] border-[#90BD00]",
-    1: "border-t-[20px] border-[#BDBD00]",
-    2: "border-t-[20px] border-[#BD7800]",
-    3: "border-t-[20px] border-[#BD4500]",
-  };
-
   
   useEffect(()=> {
     const getData = async () => {
@@ -49,9 +37,6 @@ export default function AdminInsights() {
   }, []);
 
   try {
-    // users = await getData("users");
-    console.log("Users: ", users);
-
     for (let i = 0; i < users.length; i++) {
       const user = users[i];
       if (!user.data.school) {
@@ -74,39 +59,7 @@ export default function AdminInsights() {
     console.error("Error fetching user data:", error);
   }
 
-
-
-  //   const fetchSubmissions = async () => { 
-  //     try {
-  //       const querySnapshot = await getDocs(collection(db, "submissions"));
-  //     } catch (error) {
-  //       console.error("Error fetching submissions:", error);
-  //     }
-  //   }
-  //   fetchSubmissions();
-
-
-  // const handleSubmissionAdd = async () => {
-  //   try {
-  //     const docRef = await addDoc(collection(db, "submissions"), {
-  //       __userID: "Aviel'sFakeID",
-  //       readyForCollege: true,
-  //       timestamp: new Date(),
-  //     });
-  //     assessmentsTaken + 1;
-  //     console.log("Document written with ID: ", docRef.id);
-  //   } catch (error) {
-  //     console.error("Error adding document: ", error);
-  //   }
-  // }
-
-  // submissions = await getData("submissions")
-  try {
-      console.log("You submitted your Quiz", submissions);
-      assessmentsTaken = submissions.length;
-  } catch (error) {
-      console.error("Error fetching submission data:", error);
-  }
+  assessmentsTaken = submissions.length;
   try {
     const currentDate = new Date();
     // Calculate date 7 days ago
@@ -143,7 +96,6 @@ export default function AdminInsights() {
       return submissionDate >= sevenDaysAgo && submissionDate <= currentDate;
     }).length;
     
-    console.log("Last 7 days growth:", last7DaysGrowth);
   } catch (error) {
     console.error("Error calculating last 7 days growth:", error);
   }
@@ -188,7 +140,7 @@ export default function AdminInsights() {
 
   return (
     <>
-      <AdminNavbar />
+      <AdminNavbar page="insights"/>
       <div className="min-h-screen flex flex-col items-center bg-gray-100 py-10">
         <div className="w-[850px] space-y-8">
           {/* Header */}
@@ -223,15 +175,6 @@ export default function AdminInsights() {
               <p className="ml-2 text-gray-500">last 7 days</p>
             </div>
           </div>
-
-          {/* <div className="grid grid-cols-2 gap-4">
-            <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
-              Add Submission
-            </button>
-            <button onClick={handleSubmissionAdd} className="bg-blue-500 text-white px-4 py-2 rounded">
-              Add ReadyForCollege
-            </button>
-          </div> */}
 
           {/* Three summary cards */}
           <div className="grid grid-cols-2 gap-4">

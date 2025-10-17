@@ -28,7 +28,6 @@ export default function QuizClient({ grade }) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.email);
-                console.log("User is signed in:", username);
             } else{
                 setUsername("Guest");
             }
@@ -94,6 +93,31 @@ export default function QuizClient({ grade }) {
         }
     }, [questionNum, randomNum, savedRandomNums]);
 
+    useEffect(() => {
+        const getData = async () => {
+            const data = await getAllResponses(username);
+            mergeWithState(data);              
+            return data;
+        };
+    }, [username]);
+
+    function mergeWithState(data) {
+        for (const responseObj of data) {
+            const answerStr = responseObj["questionNumber"];
+            const answerStrSplit = answerStr.split("-");
+            const questionNum = answerStrSplit[0];
+            const randomQuestionNum = parseInt(answerStrSplit[1]);
+            setSavedRandomNums((prev) => ({
+                ...prev,
+                [questionNum]: randomQuestionNum,
+            }));
+
+            setAnswers((prevAnswers) => ({
+                ...prevAnswers,
+                [answerStr]: responseObj["optionSelected"],
+            }));
+        }
+    }
     function handleAnswerSelect(value, questionId) {
         const questionNum = parseInt(questionId.split("-")[0]);
 
