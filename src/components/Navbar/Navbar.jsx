@@ -5,7 +5,6 @@ import { useState, useEffect, useRef } from "react";
 import Link from "next/link";
 import Image from "next/image";
 import { signOut, onAuthStateChanged, getAuth } from "firebase/auth";
-import { auth } from "../../utils/firebase";
 import { checkIsAdmin } from "../../../backend/adminFuncs/adminUtils.js";
 
 export const Navbar = () => {
@@ -22,7 +21,6 @@ export const Navbar = () => {
 
             if (user?.email) {
                 isAdmin.current = await checkIsAdmin(user.email);
-                console.log("isAdmin:", isAdmin.current);
             }
         });
 

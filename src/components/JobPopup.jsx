@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 
 const JobPopup = ({ isOpen, onClose, onSubmit, openRef, jobToEdit }) => {
 	const [formData, setFormData] = useState({
@@ -41,14 +41,6 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef, jobToEdit }) => {
 		setFormData((prev) => ({
 			...prev,
 			[name]: value,
-		}));
-	};
-
-	const handlePhotoChange = (e) => {
-		const files = Array.from(e.target.files);
-		setFormData((prev) => ({
-			...prev,
-			photos: files,
 		}));
 	};
 
@@ -157,25 +149,6 @@ const JobPopup = ({ isOpen, onClose, onSubmit, openRef, jobToEdit }) => {
 							className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500"
 						/>
 					</div>
-
-					{/* Currently Not Used */}
-					{/* <div className="form-group">
-						<label
-							htmlFor="photos"
-							className="block text-sm font-medium text-gray-700"
-						>
-							Photos:
-						</label>
-						<input
-							type="file"
-							id="photos"
-							name="photos"
-							onChange={handlePhotoChange}
-							multiple
-							accept="image/*"
-							className="mt-1 block w-full text-sm text-gray-500 file:mr-4 file:py-2 file:px-4 file:rounded-md file:border-0 file:text-sm file:font-semibold file:bg-indigo-50 file:text-indigo-700 hover:file:bg-indigo-100"
-						/>
-					</div> */}
 
 					<div className="flex justify-end space-x-3 mt-6">
 						<button

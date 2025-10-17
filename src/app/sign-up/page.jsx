@@ -71,7 +71,6 @@ export const Page = () => {
         try {
             const userCredential = await createUserWithEmailAndPassword(auth, email, password);
             const user = userCredential.user;
-            console.log("User created successfully: ", user.uid);
 
             const userData = {
                 uid: user.uid,
@@ -83,12 +82,9 @@ export const Page = () => {
 
             await addData("users", userData, user.uid);
 
-            alert("User registered and data saved successfully");
-
             router.push("/");
         } catch (error) {
-            console.error("Error during signup: ", error);
-            alert("Error saving data: " + error.message);
+            alert("Error: Email already in use");
         }
     };
 
@@ -220,7 +216,7 @@ export const Page = () => {
                         />
 
                         {/* Sign Up Button */}
-                        <div className="my-6">
+                        <div className="py-6">
                             <Button text="Sign Up" size="big" onClick={handleSubmit} />
                         </div>
                     </div>

@@ -26,7 +26,6 @@ export default function QuizClient({ grade }) {
         onAuthStateChanged(auth, (user) => {
             if (user) {
                 setUsername(user.email);
-                console.log("User is signed in:", username);
             }
         });
     }, [auth, username]);
@@ -71,12 +70,9 @@ export default function QuizClient({ grade }) {
     useEffect(() => {
         const getData = async () => {
             const data = await getAllResponses(username);
-            mergeWithState(data);                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                   
+            mergeWithState(data);              
             return data;
         };
-        getData().then((res) => {
-            console.log(res);
-        });
     }, [username]);
 
     function mergeWithState(data) {

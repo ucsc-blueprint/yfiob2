@@ -1,5 +1,3 @@
-import React from "react";
-
 export const Button = ({ text, size, onClick }) => {
     // Button size is dependent on text-size
     if (size === "small") {

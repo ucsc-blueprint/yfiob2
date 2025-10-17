@@ -1,5 +1,4 @@
 "use client";
-import React from "react";
 
 export const CareersCard = ({ title, description, educationLevel, careerImage }) => {
     if (educationLevel === "elementary-school") {
