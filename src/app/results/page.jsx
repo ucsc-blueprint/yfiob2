@@ -72,9 +72,7 @@ export default function QuizResultsPage() {
   }, [auth, username]);
 
   useEffect(() => {
-    if(username === "Guest") {
-      return;
-    }
+    
     const fetchData = async () => {
       getTopKIndustries(username).then((industries) => {
         setIndustries(industries);
@@ -103,7 +101,8 @@ export default function QuizResultsPage() {
     }
     if (industries.length > 0) {
       fetchCareers();
-    }})
+    }
+    }, [industries])
 
     useEffect(() => {
         const fetchCareers = async () => {
@@ -128,56 +127,13 @@ export default function QuizResultsPage() {
   );
   
   const handleTakeQuizAgain = () => {
-    if(username === "Guest") {
-      router.replace("/pre-quiz");
-      return;
-    }
-
     deleteAllResponses(username).then(() => {
       router.replace("/pre-quiz");
     });
   }
 
-    const topJobs = [
-        {
-            title: "Agricultural Architect",
-            description:
-                "Design sustainable farm layouts and eco-friendly irrigation systems.",
-            imageUrl: "/jigna-small.svg",
-        },
-        {
-            title: "Farm Manager",
-            description:
-                "Oversee daily operations, budgeting, and crop planning on a commercial farm.",
-            imageUrl: "/jigna-small.svg",
-        },
-        {
-            title: "Soil Conservationist",
-            description: "Work with landowners to protect soil health and prevent erosion.",
-            imageUrl: "/jigna-small.svg",
-        },
-        {
-            title: "Agricultural Engineer",
-            description: "Develop agricultural machinery and automation solutions.",
-            imageUrl: "/jigna-small.svg",
-        },
-    ];
 
-    const otherJobsTitles = [
-        "Environmental Scientist",
-        "Hydrologist",
-        "Food Scientist",
-        "Landscape Designer",
-        "Wildlife Biologist",
-        "Agricultural Economist",
-        "Conservation Officer",
-        "Forestry Technician",
-    ];
-    const otherJobs = otherJobsTitles.map((title) => ({
-        title,
-        description: "",
-        imageUrl: "/jigna-small.svg",
-    }));
+
 
     const [shareEmail, setShareEmail] = useState("");
     const [showShareModal, setShowShareModal] = useState(false);
