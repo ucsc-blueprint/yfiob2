@@ -33,7 +33,7 @@ function CollegeInterestPage() {
     return (
         <div
             className={`min-h-screen flex flex-col ${
-                gradeColors[grade] || "bg-gradient-to-b from-yellow-300 to-yellow-400"
+                gradeColors[grade] || "bg-#D8EF88"
             }`}
         >
             <div className="z-10 relative">

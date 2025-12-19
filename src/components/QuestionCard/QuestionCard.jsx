@@ -9,9 +9,9 @@ export const QuestionCard = ({
     onAnswerSelect = () => {},
 }) => {
     const backgroundColor = {
-        "elementary-school": "bg-[#3FA1D9]",
-        "middle-school": "bg-[#47B748]",
-        "high-school": "bg-[#FF7022]",
+        "elementary-school": "bg-[#10BFE8]",
+        "middle-school": "bg-[#90BD00]",
+        "high-school": "bg-[#FF7D26]",
     };
 
     const textColor = {
