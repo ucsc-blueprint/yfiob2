@@ -1,7 +1,7 @@
 // app/quiz-results/page.jsx
 "use client";
 
-import { use, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import Link from "next/link";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { useRouter } from "next/navigation";
@@ -24,18 +24,53 @@ import {
 import { getTopKIndustries, getCareersForIndustry } from "../../../backend/matchingAlgorithm/matchingAlgo";
 import { deleteAllResponses, getGradeOfMostRecentSubmission } from "../../../backend/questions/questionDB";
 import { getAuth, onAuthStateChanged } from "firebase/auth";
-
+import CareerGroups from "../../../constants/CareerGroups.json";
 
 export default function QuizResultsPage() {
   const router = useRouter();
 
-  const [gradeParam, setGradeParam] = useState("");
+  const [gradeParam, setGradeParam] = useState("elementary-school");
   const [industries, setIndustries] = useState([]);
-  const [careers, setCareers] = useState([]);
-  const [secondCareers, setSecondCareers] = useState([]);
-  const [thirdCareers, setThirdCareers] = useState([]);
+  const [careers, setCareers] = useState("");
+  const [secondCareers, setSecondCareers] = useState("");
+  const [thirdCareers, setThirdCareers] = useState("");
+  const [holdCareers, setholdCareers] = useState({});
   const auth = getAuth();
   const [username, setUsername] = useState("Guest");
+
+  const CareerCardsArray = (industry) => {
+
+  const industryLabel = industry;
+  const industryDataName = industryNameToData(industry);
+  
+  if (!CareerGroups[industryDataName]) return;
+
+  const careers = Object.entries(
+    CareerGroups[industryDataName].careers
+      ).map(([id, career]) => ({
+        id,
+        title: career.title,
+        description: career.description ?? null,
+        image: career.image,
+        industryDataName,
+        industryLabel,
+      }));
+
+      setholdCareers(prev => ({
+        ...prev,
+        [industryDataName]: careers,
+      }));
+  };
+
+  const industryNameToData = (name) => {
+  if (!name) return "";
+
+  return name
+    .toLowerCase()
+    .trim()
+    .replace(/[^a-z0-9\s]/g, "")
+    .replace(/\s+/g, "-");
+  };
 
   useEffect(() => {
     if (typeof window !== "undefined") {
@@ -64,12 +99,11 @@ export default function QuizResultsPage() {
 
   
   useEffect(() => {
-    onAuthStateChanged(auth, (user) => {
-        if (user) {
-            setUsername(user.email);
-        }
+    const signedIn = onAuthStateChanged(auth, (user) => {
+      if (user) setUsername(user.email);
     });
-  }, [auth, username]);
+    return () => signedIn();
+  }, [auth]);
 
   useEffect(() => {
     
@@ -87,36 +121,32 @@ export default function QuizResultsPage() {
       if (industries.length > 0) {
         const topIndustry = industries[industries.length - 1][0];
         getCareersForIndustry(topIndustry).then((careers) => {
-          setCareers(careers);
+          setCareers(topIndustry);
         });
         const secondIndustry = industries[industries.length - 2][0];
         getCareersForIndustry(secondIndustry).then((secondCareers) => {
-          setSecondCareers(secondCareers);
+          setSecondCareers(secondIndustry);
         }); 
-        const thirdIndustry = industries[industries.length - 3][0]
+        const thirdIndustry = (industries.length >= 3 && industries[industries.length - 3][0])
         getCareersForIndustry(thirdIndustry).then((thirdCareers) => {
-          setThirdCareers(thirdCareers);
+          setThirdCareers(thirdIndustry);
         });      
       }
     }
     if (industries.length > 0) {
       fetchCareers();
     }
+
     }, [industries])
 
     useEffect(() => {
-        const fetchCareers = async () => {
-            if (industries.length > 0) {
-                const topIndustry = industries[industries.length - 1][0];
-                getCareersForIndustry(topIndustry).then((careers) => {
-                    setCareers(careers);
-                });
-            }
-        };
-        if (industries.length > 0) {
-            fetchCareers();
-        }
+      if (industries.length === 0) return;
+
+      const topThree = industries.slice(-3).map(i => i[0]);
+
+      topThree.forEach(CareerCardsArray);
     }, [industries]);
+
 
   const colors = ["#C8E6C9", "#A5D6A7", "#4CAF50"];
   const chartData = industries.map((industry, index) => ({
@@ -131,9 +161,6 @@ export default function QuizResultsPage() {
       router.replace("/pre-quiz");
     });
   }
-
-
-
 
     const [shareEmail, setShareEmail] = useState("");
     const [showShareModal, setShowShareModal] = useState(false);
@@ -228,8 +255,17 @@ export default function QuizResultsPage() {
       {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {careers.map((job, i) => (
-            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          {console.log(holdCareers)}
+          {holdCareers[industryNameToData(careers)]?.map((career, index) => (
+          <CareersCard
+              key={index}
+              title={career.title}
+              description={career.description}
+              grade={gradeParam}
+              image={career.image}
+              href={`/explore-jobs/${industryNameToData(careers)}/${career.key}?grade=${gradeParam}`}
+              specific={true}
+          />
           ))}
         </div>
       </section>
@@ -324,8 +360,16 @@ export default function QuizResultsPage() {
           {industries.length > 0 && industries[industries.length - 2][0]}
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {secondCareers.map((job, i) => (
-            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          {holdCareers[industryNameToData(secondCareers)]?.map((career, index) => (
+          <CareersCard
+              key={index}
+              title={career.title}
+              description={career.description}
+              grade={gradeParam}
+              image={career.image}
+              href={`/explore-jobs/${industryNameToData(secondCareers)}/${career.key}?grade=${gradeParam}`}
+              specific={true}
+          />
           ))}
         </div>
       </section>
@@ -334,8 +378,16 @@ export default function QuizResultsPage() {
           {industries.length > 0 && industries[industries.length - 3][0]}
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {thirdCareers.map((job, i) => (
-            <CareersCard grade={gradeParam} key={i} title={job} description={""} educationLevel={""}/>
+          {holdCareers[industryNameToData(thirdCareers)]?.map((career, index) => (
+          <CareersCard
+              key={index}
+              title={career.title}
+              description={career.description}
+              grade={gradeParam}
+              image={career.image}
+              href={`/explore-jobs/${industryNameToData(thirdCareers)}/${career.key}?grade=${gradeParam}`}
+              specific={true}
+          />
           ))}
         </div>
       </section>
