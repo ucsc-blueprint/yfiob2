@@ -2,9 +2,9 @@ import Image from "next/image";
 import React from "react";
 
 const backgroundColor = {
-    "elementary-school": "darkBlue",
-    "middle-school": "darkGreen",
-    "high-school": "darkOrange",
+    "elementary-school":" #185D6D",
+    "middle-school": "#4F5C25",
+    "high-school": "#824014",
 };
 
 const jignaColor = {
@@ -36,25 +36,25 @@ export const CareersCard = ({
     href,
 }) => {
 
-    const safeGrade = grade && grade.length > 0 ? grade : "default";
-    console.log("Grade:", safeGrade);
+  const safeGrade = grade && grade.length > 0 ? grade : "elementary-school";
+
     return (
         <a href={href}>
             <div
-                className={`border-2 border-${backgroundColor[grade]} no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
+                style={{ borderColor: backgroundColor[safeGrade] }}
+                className={`border-2 no-scrollbar overflow-y-hidden rounded-[10px] w-[317px] h-[366px] font-primary bg-white shadow-md`}
             >
                 <header
-                    className={`bg-${backgroundColor[grade]} flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
+                    style={{ backgroundColor: backgroundColor[safeGrade] }}
+                    className={`flex w-full py-2 justify-center text-[22px] font-semibold text-white h-[99px] items-center text-center font-primary`}
                 >
-                    <div>
-                    {title}
-                    </div>
+                    <div> {title} </div>
                 </header>
                 <div className="h-[150px] w-full relative my-[13px]">
                     <Image
                         fill
                         src={image ?? "/assets/jigna.svg"}
-                        style={{ objectFit: "contain", filter: jignaHue[grade] }}
+                        style={{ objectFit: "contain", filter: jignaHue[safeGrade] }}
                         alt={title}
                     />
                 </div>

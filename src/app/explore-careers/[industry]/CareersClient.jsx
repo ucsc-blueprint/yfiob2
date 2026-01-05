@@ -18,8 +18,6 @@ export default function CareersClient({ industry }) {
         image: CareerGroups[industry].careers[key].image,
     }));
 
-    console.log(grade);
-
     const HeaderSection = () => (
         <div className="flex flex-col items-center font-primary py-[7.5rem]">
             <div className="font-[500] flex flex-col items-center">

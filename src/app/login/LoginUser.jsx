@@ -1,7 +1,7 @@
 "use client";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import Link from "next/link";
-import { useRouter, useSearchParams } from "next/navigation";
+import { useRouter } from "next/navigation";
 import { Navbar } from "../../components/Navbar/Navbar";
 import { signInWithEmailAndPassword, onAuthStateChanged } from "firebase/auth";
 import { auth } from "../../utils/firebase";
@@ -13,8 +13,6 @@ export function LoginUser() {
     const [password, setPassword] = useState("");
     const router = useRouter();
     const [loggedinflag, setLogin] = useState(false);
-    const searchParams = useSearchParams();
-    const grade = searchParams.get("grade") || "elementary-school";
 
     // Redirect logged-in users to another page
     useEffect(() => {
@@ -35,16 +33,13 @@ export function LoginUser() {
         }
         try {
             // Use Firebase's signInWithEmailAndPassword method
-            const userCredential = await signInWithEmailAndPassword(auth, email, password);
-            // If successful, you can get the user data from userCredential.user
-            alert("Login successful!");
+            await signInWithEmailAndPassword(auth, email, password);
             // Navigate to the quiz with the grade and valid=true parameter
             router.push(`/`);
             setLogin(true);
-            console.log(userCredential.user); // Log the user data for debugging
         } catch (error) {
             // Handle errors such as wrong credentials or non-existing accounts
-            alert("Login failed: " + error.message);
+            alert("Invalid email or password");
         }
     };
 

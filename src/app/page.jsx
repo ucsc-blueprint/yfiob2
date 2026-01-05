@@ -15,7 +15,7 @@ function App() {
             if (user) {
                 // User is signed in
                 console.log("User is signed in:", user.uid);
-                if (grade == "high-school"){
+                if (grade === "high-school"){
                     router.push(`/college-interest?grade=${grade}&valid=true`);
                 }
                 else{
@@ -37,29 +37,44 @@ function App() {
                 <h1 className="text-3xl font-primary mb-4">
                     Discover a career path that matches your unique interests!
                 </h1>
-                <div className="flex items-center justify-center space-x-40 mt-6">
+                <div className="flex items-center justify-center space-x-20 mt-6">
                     <img
-                        src="/assets/ConstructionPuzzlePiece.svg"
+                        src="/characters/Agriculture&NaturalResources/AnimalScience.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/assets/TeacherPuzzlePiece.svg"
-                        alt="K-5 Puzzle Piece"
-                        className="w-40 h-40"
-                    />
-                    <img
-                        src="/assets/DirectorPuzzlePiece.svg"
+                        src="/characters/ArtsMedia&Entertainment/Art Management.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/assets/DoctorPuzzlePiece.svg"
+                        src="/characters/Building&ConstructionTrades/Building Maintenance.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/assets/FirefighterPuzzlePiece.svg"
+                        src="/characters/Business&Finance/Accounting & Auditing.svg"
+                        alt="K-5 Puzzle Piece"
+                        className="w-36 h-36"
+                    />
+                    <img
+                        src="/characters/EducationChildDev&FamServices/Child & Family Services.svg"
+                        alt="K-5 Puzzle Piece"
+                        className="w-36 h-36"
+                    />
+                    <img
+                        src="/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg"
+                        alt="K-5 Puzzle Piece"
+                        className="w-36 h-36"
+                    />
+                    <img
+                        src="/characters/Engineering&Architecture/Architecture and Planning.svg"
+                        alt="K-5 Puzzle Piece"
+                        className="w-36 h-36"
+                    />
+                    <img
+                        src="/characters/Fashion&InteriorDesign/Fashion Design.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
