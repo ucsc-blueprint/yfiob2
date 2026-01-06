@@ -1,986 +1,1072 @@
 {
-    "agriculture-and-natural-resources": {
-        "title": "Agriculture and Natural Resources",
-        "careers": {
-            "animal-science": {
-                "title": "Animal Science",
-                "jobs": [
-                    "Animal Breeder",
-                    "Animal Caretaker",
-                    "Animal Scientist",
-                    "Animal Trainer",
-                    "Veterinarian (VMD)",
-                    "Zoo Veterinarian",
-                    "Zoologist",
-                    "Wildlife Biologist",
-                    "Wildlife Control Agent"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/AnimalScience.svg"
-            },
-            "plant-science-and-gardening": {
-                "title": "Plant Science & Gardening",
-                "jobs": [
-                    "Botanist",
-                    "Crop Workers Supervisor",
-                    "Greenhouse and Nursery Manager",
-                    "Horticulturist",
-                    "Plant Breeder"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg"
-            },
-            "environmental-conservation": {
-                "title": "Environmental Conservation",
-                "jobs": [
-                    "Conservation Scientist",
-                    "Environmental Compliance Inspector",
-                    "Environmental Disease Analyst",
-                    "Environmental Economists",
-                    "Environmental Engineer",
-                    "Environmental Planner",
-                    "Environmental Research Analyst",
-                    "Environmental Restoration Planners",
-                    "Environmental Technician",
-                    "Soil Conservation Technician",
-                    "Soil Conservationist",
-                    "Soil Engineer",
-                    "Soil Scientist"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg"
-            },
-            "aquatic-science": {
-                "title": "Aquatic Science",
-                "jobs": [
-                    "Aquaculture Specialist",
-                    "Marine and Aquatic Biologist",
-                    "Marine Surveyor",
-                    "Oceanographer"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/AquaticScience.svg"
-            },
-            "farming-and-ranching": {
-                "title": "Farming & Ranching",
-                "jobs": [
-                    "Farm and Ranch Manager",
-                    "Farm Equipment Mechanic",
-                    "Farm Management Advisor",
-                    "Farm Product Buyer",
-                    "Farm Products Purchasing Agent",
-                    "Farmers and Ranchers"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg"
-            },
-            "forestry": {
-                "title": "Forestry",
-                "jobs": [
-                    "Forester",
-                    "Forest and Conservation Technician",
-                    "Forest and Conservation Workers",
-                    "Logging Equipment Operators",
-                    "Logging Worker Supervisor"
-                ],
-                "image": "/characters/Agriculture&NaturalResources/Forestry.svg"
-            }
-        },
-        "image": "/icons/Agriculture&NaturalResources.svg"
+  "agriculture-and-natural-resources": {
+    "description": "This industry focuses on producing food and managing natural resources while protecting the environment.",
+    "title": "Agriculture and Natural Resources",
+    "careers": {
+      "animal-science": {
+        "title": "Animal Science",
+        "description": "Studies the care, health, behavior, and breeding of animals for agriculture, conservation, and companionship.",
+        "jobs": [
+          "Animal Breeder",
+          "Animal Caretaker",
+          "Animal Scientist",
+          "Animal Trainer",
+          "Veterinarian (VMD)",
+          "Zoo Veterinarian",
+          "Zoologist",
+          "Wildlife Biologist",
+          "Wildlife Control Agent"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/AnimalScience.svg"
+      },
+      "plant-science-and-gardening": {
+        "title": "Plant Science & Gardening",
+        "description": "Focuses on growing, improving, and managing plants for food, landscapes, and research.",
+        "jobs": [
+          "Botanist",
+          "Crop Workers Supervisor",
+          "Greenhouse and Nursery Manager",
+          "Horticulturist",
+          "Plant Breeder"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/PlantScience&Gardening.svg"
+      },
+      "environmental-conservation": {
+        "title": "Environmental Conservation",
+        "description": "Protects natural resources by studying ecosystems and creating solutions to environmental challenges.",
+        "jobs": [
+          "Conservation Scientist",
+          "Environmental Compliance Inspector",
+          "Environmental Disease Analyst",
+          "Environmental Economists",
+          "Environmental Engineer",
+          "Environmental Planner",
+          "Environmental Research Analyst",
+          "Environmental Restoration Planners",
+          "Environmental Technician",
+          "Soil Conservation Technician",
+          "Soil Conservationist",
+          "Soil Engineer",
+          "Soil Scientist"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/EnvironmentalConservation.svg"
+      },
+      "aquatic-science": {
+        "title": "Aquatic Science",
+        "description": "Explores marine and freshwater ecosystems, organisms, and water-based environments.",
+        "jobs": [
+          "Aquaculture Specialist",
+          "Marine and Aquatic Biologist",
+          "Marine Surveyor",
+          "Oceanographer"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/AquaticScience.svg"
+      },
+      "farming-and-ranching": {
+        "title": "Farming & Ranching",
+        "description": "Produces crops and raises livestock to supply food, fiber, and other agricultural products.",
+        "jobs": [
+          "Farm and Ranch Manager",
+          "Farm Equipment Mechanic",
+          "Farm Management Advisor",
+          "Farm Product Buyer",
+          "Farm Products Purchasing Agent",
+          "Farmers and Ranchers"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/Farming&Ranching.svg"
+      },
+      "forestry": {
+        "title": "Forestry",
+        "description": "Manages forests to balance conservation, recreation, and sustainable resource use.",
+        "jobs": [
+          "Forester",
+          "Forest and Conservation Technician",
+          "Forest and Conservation Workers",
+          "Logging Equipment Operators",
+          "Logging Worker Supervisor"
+        ],
+        "image": "/characters/Agriculture&NaturalResources/Forestry.svg"
+      }
     },
-    "arts-media-and-entertainment": {
-        "title": "Arts, Media, and Entertainment",
-        "careers": {
-            "performing-arts": {
-                "title": "Performing Arts",
-                "jobs": [
-                    "Actor/Actress",
-                    "Dancer",
-                    "Choreographer",
-                    "Musician",
-                    "Singer",
-                    "Music Arrangers and Orchestrators",
-                    "Music Director",
-                    "Theater and Media Director"
-                ],
-                "image": "/characters/ArtsMedia&Entertainment/Performing-Arts.svg"
-            },
-            "visual-arts-and-design": {
-                "title": "Visual Arts & Design",
-                "jobs": [
-                    "Fine Artist",
-                    "Illustrator",
-                    "Cartoonist (Publications)",
-                    "Graphic Designer",
-                    "Set Designer",
-                    "Set Illustrator",
-                    "Sculptors",
-                    "Exhibit Artist",
-                    "Exhibit Designer",
-                    "Furniture Designer",
-                    "Toy Designer",
-                    "Fashion Artist",
-                    "Fashion Designer",
-                    "Fashion Coordinator",
-                    "Makeup Artists - Theatrical"
-                ],
-                "image": "/characters/ArtsMedia&Entertainment/Visual-Arts-Design.svg"
-            },
-            "media-and-broadcasting": {
-                "title": "Media & Broadcasting",
-                "jobs": [
-                    "Broadcast News Analyst",
-                    "Broadcast Technician",
-                    "Film Editor",
-                    "Cinematographer",
-                    "Radio & TV Announcer",
-                    "Radio & TV News Commentator",
-                    "Radio & TV Newscaster",
-                    "Radio & TV Producer",
-                    "Radio & TV Program Director",
-                    "Radio & TV Sports Announcer",
-                    "Radio & TV Station Administrator",
-                    "Radio & TV Talk Show Host",
-                    "Disc Jockey"
-                ],
-                "image": "/characters/ArtsMedia&Entertainment/Media-Broadcasting.svg"
-            },
-            "writing-and-editing": {
-                "title": "Writing & Editing",
-                "jobs": [
-                    "Writer / Author",
-                    "Copy Writer",
-                    "Screen Writer",
-                    "Script Editor",
-                    "Editorial Writer, Newspapers & Magazines",
-                    "Newspaper Editor",
-                    "Publications Editor"
-                ],
-                "image": "/characters/ArtsMedia&Entertainment/Writing-Editing.svg"
-            },
-            "art-management": {
-                "title": "Art Management",
-                "jobs": [
-                    "Art Director",
-                    "Artists Agent (Manager)",
-                    "Museum Curator",
-                    "Museum Technicians and Conservators",
-                    "Art Appraiser",
-                    "Art Restorer"
-                ],
-                "image": "/characters/ArtsMedia&Entertainment/Art-Management.svg"
-            }
-        },
-        "image": "/icons/ArtsMedia&Entertainment.svg"
+    "image": "/icons/Agriculture&NaturalResources.svg"
+  },
+
+  "arts-media-and-entertainment": {
+    "description": "This industry creates content like art, music, films, and digital media to inform and entertain people.",
+    "title": "Arts, Media, and Entertainment",
+    "careers": {
+      "performing-arts": {
+        "title": "Performing Arts",
+        "description": "Uses live performance like music, dance, and theater to entertain and express ideas.",
+        "jobs": [
+          "Actor/Actress",
+          "Dancer",
+          "Choreographer",
+          "Musician",
+          "Singer",
+          "Music Arrangers and Orchestrators",
+          "Music Director",
+          "Theater and Media Director"
+        ],
+        "image": "/characters/ArtsMedia&Entertainment/Performing-Arts.svg"
+      },
+      "visual-arts-and-design": {
+        "title": "Visual Arts & Design",
+        "description": "Creates visual content such as illustrations, fashion, and graphics for artistic or commercial use.",
+        "jobs": [
+          "Fine Artist",
+          "Illustrator",
+          "Cartoonist (Publications)",
+          "Graphic Designer",
+          "Set Designer",
+          "Set Illustrator",
+          "Sculptors",
+          "Exhibit Artist",
+          "Exhibit Designer",
+          "Furniture Designer",
+          "Toy Designer",
+          "Fashion Artist",
+          "Fashion Designer",
+          "Fashion Coordinator",
+          "Makeup Artists - Theatrical"
+        ],
+        "image": "/characters/ArtsMedia&Entertainment/Visual-Arts-Design.svg"
+      },
+      "media-and-broadcasting": {
+        "title": "Media & Broadcasting",
+        "description": "Produces and delivers news, film, radio, and television content to the public.",
+        "jobs": [
+          "Broadcast News Analyst",
+          "Broadcast Technician",
+          "Film Editor",
+          "Cinematographer",
+          "Radio & TV Announcer",
+          "Radio & TV News Commentator",
+          "Radio & TV Newscaster",
+          "Radio & TV Producer",
+          "Radio & TV Program Director",
+          "Radio & TV Sports Announcer",
+          "Radio & TV Station Administrator",
+          "Radio & TV Talk Show Host",
+          "Disc Jockey"
+        ],
+        "image": "/characters/ArtsMedia&Entertainment/Media-Broadcasting.svg"
+      },
+      "writing-and-editing": {
+        "title": "Writing & Editing",
+        "description": "Develops written content for books, scripts, articles, and digital media.",
+        "jobs": [
+          "Writer / Author",
+          "Copy Writer",
+          "Screen Writer",
+          "Script Editor",
+          "Editorial Writer, Newspapers & Magazines",
+          "Newspaper Editor",
+          "Publications Editor"
+        ],
+        "image": "/characters/ArtsMedia&Entertainment/Writing-Editing.svg"
+      },
+      "art-management": {
+        "title": "Art Management",
+        "description": "Oversees artistic projects, collections, and organizations to support creative work.",
+        "jobs": [
+          "Art Director",
+          "Artists Agent (Manager)",
+          "Museum Curator",
+          "Museum Technicians and Conservators",
+          "Art Appraiser",
+          "Art Restorer"
+        ],
+        "image": "/characters/ArtsMedia&Entertainment/Art-Management.svg"
+      }
     },
-    "building-and-construction-trades": {
-        "title": "Building and Construction Trades",
-        "careers": {
-            "construction-management": {
-                "title": "Construction Management",
-                "jobs": [
-                    "Construction Manager",
-                    "Building Inspector",
-                    "Construction Carpenter",
-                    "Building Maintenance Mechanic",
-                    "Facilities Planner"
-                ],
-                "image": "/characters/Building&ConstructionTrades/Construction-Management.svg"
-            },
-            "skilled-trades": {
-                "title": "Skilled Trades",
-                "jobs": [
-                    "Electrician",
-                    "Electrician Helpers",
-                    "Plumber (Plumbing Contractor)",
-                    "Pipefitter",
-                    "Sheet Metal Workers",
-                    "Mason",
-                    "Roofer",
-                    "Painter",
-                    "HVAC Technician",
-                    "Cabinet Maker",
-                    "Boilermakers",
-                    "Reinforcing Iron and Rebar Workers"
-                ],
-                "image": "/characters/Building&ConstructionTrades/Skilled-Trades.svg"
-            },
-            "heavy-equipment-operation": {
-                "title": "Heavy Equipment Operation",
-                "jobs": [
-                    "Crane Operator",
-                    "Bulldozer / Grader Operator",
-                    "Excavating Machine Operator",
-                    "Excavating Supervisor",
-                    "Heavy Equipment Mechanic",
-                    "Heavy Machine Operator"
-                ],
-                "image": "/characters/Building&ConstructionTrades/Heavy-Equipment-Operation.svg"
-            },
-            "building-maintenance": {
-                "title": "Building Maintenance",
-                "jobs": [
-                    "Building Maintenance Mechanic",
-                    "Janitorial Supervisors",
-                    "Housekeeping Supervisors"
-                ],
-                "image": "/characters/Building&ConstructionTrades/Building-Maintenance.svg"
-            }
-        },
-        "image": "/icons/Building&ConstructionTrades.svg"
+    "image": "/icons/ArtsMedia&Entertainment.svg"
+  },
+  "building-and-construction-trades": {
+    "description": "This industry builds and maintains homes, buildings, and infrastructure.",
+    "title": "Building and Construction Trades",
+    "careers": {
+      "construction-management": {
+        "title": "Construction Management",
+        "description": "Plans and supervises building projects to ensure safety, quality, and efficiency.",
+        "jobs": [
+          "Construction Manager",
+          "Building Inspector",
+          "Construction Carpenter",
+          "Building Maintenance Mechanic",
+          "Facilities Planner"
+        ],
+        "image": "/characters/Building&ConstructionTrades/Construction-Management.svg"
+      },
+      "skilled-trades": {
+        "title": "Skilled Trades",
+        "description": "Performs specialized hands-on construction work like electrical, plumbing, and carpentry.",
+        "jobs": [
+          "Electrician",
+          "Electrician Helpers",
+          "Plumber (Plumbing Contractor)",
+          "Pipefitter",
+          "Sheet Metal Workers",
+          "Mason",
+          "Roofer",
+          "Painter",
+          "HVAC Technician",
+          "Cabinet Maker",
+          "Boilermakers",
+          "Reinforcing Iron and Rebar Workers"
+        ],
+        "image": "/characters/Building&ConstructionTrades/Skilled-Trades.svg"
+      },
+      "heavy-equipment-operation": {
+        "title": "Heavy Equipment Operation",
+        "description": "Operates and maintains large machinery used in construction and infrastructure projects.",
+        "jobs": [
+          "Crane Operator",
+          "Bulldozer / Grader Operator",
+          "Excavating Machine Operator",
+          "Excavating Supervisor",
+          "Heavy Equipment Mechanic",
+          "Heavy Machine Operator"
+        ],
+        "image": "/characters/Building&ConstructionTrades/Heavy-Equipment-Operation.svg"
+      },
+      "building-maintenance": {
+        "title": "Building Maintenance",
+        "description": "Keeps buildings safe, clean, and functional through regular repairs and upkeep.",
+        "jobs": [
+          "Building Maintenance Mechanic",
+          "Janitorial Supervisors",
+          "Housekeeping Supervisors"
+        ],
+        "image": "/characters/Building&ConstructionTrades/Building-Maintenance.svg"
+      }
     },
-    "business-and-finance": {
-        "title": "Business and Finance",
-        "careers": {
-            "accounting-and-auditing": {
-                "title": "Accounting & Auditing",
-                "jobs": [
-                    "Accountant",
-                    "Accounting Clerk",
-                    "Auditor",
-                    "Bookkeeper",
-                    "Budget Accountant",
-                    "Budget Analyst",
-                    "Certified Public Accountant (CPA)",
-                    "Cost Accountant",
-                    "County or City Auditor",
-                    "Internal Auditor",
-                    "Property Accountant",
-                    "Tax Accountant",
-                    "Tax Auditor",
-                    "Tax Preparer"
-                ],
-                "image": "/characters/Business&Finance/Accounting-Auditing.svg"
-            },
-            "financial-services": {
-                "title": "Financial Services",
-                "jobs": [
-                    "Actuary",
-                    "Financial Analyst",
-                    "Financial Examiner",
-                    "Financial Manager",
-                    "Financial Planner",
-                    "Financial Quantitative Analysts",
-                    "Loan Officer",
-                    "Loan Counselor",
-                    "Securities Broker",
-                    "Securities and Commodities Sales Agent",
-                    "Insurance Agent",
-                    "Insurance Adjuster",
-                    "Insurance Claim Examiner",
-                    "Insurance Claims Adjuster",
-                    "Insurance Underwriter"
-                ],
-                "image": "/characters/Business&Finance/Financial-Services.svg"
-            },
-            "management-and-administration": {
-                "title": "Management & Administration",
-                "jobs": [
-                    "Administrative Assistant",
-                    "Administrative Service Manager",
-                    "Benefits Manager",
-                    "Chief Executives",
-                    "Chief Financial Officer",
-                    "Chief Sustainability Officers",
-                    "Compliance Managers",
-                    "Compliance Officer",
-                    "Compensation Administrator",
-                    "Compensation Specialist",
-                    "Employment Administrator",
-                    "Employment and Placement Specialist",
-                    "Human Resources Management Advisor",
-                    "Human Resources Management Consultant",
-                    "Manager",
-                    "Office Supervisor",
-                    "Project Management Specialists",
-                    "Purchasing Agent",
-                    "Purchasing Manager",
-                    "Storage and Distribution Manager",
-                    "Supply Chain Managers"
-                ],
-                "image": "/characters/Business&Finance/Management-Administration.svg"
-            },
-            "sales-and-brokerage": {
-                "title": "Sales & Brokerage",
-                "jobs": [
-                    "Sales Representative (all types)",
-                    "Sales Engineers",
-                    "Sales Managers",
-                    "Retail Store Manager",
-                    "Retail Buyer",
-                    "Real Estate Broker",
-                    "Real Estate Appraiser"
-                ],
-                "image": "/characters/Business&Finance/Sales-Brokerage.svg"
-            }
-        },
-        "image": "/icons/Business&Finance.svg"
+    "image": "/icons/Building&ConstructionTrades.svg"
+  },
+
+  "business-and-finance": {
+    "description": "This industry manages money, organizations, and economic activities.",
+    "title": "Business and Finance",
+    "careers": {
+      "accounting-and-auditing": {
+        "title": "Accounting & Auditing",
+        "description": "Tracks, analyzes, and reports financial information for individuals and organizations.",
+        "jobs": [
+          "Accountant",
+          "Accounting Clerk",
+          "Auditor",
+          "Bookkeeper",
+          "Budget Accountant",
+          "Budget Analyst",
+          "Certified Public Accountant (CPA)",
+          "Cost Accountant",
+          "County or City Auditor",
+          "Internal Auditor",
+          "Property Accountant",
+          "Tax Accountant",
+          "Tax Auditor",
+          "Tax Preparer"
+        ],
+        "image": "/characters/Business&Finance/Accounting-Auditing.svg"
+      },
+      "financial-services": {
+        "title": "Financial Services",
+        "description": "Manages investments, insurance, loans, and financial planning.",
+        "jobs": [
+          "Actuary",
+          "Financial Analyst",
+          "Financial Examiner",
+          "Financial Manager",
+          "Financial Planner",
+          "Financial Quantitative Analysts",
+          "Loan Officer",
+          "Loan Counselor",
+          "Securities Broker",
+          "Securities and Commodities Sales Agent",
+          "Insurance Agent",
+          "Insurance Adjuster",
+          "Insurance Claim Examiner",
+          "Insurance Claims Adjuster",
+          "Insurance Underwriter"
+        ],
+        "image": "/characters/Business&Finance/Financial-Services.svg"
+      },
+      "management-and-administration": {
+        "title": "Management & Administration",
+        "description": "Oversees daily operations, employees, and organizational planning.",
+        "jobs": [
+          "Administrative Assistant",
+          "Administrative Service Manager",
+          "Benefits Manager",
+          "Chief Executives",
+          "Chief Financial Officer",
+          "Chief Sustainability Officers",
+          "Compliance Managers",
+          "Compliance Officer",
+          "Compensation Administrator",
+          "Compensation Specialist",
+          "Employment Administrator",
+          "Employment and Placement Specialist",
+          "Human Resources Management Advisor",
+          "Human Resources Management Consultant",
+          "Manager",
+          "Office Supervisor",
+          "Project Management Specialists",
+          "Purchasing Agent",
+          "Purchasing Manager",
+          "Storage and Distribution Manager",
+          "Supply Chain Managers"
+        ],
+        "image": "/characters/Business&Finance/Management-Administration.svg"
+      },
+      "sales-and-brokerage": {
+        "title": "Sales & Brokerage",
+        "description": "Connects products, services, or properties with customers and clients.",
+        "jobs": [
+          "Sales Representative (all types)",
+          "Sales Engineers",
+          "Sales Managers",
+          "Retail Store Manager",
+          "Retail Buyer",
+          "Real Estate Broker",
+          "Real Estate Appraiser"
+        ],
+        "image": "/characters/Business&Finance/Sales-Brokerage.svg"
+      }
     },
-    "education-child-development-and-family-services": {
-        "title": "Education, Child Development, and Family Services",
-        "careers": {
-            "teaching-k-12-and-postsecondary": {
-                "title": "Teaching (K-12 & Postsecondary)",
-                "jobs": [
-                    "Elementary School Teacher",
-                    "High School Teacher",
-                    "Middle School Teacher",
-                    "Preschool Teacher",
-                    "Special Ed Teachers (all levels)",
-                    "Career / Technical Education Teacher",
-                    "Outdoor Education Teacher",
-                    "Literacy and Remedial Education Teachers",
-                    "Professor (all subjects)",
-                    "Graduate Teaching Assistant",
-                    "Vocational Education Instructors"
-                ],
-                "image": "/characters/EducationChildDev&FamServices/Teaching.svg"
-            },
-            "educational-administration": {
-                "title": "Educational Administration",
-                "jobs": [
-                    "School Administrator",
-                    "Registrar Administrator",
-                    "Curriculum and Assessment Director",
-                    "Student Admissions Administrator",
-                    "Student Affairs Administrator",
-                    "Special Education Administrator",
-                    "Preschool Administrator",
-                    "Elementary School Administrator",
-                    "High School Administrator",
-                    "Middle School Administrator"
-                ],
-                "image": "/characters/EducationChildDev&FamServices/Educational-Administration.svg"
-            },
-            "counseling-and-student-services": {
-                "title": "Counseling & Student Services",
-                "jobs": [
-                    "Academic Advisor",
-                    "Admissions Counselor",
-                    "Guidance Counselor",
-                    "Counselor",
-                    "Job Development Specialist",
-                    "Day Care Center Administrator",
-                    "Child Support Investigator",
-                    "Child Support Services Worker",
-                    "Childcare Workers"
-                ],
-                "image": "/characters/EducationChildDev&FamServices/Counseling-Student-Services.svg"
-            },
-            "child-and-family-services": {
-                "title": "Child & Family Services",
-                "jobs": [
-                    "Family Caseworker",
-                    "Social Worker",
-                    "Healthcare Social Workers",
-                    "Youth Services Specialist",
-                    "Marriage and Family Therapists"
-                ],
-                "image": "/characters/EducationChildDev&FamServices/Child-Family-Services.svg"
-            }
-        },
-        "image": "/icons/EducationChildDev&FamServices.svg"
+    "image": "/icons/Business&Finance.svg"
+  },
+  "education-child-development-and-family-services": {
+    "description": "This industry supports learning, child development, and family well-being.",
+    "title": "Education, Child Development, and Family Services",
+    "careers": {
+      "teaching-k-12-and-postsecondary": {
+        "title": "Teaching (K-12 & Postsecondary)",
+        "description": "Educates students by delivering lessons and supporting academic growth.",
+        "jobs": [
+          "Elementary School Teacher",
+          "High School Teacher",
+          "Middle School Teacher",
+          "Preschool Teacher",
+          "Special Ed Teachers (all levels)",
+          "Career / Technical Education Teacher",
+          "Outdoor Education Teacher",
+          "Literacy and Remedial Education Teachers",
+          "Professor (all subjects)",
+          "Graduate Teaching Assistant",
+          "Vocational Education Instructors"
+        ],
+        "image": "/characters/EducationChildDev&FamServices/Teaching.svg"
+      },
+      "educational-administration": {
+        "title": "Educational Administration",
+        "description": "Manages schools and educational programs to support learning environments.",
+        "jobs": [
+          "School Administrator",
+          "Registrar Administrator",
+          "Curriculum and Assessment Director",
+          "Student Admissions Administrator",
+          "Student Affairs Administrator",
+          "Special Education Administrator",
+          "Preschool Administrator",
+          "Elementary School Administrator",
+          "High School Administrator",
+          "Middle School Administrator"
+        ],
+        "image": "/characters/EducationChildDev&FamServices/Educational-Administration.svg"
+      },
+      "counseling-and-student-services": {
+        "title": "Counseling & Student Services",
+        "description": "Supports students’ academic, career, and personal development.",
+        "jobs": [
+          "Academic Advisor",
+          "Admissions Counselor",
+          "Guidance Counselor",
+          "Counselor",
+          "Job Development Specialist",
+          "Day Care Center Administrator",
+          "Child Support Investigator",
+          "Child Support Services Worker",
+          "Childcare Workers"
+        ],
+        "image": "/characters/EducationChildDev&FamServices/Counseling-Student-Services.svg"
+      },
+      "child-and-family-services": {
+        "title": "Child & Family Services",
+        "description": "Assists families and children with social, emotional, and community needs.",
+        "jobs": [
+          "Family Caseworker",
+          "Social Worker",
+          "Healthcare Social Workers",
+          "Youth Services Specialist",
+          "Marriage and Family Therapists"
+        ],
+        "image": "/characters/EducationChildDev&FamServices/Child-Family-Services.svg"
+      }
     },
-    "energy-environment-and-utilities": {
-        "title": "Energy, Environment, and Utilities",
-        "careers": {
-            "energy-production-and-management": {
-                "title": "Energy Production & Management",
-                "jobs": [
-                    "Solar Energy Installation Managers",
-                    "Solar Energy Systems Designer",
-                    "Solar Energy Systems Engineers",
-                    "Solar Sales Representatives and Assessors",
-                    "Solar Thermal Installers and Technicians",
-                    "Wind Energy Engineer",
-                    "Wind Energy Operations Managers",
-                    "Wind Energy Project Managers",
-                    "Wind Turbine Service Technicians",
-                    "Nuclear Power Reactor Operator",
-                    "Nuclear Engineer",
-                    "Nuclear Fuels Research Engineer",
-                    "Nuclear Monitoring Technician",
-                    "Power Plant Operators"
-                ],
-                "image": "/characters/EnergyEnvironment&Utilities/Energy-Production-Management.svg"
-            },
-            "environmental-science-and-engineering": {
-                "title": "Environmental Science & Engineering",
-                "jobs": [
-                    "Environmental Engineer",
-                    "Environmental Compliance Inspector",
-                    "Environmental Technician",
-                    "Hazardous Materials Removal Worker",
-                    "Hazardous Waste Management Analyst",
-                    "Industrial Air Pollution Analyst",
-                    "Industrial Ecologists",
-                    "Industrial Hygienist",
-                    "Industrial Safety and Health Engineer",
-                    "Occupational Safety & Health Inspector",
-                    "Water Pollution Control Inspector",
-                    "Water Resource Specialists",
-                    "Water Treatment Plant Operators",
-                    "Water/Wastewater Engineers"
-                ],
-                "image": "/characters/EnergyEnvironment&Utilities/Environmental-Science-Engineering.svg"
-            },
-            "utilities-operations": {
-                "title": "Utilities Operations",
-                "jobs": [
-                    "Power Distributors and Dispatchers",
-                    "Power-Line Installer and Mechanic",
-                    "Gas Plant Operator"
-                ],
-                "image": "/characters/EnergyEnvironment&Utilities/Utilities-Operations.svg"
-            },
-            "sustainability-and-conservation": {
-                "title": "Sustainability & Conservation",
-                "jobs": [
-                    "Chief Sustainability Officers",
-                    "Sustainability Specialists",
-                    "Energy Auditor",
-                    "Brownfield Redevelopment Specialist"
-                ],
-                "image": "/characters/EnergyEnvironment&Utilities/Sustainability-Conservation.svg"
-            }
-        },
-        "image": "/icons/EnergyEnvironment&Utilities.svg"
+    "image": "/icons/EducationChildDev&FamServices.svg"
+  },
+
+  "energy-environment-and-utilities": {
+    "description": "This industry provides essential energy and water services while promoting environmental sustainability.",
+    "title": "Energy, Environment, and Utilities",
+    "careers": {
+      "energy-production-and-management": {
+        "title": "Energy Production & Management",
+        "description": "Generates and manages power from renewable and traditional energy sources.",
+        "jobs": [
+          "Solar Energy Installation Managers",
+          "Solar Energy Systems Designer",
+          "Solar Energy Systems Engineers",
+          "Solar Sales Representatives and Assessors",
+          "Solar Thermal Installers and Technicians",
+          "Wind Energy Engineer",
+          "Wind Energy Operations Managers",
+          "Wind Energy Project Managers",
+          "Wind Turbine Service Technicians",
+          "Nuclear Power Reactor Operator",
+          "Nuclear Engineer",
+          "Nuclear Fuels Research Engineer",
+          "Nuclear Monitoring Technician",
+          "Power Plant Operators"
+        ],
+        "image": "/characters/EnergyEnvironment&Utilities/Energy-Production-Management.svg"
+      },
+      "environmental-science-and-engineering": {
+        "title": "Environmental Science & Engineering",
+        "description": "Solves environmental problems through science, safety, and engineering solutions.",
+        "jobs": [
+          "Environmental Engineer",
+          "Environmental Compliance Inspector",
+          "Environmental Technician",
+          "Hazardous Materials Removal Worker",
+          "Hazardous Waste Management Analyst",
+          "Industrial Air Pollution Analyst",
+          "Industrial Ecologists",
+          "Industrial Hygienist",
+          "Industrial Safety and Health Engineer",
+          "Occupational Safety & Health Inspector",
+          "Water Pollution Control Inspector",
+          "Water Resource Specialists",
+          "Water Treatment Plant Operators",
+          "Water/Wastewater Engineers"
+        ],
+        "image": "/characters/EnergyEnvironment&Utilities/Environmental-Science-Engineering.svg"
+      },
+      "utilities-operations": {
+        "title": "Utilities Operations",
+        "description": "Maintains systems that deliver electricity, gas, and water to communities.",
+        "jobs": [
+          "Power Distributors and Dispatchers",
+          "Power-Line Installer and Mechanic",
+          "Gas Plant Operator"
+        ],
+        "image": "/characters/EnergyEnvironment&Utilities/Utilities-Operations.svg"
+      },
+      "sustainability-and-conservation": {
+        "title": "Sustainability & Conservation",
+        "description": "Promotes efficient resource use and long-term environmental responsibility.",
+        "jobs": [
+          "Chief Sustainability Officers",
+          "Sustainability Specialists",
+          "Energy Auditor",
+          "Brownfield Redevelopment Specialist"
+        ],
+        "image": "/characters/EnergyEnvironment&Utilities/Sustainability-Conservation.svg"
+      }
     },
-    "engineering-and-architecture": {
-        "title": "Engineering and Architecture",
-        "careers": {
-            "engineering-disciplines": {
-                "title": "Engineering Disciplines",
-                "jobs": [
-                    "Aeronautical & Aerospace Engineer",
-                    "Agricultural Engineer",
-                    "Bioengineers and Biomedical Engineers",
-                    "Chemical Engineer",
-                    "Civil Engineer",
-                    "Electrical Engineer",
-                    "Electronics Engineer",
-                    "Environmental Engineer",
-                    "Industrial Engineer",
-                    "Mechanical Engineer",
-                    "Nuclear Engineer",
-                    "Mining Engineer",
-                    "Petroleum Engineer",
-                    "Robotics Engineers",
-                    "Structural Engineer",
-                    "Transportation Engineer",
-                    "Validation Engineers"
-                ],
-                "image": "/characters/Engineering&Architecture/Engineering-Disciplines.svg"
-            },
-            "architecture-and-planning": {
-                "title": "Architecture & Planning",
-                "jobs": [
-                    "Architect",
-                    "Architectural Drafters",
-                    "Landscape Architect",
-                    "Landscape Contractor",
-                    "Urban and Regional Planner",
-                    "City Planning Aide"
-                ],
-                "image": "/characters/Engineering&Architecture/Architecture-and-Planning.svg"
-            },
-            "technical-support": {
-                "title": "Technical Support",
-                "jobs": [
-                    "Engineering Technician",
-                    "Aerospace Engineering Technician",
-                    "Civil Engineering Technician",
-                    "Electrical Engineering Technician",
-                    "Mechanical Engineering Technician",
-                    "Industrial Engineering Technician",
-                    "Surveyor",
-                    "Surveying Technicians",
-                    "Mapping Technician"
-                ],
-                "image": "/characters/Engineering&Architecture/Technical-Support.svg"
-            }
-        },
-        "image": "/icons/Engineering&Architecture.svg"
+    "image": "/icons/EnergyEnvironment&Utilities.svg"
+  },
+
+  "engineering-and-architecture": {
+    "description": "This industry designs and builds structures, systems, and technologies using math, science, and creativity.",
+    "title": "Engineering and Architecture",
+    "careers": {
+      "engineering-disciplines": {
+        "title": "Engineering Disciplines",
+        "description": "Designs and improves machines, systems, and structures using science and math.",
+        "jobs": [
+          "Aeronautical & Aerospace Engineer",
+          "Agricultural Engineer",
+          "Bioengineers and Biomedical Engineers",
+          "Chemical Engineer",
+          "Civil Engineer",
+          "Electrical Engineer",
+          "Electronics Engineer",
+          "Environmental Engineer",
+          "Industrial Engineer",
+          "Mechanical Engineer",
+          "Nuclear Engineer",
+          "Mining Engineer",
+          "Petroleum Engineer",
+          "Robotics Engineers",
+          "Structural Engineer",
+          "Transportation Engineer",
+          "Validation Engineers"
+        ],
+        "image": "/characters/Engineering&Architecture/Engineering-Disciplines.svg"
+      },
+      "architecture-and-planning": {
+        "title": "Architecture & Planning",
+        "description": "Plans and designs buildings and communities that are safe and functional.",
+        "jobs": [
+          "Architect",
+          "Architectural Drafters",
+          "Landscape Architect",
+          "Landscape Contractor",
+          "Urban and Regional Planner",
+          "City Planning Aide"
+        ],
+        "image": "/characters/Engineering&Architecture/Architecture-and-Planning.svg"
+      },
+      "technical-support": {
+        "title": "Technical Support",
+        "description": "Assists engineers with testing, surveying, drafting, and technical measurements.",
+        "jobs": [
+          "Engineering Technician",
+          "Aerospace Engineering Technician",
+          "Civil Engineering Technician",
+          "Electrical Engineering Technician",
+          "Mechanical Engineering Technician",
+          "Industrial Engineering Technician",
+          "Surveyor",
+          "Surveying Technicians",
+          "Mapping Technician"
+        ],
+        "image": "/characters/Engineering&Architecture/Technical-Support.svg"
+      }
     },
-    "fashion-and-interior-design": {
-        "title": "Fashion and Interior Design",
-        "careers": {
-            "fashion-design": {
-                "title": "Fashion Design",
-                "jobs": [
-                    "Fashion Artist",
-                    "Fashion Coordinator",
-                    "Fashion Designer",
-                    "Makeup Artists"
-                ],
-                "image": "/characters/Fashion&InteriorDesign/Fashion-Design.svg"
-            },
-            "interior-and-set-design": {
-                "title": "Interior & Set Design",
-                "jobs": [
-                    "Interior Designer",
-                    "Set Designer",
-                    "Set Illustrator",
-                    "Exhibit Designer",
-                    "Furniture Designer",
-                    "Toy Designer"
-                ],
-                "image": "/characters/Fashion&InteriorDesign/Interior-Set-Design.svg"
-            },
-            "textile-and-product-design": {
-                "title": "Textile & Product Design",
-                "jobs": ["Textile Designer", "Ornamental-Metalwork Designer"],
-                "image": "/characters/Fashion&InteriorDesign/Textile-Product-Design.svg"
-            }
-        },
-        "image": "/icons/Fashion&InteriorDesign.svg"
+    "image": "/icons/Engineering&Architecture.svg"
+  },
+  "fashion-and-interior-design": {
+    "description": "This industry creates clothing and interior spaces that combine style and function.",
+    "title": "Fashion and Interior Design",
+    "careers": {
+      "fashion-design": {
+        "title": "Fashion Design",
+        "description": "Creates clothing and accessories that are both functional and stylish.",
+        "jobs": [
+          "Fashion Artist",
+          "Fashion Coordinator",
+          "Fashion Designer",
+          "Makeup Artists"
+        ],
+        "image": "/characters/Fashion&InteriorDesign/Fashion-Design.svg"
+      },
+      "interior-and-set-design": {
+        "title": "Interior & Set Design",
+        "description": "Plans and decorates indoor and stage environments for beauty and function.",
+        "jobs": [
+          "Interior Designer",
+          "Set Designer",
+          "Set Illustrator",
+          "Exhibit Designer",
+          "Furniture Designer",
+          "Toy Designer"
+        ],
+        "image": "/characters/Fashion&InteriorDesign/Interior-Set-Design.svg"
+      },
+      "textile-and-product-design": {
+        "title": "Textile & Product Design",
+        "description": "Designs fabrics and products with an emphasis on aesthetics and usability.",
+        "jobs": ["Textile Designer", "Ornamental-Metalwork Designer"],
+        "image": "/characters/Fashion&InteriorDesign/Textile-Product-Design.svg"
+      }
     },
-    "health-science-and-medical-technology": {
-        "title": "Health Science and Medical Technology",
-        "careers": {
-            "nursing": {
-                "title": "Nursing",
-                "jobs": [
-                    "Acute Care Nurse",
-                    "Community Health Nurse",
-                    "Hospital Nurse",
-                    "Nurse",
-                    "Nurse Anesthetists",
-                    "Nurse Midwives",
-                    "Nurse Practitioner",
-                    "Nurses Aide",
-                    "Private Nurse",
-                    "Registered Nurses",
-                    "School Nurse"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Nursing.svg"
-            },
-            "physicians-and-surgeons": {
-                "title": "Physicians & Surgeons",
-                "jobs": [
-                    "Anesthesiologist (MD)",
-                    "Cardiologist (MD)",
-                    "Dermatologist (MD)",
-                    "Family Practitioner (MD)",
-                    "General Internal Medicine Physicians",
-                    "Neurologists",
-                    "Obstetrician (MD)",
-                    "Occupational Physician (MD)",
-                    "Ophthalmologist (MD)",
-                    "Orthodontist (MD)",
-                    "Pathologist (MD)",
-                    "Pediatric Dentist",
-                    "Pediatrician (MD)",
-                    "Plastic Surgeon",
-                    "Preventive Medicine Physicians",
-                    "Psychiatrist (MD)",
-                    "Radiologist (MD)",
-                    "Sports Medicine Physicians",
-                    "Sports Physician (Orthopedist)",
-                    "Surgeons (MD)",
-                    "Urologists"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Physicians-and-Surgeons.svg"
-            },
-            "therapists": {
-                "title": "Therapists",
-                "jobs": [
-                    "Art Therapist",
-                    "Athletic Trainer",
-                    "Clinical Psychologist",
-                    "Clinical Sociologist",
-                    "Counseling Psychologist",
-                    "Developmental Psychologist",
-                    "Educational Therapist",
-                    "Exercise Physiologist",
-                    "Manual Arts Therapist",
-                    "Marriage and Family Therapists",
-                    "Massage Therapist",
-                    "Mental Health Counselor",
-                    "Occupational Therapist",
-                    "Physical Therapist",
-                    "Recreational Therapist",
-                    "Speech Pathologist",
-                    "Speech-Language Pathology Assistants",
-                    "Vocational Rehabilitation Counselor"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Therapists.svg"
-            },
-            "technicians-and-technologists": {
-                "title": "Technicians & Technologists",
-                "jobs": [
-                    "Anesthesiologist Assistants",
-                    "Cardiovascular Technologist",
-                    "EEG Technician/Technologist",
-                    "Endoscopy Technicians",
-                    "Medical Appliance Technician",
-                    "Medical Assistant",
-                    "Medical Equipment Technician",
-                    "Medical Laboratory Technician",
-                    "Medical Photographer",
-                    "Medical Records Technician",
-                    "Medical Secretary",
-                    "Medical Technologist",
-                    "Nuclear Medicine Technologist",
-                    "Nuclear Monitoring Technician",
-                    "Ophthalmic Laboratory Technician",
-                    "Ophthalmic Medical Technicians",
-                    "Ophthalmic Medical Technologists",
-                    "Orthodontic Assistant",
-                    "Orthodontic Laboratory Technician",
-                    "Phlebotomist",
-                    "Physical Therapy Assistant",
-                    "Radiologic Technicians",
-                    "Radiologic Technologist",
-                    "Respiratory Care Technician",
-                    "Respiratory Therapist",
-                    "Respiratory Therapy Technicians",
-                    "Surgical Assistants",
-                    "Surgical Technician/Technologist",
-                    "Ultrasound Technologist"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Technicians-Technologists.svg"
-            },
-            "dental-professions": {
-                "title": "Dental Professions",
-                "jobs": [
-                    "Dental Assistant",
-                    "Dental Hygienist",
-                    "Dental Laboratory Technician",
-                    "Dentist (DDS)",
-                    "Orthodontist (MD)",
-                    "Periodontist"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Dental-Professions.svg"
-            },
-            "pharmacy": {
-                "title": "Pharmacy",
-                "jobs": ["Pharmacist", "Pharmacy Technician"],
-                "image": "/characters/HealthScience&MedTechnology/Pharmacy.svg"
-            },
-            "mental-health": {
-                "title": "Mental Health",
-                "jobs": [
-                    "Psychiatric Aide",
-                    "Psychiatric Technician",
-                    "Clinical Psychologist",
-                    "Mental Health Counselor"
-                ],
-                "image": "/characters/HealthScience&MedTechnology/Mental-Health.svg"
-            }
-        },
-        "image": "/icons/HealthScience&MedTechnology.svg"
+    "image": "/icons/Fashion&InteriorDesign.svg"
+  },
+
+  "health-science-and-medical-technology": {
+    "description": "This industry improves health through medical care, research, and technology.",
+    "title": "Health Science and Medical Technology",
+    "careers": {
+      "nursing": {
+        "title": "Nursing",
+        "description": "Provides patient care, support, and health education in various medical settings.",
+        "jobs": [
+          "Acute Care Nurse",
+          "Community Health Nurse",
+          "Hospital Nurse",
+          "Nurse",
+          "Nurse Anesthetists",
+          "Nurse Midwives",
+          "Nurse Practitioner",
+          "Nurses Aide",
+          "Private Nurse",
+          "Registered Nurses",
+          "School Nurse"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Nursing.svg"
+      },
+      "physicians-and-surgeons": {
+        "title": "Physicians & Surgeons",
+        "description": "Diagnoses, treats, and prevents illnesses through medical expertise.",
+        "jobs": [
+          "Anesthesiologist (MD)",
+          "Cardiologist (MD)",
+          "Dermatologist (MD)",
+          "Family Practitioner (MD)",
+          "General Internal Medicine Physicians",
+          "Neurologists",
+          "Obstetrician (MD)",
+          "Occupational Physician (MD)",
+          "Ophthalmologist (MD)",
+          "Orthodontist (MD)",
+          "Pathologist (MD)",
+          "Pediatric Dentist",
+          "Pediatrician (MD)",
+          "Plastic Surgeon",
+          "Preventive Medicine Physicians",
+          "Psychiatrist (MD)",
+          "Radiologist (MD)",
+          "Sports Medicine Physicians",
+          "Sports Physician (Orthopedist)",
+          "Surgeons (MD)",
+          "Urologists"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Physicians-and-Surgeons.svg"
+      },
+      "therapists": {
+        "title": "Therapists",
+        "description": "Supports patients’ mental, physical, and emotional health through therapy.",
+        "jobs": [
+          "Art Therapist",
+          "Athletic Trainer",
+          "Clinical Psychologist",
+          "Clinical Sociologist",
+          "Counseling Psychologist",
+          "Developmental Psychologist",
+          "Educational Therapist",
+          "Exercise Physiologist",
+          "Manual Arts Therapist",
+          "Marriage and Family Therapists",
+          "Massage Therapist",
+          "Mental Health Counselor",
+          "Occupational Therapist",
+          "Physical Therapist",
+          "Recreational Therapist",
+          "Speech Pathologist",
+          "Speech-Language Pathology Assistants",
+          "Vocational Rehabilitation Counselor"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Therapists.svg"
+      },
+      "technicians-and-technologists": {
+        "title": "Technicians & Technologists",
+        "description": "Supports medical diagnostics and treatment using specialized technology.",
+        "jobs": [
+          "Anesthesiologist Assistants",
+          "Cardiovascular Technologist",
+          "EEG Technician/Technologist",
+          "Endoscopy Technicians",
+          "Medical Appliance Technician",
+          "Medical Assistant",
+          "Medical Equipment Technician",
+          "Medical Laboratory Technician",
+          "Medical Photographer",
+          "Medical Records Technician",
+          "Medical Secretary",
+          "Medical Technologist",
+          "Nuclear Medicine Technologist",
+          "Nuclear Monitoring Technician",
+          "Ophthalmic Laboratory Technician",
+          "Ophthalmic Medical Technicians",
+          "Ophthalmic Medical Technologists",
+          "Orthodontic Assistant",
+          "Orthodontic Laboratory Technician",
+          "Phlebotomist",
+          "Physical Therapy Assistant",
+          "Radiologic Technicians",
+          "Radiologic Technologist",
+          "Respiratory Care Technician",
+          "Respiratory Therapist",
+          "Respiratory Therapy Technicians",
+          "Surgical Assistants",
+          "Surgical Technician/Technologist",
+          "Ultrasound Technologist"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Technicians-Technologists.svg"
+      },
+      "dental-professions": {
+        "title": "Dental Professions",
+        "description": "Provides oral care, treatment, and dental health education to patients.",
+        "jobs": [
+          "Dental Assistant",
+          "Dental Hygienist",
+          "Dental Laboratory Technician",
+          "Dentist (DDS)",
+          "Orthodontist (MD)",
+          "Periodontist"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Dental-Professions.svg"
+      },
+      "pharmacy": {
+        "title": "Pharmacy",
+        "description": "Prepares and dispenses medications while advising on proper use.",
+        "jobs": ["Pharmacist", "Pharmacy Technician"],
+        "image": "/characters/HealthScience&MedTechnology/Pharmacy.svg"
+      },
+      "mental-health": {
+        "title": "Mental Health",
+        "description": "Supports mental wellness and treats psychological and emotional challenges.",
+        "jobs": [
+          "Psychiatric Aide",
+          "Psychiatric Technician",
+          "Clinical Psychologist",
+          "Mental Health Counselor"
+        ],
+        "image": "/characters/HealthScience&MedTechnology/Mental-Health.svg"
+      }
     },
-    "hospitality-tourism-and-recreation": {
-        "title": "Hospitality, Tourism, and Recreation",
-        "careers": {
-            "hospitality-management": {
-                "title": "Hospitality Management",
-                "jobs": ["Hotel Manager", "Spa Manager", "Restaurant Manager"],
-                "image": "/characters/HospitalityTourism&Recreation/Hospitality-Management.svg"
-            },
-            "food-services": {
-                "title": "Food Services",
-                "jobs": [
-                    "Baker",
-                    "Bartender",
-                    "Catering Administrator",
-                    "Chef",
-                    "Food & Drug Inspector",
-                    "Food Science Technicians",
-                    "Food Technologist"
-                ],
-                "image": "/characters/HospitalityTourism&Recreation/Food-Services.svg"
-            },
-            "recreation-and-fitness": {
-                "title": "Recreation & Fitness",
-                "jobs": [
-                    "Camp Director",
-                    "Fitness Trainer",
-                    "Recreation Worker",
-                    "Sports Events Planner",
-                    "Sports Agent"
-                ],
-                "image": "/characters/HospitalityTourism&Recreation/Recreation-Fitness.svg"
-            },
-            "travel-and-tourism": {
-                "title": "Travel & Tourism",
-                "jobs": ["Travel Agent", "Travel Counselor", "Tour Guides and Escorts"],
-                "image": "/characters/HospitalityTourism&Recreation/Travel-Tourism.svg"
-            }
-        },
-        "image": "/icons/HospitalityTourism&Recreation.svg"
+    "image": "/icons/HealthScience&MedTechnology.svg"
+  },
+  "hospitality-tourism-and-recreation": {
+    "description": "This industry delivers travel, dining, and recreational experiences.",
+    "title": "Hospitality, Tourism, and Recreation",
+    "careers": {
+      "hospitality-management": {
+        "title": "Hospitality Management",
+        "description": "Oversees operations of hotels, restaurants, and spas to ensure quality service.",
+        "jobs": ["Hotel Manager", "Spa Manager", "Restaurant Manager"],
+        "image": "/characters/HospitalityTourism&Recreation/Hospitality-Management.svg"
+      },
+      "food-services": {
+        "title": "Food Services",
+        "description": "Prepares, manages, and inspects food for safe and enjoyable dining experiences.",
+        "jobs": [
+          "Baker",
+          "Bartender",
+          "Catering Administrator",
+          "Chef",
+          "Food & Drug Inspector",
+          "Food Science Technicians",
+          "Food Technologist"
+        ],
+        "image": "/characters/HospitalityTourism&Recreation/Food-Services.svg"
+      },
+      "recreation-and-fitness": {
+        "title": "Recreation & Fitness",
+        "description": "Provides fitness programs, sports planning, and leisure activities for all ages.",
+        "jobs": [
+          "Camp Director",
+          "Fitness Trainer",
+          "Recreation Worker",
+          "Sports Events Planner",
+          "Sports Agent"
+        ],
+        "image": "/characters/HospitalityTourism&Recreation/Recreation-Fitness.svg"
+      },
+      "travel-and-tourism": {
+        "title": "Travel & Tourism",
+        "description": "Plans and guides travel experiences, ensuring enjoyable and safe trips.",
+        "jobs": ["Travel Agent", "Travel Counselor", "Tour Guides and Escorts"],
+        "image": "/characters/HospitalityTourism&Recreation/Travel-Tourism.svg"
+      }
     },
-    "information-and-communication-technology": {
-        "title": "Information and Communication Technology",
-        "careers": {
-            "software-and-web-development": {
-                "title": "Software & Web Development",
-                "jobs": [
-                    "Computer Programmer",
-                    "Computer and Information Scientists",
-                    "Software Developers - Applications",
-                    "Software Quality Assurance Analysts and Testers",
-                    "Web Administrators",
-                    "Web Art Director",
-                    "Webmaster",
-                    "Video Game Designer"
-                ],
-                "image": "/characters/Information&ComTechnology/Software-Web-Development.svg"
-            },
-            "it-support-and-networking": {
-                "title": "IT Support & Networking",
-                "jobs": [
-                    "Computer Hardware Technician",
-                    "Computer Network Architects",
-                    "Computer Network Support Specialists",
-                    "Computer Systems Analyst",
-                    "Computer Systems Engineer",
-                    "Computer User Support Specialist",
-                    "Information Security Analysts",
-                    "IT Administrator (Information Technology)",
-                    "Information Technology Project Managers"
-                ],
-                "image": "/characters/Information&ComTechnology/IT-Support-Networking.svg"
-            },
-            "hardware-and-systems": {
-                "title": "Hardware & Systems",
-                "jobs": ["Computer Hardware Engineers", "Computer Technician"],
-                "image": "/characters/Information&ComTechnology/Hardware-Systems.svg"
-            }
-        },
-        "image": "/icons/Information&ComTechnology.svg"
+    "image": "/icons/HospitalityTourism&Recreation.svg"
+  },
+
+  "information-and-communication-technology": {
+    "description": "This industry develops and supports computer systems and digital communication.",
+    "title": "Information and Communication Technology",
+    "careers": {
+      "software-and-web-development": {
+        "title": "Software & Web Development",
+        "description": "Designs and builds applications, websites, and video games for users.",
+        "jobs": [
+          "Computer Programmer",
+          "Computer and Information Scientists",
+          "Software Developers - Applications",
+          "Software Quality Assurance Analysts and Testers",
+          "Web Administrators",
+          "Web Art Director",
+          "Webmaster",
+          "Video Game Designer"
+        ],
+        "image": "/characters/Information&ComTechnology/Software-Web-Development.svg"
+      },
+      "it-support-and-networking": {
+        "title": "IT Support & Networking",
+        "description": "Manages networks, computers, and IT systems to ensure smooth operations.",
+        "jobs": [
+          "Computer Hardware Technician",
+          "Computer Network Architects",
+          "Computer Network Support Specialists",
+          "Computer Systems Analyst",
+          "Computer Systems Engineer",
+          "Computer User Support Specialist",
+          "Information Security Analysts",
+          "IT Administrator (Information Technology)",
+          "Information Technology Project Managers"
+        ],
+        "image": "/characters/Information&ComTechnology/IT-Support-Networking.svg"
+      },
+      "hardware-and-systems": {
+        "title": "Hardware & Systems",
+        "description": "Develops and maintains computer hardware and integrated systems for users.",
+        "jobs": ["Computer Hardware Engineers", "Computer Technician"],
+        "image": "/characters/Information&ComTechnology/Hardware-Systems.svg"
+      }
     },
-    "manufacturing-and-product-development": {
-        "title": "Manufacturing and Product Development",
-        "careers": {
-            "production-and-assembly": {
-                "title": "Production & Assembly",
-                "jobs": [
-                    "Aircraft Assembler",
-                    "Engine and Machine Assemblers",
-                    "Machinist",
-                    "Model Maker",
-                    "Model Makers, Metal and Plastic",
-                    "Team Assemblers"
-                ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Production-Assembly.svg"
-            },
-            "quality-control": {
-                "title": "Quality Control",
-                "jobs": [
-                    "Quality Control Inspector",
-                    "Quality Control Managers",
-                    "Quality Control Technician",
-                    "Precision Devices Inspectors and Testers"
-                ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Quality-Control.svg"
-            },
-            "product-design-and-development": {
-                "title": "Product Design & Development",
-                "jobs": [
-                    "Commercial Designer",
-                    "Industrial Designer",
-                    "Manufacturing Engineers",
-                    "Product Planner",
-                    "Product Safety Engineer",
-                    "Tool and Die Makers",
-                    "Tool and Machine Designer"
-                ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Product-Design-Development.svg"
-            }
-        },
-        "image": "/icons/Manufacturing&ProductDevelopment.svg"
+    "image": "/icons/Information&ComTechnology.svg"
+  },
+
+  "manufacturing-and-product-development": {
+    "description": "This industry designs and produces goods used in everyday life.",
+    "title": "Manufacturing and Product Development",
+    "careers": {
+      "production-and-assembly": {
+        "title": "Production & Assembly",
+        "description": "Builds, assembles, and maintains products in factories and workshops.",
+        "jobs": [
+          "Aircraft Assembler",
+          "Engine and Machine Assemblers",
+          "Machinist",
+          "Model Maker",
+          "Model Makers, Metal and Plastic",
+          "Team Assemblers"
+        ],
+        "image": "/characters/Manufacturing&ProductDevelopment/Production-Assembly.svg"
+      },
+      "quality-control": {
+        "title": "Quality Control",
+        "description": "Inspects products to ensure they meet safety and performance standards.",
+        "jobs": [
+          "Quality Control Inspector",
+          "Quality Control Managers",
+          "Quality Control Technician",
+          "Precision Devices Inspectors and Testers"
+        ],
+        "image": "/characters/Manufacturing&ProductDevelopment/Quality-Control.svg"
+      },
+      "product-design-and-development": {
+        "title": "Product Design & Development",
+        "description": "Plans and engineers new products for function, usability, and market appeal.",
+        "jobs": [
+          "Commercial Designer",
+          "Industrial Designer",
+          "Manufacturing Engineers",
+          "Product Planner",
+          "Product Safety Engineer",
+          "Tool and Die Makers",
+          "Tool and Machine Designer"
+        ],
+        "image": "/characters/Manufacturing&ProductDevelopment/Product-Design-Development.svg"
+      }
     },
-    "marketing-sales-and-services": {
-        "title": "Marketing, Sales, and Services",
-        "careers": {
-            "marketing-and-advertising": {
-                "title": "Marketing & Advertising",
-                "jobs": [
-                    "Advertising Account Manager",
-                    "Advertising Agency Coordinator",
-                    "Advertising Sales Agent",
-                    "Market Research Analyst",
-                    "Marketing Managers",
-                    "Search Marketing Strategists"
-                ],
-                "image": "/characters/MarketingSales&Services/Marketing-Advertising.svg"
-            },
-            "sales": {
-                "title": "Sales",
-                "jobs": [
-                    "Sales Representative (all types)",
-                    "Sales Engineers",
-                    "Sales Managers",
-                    "Retail Sales Department Supervisor",
-                    "Customer Service Representative",
-                    "Customer Service Supervisor"
-                ],
-                "image": "/characters/MarketingSales&Services/Sales.svg"
-            },
-            "public-relations": {
-                "title": "Public Relations",
-                "jobs": [
-                    "Fund Raiser",
-                    "Fundraising Manager",
-                    "Public Relations Manager",
-                    "Public Relations Specialist"
-                ],
-                "image": "/characters/MarketingSales&Services/Public-Relations.svg"
-            },
-            "personal-services": {
-                "title": "Personal Services",
-                "jobs": [
-                    "Barber",
-                    "Cosmetologist (Hair Stylist)",
-                    "Manicurists and Pedicurists",
-                    "Personal Service Supervisor",
-                    "Skin Care Specialist"
-                ],
-                "image": "/characters/MarketingSales&Services/Personal-Services.svg"
-            }
-        },
-        "image": "/icons/MarketingSales&Services.svg"
+    "image": "/icons/Manufacturing&ProductDevelopment.svg"
+  },
+  "marketing-sales-and-services": {
+    "description": "This industry promotes products and provides services to meet customer needs.",
+    "title": "Marketing, Sales, and Services",
+    "careers": {
+      "marketing-and-advertising": {
+        "title": "Marketing & Advertising",
+        "description": "Creates campaigns to promote products and reach target audiences.",
+        "jobs": [
+          "Advertising Account Manager",
+          "Advertising Agency Coordinator",
+          "Advertising Sales Agent",
+          "Market Research Analyst",
+          "Marketing Managers",
+          "Search Marketing Strategists"
+        ],
+        "image": "/characters/MarketingSales&Services/Marketing-Advertising.svg"
+      },
+      "sales": {
+        "title": "Sales",
+        "description": "Sells products or services and manages customer relationships.",
+        "jobs": [
+          "Sales Representative (all types)",
+          "Sales Engineers",
+          "Sales Managers",
+          "Retail Sales Department Supervisor",
+          "Customer Service Representative",
+          "Customer Service Supervisor"
+        ],
+        "image": "/characters/MarketingSales&Services/Sales.svg"
+      },
+      "public-relations": {
+        "title": "Public Relations",
+        "description": "Manages communication between organizations and the public.",
+        "jobs": [
+          "Fund Raiser",
+          "Fundraising Manager",
+          "Public Relations Manager",
+          "Public Relations Specialist"
+        ],
+        "image": "/characters/MarketingSales&Services/Public-Relations.svg"
+      },
+      "personal-services": {
+        "title": "Personal Services",
+        "description": "Provides grooming, beauty, and other services for individual clients.",
+        "jobs": [
+          "Barber",
+          "Cosmetologist (Hair Stylist)",
+          "Manicurists and Pedicurists",
+          "Personal Service Supervisor",
+          "Skin Care Specialist"
+        ],
+        "image": "/characters/MarketingSales&Services/Personal-Services.svg"
+      }
     },
-    "public-services": {
-        "title": "Public Services",
-        "careers": {
-            "legal-and-judicial": {
-                "title": "Legal & Judicial",
-                "jobs": [
-                    "Administrative Law Judge",
-                    "Admiralty Lawyer",
-                    "Appeals Examiner",
-                    "Arbitrator",
-                    "Attorney",
-                    "Bailiff",
-                    "Corporation Lawyer",
-                    "Correction Officer",
-                    "Court Reporter",
-                    "Criminal Lawyer",
-                    "Judge",
-                    "Law Clerks",
-                    "Lawyer",
-                    "Legal Assistant",
-                    "Legal Secretary",
-                    "Legislative Assistant",
-                    "Legislator",
-                    "Magistrate",
-                    "Paralegal",
-                    "Patent Agent",
-                    "Patent Lawyer",
-                    "Probate Lawyer",
-                    "Real Estate Lawyer",
-                    "Tax Lawyer"
-                ],
-                "image": "/characters/PublicServices/Legal-Judicial.svg"
-            },
-            "law-enforcement-and-security": {
-                "title": "Law Enforcement & Security",
-                "jobs": [
-                    "Border Patrol Agent",
-                    "Customs Inspector",
-                    "Detective",
-                    "Harbor, Lake & Waterways Police",
-                    "Immigration Inspector",
-                    "Intelligence Analyst",
-                    "Intelligence Specialist",
-                    "Narcotics Investigator",
-                    "Parole Officer",
-                    "Police and Detectives Supervisor",
-                    "Police Artist",
-                    "Police Detective",
-                    "Police Identification and Records Officers",
-                    "Police Officer",
-                    "Security and Fire Alarm Systems Installers",
-                    "Sheriffs",
-                    "Transit and Railroad Police"
-                ],
-                "image": "/characters/PublicServices/Law-Enforcement-Security.svg"
-            },
-            "emergency-and-social-services": {
-                "title": "Emergency & Social Services",
-                "jobs": [
-                    "Emergency Management Specialist",
-                    "Emergency Medical Technician",
-                    "Fire Inspector",
-                    "Fire Investigator",
-                    "Fire Prevention Engineer",
-                    "Fire Protection Engineer",
-                    "Firefighter",
-                    "Forest Fire Fighting and Prevention Supervisor",
-                    "Probation Officer",
-                    "Social and Community Service Managers",
-                    "Social and Human Service Assistants",
-                    "Social Welfare Administrator"
-                ],
-                "image": "/characters/PublicServices/Emergency-Social-Services.svg"
-            },
-            "government-administration": {
-                "title": "Government Administration",
-                "jobs": [
-                    "Congressional Aide",
-                    "Government Budget Analyst",
-                    "Government Property Inspector",
-                    "Government Service Executives"
-                ],
-                "image": "/characters/PublicServices/Government-Administration.svg"
-            }
-        },
-        "image": "/icons/PublicServices.svg"
+    "image": "/icons/MarketingSales&Services.svg"
+  },
+
+  "public-services": {
+    "description": "This industry serves communities through government, safety, and social services.",
+    "title": "Public Services",
+    "careers": {
+      "legal-and-judicial": {
+        "title": "Legal & Judicial",
+        "description": "Supports the law through lawyers, judges, and court administration.",
+        "jobs": [
+          "Administrative Law Judge",
+          "Admiralty Lawyer",
+          "Appeals Examiner",
+          "Arbitrator",
+          "Attorney",
+          "Bailiff",
+          "Corporation Lawyer",
+          "Correction Officer",
+          "Court Reporter",
+          "Criminal Lawyer",
+          "Judge",
+          "Law Clerks",
+          "Lawyer",
+          "Legal Assistant",
+          "Legal Secretary",
+          "Legislative Assistant",
+          "Legislator",
+          "Magistrate",
+          "Paralegal",
+          "Patent Agent",
+          "Patent Lawyer",
+          "Probate Lawyer",
+          "Real Estate Lawyer",
+          "Tax Lawyer"
+        ],
+        "image": "/characters/PublicServices/Legal-Judicial.svg"
+      },
+      "law-enforcement-and-security": {
+        "title": "Law Enforcement & Security",
+        "description": "Maintains public safety and enforces laws across communities.",
+        "jobs": [
+          "Border Patrol Agent",
+          "Customs Inspector",
+          "Detective",
+          "Harbor, Lake & Waterways Police",
+          "Immigration Inspector",
+          "Intelligence Analyst",
+          "Intelligence Specialist",
+          "Narcotics Investigator",
+          "Parole Officer",
+          "Police and Detectives Supervisor",
+          "Police Artist",
+          "Police Detective",
+          "Police Identification and Records Officers",
+          "Police Officer",
+          "Security and Fire Alarm Systems Installers",
+          "Sheriffs",
+          "Transit and Railroad Police"
+        ],
+        "image": "/characters/PublicServices/Law-Enforcement-Security.svg"
+      },
+      "emergency-and-social-services": {
+        "title": "Emergency & Social Services",
+        "description": "Provides urgent assistance, social support, and community welfare services.",
+        "jobs": [
+          "Emergency Management Specialist",
+          "Emergency Medical Technician",
+          "Fire Inspector",
+          "Fire Investigator",
+          "Fire Prevention Engineer",
+          "Fire Protection Engineer",
+          "Firefighter",
+          "Forest Fire Fighting and Prevention Supervisor",
+          "Probation Officer",
+          "Social and Community Service Managers",
+          "Social and Human Service Assistants",
+          "Social Welfare Administrator"
+        ],
+        "image": "/characters/PublicServices/Emergency-Social-Services.svg"
+      },
+      "government-administration": {
+        "title": "Government Administration",
+        "description": "Manages governmental programs, budgets, and public resources.",
+        "jobs": [
+          "Congressional Aide",
+          "Government Budget Analyst",
+          "Government Property Inspector",
+          "Government Service Executives"
+        ],
+        "image": "/characters/PublicServices/Government-Administration.svg"
+      }
     },
-    "transportation": {
-        "title": "Transportation",
-        "careers": {
-            "ground-transportation": {
-                "title": "Ground Transportation",
-                "jobs": [
-                    "Bus Driver (School)",
-                    "Delivery Driver",
-                    "Locomotive Operator",
-                    "Railroad Conductors and Yardmasters",
-                    "Railroad Inspector",
-                    "Taxi Driver",
-                    "Traffic Administrator (Freight, Passenger)",
-                    "Transportation Supervisor",
-                    "Truck Driver (Long Distance)",
-                    "Truck Mechanic"
-                ],
-                "image": "/characters/Transportation/Ground-Transportation.svg"
-            },
-            "aviation": {
-                "title": "Aviation",
-                "jobs": [
-                    "Air Traffic Controller",
-                    "Airline Flight Control Administrator",
-                    "Airline Flight Operations Administrator",
-                    "Airline Flight Reservations Administrator",
-                    "Airport Administrator",
-                    "Airport Engineer",
-                    "Highway Patrol Pilot",
-                    "Pilot"
-                ],
-                "image": "/characters/Transportation/Aviation.svg"
-            },
-            "maritime": {
-                "title": "Maritime",
-                "jobs": [
-                    "Marine Engineer",
-                    "Marine Architect",
-                    "Ship Engineers",
-                    "Ship Master",
-                    "Ship Pilot"
-                ],
-                "image": "/characters/Transportation/Maritime.svg"
-            },
-            "logistics-and-planning": {
-                "title": "Logistics & Planning",
-                "jobs": [
-                    "Cargo and Freight Agents",
-                    "Logistics Analysts",
-                    "Logistics Engineers",
-                    "Transportation Engineer",
-                    "Transportation Planners"
-                ],
-                "image": "/characters/Transportation/Logistics-Planning.svg"
-            }
-        },
-        "image": "/icons/Transportation.svg"
-    }
+    "image": "/icons/PublicServices.svg"
+  },
+
+  "transportation": {
+    "description": "This industry moves people and goods through various transportation systems.",
+    "title": "Transportation",
+    "careers": {
+      "ground-transportation": {
+        "title": "Ground Transportation",
+        "description": "Operates vehicles and supervises the movement of goods and passengers on land.",
+        "jobs": [
+          "Bus Driver (School)",
+          "Delivery Driver",
+          "Locomotive Operator",
+          "Railroad Conductors and Yardmasters",
+          "Railroad Inspector",
+          "Taxi Driver",
+          "Traffic Administrator (Freight, Passenger)",
+          "Transportation Supervisor",
+          "Truck Driver (Long Distance)",
+          "Truck Mechanic"
+        ],
+        "image": "/characters/Transportation/Ground-Transportation.svg"
+      },
+      "aviation": {
+        "title": "Aviation",
+        "description": "Manages air travel operations, pilots, and air traffic control systems.",
+        "jobs": [
+          "Air Traffic Controller",
+          "Airline Flight Control Administrator",
+          "Airline Flight Operations Administrator",
+          "Airline Flight Reservations Administrator",
+          "Airport Administrator",
+          "Airport Engineer",
+          "Highway Patrol Pilot",
+          "Pilot"
+        ],
+        "image": "/characters/Transportation/Aviation.svg"
+      },
+      "maritime": {
+        "title": "Maritime",
+        "description": "Builds, operates, and navigates ships for transport of goods and passengers.",
+        "jobs": [
+          "Marine Engineer",
+          "Marine Architect",
+          "Ship Engineers",
+          "Ship Master",
+          "Ship Pilot"
+        ],
+        "image": "/characters/Transportation/Maritime.svg"
+      },
+      "logistics-and-planning": {
+        "title": "Logistics & Planning",
+        "description": "Coordinates the movement, storage, and delivery of goods efficiently.",
+        "jobs": [
+          "Cargo and Freight Agents",
+          "Logistics Analysts",
+          "Logistics Engineers",
+          "Transportation Engineer",
+          "Transportation Planners"
+        ],
+        "image": "/characters/Transportation/Logistics-Planning.svg"
+      }
+    },
+    "image": "/icons/Transportation.svg"
+  }
 }

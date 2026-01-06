@@ -14,7 +14,7 @@ export default function CareersClient({ industry }) {
     const CareersArray = Object.keys(CareerGroups[industry].careers).map((key) => ({
         key: key,
         title: CareerGroups[industry].careers[key].title,
-        description: null, //TODO: MAKE IT PULL FROM A DATA FILE
+        description: CareerGroups[industry].careers[key].description,
         image: CareerGroups[industry].careers[key].image,
     }));
 
