@@ -44,37 +44,37 @@ function App() {
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/ArtsMedia&Entertainment/Art Management.svg"
+                        src="/characters/ArtsMedia&Entertainment/Art-Management.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/Building&ConstructionTrades/Building Maintenance.svg"
+                        src="/characters/Building&ConstructionTrades/Building-Maintenance.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/Business&Finance/Accounting & Auditing.svg"
+                        src="/characters/Business&Finance/Accounting-Auditing.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/EducationChildDev&FamServices/Child & Family Services.svg"
+                        src="/characters/EducationChildDev&FamServices/Child-Family-Services.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg"
+                        src="/characters/EnergyEnvironment&Utilities/Energy-Production-Management.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/Engineering&Architecture/Architecture and Planning.svg"
+                        src="/characters/Engineering&Architecture/Architecture-and-Planning.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
                     <img
-                        src="/characters/Fashion&InteriorDesign/Fashion Design.svg"
+                        src="/characters/Fashion&InteriorDesign/Fashion-Design.svg"
                         alt="K-5 Puzzle Piece"
                         className="w-36 h-36"
                     />
