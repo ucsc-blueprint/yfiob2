@@ -98,7 +98,7 @@
                     "Music Director",
                     "Theater and Media Director"
                 ],
-                "image": "/characters/ArtsMedia&Entertainment/Performing Arts.svg"
+                "image": "/characters/ArtsMedia&Entertainment/Performing-Arts.svg"
             },
             "visual-arts-and-design": {
                 "title": "Visual Arts & Design",
@@ -119,7 +119,7 @@
                     "Fashion Coordinator",
                     "Makeup Artists - Theatrical"
                 ],
-                "image": "/characters/ArtsMedia&Entertainment/Visual Arts & Design.svg"
+                "image": "/characters/ArtsMedia&Entertainment/Visual-Arts-Design.svg"
             },
             "media-and-broadcasting": {
                 "title": "Media & Broadcasting",
@@ -138,7 +138,7 @@
                     "Radio & TV Talk Show Host",
                     "Disc Jockey"
                 ],
-                "image": "/characters/ArtsMedia&Entertainment/Media & Broadcasting.svg"
+                "image": "/characters/ArtsMedia&Entertainment/Media-Broadcasting.svg"
             },
             "writing-and-editing": {
                 "title": "Writing & Editing",
@@ -151,7 +151,7 @@
                     "Newspaper Editor",
                     "Publications Editor"
                 ],
-                "image": "/characters/ArtsMedia&Entertainment/Writing & Editing.svg"
+                "image": "/characters/ArtsMedia&Entertainment/Writing-Editing.svg"
             },
             "art-management": {
                 "title": "Art Management",
@@ -163,7 +163,7 @@
                     "Art Appraiser",
                     "Art Restorer"
                 ],
-                "image": "/characters/ArtsMedia&Entertainment/Art Management.svg"
+                "image": "/characters/ArtsMedia&Entertainment/Art-Management.svg"
             }
         },
         "image": "/icons/ArtsMedia&Entertainment.svg"
@@ -180,7 +180,7 @@
                     "Building Maintenance Mechanic",
                     "Facilities Planner"
                 ],
-                "image": "/characters/Building&ConstructionTrades/Construction Management.svg"
+                "image": "/characters/Building&ConstructionTrades/Construction-Management.svg"
             },
             "skilled-trades": {
                 "title": "Skilled Trades",
@@ -198,7 +198,7 @@
                     "Boilermakers",
                     "Reinforcing Iron and Rebar Workers"
                 ],
-                "image": "/characters/Building&ConstructionTrades/Skilled Trades.svg"
+                "image": "/characters/Building&ConstructionTrades/Skilled-Trades.svg"
             },
             "heavy-equipment-operation": {
                 "title": "Heavy Equipment Operation",
@@ -210,7 +210,7 @@
                     "Heavy Equipment Mechanic",
                     "Heavy Machine Operator"
                 ],
-                "image": "/characters/Building&ConstructionTrades/Heavy Equipment Operation.svg"
+                "image": "/characters/Building&ConstructionTrades/Heavy-Equipment-Operation.svg"
             },
             "building-maintenance": {
                 "title": "Building Maintenance",
@@ -219,7 +219,7 @@
                     "Janitorial Supervisors",
                     "Housekeeping Supervisors"
                 ],
-                "image": "/characters/Building&ConstructionTrades/Building Maintenance.svg"
+                "image": "/characters/Building&ConstructionTrades/Building-Maintenance.svg"
             }
         },
         "image": "/icons/Building&ConstructionTrades.svg"
@@ -245,7 +245,7 @@
                     "Tax Auditor",
                     "Tax Preparer"
                 ],
-                "image": "/characters/Business&Finance/Accounting & Auditing.svg"
+                "image": "/characters/Business&Finance/Accounting-Auditing.svg"
             },
             "financial-services": {
                 "title": "Financial Services",
@@ -266,7 +266,7 @@
                     "Insurance Claims Adjuster",
                     "Insurance Underwriter"
                 ],
-                "image": "/characters/Business&Finance/Financial Services.svg"
+                "image": "/characters/Business&Finance/Financial-Services.svg"
             },
             "management-and-administration": {
                 "title": "Management & Administration",
@@ -293,7 +293,7 @@
                     "Storage and Distribution Manager",
                     "Supply Chain Managers"
                 ],
-                "image": "/characters/Business&Finance/Management & Administration.svg"
+                "image": "/characters/Business&Finance/Management-Administration.svg"
             },
             "sales-and-brokerage": {
                 "title": "Sales & Brokerage",
@@ -306,7 +306,7 @@
                     "Real Estate Broker",
                     "Real Estate Appraiser"
                 ],
-                "image": "/characters/Business&Finance/Sales & Brokerage.svg"
+                "image": "/characters/Business&Finance/Sales-Brokerage.svg"
             }
         },
         "image": "/icons/Business&Finance.svg"
@@ -345,7 +345,7 @@
                     "High School Administrator",
                     "Middle School Administrator"
                 ],
-                "image": "/characters/EducationChildDev&FamServices/Educational Administration.svg"
+                "image": "/characters/EducationChildDev&FamServices/Educational-Administration.svg"
             },
             "counseling-and-student-services": {
                 "title": "Counseling & Student Services",
@@ -360,7 +360,7 @@
                     "Child Support Services Worker",
                     "Childcare Workers"
                 ],
-                "image": "/characters/EducationChildDev&FamServices/Counseling & Student Services.svg"
+                "image": "/characters/EducationChildDev&FamServices/Counseling-Student-Services.svg"
             },
             "child-and-family-services": {
                 "title": "Child & Family Services",
@@ -371,7 +371,7 @@
                     "Youth Services Specialist",
                     "Marriage and Family Therapists"
                 ],
-                "image": "/characters/EducationChildDev&FamServices/Child & Family Services.svg"
+                "image": "/characters/EducationChildDev&FamServices/Child-Family-Services.svg"
             }
         },
         "image": "/icons/EducationChildDev&FamServices.svg"
@@ -397,7 +397,7 @@
                     "Nuclear Monitoring Technician",
                     "Power Plant Operators"
                 ],
-                "image": "/characters/EnergyEnvironment&Utilities/Energy Production & Management.svg"
+                "image": "/characters/EnergyEnvironment&Utilities/Energy-Production-Management.svg"
             },
             "environmental-science-and-engineering": {
                 "title": "Environmental Science & Engineering",
@@ -417,7 +417,7 @@
                     "Water Treatment Plant Operators",
                     "Water/Wastewater Engineers"
                 ],
-                "image": "/characters/EnergyEnvironment&Utilities/Environmental Science & Engineering.svg"
+                "image": "/characters/EnergyEnvironment&Utilities/Environmental-Science-Engineering.svg"
             },
             "utilities-operations": {
                 "title": "Utilities Operations",
@@ -426,7 +426,7 @@
                     "Power-Line Installer and Mechanic",
                     "Gas Plant Operator"
                 ],
-                "image": "/characters/EnergyEnvironment&Utilities/Utilities Operations.svg"
+                "image": "/characters/EnergyEnvironment&Utilities/Utilities-Operations.svg"
             },
             "sustainability-and-conservation": {
                 "title": "Sustainability & Conservation",
@@ -436,7 +436,7 @@
                     "Energy Auditor",
                     "Brownfield Redevelopment Specialist"
                 ],
-                "image": "/characters/EnergyEnvironment&Utilities/Sustainability & Conservation.svg"
+                "image": "/characters/EnergyEnvironment&Utilities/Sustainability-Conservation.svg"
             }
         },
         "image": "/icons/EnergyEnvironment&Utilities.svg"
@@ -465,7 +465,7 @@
                     "Transportation Engineer",
                     "Validation Engineers"
                 ],
-                "image": "/characters/Engineering&Architecture/Engineering Disciplines.svg"
+                "image": "/characters/Engineering&Architecture/Engineering-Disciplines.svg"
             },
             "architecture-and-planning": {
                 "title": "Architecture & Planning",
@@ -477,7 +477,7 @@
                     "Urban and Regional Planner",
                     "City Planning Aide"
                 ],
-                "image": "/characters/Engineering&Architecture/Architecture and Planning.svg"
+                "image": "/characters/Engineering&Architecture/Architecture-and-Planning.svg"
             },
             "technical-support": {
                 "title": "Technical Support",
@@ -492,7 +492,7 @@
                     "Surveying Technicians",
                     "Mapping Technician"
                 ],
-                "image": "/characters/Engineering&Architecture/Technical Support.svg"
+                "image": "/characters/Engineering&Architecture/Technical-Support.svg"
             }
         },
         "image": "/icons/Engineering&Architecture.svg"
@@ -508,7 +508,7 @@
                     "Fashion Designer",
                     "Makeup Artists"
                 ],
-                "image": "/characters/Fashion&InteriorDesign/Fashion Design.svg"
+                "image": "/characters/Fashion&InteriorDesign/Fashion-Design.svg"
             },
             "interior-and-set-design": {
                 "title": "Interior & Set Design",
@@ -520,12 +520,12 @@
                     "Furniture Designer",
                     "Toy Designer"
                 ],
-                "image": "/characters/Fashion&InteriorDesign/Interior & Set Design.svg"
+                "image": "/characters/Fashion&InteriorDesign/Interior-Set-Design.svg"
             },
             "textile-and-product-design": {
                 "title": "Textile & Product Design",
                 "jobs": ["Textile Designer", "Ornamental-Metalwork Designer"],
-                "image": "/characters/Fashion&InteriorDesign/Textile & Product Design.svg"
+                "image": "/characters/Fashion&InteriorDesign/Textile-Product-Design.svg"
             }
         },
         "image": "/icons/Fashion&InteriorDesign.svg"
@@ -575,7 +575,7 @@
                     "Surgeons (MD)",
                     "Urologists"
                 ],
-                "image": "/characters/HealthScience&MedTechnology/Physicians and Surgeons.svg"
+                "image": "/characters/HealthScience&MedTechnology/Physicians-and-Surgeons.svg"
             },
             "therapists": {
                 "title": "Therapists",
@@ -634,7 +634,7 @@
                     "Surgical Technician/Technologist",
                     "Ultrasound Technologist"
                 ],
-                "image": "/characters/HealthScience&MedTechnology/Technicians & Technologists.svg"
+                "image": "/characters/HealthScience&MedTechnology/Technicians-Technologists.svg"
             },
             "dental-professions": {
                 "title": "Dental Professions",
@@ -646,7 +646,7 @@
                     "Orthodontist (MD)",
                     "Periodontist"
                 ],
-                "image": "/characters/HealthScience&MedTechnology/Dental Professions.svg"
+                "image": "/characters/HealthScience&MedTechnology/Dental-Professions.svg"
             },
             "pharmacy": {
                 "title": "Pharmacy",
@@ -661,7 +661,7 @@
                     "Clinical Psychologist",
                     "Mental Health Counselor"
                 ],
-                "image": "/characters/HealthScience&MedTechnology/Mental Health.svg"
+                "image": "/characters/HealthScience&MedTechnology/Mental-Health.svg"
             }
         },
         "image": "/icons/HealthScience&MedTechnology.svg"
@@ -672,7 +672,7 @@
             "hospitality-management": {
                 "title": "Hospitality Management",
                 "jobs": ["Hotel Manager", "Spa Manager", "Restaurant Manager"],
-                "image": "/characters/HospitalityTourism&Recreation/Hospitality Management.svg"
+                "image": "/characters/HospitalityTourism&Recreation/Hospitality-Management.svg"
             },
             "food-services": {
                 "title": "Food Services",
@@ -685,7 +685,7 @@
                     "Food Science Technicians",
                     "Food Technologist"
                 ],
-                "image": "/characters/HospitalityTourism&Recreation/Food Services.svg"
+                "image": "/characters/HospitalityTourism&Recreation/Food-Services.svg"
             },
             "recreation-and-fitness": {
                 "title": "Recreation & Fitness",
@@ -696,12 +696,12 @@
                     "Sports Events Planner",
                     "Sports Agent"
                 ],
-                "image": "/characters/HospitalityTourism&Recreation/Recreation & Fitness.svg"
+                "image": "/characters/HospitalityTourism&Recreation/Recreation-Fitness.svg"
             },
             "travel-and-tourism": {
                 "title": "Travel & Tourism",
                 "jobs": ["Travel Agent", "Travel Counselor", "Tour Guides and Escorts"],
-                "image": "/characters/HospitalityTourism&Recreation/Travel & Tourism.svg"
+                "image": "/characters/HospitalityTourism&Recreation/Travel-Tourism.svg"
             }
         },
         "image": "/icons/HospitalityTourism&Recreation.svg"
@@ -721,7 +721,7 @@
                     "Webmaster",
                     "Video Game Designer"
                 ],
-                "image": "/characters/Information&ComTechnology/Software & Web Development.svg"
+                "image": "/characters/Information&ComTechnology/Software-Web-Development.svg"
             },
             "it-support-and-networking": {
                 "title": "IT Support & Networking",
@@ -736,12 +736,12 @@
                     "IT Administrator (Information Technology)",
                     "Information Technology Project Managers"
                 ],
-                "image": "/characters/Information&ComTechnology/IT Support & Networking.svg"
+                "image": "/characters/Information&ComTechnology/IT-Support-Networking.svg"
             },
             "hardware-and-systems": {
                 "title": "Hardware & Systems",
                 "jobs": ["Computer Hardware Engineers", "Computer Technician"],
-                "image": "/characters/Information&ComTechnology/Hardware & Systems.svg"
+                "image": "/characters/Information&ComTechnology/Hardware-Systems.svg"
             }
         },
         "image": "/icons/Information&ComTechnology.svg"
@@ -759,7 +759,7 @@
                     "Model Makers, Metal and Plastic",
                     "Team Assemblers"
                 ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Production & Assembly.svg"
+                "image": "/characters/Manufacturing&ProductDevelopment/Production-Assembly.svg"
             },
             "quality-control": {
                 "title": "Quality Control",
@@ -769,7 +769,7 @@
                     "Quality Control Technician",
                     "Precision Devices Inspectors and Testers"
                 ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Quality Control.svg"
+                "image": "/characters/Manufacturing&ProductDevelopment/Quality-Control.svg"
             },
             "product-design-and-development": {
                 "title": "Product Design & Development",
@@ -782,7 +782,7 @@
                     "Tool and Die Makers",
                     "Tool and Machine Designer"
                 ],
-                "image": "/characters/Manufacturing&ProductDevelopment/Product Design & Development.svg"
+                "image": "/characters/Manufacturing&ProductDevelopment/Product-Design-Development.svg"
             }
         },
         "image": "/icons/Manufacturing&ProductDevelopment.svg"
@@ -800,7 +800,7 @@
                     "Marketing Managers",
                     "Search Marketing Strategists"
                 ],
-                "image": "/characters/MarketingSales&Services/Marketing & Advertising.svg"
+                "image": "/characters/MarketingSales&Services/Marketing-Advertising.svg"
             },
             "sales": {
                 "title": "Sales",
@@ -822,7 +822,7 @@
                     "Public Relations Manager",
                     "Public Relations Specialist"
                 ],
-                "image": "/characters/MarketingSales&Services/Public Relations.svg"
+                "image": "/characters/MarketingSales&Services/Public-Relations.svg"
             },
             "personal-services": {
                 "title": "Personal Services",
@@ -833,7 +833,7 @@
                     "Personal Service Supervisor",
                     "Skin Care Specialist"
                 ],
-                "image": "/characters/MarketingSales&Services/Personal Services.svg"
+                "image": "/characters/MarketingSales&Services/Personal-Services.svg"
             }
         },
         "image": "/icons/MarketingSales&Services.svg"
@@ -869,7 +869,7 @@
                     "Real Estate Lawyer",
                     "Tax Lawyer"
                 ],
-                "image": "/characters/PublicServices/Legal & Judicial.svg"
+                "image": "/characters/PublicServices/Legal-Judicial.svg"
             },
             "law-enforcement-and-security": {
                 "title": "Law Enforcement & Security",
@@ -892,7 +892,7 @@
                     "Sheriffs",
                     "Transit and Railroad Police"
                 ],
-                "image": "/characters/PublicServices/Law Enforcement & Security.svg"
+                "image": "/characters/PublicServices/Law-Enforcement-Security.svg"
             },
             "emergency-and-social-services": {
                 "title": "Emergency & Social Services",
@@ -910,7 +910,7 @@
                     "Social and Human Service Assistants",
                     "Social Welfare Administrator"
                 ],
-                "image": "/characters/PublicServices/Emergency & Social Services.svg"
+                "image": "/characters/PublicServices/Emergency-Social-Services.svg"
             },
             "government-administration": {
                 "title": "Government Administration",
@@ -920,7 +920,7 @@
                     "Government Property Inspector",
                     "Government Service Executives"
                 ],
-                "image": "/characters/PublicServices/Government Administration.svg"
+                "image": "/characters/PublicServices/Government-Administration.svg"
             }
         },
         "image": "/icons/PublicServices.svg"
@@ -942,7 +942,7 @@
                     "Truck Driver (Long Distance)",
                     "Truck Mechanic"
                 ],
-                "image": "/characters/Transportation/Ground Transportation.svg"
+                "image": "/characters/Transportation/Ground-Transportation.svg"
             },
             "aviation": {
                 "title": "Aviation",
@@ -978,7 +978,7 @@
                     "Transportation Engineer",
                     "Transportation Planners"
                 ],
-                "image": "/characters/Transportation/Logistics & Planning.svg"
+                "image": "/characters/Transportation/Logistics-Planning.svg"
             }
         },
         "image": "/icons/Transportation.svg"
