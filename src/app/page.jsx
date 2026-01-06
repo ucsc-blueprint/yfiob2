@@ -37,7 +37,7 @@ function App() {
                 <h1 className="text-3xl font-primary mb-4">
                     Discover a career path that matches your unique interests!
                 </h1>
-                <div className="flex items-center justify-center space-x-20 mt-6">
+                <div className="flex items-center justify-center space-x-10 mt-6">
                     <img
                         src="/characters/Agriculture&NaturalResources/AnimalScience.svg"
                         alt="K-5 Puzzle Piece"
