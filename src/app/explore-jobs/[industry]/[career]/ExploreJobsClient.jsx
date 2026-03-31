@@ -22,9 +22,9 @@ export default function ExploreJobsClient({ industry, career, careerJobsData }) 
     const careerJobs = CareerGroups[industry]["careers"][career].jobs;
 
     const HeaderSection = () => (
-        <div className="flex flex-col items-center font-primary py-10">
+        <div className="flex flex-col items-center font-primary pt-10 pb-2">
             <div className="font-[500] flex flex-col items-center">
-                <h1 className="text-[40px]">{careerTitle}</h1>
+                <h1 className="text-[40px] pt-20 pb-0">{careerTitle}</h1>
             </div>
         </div>
     );

@@ -11,6 +11,9 @@ export default function CareersClient({ industry }) {
     const searchParams = useSearchParams();
     const grade = searchParams.get("grade") ?? "elementary-school";
 
+console.log(CareerGroups[industry].careers); 
+console.log(CareersArray); 
+
     const CareersArray = Object.keys(CareerGroups[industry].careers).map((key) => ({
         key: key,
         title: CareerGroups[industry].careers[key].title,
@@ -35,6 +38,7 @@ export default function CareersClient({ industry }) {
             <HeaderSection />
             <div className="flex justify-center px-16">
                 <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-1 gap-y-4 w-full">
+                    {console.log(CareersArray)}
                     {CareersArray.map((career, index) => (
                         <CareersCard
                             key={index}

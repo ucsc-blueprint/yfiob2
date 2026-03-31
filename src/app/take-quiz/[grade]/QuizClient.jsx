@@ -4,12 +4,12 @@ import { useEffect, useState } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { Navbar } from "../../../components/Navbar/Navbar.jsx";
 import { QuestionCard } from "../../../components/QuestionCard/QuestionCard.jsx";
-import BackArrow from "../../../components/BackArrow.jsx";
+import BackArrow from "../../../components/BackQuizArrow.jsx";
 import ForwardArrow from "../../../components/ForwardArrow.jsx";
 import questions from "../../../../questions.json";
 import { getAllResponses, storeResponse } from "../../../../backend/questions/questionDB.js";
 import storeTopKIndustries from "../../../../backend/matchingAlgorithm/matchingAlgo.js";
-import { getAuth, onAuthStateChanged } from "firebase/auth";
+import { getAuth, onAuthStateChanged, signInAnonymously } from "firebase/auth";
 
 function getQuestions(educationLevel) {
     const parsed = Object.values(questions);
@@ -25,14 +25,16 @@ export default function QuizClient({ grade }) {
 
 
     useEffect(() => {
-        onAuthStateChanged(auth, (user) => {
-            if (user) {
-                setUsername(user.email);
-            } else{
-                setUsername("Guest");
+        const unsubscribe = onAuthStateChanged(auth, async (user) => {
+            if (!user) {
+                const result = await signInAnonymously(auth);
+                setUsername(result.user.uid);
+            } else {
+                setUsername(user.uid);
             }
         });
-    }, [auth, username]);
+        return () => unsubscribe();
+    }, [auth]);
 
     const searchParams = useSearchParams();
     const isValid = searchParams.get("valid") === "true";
@@ -94,11 +96,15 @@ export default function QuizClient({ grade }) {
     }, [questionNum, randomNum, savedRandomNums]);
 
     useEffect(() => {
+        if (!username) return;
+
         const getData = async () => {
             const data = await getAllResponses(username);
             mergeWithState(data);              
             return data;
         };
+
+        getData();
     }, [username]);
 
     function mergeWithState(data) {

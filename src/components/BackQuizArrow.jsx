@@ -1,5 +1,5 @@
-const ForwardArrow = (props) => (
-    <svg width="108" height="147" viewBox="0 0 108 147" fill="none" xmlns="http://www.w3.org/2000/svg" style={{ transform: "scaleX(-1)" }}>
+const BackArrow = (props) => (
+    <svg width="108" height="147" viewBox="0 0 108 147" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g clipPath="url(#clip0_3691_6065)">
             <g filter="url(#filter0_d_3691_6065)">
                 <circle cx="54.5" cy="73.5" r="33.5" fill="white"/>
@@ -22,5 +22,7 @@ const ForwardArrow = (props) => (
             </clipPath>
         </defs>
     </svg>
+
 );
-export default ForwardArrow;
+
+export default BackArrow;

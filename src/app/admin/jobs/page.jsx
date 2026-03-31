@@ -75,7 +75,7 @@ function Page() {
 		return (
 			<div className="mx-2 p-2" key={job.id}>
 				<div className="flex" id={job.name}>
-					<div className="flex gap-2">
+					<div className="flex gap-2 w-full">
 						<img src="/assets/business_center.svg" alt="briefcase"/>
 						<p>{job.name}</p>
 					</div>

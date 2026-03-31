@@ -35,19 +35,19 @@ export const QuestionCard = ({
 
     return (
         <div
-            className={`bg-slate-300 w-[66vw] h-[51vh] rounded-[20px] font-secondary shadow-md overflow-hidden`}
+            className={`bg-slate-300 w-[66vw] h-[51vh] rounded-[20px] font-secondary shadow-md overflow-hidden pb-8`}
         >
             <div
                 className={`${bgColor} h-[10%] w-[25%] rounded-tl-[20px]`}
                 style={{ width: `${Math.floor((questionNumber / totalQuestions) * 100)}%` }}
             ></div>
-            <div className="bg-white h-full rounded-b-[20px] p-[5vh] flex flex-col justify-center overflow-y-auto overlfow-x-hidden">
-                <div className={`font-secondary italic ${gcolor} mb-5 pl-[11.5%]`}>
+            <div className="bg-white h-full rounded-b-[20px] p-[5vh] pb-8 pt-8 flex flex-col justify-center overflow-y-auto overlfow-x-hidden">
+                <div className={`font-secondary italic ${gcolor} mb-5 pt-2 pl-[11.5%]`}>
                     "Don't worry about time, money, training, or education. Just think do you
                     enjoy it?"
                 </div>
 
-                <div className="flex-col flex items-center grow relative mb-14">
+                <div className="flex-col flex items-center grow relative mb-0">
                     <div className="flex-[3] w-[77%] flex items-start gap-4 mr-14 -ml-5">
                         {/* Fixed size circle */}
                         <div
@@ -91,18 +91,13 @@ export const QuestionCard = ({
                                 </button>
                             );
                         })}
-                        <div className="absolute mt-14 right-0 text-2xl">
+                    </div>
+                    
+                </div>
+                    <div className="flex justify-end text-2xl">
                             <span className={`${tColor}`}>{questionNumber}</span>
                             <span className="text-slate-400">/{totalQuestions}</span>
-                        </div>
                     </div>
-                </div>
-            </div>
-
-            <div className="flex-end justify-center">
-                <button className="text-lg text-white bg-blue-500 px-5 py-2 rounded-full hover:bg-blue-700">
-                    Submit
-                </button>
             </div>
         </div>
     );
