@@ -8,12 +8,12 @@ export default function AdminInsights() {
   const [industriesRecommended, setIndustriesRecommended] = useState([]);
   
   useEffect(()=> {
-    const getData = async () => {
+    const fetchData = async () => {
       getAllIndustries().then((data)=>{
         setIndustriesRecommended(data);
       });
     }
-    getData();
+    fetchData();
   }, [])
 
   let last7DaysGrowth = 0;
@@ -110,33 +110,13 @@ export default function AdminInsights() {
     console.error("Error calculating ready for college percent:", error);
   }
 
-  // TODO: fetch sectors array from Firebase, with percent & a color code
-  const sectors = [
-    { percent: 25, label: "Agricultural and Engineering", color: "border-green-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-green-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-green-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-green-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-yellow-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-yellow-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-orange-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-orange-500" },
-    { percent: 25, label: "Agricultural and Engineering", color: "border-red-500" },
-  ];
-
   const getColor = (percentage) => {
-    switch (percentage) {
-      case percentage > 15:
-        return "border-green-500";
-      case percentage > 10:
-        return "border-yellow-500";
-      case percentage > 5:
-        return "border-orange-500";
-      case percentage > 0:
-        return "border-red-500";
-      default:
-        return "border-gray-300";
-    }
-  }
+    if (percentage > 15) return "border-green-500";
+    if (percentage > 10) return "border-yellow-500";
+    if (percentage > 5) return "border-orange-500";
+    if (percentage > 0) return "border-red-500";
+    return "border-gray-300";
+  };
 
   return (
     <>
@@ -232,7 +212,7 @@ export default function AdminInsights() {
       className="bg-white rounded-lg shadow overflow-hidden"
     >
                 <div
-                  className={`h-6 ${
+                  className={`h-5 border-t-8 ${
                     getColor(percentage)
                   }`}
                 />

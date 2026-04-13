@@ -166,6 +166,11 @@ export default function QuizResultsPage() {
     const [showShareModal, setShowShareModal] = useState(false);
     const [shareModalEmail, setShareModalEmail] = useState("");
 
+    const CareersArray = (industry) => {
+      const key = industryNameToData(industry);
+      return holdCareers[key] ?? [];
+    };
+
   return (
     <div className="min-h-screen flex flex-col bg-white">
       <Navbar />
@@ -255,17 +260,16 @@ export default function QuizResultsPage() {
       {/* Green cards section */}
       <section className="bg-green-50 py-12">
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {console.log(holdCareers)}
-          {holdCareers[industryNameToData(careers)]?.map((career, index) => (
-          <CareersCard
-              key={index}
+          {CareersArray(careers).map((career, index) => (
+            <CareersCard
+              key={career.id}
               title={career.title}
               description={career.description}
               grade={gradeParam}
               image={career.image}
-              href={`/explore-jobs/${industryNameToData(careers)}/${career.key}?grade=${gradeParam}`}
-              specific={true}
-          />
+              href={`/explore-jobs/${industryNameToData(careers)}/${career.id}?grade=${gradeParam}`}
+              specific
+            />
           ))}
         </div>
       </section>
@@ -360,16 +364,16 @@ export default function QuizResultsPage() {
           {industries.length > 0 && industries[industries.length - 2][0]}
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {holdCareers[industryNameToData(secondCareers)]?.map((career, index) => (
-          <CareersCard
-              key={index}
+          {CareersArray(secondCareers).map((career, index) => (
+            <CareersCard
+              key={career.id}
               title={career.title}
               description={career.description}
               grade={gradeParam}
               image={career.image}
-              href={`/explore-jobs/${industryNameToData(secondCareers)}/${career.key}?grade=${gradeParam}`}
-              specific={true}
-          />
+              href={`/explore-jobs/${industryNameToData(secondCareers)}/${career.id}?grade=${gradeParam}`}
+              specific
+            />
           ))}
         </div>
       </section>
@@ -378,16 +382,16 @@ export default function QuizResultsPage() {
           {industries.length > 0 && industries[industries.length - 3][0]}
         </div>
         <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-3 gap-8 px-4 justify-items-center">
-          {holdCareers[industryNameToData(thirdCareers)]?.map((career, index) => (
-          <CareersCard
-              key={index}
+          {CareersArray(thirdCareers).map((career, index) => (
+            <CareersCard
+              key={career.id}
               title={career.title}
               description={career.description}
               grade={gradeParam}
               image={career.image}
-              href={`/explore-jobs/${industryNameToData(thirdCareers)}/${career.key}?grade=${gradeParam}`}
-              specific={true}
-          />
+              href={`/explore-jobs/${industryNameToData(thirdCareers)}/${career.id}?grade=${gradeParam}`}
+              specific
+            />
           ))}
         </div>
       </section>
